@@ -34,7 +34,7 @@ private:
     std::shared_ptr <font> windowFont = std::make_shared<font> (FONT_HELVETICA_10);
     RGBcolor fontColor = KBlack;
     unsigned fontSize = 10;
-    RGBcolor bgColor = KWhite;
+    RGBcolor bgColor;
 
 
     //ce dont on a besoin pour glut
@@ -59,12 +59,13 @@ public:
     void initGraphic ();
     void stopGaphic();
 
-    minGL(const unsigned & Width = 640, const unsigned & Height = 480, const std::string & Name = std::string());
+    minGL(const unsigned & Width = 640, const unsigned & Height = 480, const std::string & Name = std::string(), const RGBcolor & backGroungColor = KWhite);
     ~minGL();
     void updateGraphic ();
     void clearScreen() throw (myexception);
     void setPixel(const pos & pos_, const RGBcolor & col) throw (PixelException);
     char get_key ();
+    void setBgColor(const RGBcolor & col);
 
     unsigned getWindowWidth() const;
     unsigned getWindowHeight() const;

@@ -6,15 +6,40 @@
 #include "figs/circle.h"
 #include "figs/figure.h"
 
+#include <chrono>
+#include <thread>
+
 using namespace std;
 
 
 
 int main()
 {
-    minGL Window(800, 600, "Space Invader") ;
+    minGL Window(800, 600, "Space Invader", KBlack) ;
     Window.initGlut();
     Window.initGraphic();
+
+    const chrono::duration<double, milli> frameDuration(33.3);//30fps
+
+    /*while(true)
+    {
+        chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
+
+
+
+
+
+
+
+        chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
+        chrono::duration<double, milli> diff(end - beg);
+        if(diff < frameDuration)
+            this_thread::sleep_for(frameDuration - diff);
+
+
+        end = chrono::steady_clock::now();
+        cout << chrono::duration<double, milli>(end - beg).count() << endl;
+    }*/
 
 
     figure invader;

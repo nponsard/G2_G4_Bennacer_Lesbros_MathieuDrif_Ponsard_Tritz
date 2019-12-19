@@ -30,10 +30,11 @@ struct callBackBuilder<void(Obj::*)(Arg...), oHandler>
 
 #define BIND_CALLBACK(HANDLER) callBackBuilder<decltype(HANDLER), HANDLER>::callback
 
-minGL::minGL(const unsigned &Width, const unsigned &Height, const std::string &Name) :
+minGL::minGL(const unsigned &Width, const unsigned &Height, const std::string &Name, const RGBcolor & backGroungColor) :
     windowWidth (Width),
     windowHeight (Height),
-    windowName (Name)
+    windowName (Name),
+    bgColor(backGroungColor)
 {
     screenBuffer.resize(Width * Height * 3);
    // initGlut();
@@ -87,6 +88,11 @@ char minGL::get_key()
         keyboardBuffer.pop();
         return(key);
 
+}
+
+void minGL::setBgColor(const RGBcolor & col)
+{
+    bgColor = col;
 }
 
 //static void minGL::initGlut()
