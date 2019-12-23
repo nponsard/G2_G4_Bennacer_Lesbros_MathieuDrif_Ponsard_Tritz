@@ -22,7 +22,6 @@ SOURCES += main.cpp \
 
 QT += opengl core gui
 
-#LIBS +=  -lglut -lGLU -lGL -lGLEW
 LIBS +=  -lglut -lGLU -lGL
 
 #INCLUDEPATH += /opt/local/include/GL/
