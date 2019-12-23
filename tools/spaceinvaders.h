@@ -2,10 +2,16 @@
 #define SPACEINVADERS_H
 
 #include <vector>
+#include <chrono>
 #include "figs/figure.h"
 
 struct spaceInvaders
 {
+    std::chrono::duration<int, std::milli> invadersMovements;
+    std::chrono::time_point<std::chrono::steady_clock> invadersLastMove;
+
+    bool InvadersRight = true;
+
     figure invaders;
     figure player;
     figure playerTorpedo;
