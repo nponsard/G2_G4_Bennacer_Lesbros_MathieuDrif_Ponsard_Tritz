@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "thread": "cpp"
+        "thread": "cpp",
+        "string": "cpp",
+        "queue": "cpp"
     }
 }
