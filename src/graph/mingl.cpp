@@ -76,7 +76,7 @@ void minGL::setPixel(const pos &pos_, const RGBcolor &col) throw(PixelException)
     screenBuffer[3 * (pos_.ord * windowWidth + pos_.abs) + 1] = col.Green;
     screenBuffer[3 * (pos_.ord * windowWidth + pos_.abs) + 2] = col.Blue;
 }
-
+/*
 char minGL::get_key()
 {
     glutMainLoopEvent();
@@ -94,7 +94,7 @@ std::map<char, bool> minGL::get_key_2()
 {
     glutMainLoopEvent();
     return keyboardMap;
-}
+}*/
 
 void minGL::setBgColor(const RGBcolor &col)
 {
@@ -122,15 +122,20 @@ void minGL::initGraphic()
     // Initialisation handlers
     glutReshapeFunc(BIND_CALLBACK(&minGL::callReshape));
     glutDisplayFunc(BIND_CALLBACK(&minGL::callDisplay));
-    glutKeyboardFunc(BIND_CALLBACK(&minGL::callKeyboardV2));
-    glutSpecialFunc(BIND_CALLBACK(&minGL::callKeyboardSpecial));
+    glutKeyboardFunc(BIND_CALLBACK(&minGL::callKeyboard));
     glutKeyboardUpFunc(BIND_CALLBACK(&minGL::callKeyboardUp));
+    glutSpecialFunc(BIND_CALLBACK(&minGL::callKeyboardSpecial));
+    glutSpecialUpFunc(BIND_CALLBACK(&minGL::callKeyboardUpSpecial));
 
     // Efface ecran
     clearScreen();
 
     // Un tour de boucle pour lancer l'affichage
     glutMainLoopEvent();
+}
+bool minGL::isPressed(keyType key)
+{
+    return keyboardMap[key];
 }
 
 void minGL::stopGaphic()
@@ -156,26 +161,26 @@ void minGL::callDisplay()
     glDrawPixels(windowWidth, windowHeight, GL_RGB, GL_UNSIGNED_BYTE, &screenBuffer[0]);
     glFlush();
 }
-
-void minGL::callKeyboard(unsigned char key, int x, int y)
+void minGL::callKeyboard(unsigned char k, int x, int y)
 {
-    keyboardBuffer.push(key);
-    //cout << int (key) << endl;
-}
-
-void minGL::callKeyboardV2(unsigned char key, int x, int y)
-{
+    keyType key(k, false);
     keyboardMap[key] = true;
 }
-
-void minGL::callKeyboardUp(unsigned char key, int x, int y)
+void minGL::callKeyboardUp(unsigned char k, int x, int y)
 {
+    keyType key(k, false);
     keyboardMap[key] = false;
 }
 
-void minGL::callKeyboardSpecial(int key, int x, int y)
+void minGL::callKeyboardSpecial(int k, int x, int y)
 {
-    keyboardBuffer.push(key << 8);
+    keyType key(k, true);
+    keyboardMap[key] = true;
+}
+void minGL::callKeyboardUpSpecial(int k, int x, int y)
+{
+    keyType key(k, true);
+    keyboardMap[key] = false;
 }
 
 unsigned minGL::getWindowWidth() const
