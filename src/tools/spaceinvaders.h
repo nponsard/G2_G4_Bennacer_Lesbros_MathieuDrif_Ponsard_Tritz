@@ -13,6 +13,8 @@ struct spaceInvaders
     std::chrono::duration<int, std::milli> shot;
     std::chrono::time_point<std::chrono::steady_clock> lastShot;
 
+    unsigned lives;
+
     bool InvadersRight = true;
 
     figure invaders;

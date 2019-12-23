@@ -20,9 +20,8 @@ const keyType DOWN({103, true});
 const keyType LEFT({100, true});
 const keyType RIGHT({102, true});
 const keyType ESCAPE({27, false});
-const keyType KEY_SPACE({32, false});
-
 const keyType KeyS({115, false});
+const keyType KEY_SPACE({32, false});
 
 void initSpaceInvaders(spaceInvaders &SI, const unsigned &height, const unsigned &width)
 {
@@ -77,6 +76,7 @@ void initSpaceInvaders(spaceInvaders &SI, const unsigned &height, const unsigned
     SI.playerTorpedo = playerTorpedo;
 
     SI.playerPos = pos(0, 50); //placement intial joueur
+    SI.lives = 3;
 
     //placement invaders
     unsigned Xshift, Yshift(55);
@@ -97,7 +97,7 @@ void display(minGL &window, const vector<pos> &positions, const figure &fig)
         window << fig + *it;
 }
 
-void displaySpace(minGL &window, const spaceInvaders &SI)
+void displaySpace(minGL &window, const spaceInvaders & SI)
 {
     display(window, SI.invadersPos, SI.invaders);
     display(window, SI.playerTorpedoPos, SI.playerTorpedo);
@@ -105,10 +105,16 @@ void displaySpace(minGL &window, const spaceInvaders &SI)
     window << SI.player + SI.playerPos;
 }
 
-void displayScore(minGL &window)
+void displayScore(minGL &window, const spaceInvaders & SI)
 {
     window << rectangle(pos(0, window.getWindowHeight()), pos(window.getWindowWidth() - 1, window.getWindowHeight() - 50), KGreen, KBlack);
     window << rectangle(pos(0, 0), pos(window.getWindowWidth() - 1, 50), KGreen, KBlack);
+
+    //vies
+    window << SI.player * 0.5 + pos(10, 8);
+
+    for(unsigned i(0); i < SI.lives; ++i)
+        window << rectangle(pos(75 + (10*i), 12), 5, 5, KGreen, KGreen);
 }
 
 vector<pos>::iterator collisions(spaceInvaders &SI,
@@ -158,7 +164,6 @@ void process(spaceInvaders &SI, minGL & window, const unsigned &height, const un
     }
 
     //collisions
-
     //invaders - playerTorpedo
     it = SI.playerTorpedoPos.begin();
     while (it != SI.playerTorpedoPos.end())
@@ -188,17 +193,25 @@ void process(spaceInvaders &SI, minGL & window, const unsigned &height, const un
     }
 
     //invadersTorpedo - player
-    if (collisions(SI, SI.playerPos, SI.invadersTorpedoPos, 55, 15, 110, 15) != SI.invadersTorpedoPos.end())
-        iLoose = true;
+    vector<pos>::iterator collisionIt(collisions(SI, SI.playerPos, SI.invadersTorpedoPos, 55, 15, 110, 15));
+    if (collisionIt != SI.invadersTorpedoPos.end())
+    {
+        SI.invadersTorpedoPos.erase(collisionIt);
+        if(--SI.lives == 0)
+            iLoose = true;
+    }
 
-    if (!iLoose)
+    if(SI.invadersPos.size() == 0)
+        iWin = true;
+
+    if (!iLoose && !iWin)
     {
         //deplacement invaders et tirs
         //un invader choisi au hasard envoie un missile à chaque déplacement
         chrono::time_point<chrono::steady_clock> now(chrono::steady_clock::now());
         chrono::duration<double, milli> diff(now - SI.invadersLastMove);
         bool downShift(false);
-        if (diff >= SI.invadersMovements && !iWin)
+        if (diff >= SI.invadersMovements)
         {
             //SI.invadersPos.size() != 0 car win = false
             //trouver pos max invaders
@@ -270,23 +283,27 @@ void process(spaceInvaders &SI, minGL & window, const unsigned &height, const un
                     iLoose = true;
             }
 
-            //tir
-            it = SI.invadersPos.begin() + (rand() % SI.invadersPos.size());
-            //trouver l'invader le plus bas dans cette colonne
-            for (vector<pos>::iterator it2(SI.invadersPos.begin()); it2 != SI.invadersPos.end(); ++it2)
-                if (it2->getAbs() == it->getAbs() && it2->getOrd() < it->getOrd())
-                    it = it2;
+            if(!iLoose)
+            {
+                //tir
+                it = SI.invadersPos.begin() + (rand() % SI.invadersPos.size());
+                //trouver l'invader le plus bas dans cette colonne
+                for (vector<pos>::iterator it2(SI.invadersPos.begin()); it2 != SI.invadersPos.end(); ++it2)
+                    if (it2->getAbs() == it->getAbs() && it2->getOrd() < it->getOrd())
+                        it = it2;
 
-            SI.invadersTorpedoPos.push_back(pos(it->getAbs() + 27, it->getOrd()));
+                SI.invadersTorpedoPos.push_back(pos(it->getAbs() + 27, it->getOrd()));
 
-            SI.invadersLastMove = chrono::time_point<chrono::steady_clock>(chrono::steady_clock::now());
+                SI.invadersLastMove = chrono::time_point<chrono::steady_clock>(chrono::steady_clock::now());
+            }
         }
 
+        //lecture clavier
         if (window.isPressed(RIGHT) && SI.playerPos.getAbs() + 120 < window.getWindowWidth())
             SI.playerPos.abs += 10;
         if (window.isPressed(LEFT) && SI.playerPos.getAbs() > 10)
             SI.playerPos.abs -= 10;
-        if (window.isPressed(KeyS))
+        if (window.isPressed(KEY_SPACE))
         {
             now = chrono::steady_clock::now();
             diff = now - SI.lastShot;
@@ -309,24 +326,17 @@ void mainSpaceInvaders()
     initSpaceInvaders(SI, window.getWindowHeight(), window.getWindowWidth());
 
     const chrono::duration<double, milli> frameDuration(16.6); //60fps
-    map<char, bool> keyboardMap;
 
     bool iWin(false), iLoose(false);
 
     while (!iLoose && !iWin)
     {
         chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
-        if (window.isPressed(RIGHT) && SI.playerPos.getAbs() + 120 < window.getWindowWidth())
-            SI.playerPos.abs += 10;
-        if (window.isPressed(LEFT) && SI.playerPos.getAbs() > 10)
-            SI.playerPos.abs -= 10;
-        if (window.isPressed(KEY_SPACE))
-            SI.playerTorpedoPos.push_back(SI.playerPos + pos(52, 50));
 
         window.clearScreen();
         process(SI, window, window.getWindowHeight(), window.getWindowWidth(), iWin, iLoose);
         displaySpace(window, SI);
-        displayScore(window);
+        displayScore(window, SI);
 
         window.updateGraphic();
 
@@ -341,7 +351,6 @@ void mainSpaceInvaders()
         cout << "Lost" << endl;
     else //iWin
         cout << "Won" << endl;
-    //window.get_key();
 }
 
 int main()

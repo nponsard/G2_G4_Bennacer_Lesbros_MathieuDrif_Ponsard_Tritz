@@ -16,7 +16,6 @@ SOURCES += main.cpp \
     tools/myexception.cpp \
     tools/pixel.cpp \
     graph/iminglinjectable.cpp \
-    tools/spaceinvaders.cpp \
     tools/tools.cpp \
     tools/pixelexception.cpp
 

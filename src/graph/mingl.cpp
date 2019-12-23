@@ -67,10 +67,8 @@ void minGL::setPixel(const pos &pos_, const RGBcolor &col) throw(PixelException)
 
     //if (pos_.abs > windowWidth) throw myexception (kErrTooRight);
     //if (pos_.ord > windowHeight) throw myexception (kErrTooHight);
-    if (pos_.abs > windowWidth)
-        return;
-    if (pos_.ord > windowHeight)
-        return;
+    if (pos_.abs > windowWidth) throw PixelException (pos_, col, "Pixel too right");
+    if (pos_.ord > windowHeight) throw PixelException (pos_, col, "Pixel too high");
 
     screenBuffer[3 * (pos_.ord * windowWidth + pos_.abs) + 0] = col.Red;
     screenBuffer[3 * (pos_.ord * windowWidth + pos_.abs) + 1] = col.Green;
@@ -174,7 +172,6 @@ void minGL::callKeyboardUp(unsigned char k, int x, int y)
 
 void minGL::callKeyboardSpecial(int k, int x, int y)
 {
-
     keyType key(k, true);
     keyboardMap[key] = true;
 }
