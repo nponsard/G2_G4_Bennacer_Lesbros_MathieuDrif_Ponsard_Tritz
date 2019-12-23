@@ -41,12 +41,15 @@ private:
     short glutWindowId = 0;
     std::vector <GLubyte> screenBuffer;
     std::queue <char> keyboardBuffer;
+    std::map<char, bool> keyboardMap;
 
 
     //les handlers
     void callReshape(int h, int w) ;
     void callDisplay();
     void callKeyboard(unsigned char key, int x = 0, int y = 0);
+    void callKeyboardV2(unsigned char key, int x, int y);
+    void callKeyboardUp(unsigned char key, int x, int y);
     void callKeyboardSpecial(int key, int x =0, int y = 0);
 
 public:
@@ -65,6 +68,7 @@ public:
     void clearScreen() throw (myexception);
     void setPixel(const pos & pos_, const RGBcolor & col) throw (PixelException);
     char get_key ();
+    std::map<char, bool> get_key_2();
     void setBgColor(const RGBcolor & col);
 
     unsigned getWindowWidth() const;

@@ -90,6 +90,12 @@ char minGL::get_key()
 
 }
 
+std::map<char, bool> minGL::get_key_2()
+{
+    glutMainLoopEvent();
+    return keyboardMap;
+}
+
 void minGL::setBgColor(const RGBcolor & col)
 {
     bgColor = col;
@@ -116,8 +122,9 @@ void minGL::initGraphic()
     // Initialisation handlers
     glutReshapeFunc(BIND_CALLBACK(&minGL::callReshape));
     glutDisplayFunc(BIND_CALLBACK(&minGL::callDisplay));
-    glutKeyboardFunc(BIND_CALLBACK(&minGL::callKeyboard));
+    glutKeyboardFunc(BIND_CALLBACK(&minGL::callKeyboardV2));
     glutSpecialFunc(BIND_CALLBACK(&minGL::callKeyboardSpecial));
+    glutKeyboardUpFunc(BIND_CALLBACK(&minGL::callKeyboardUp));
 
     // Efface ecran
     clearScreen();
@@ -152,7 +159,17 @@ void minGL::callDisplay() {
 void minGL::callKeyboard(unsigned char key, int x, int y)
 {
     keyboardBuffer.push(key);
-   // cout << int (key) << endl;
+    //cout << int (key) << endl;
+}
+
+void minGL::callKeyboardV2(unsigned char key, int x, int y)
+{
+    keyboardMap[key] = true;
+}
+
+void minGL::callKeyboardUp(unsigned char key, int x, int y)
+{
+    keyboardMap[key] = false;
 }
 
 void minGL::callKeyboardSpecial(int key, int x, int y)

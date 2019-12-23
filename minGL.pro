@@ -16,6 +16,7 @@ SOURCES += main.cpp \
     tools/myexception.cpp \
     tools/pixel.cpp \
     graph/iminglinjectable.cpp \
+    tools/spaceinvaders.cpp \
     tools/tools.cpp \
     tools/pixelexception.cpp
 
@@ -48,6 +49,7 @@ HEADERS += \
     tools/IEditable.hxx \
     tools/myexception.h \
     tools/pixel.h \
+    tools/spaceinvaders.h \
     tools/tools.h \
     graph/iminglinjectable.h \
     tools/pixelexception.h
