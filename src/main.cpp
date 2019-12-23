@@ -68,6 +68,9 @@ void initSpaceInvaders(spaceInvaders &SI, const unsigned &height, const unsigned
     SI.invadersMovements = chrono::duration<int, milli>(1200);
     SI.invadersLastMove = chrono::time_point<chrono::steady_clock>(chrono::steady_clock::now());
 
+    SI.shot = chrono::duration<int, milli>(800);
+    SI.lastShot = chrono::time_point<chrono::steady_clock>(chrono::steady_clock::now());
+
     SI.player = player;
     SI.invaders = invader;
     SI.invadersTorpedo = invadersTorpedo;
@@ -127,7 +130,7 @@ vector<pos>::iterator collisions(spaceInvaders &SI,
     return vec.end();
 }
 
-void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, bool &iWin, bool &iLoose)
+void process(spaceInvaders &SI, minGL & window, const unsigned &height, const unsigned &width, bool &iWin, bool &iLoose)
 {
     //deplacement missiles
     vector<pos>::iterator it(SI.playerTorpedoPos.begin());
@@ -279,7 +282,20 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
             SI.invadersLastMove = chrono::time_point<chrono::steady_clock>(chrono::steady_clock::now());
         }
 
-        /*GESTION POSITION JOUEUR*/
+        if (window.isPressed(RIGHT) && SI.playerPos.getAbs() + 120 < window.getWindowWidth())
+            SI.playerPos.abs += 10;
+        if (window.isPressed(LEFT) && SI.playerPos.getAbs() > 10)
+            SI.playerPos.abs -= 10;
+        if (window.isPressed(KeyS))
+        {
+            now = chrono::steady_clock::now();
+            diff = now - SI.lastShot;
+            if(diff >= SI.shot)
+            {
+                SI.playerTorpedoPos.push_back(SI.playerPos + pos(52, 50));
+                SI.lastShot = chrono::time_point<chrono::steady_clock>(chrono::steady_clock::now());
+            }
+        }
     }
 }
 
@@ -300,9 +316,6 @@ void mainSpaceInvaders()
     while (!iLoose && !iWin)
     {
         chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
-
-        // keyboardMap = window.get_key_2(); /*faire une methode dans MINGL*/
-
         if (window.isPressed(RIGHT) && SI.playerPos.getAbs() + 120 < window.getWindowWidth())
             SI.playerPos.abs += 10;
         if (window.isPressed(LEFT) && SI.playerPos.getAbs() > 10)
@@ -311,7 +324,7 @@ void mainSpaceInvaders()
             SI.playerTorpedoPos.push_back(SI.playerPos + pos(52, 50));
 
         window.clearScreen();
-        process(SI, window.getWindowHeight(), window.getWindowWidth(), iWin, iLoose);
+        process(SI, window, window.getWindowHeight(), window.getWindowWidth(), iWin, iLoose);
         displaySpace(window, SI);
         displayScore(window);
 
