@@ -174,6 +174,7 @@ void minGL::callKeyboardUp(unsigned char k, int x, int y)
 
 void minGL::callKeyboardSpecial(int k, int x, int y)
 {
+
     keyType key(k, true);
     keyboardMap[key] = true;
 }

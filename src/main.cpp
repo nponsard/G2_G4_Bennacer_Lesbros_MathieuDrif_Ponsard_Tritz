@@ -20,6 +20,8 @@ const keyType DOWN({103, true});
 const keyType LEFT({100, true});
 const keyType RIGHT({102, true});
 const keyType ESCAPE({27, false});
+const keyType KEY_SPACE({32, false});
+
 const keyType KeyS({115, false});
 
 void initSpaceInvaders(spaceInvaders &SI, const unsigned &height, const unsigned &width)
@@ -314,10 +316,12 @@ void mainSpaceInvaders()
     while (!iLoose && !iWin)
     {
         chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
-
-
-
-
+        if (window.isPressed(RIGHT) && SI.playerPos.getAbs() + 120 < window.getWindowWidth())
+            SI.playerPos.abs += 10;
+        if (window.isPressed(LEFT) && SI.playerPos.getAbs() > 10)
+            SI.playerPos.abs -= 10;
+        if (window.isPressed(KEY_SPACE))
+            SI.playerTorpedoPos.push_back(SI.playerPos + pos(52, 50));
 
         window.clearScreen();
         process(SI, window, window.getWindowHeight(), window.getWindowWidth(), iWin, iLoose);
