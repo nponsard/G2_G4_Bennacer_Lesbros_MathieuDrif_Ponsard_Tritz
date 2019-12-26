@@ -23,7 +23,7 @@
  */
 
 //pour les fonts et l'affichage des string voir : https://www.opengl.org/resources/libraries/glut/spec3/node76.html
-typedef std::pair<int, bool> keyType; // clef, spécial
+typedef std::pair<int, bool> keyType; // cle, spécial
 typedef std::map<keyType, bool> keyMap;
 class minGL
 {
@@ -36,6 +36,7 @@ private:
     RGBcolor fontColor = KBlack;
     unsigned fontSize = 10;
     RGBcolor bgColor;
+    keyMap keyboardMap;
 
     //ce dont on a besoin pour glut
     short glutWindowId = 0;
@@ -48,7 +49,6 @@ private:
     void callKeyboardUp(unsigned char key, int x = 0, int y = 0);
     void callKeyboardSpecial(int key, int x = 0, int y = 0);
     void callKeyboardUpSpecial(int key, int x = 0, int y = 0);
-    keyMap keyboardMap;
 
 public:
     static void initGlut()
@@ -60,6 +60,7 @@ public:
     void stopGaphic();
 
     bool isPressed(keyType key);
+    void displayText(void *font, int x, int y, std::string str);
     minGL(const unsigned &Width = 640, const unsigned &Height = 480, const std::string &Name = std::string(), const RGBcolor &backGroungColor = KWhite);
     ~minGL();
     void updateGraphic();

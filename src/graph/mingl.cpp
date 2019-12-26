@@ -136,6 +136,20 @@ bool minGL::isPressed(keyType key)
     return keyboardMap[key];
 }
 
+//http://mperriss.free.fr/opengl/Guide_2D/texte.htm
+void minGL::displayText(void *font, int x, int y, string str)
+{
+    int x1 = x;
+    for (unsigned i(0); i < str.size(); ++i)
+    {
+        glRasterPos2f(x1, y);
+        glutBitmapCharacter(font, str[i]);
+        x1 = x1 + glutBitmapWidth(font, str[i]);
+    }
+
+    glFlush();
+}
+
 void minGL::stopGaphic()
 {
     glutDestroyWindow(glutWindowId);

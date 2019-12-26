@@ -77,6 +77,8 @@ void initSpaceInvaders(spaceInvaders &SI, const unsigned &height, const unsigned
 
     SI.playerPos = pos(0, 50); //placement intial joueur
     SI.lives = 3;
+    SI.score = 0;
+    SI.scoreStep = 100;
 
     //placement invaders
     unsigned Xshift, Yshift(55);
@@ -105,16 +107,18 @@ void displaySpace(minGL &window, const spaceInvaders & SI)
     window << SI.player + SI.playerPos;
 }
 
-void displayScore(minGL &window, const spaceInvaders & SI)
+void displayHUD(minGL & window, const spaceInvaders & SI)
 {
     window << rectangle(pos(0, window.getWindowHeight()), pos(window.getWindowWidth() - 1, window.getWindowHeight() - 50), KGreen, KBlack);
     window << rectangle(pos(0, 0), pos(window.getWindowWidth() - 1, 50), KGreen, KBlack);
-
-    //vies
     window << SI.player * 0.5 + pos(10, 8);
+}
 
-    for(unsigned i(0); i < SI.lives; ++i)
-        window << rectangle(pos(75 + (10*i), 12), 5, 5, KGreen, KGreen);
+void fillHUD(minGL & window, const spaceInvaders & SI)
+{
+    //vies
+    window.displayText(GLUT_BITMAP_TIMES_ROMAN_24, 75, 12, to_string(SI.lives));
+    window.displayText(GLUT_BITMAP_TIMES_ROMAN_24, 20, window.getWindowHeight() - 25, to_string(SI.score));
 }
 
 vector<pos>::iterator collisions(spaceInvaders &SI,
@@ -173,6 +177,7 @@ void process(spaceInvaders &SI, minGL & window, const unsigned &height, const un
         {
             SI.playerTorpedoPos.erase(it);
             SI.invadersPos.erase(collisionIt);
+            SI.score += SI.scoreStep;
         }
         else
             ++it;
@@ -316,11 +321,9 @@ void process(spaceInvaders &SI, minGL & window, const unsigned &height, const un
     }
 }
 
-void mainSpaceInvaders()
+void mainSpaceInvaders(minGL & window)
 {
-    minGL window(1280, 720, "Space Invader", KBlack);
-    window.initGlut();
-    window.initGraphic();
+
 
     spaceInvaders SI;
     initSpaceInvaders(SI, window.getWindowHeight(), window.getWindowWidth());
@@ -336,9 +339,10 @@ void mainSpaceInvaders()
         window.clearScreen();
         process(SI, window, window.getWindowHeight(), window.getWindowWidth(), iWin, iLoose);
         displaySpace(window, SI);
-        displayScore(window, SI);
+        displayHUD(window, SI);
 
         window.updateGraphic();
+        fillHUD(window, SI);
 
         chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
         chrono::duration<double, milli> diff(end - beg);
@@ -355,7 +359,12 @@ void mainSpaceInvaders()
 
 int main()
 {
+    minGL window(1280, 720, "Space Invader", KBlack);
+    window.initGlut();
+    window.initGraphic();
+
     srand(time(NULL));
-    mainSpaceInvaders();
+    mainSpaceInvaders(window);
+
     return 0;
 }

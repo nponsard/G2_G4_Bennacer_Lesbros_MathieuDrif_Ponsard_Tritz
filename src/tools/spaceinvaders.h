@@ -15,6 +15,9 @@ struct spaceInvaders
 
     unsigned lives;
 
+    unsigned score;
+    unsigned scoreStep;
+
     bool InvadersRight = true;
 
     figure invaders;
