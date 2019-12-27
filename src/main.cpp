@@ -82,7 +82,7 @@ void initSpaceInvaders(spaceInvaders &SI, const unsigned &height, const unsigned
 
     //placement invaders
     unsigned Xshift, Yshift(55);
-    for (unsigned i(0); i < 3; ++i)
+    for (unsigned i(0); i < 5; ++i)
     {
         Xshift = 0;
         while (Xshift + 55 /*invaderSize*/ + 110 /*marge*/ < width)
@@ -179,6 +179,7 @@ void process(spaceInvaders &SI, minGL & window, const unsigned &height, const un
             SI.playerTorpedoPos.erase(it);
             SI.invadersPos.erase(collisionIt);
             SI.score += SI.scoreStep;
+            SI.scoreStep += 20;
         }
         else
             ++it;
