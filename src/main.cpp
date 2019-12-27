@@ -117,8 +117,9 @@ void displayHUD(minGL & window, const spaceInvaders & SI)
 void fillHUD(minGL & window, const spaceInvaders & SI)
 {
     //vies
-    window.displayText(GLUT_BITMAP_TIMES_ROMAN_24, 75, 12, to_string(SI.lives));
-    window.displayText(GLUT_BITMAP_TIMES_ROMAN_24, 20, window.getWindowHeight() - 25, to_string(SI.score));
+    window.displayText(GLUT_BITMAP_9_BY_15, 75, 12, to_string(SI.lives));
+    window.displayText(GLUT_BITMAP_9_BY_15, 5, window.getWindowHeight() - 25, "Score : ");
+    window.displayText(GLUT_BITMAP_9_BY_15, 85, window.getWindowHeight() - 25, to_string(SI.score));
 }
 
 vector<pos>::iterator collisions(spaceInvaders &SI,

@@ -137,6 +137,7 @@ bool minGL::isPressed(keyType key)
 }
 
 //http://mperriss.free.fr/opengl/Guide_2D/texte.htm
+//https://www.opengl.org/resources/libraries/glut/spec3/node76.html
 void minGL::displayText(void *font, int x, int y, string str)
 {
     int x1 = x;
