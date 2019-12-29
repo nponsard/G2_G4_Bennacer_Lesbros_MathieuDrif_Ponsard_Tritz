@@ -165,6 +165,7 @@ void process(spaceInvaders &SI, minGL & window, const unsigned &height, const un
                         SI.invadersPos.erase(itInvadersPos);
                         SI.score += SI.scoreStep;
                         SI.scoreStep += 20;
+                        SI.invadersMovements = SI.invadersMovements*3/5;
                     }
                 }
 
