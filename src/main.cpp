@@ -78,7 +78,9 @@ void initSpaceInvaders(spaceInvaders &SI, const unsigned &height, const unsigned
     SI.playerPos = pos(0, 50); //placement intial joueur
     SI.lives = 3;
     SI.score = 0;
+    SI.scoreForMissileDestruction = 50;
     SI.scoreStep = 100;
+    SI.torpedoVelocity = 20;
 
     //placement invaders
     unsigned Xshift, Yshift(55);
@@ -122,91 +124,102 @@ void fillHUD(minGL & window, const spaceInvaders & SI)
     window.displayText(GLUT_BITMAP_9_BY_15, 85, window.getWindowHeight() - 25, to_string(SI.score));
 }
 
-vector<pos>::iterator collisions(spaceInvaders &SI,
-                                 pos &entity,
-                                 vector<pos> &vec,
+bool collisions(spaceInvaders &SI,
+                                 pos &entity1,
+                                 pos &entity2,
                                  const unsigned &entityHeight,
                                  const unsigned &VHeight,
                                  const unsigned &entityWidth,
                                  const unsigned &VWidth)
 {
-    vector<pos>::iterator it(vec.begin());
-    while (it != vec.end())
-    {
-        if (entity.getOrd() + entityHeight >= it->getOrd() && entity.getOrd() + entityHeight <= it->getOrd() + VHeight)
-            if (entity.getAbs() + entityWidth >= it->getAbs() && entity.getAbs() <= it->getAbs() + VWidth)
-                return it;
-        ++it;
-    }
-    return vec.end();
+        if (entity1.getOrd() + entityHeight >= entity2.getOrd() && entity1.getOrd() + entityHeight <= entity2.getOrd() + VHeight)
+            if (entity1.getAbs() + entityWidth >= entity2.getAbs() && entity1.getAbs() <= entity2.getAbs() + VWidth)
+                return true;
+
+        return false;
 }
 
 void process(spaceInvaders &SI, minGL & window, const unsigned &height, const unsigned &width, bool &iWin, bool &iLoose)
 {
-    //deplacement missiles
+    //deplacement missiles joueur
     vector<pos>::iterator it(SI.playerTorpedoPos.begin());
     while (it != SI.playerTorpedoPos.end())
     {
-        if (it->getOrd() + 30 < height)
+        bool collision(false);//collision avec un mur, un invader ou un missile d'invader
+        for(unsigned tempMove(0); !collision && tempMove < SI.torpedoVelocity; ++tempMove)//deplacer par pas de 1 pour verifier les collisions meme quand la vitesse des missiles est élevée
         {
-            *it = *it + pos(0, 5);
-            ++it;
+            if (it->getOrd() + 2 + 30/*taille missile*/ < height)
+            {
+                *it = *it + pos(0, 1);//déplacement
+
+                //collision avec un invader
+                for(vector<pos>::iterator itInvadersPos(SI.invadersPos.begin()); !collision && itInvadersPos != SI.invadersPos.end(); ++itInvadersPos)
+                {
+                    collision = collisions(SI, *it, *itInvadersPos, 15, 15, 50, 50);
+                    if (collision)
+                    {
+                        SI.playerTorpedoPos.erase(it);
+                        SI.invadersPos.erase(itInvadersPos);
+                        SI.score += SI.scoreStep;
+                        SI.scoreStep += 20;
+                    }
+                }
+
+                if(!collision)
+                {
+                    //collision avec un missile
+                    for(vector<pos>::iterator itInvadersTorpedoPos(SI.invadersTorpedoPos.begin()); !collision && itInvadersTorpedoPos != SI.invadersTorpedoPos.end(); ++itInvadersTorpedoPos)
+                    {
+                        collision = collisions(SI, *it, *itInvadersTorpedoPos, 15, 15, 15, 15);
+                        if (collision)
+                        {
+                            SI.playerTorpedoPos.erase(it);
+                            SI.invadersTorpedoPos.erase(itInvadersTorpedoPos);
+                            SI.score += SI.scoreForMissileDestruction;
+                        }
+                    }
+                }
+            }
+            else//collision avec le mur
+            {
+                SI.playerTorpedoPos.erase(it);
+                collision = true;
+            }
         }
-        else
-            SI.playerTorpedoPos.erase(it);
+        if(!collision)
+            ++it;
     }
 
+
+    //deplacement des missiles invaders
     it = SI.invadersTorpedoPos.begin();
     while (it != SI.invadersTorpedoPos.end())
     {
-        if (it->getOrd() > 0)
+        bool collision(false);
+        for(unsigned tempMove(0); !collision && tempMove < SI.torpedoVelocity; ++tempMove)//deplacer par pas de 1 pour verifier collisions meme quand vitesse élevée
         {
-            *it = pos(it->getAbs(), it->getOrd() - 5);
-            ++it;
+            if (it->getOrd() > 1)
+            {
+                *it = pos(it->getAbs(), it->getOrd() - 1);//déplacement
+                collision = collisions(SI, *it, SI.playerPos, 15, 55, 15, 110);//collision avec le joueur
+                if (collision)
+                {
+                    SI.invadersTorpedoPos.erase(it);
+                    if(--SI.lives == 0)
+                        iLoose = true;
+                }
+            }
+            else//collision avec le mur
+            {
+                SI.invadersTorpedoPos.erase(it);
+                collision = true;
+            }
         }
-        else
-            SI.invadersTorpedoPos.erase(it);
-    }
-
-    //collisions
-    //invaders - playerTorpedo
-    it = SI.playerTorpedoPos.begin();
-    while (it != SI.playerTorpedoPos.end())
-    {
-        vector<pos>::iterator collisionIt(collisions(SI, *it, SI.invadersPos, 15, 15, 50, 50));
-        if (collisionIt != SI.invadersPos.end())
-        {
-            SI.playerTorpedoPos.erase(it);
-            SI.invadersPos.erase(collisionIt);
-            SI.score += SI.scoreStep;
-            SI.scoreStep += 20;
-        }
-        else
+        if(!collision)
             ++it;
     }
 
-    //invadersTorpedo - playerTorpedo
-    it = SI.playerTorpedoPos.begin();
-    while (it != SI.playerTorpedoPos.end())
-    {
-        vector<pos>::iterator collisionIt(collisions(SI, *it, SI.invadersTorpedoPos, 15, 15, 15, 15));
-        if (collisionIt != SI.invadersTorpedoPos.end())
-        {
-            SI.playerTorpedoPos.erase(it);
-            SI.invadersTorpedoPos.erase(collisionIt);
-        }
-        else
-            ++it;
-    }
 
-    //invadersTorpedo - player
-    vector<pos>::iterator collisionIt(collisions(SI, SI.playerPos, SI.invadersTorpedoPos, 55, 15, 110, 15));
-    if (collisionIt != SI.invadersTorpedoPos.end())
-    {
-        SI.invadersTorpedoPos.erase(collisionIt);
-        if(--SI.lives == 0)
-            iLoose = true;
-    }
 
     if(SI.invadersPos.size() == 0)
         iWin = true;

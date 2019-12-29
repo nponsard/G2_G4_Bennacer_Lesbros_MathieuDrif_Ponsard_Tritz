@@ -14,9 +14,10 @@ struct spaceInvaders
     std::chrono::time_point<std::chrono::steady_clock> lastShot;
 
     unsigned lives;
-
     unsigned score;
     unsigned scoreStep;
+    unsigned scoreForMissileDestruction;
+    unsigned torpedoVelocity;
 
     bool InvadersRight = true;
 

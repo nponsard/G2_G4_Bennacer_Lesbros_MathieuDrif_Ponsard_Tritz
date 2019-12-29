@@ -131,14 +131,14 @@ void minGL::initGraphic()
     // Un tour de boucle pour lancer l'affichage
     glutMainLoopEvent();
 }
-bool minGL::isPressed(keyType key)
+bool minGL::isPressed(const keyType & key)
 {
     return keyboardMap[key];
 }
 
 //http://mperriss.free.fr/opengl/Guide_2D/texte.htm
 //https://www.opengl.org/resources/libraries/glut/spec3/node76.html
-void minGL::displayText(void *font, int x, int y, string str)
+void minGL::displayText(void *font, const unsigned & x, const unsigned & y, const string & str)
 {
     int x1 = x;
     for (unsigned i(0); i < str.size(); ++i)

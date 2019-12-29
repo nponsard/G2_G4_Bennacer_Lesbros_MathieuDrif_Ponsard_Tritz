@@ -59,8 +59,8 @@ public:
     void initGraphic();
     void stopGaphic();
 
-    bool isPressed(keyType key);
-    void displayText(void *font, int x, int y, std::string str);
+    bool isPressed(const keyType &key);
+    void displayText(void *font, const unsigned & x, const unsigned & y, const std::string &str);
     minGL(const unsigned &Width = 640, const unsigned &Height = 480, const std::string &Name = std::string(), const RGBcolor &backGroungColor = KWhite);
     ~minGL();
     void updateGraphic();
