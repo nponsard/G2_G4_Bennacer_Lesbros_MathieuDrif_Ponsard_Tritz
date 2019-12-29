@@ -13,6 +13,9 @@ struct spaceInvaders
     std::chrono::duration<int, std::milli> shot;
     std::chrono::time_point<std::chrono::steady_clock> lastShot;
 
+    std::chrono::duration<int, std::milli> invadersShot;
+    std::chrono::time_point<std::chrono::steady_clock> invadersLastShot;
+
     unsigned lives;
     unsigned score;
     unsigned scoreStep;

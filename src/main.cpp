@@ -68,7 +68,10 @@ void initSpaceInvaders(spaceInvaders &SI, const unsigned &height, const unsigned
     SI.invadersLastMove = chrono::time_point<chrono::steady_clock>(chrono::steady_clock::now());
 
     SI.shot = chrono::duration<int, milli>(800);
-    SI.lastShot = chrono::time_point<chrono::steady_clock>(chrono::steady_clock::now());
+    SI.lastShot = chrono::steady_clock::now();
+
+    SI.invadersShot = chrono::duration<int, milli>(900);
+    SI.invadersLastShot = chrono::steady_clock::now();
 
     SI.player = player;
     SI.invaders = invader;
@@ -226,10 +229,28 @@ void process(spaceInvaders &SI, minGL & window, const unsigned &height, const un
 
     if (!iLoose && !iWin)
     {
-        //deplacement invaders et tirs
-        //un invader choisi au hasard envoie un missile à chaque déplacement
+        //tir
+        //un invader choisi au hasard envoie un missile
         chrono::time_point<chrono::steady_clock> now(chrono::steady_clock::now());
-        chrono::duration<double, milli> diff(now - SI.invadersLastMove);
+        chrono::duration<double, milli> diff(now - SI.invadersLastShot);
+        if(diff >= SI.invadersShot)
+        {
+            it = SI.invadersPos.begin() + (rand() % SI.invadersPos.size());//choix d'un invader
+            //trouver l'invader le plus bas dans cette colonne
+            for (vector<pos>::iterator it2(SI.invadersPos.begin()); it2 != SI.invadersPos.end(); ++it2)
+                if (it2->getAbs() == it->getAbs() && it2->getOrd() < it->getOrd())
+                    it = it2;
+
+            SI.invadersTorpedoPos.push_back(pos(it->getAbs() + 27, it->getOrd()));
+
+            SI.invadersLastShot = chrono::steady_clock::now();
+        }
+
+
+
+        //déplacement
+        now = chrono::steady_clock::now();
+        diff = now - SI.invadersLastMove;
         bool downShift(false);
         if (diff >= SI.invadersMovements)
         {
@@ -302,20 +323,7 @@ void process(spaceInvaders &SI, minGL & window, const unsigned &height, const un
                 else
                     iLoose = true;
             }
-
-            if(!iLoose)
-            {
-                //tir
-                it = SI.invadersPos.begin() + (rand() % SI.invadersPos.size());
-                //trouver l'invader le plus bas dans cette colonne
-                for (vector<pos>::iterator it2(SI.invadersPos.begin()); it2 != SI.invadersPos.end(); ++it2)
-                    if (it2->getAbs() == it->getAbs() && it2->getOrd() < it->getOrd())
-                        it = it2;
-
-                SI.invadersTorpedoPos.push_back(pos(it->getAbs() + 27, it->getOrd()));
-
-                SI.invadersLastMove = chrono::time_point<chrono::steady_clock>(chrono::steady_clock::now());
-            }
+            SI.invadersLastMove = chrono::steady_clock::now();
         }
 
         //lecture clavier
@@ -330,7 +338,7 @@ void process(spaceInvaders &SI, minGL & window, const unsigned &height, const un
             if(diff >= SI.shot)
             {
                 SI.playerTorpedoPos.push_back(SI.playerPos + pos(52, 50));
-                SI.lastShot = chrono::time_point<chrono::steady_clock>(chrono::steady_clock::now());
+                SI.lastShot = chrono::steady_clock::now();
             }
         }
     }
