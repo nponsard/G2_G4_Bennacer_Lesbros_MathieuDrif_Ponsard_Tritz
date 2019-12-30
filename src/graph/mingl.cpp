@@ -138,14 +138,14 @@ bool minGL::isPressed(const keyType & key)
 
 //http://mperriss.free.fr/opengl/Guide_2D/texte.htm
 //https://www.opengl.org/resources/libraries/glut/spec3/node76.html
-void minGL::displayText(void *font, const unsigned & x, const unsigned & y, const string & str)
+void minGL::displayText(const unsigned & x, const unsigned & y, const string & str)
 {
     int x1 = x;
     for (unsigned i(0); i < str.size(); ++i)
     {
         glRasterPos2f(x1, y);
-        glutBitmapCharacter(font, str[i]);
-        x1 = x1 + glutBitmapWidth(font, str[i]);
+        glutBitmapCharacter(GLUT_BITMAP_9_BY_15, str[i]);
+        x1 = x1 + glutBitmapWidth(GLUT_BITMAP_9_BY_15, str[i]);
     }
 
     glFlush();

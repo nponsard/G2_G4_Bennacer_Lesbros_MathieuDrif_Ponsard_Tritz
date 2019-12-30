@@ -60,7 +60,7 @@ public:
     void stopGaphic();
 
     bool isPressed(const keyType &key);
-    void displayText(void *font, const unsigned & x, const unsigned & y, const std::string &str);
+    void displayText(const unsigned & x, const unsigned & y, const std::string &str);
     minGL(const unsigned &Width = 640, const unsigned &Height = 480, const std::string &Name = std::string(), const RGBcolor &backGroungColor = KWhite);
     ~minGL();
     void updateGraphic();

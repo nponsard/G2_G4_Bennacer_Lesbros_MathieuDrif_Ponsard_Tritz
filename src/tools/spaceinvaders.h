@@ -7,9 +7,6 @@
 
 struct spaceInvaders
 {
-    std::chrono::duration<int, std::milli> invadersMovements;
-    std::chrono::time_point<std::chrono::steady_clock> invadersLastMove;
-
     std::chrono::duration<int, std::milli> shot;
     std::chrono::time_point<std::chrono::steady_clock> lastShot;
 
@@ -21,6 +18,9 @@ struct spaceInvaders
     unsigned scoreStep;
     unsigned scoreForMissileDestruction;
     unsigned torpedoVelocity;
+    unsigned invadersVelocity;
+    unsigned invadersMaxVelocity;
+    unsigned invadersVelocityStep;
 
     bool InvadersRight = true;
 
