@@ -13,6 +13,11 @@ struct spaceInvaders
     std::chrono::duration<int, std::milli> invadersShot;
     std::chrono::time_point<std::chrono::steady_clock> invadersLastShot;
 
+    std::chrono::duration<int, std::milli> bonusInvaders;
+    std::chrono::time_point<std::chrono::steady_clock> LastBonusInvaders;
+
+
+
     unsigned lives;
     unsigned score;
     unsigned scoreStep;
@@ -28,6 +33,7 @@ struct spaceInvaders
     figure player;
     figure playerTorpedo;
     figure invadersTorpedo;
+    figure bonusInvader;
 
     pos playerPos;
     std::vector<pos> invadersPos;

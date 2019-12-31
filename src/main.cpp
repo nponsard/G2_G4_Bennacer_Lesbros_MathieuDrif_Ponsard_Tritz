@@ -58,6 +58,31 @@ void initSpaceInvadersFigs(spaceInvaders &SI)
     invader.Add(rectangle(pos(10, 35), 5, 5, KWhite, KWhite));
     invader.Add(rectangle(pos(40, 35), 5, 5, KWhite, KWhite));
 
+
+
+    figure bonusInvader;
+    bonusInvader.Add(rectangle(pos(50, 60), 60, 10, KRed, KRed));
+
+    bonusInvader.Add(rectangle(pos(30, 50), 100, 10, KRed, KRed));
+
+    bonusInvader.Add(rectangle(pos(20, 40), 120, 10, KRed, KRed));
+
+    bonusInvader.Add(rectangle(pos(10, 30), 20, 10, KRed, KRed));
+    bonusInvader.Add(rectangle(pos(40, 30), 20, 10, KRed, KRed));
+    bonusInvader.Add(rectangle(pos(70, 30), 20, 10, KRed, KRed));
+    bonusInvader.Add(rectangle(pos(100, 30), 20, 10, KRed, KRed));
+    bonusInvader.Add(rectangle(pos(130, 30), 20, 10, KRed, KRed));
+
+    bonusInvader.Add(rectangle(pos(0, 20), 160, 10, KRed, KRed));
+    bonusInvader.Add(rectangle(pos(20, 10), 30, 10, KRed, KRed));
+    bonusInvader.Add(rectangle(pos(70, 10), 20, 10, KRed, KRed));
+    bonusInvader.Add(rectangle(pos(110, 10), 30, 10, KRed, KRed));
+    bonusInvader.Add(rectangle(pos(30, 0), 10, 10, KRed, KRed));
+    bonusInvader.Add(rectangle(pos(120, 0), 10, 10, KRed, KRed));
+
+
+
+
     figure playerTorpedo;
     playerTorpedo.Add(rectangle(pos(0, 0), 5, 30, KWhite, KWhite));
 
@@ -69,17 +94,18 @@ void initSpaceInvadersFigs(spaceInvaders &SI)
     SI.invaders = invader;
     SI.invadersTorpedo = invadersTorpedo;
     SI.playerTorpedo = playerTorpedo;
+    SI.bonusInvader = bonusInvader;
 }
 
 void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigned &width)
 {
     unsigned Xshift, Yshift(55);
-    for (unsigned i(0); i < 5; ++i)
+    for (unsigned i(0); i < 4; ++i)
     {
         Xshift = 0;
         while (Xshift + 55 /*invaderSize*/ + 110 /*marge*/ < width)
         {
-            SI.invadersPos.push_back(pos(Xshift, height - 100 - (Yshift * i)));
+            SI.invadersPos.push_back(pos(Xshift, height - 200 - (Yshift * i)));
             Xshift += 110 + 50; /*distance entre invaders*/
         }
     }
