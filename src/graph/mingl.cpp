@@ -142,8 +142,7 @@ bool minGL::isPressed(const keyType &key)
 //https://www.opengl.org/resources/libraries/glut/spec3/node76.html
 void minGL::displayText(const unsigned &x, const unsigned &y, const string &str)
 {
-    int x1 = x;
-    glRasterPos2f(x1, y);
+    glRasterPos2f(x, y);
     for (unsigned i(0); i < str.size(); ++i)
     {
         glutBitmapCharacter(GLUT_BITMAP_9_BY_15, str[i]);
