@@ -67,8 +67,10 @@ void minGL::setPixel(const pos &pos_, const RGBcolor &col) throw(PixelException)
 
     //if (pos_.abs > windowWidth) throw myexception (kErrTooRight);
     //if (pos_.ord > windowHeight) throw myexception (kErrTooHight);
-    if (pos_.abs > windowWidth) throw PixelException (pos_, col, "Pixel too right");
-    if (pos_.ord > windowHeight) throw PixelException (pos_, col, "Pixel too high");
+    if (pos_.abs > windowWidth)
+        throw PixelException(pos_, col, "Pixel too right");
+    if (pos_.ord > windowHeight)
+        throw PixelException(pos_, col, "Pixel too high");
 
     screenBuffer[3 * (pos_.ord * windowWidth + pos_.abs) + 0] = col.Red;
     screenBuffer[3 * (pos_.ord * windowWidth + pos_.abs) + 1] = col.Green;
@@ -131,21 +133,21 @@ void minGL::initGraphic()
     // Un tour de boucle pour lancer l'affichage
     glutMainLoopEvent();
 }
-bool minGL::isPressed(const keyType & key)
+bool minGL::isPressed(const keyType &key)
 {
     return keyboardMap[key];
 }
 
 //http://mperriss.free.fr/opengl/Guide_2D/texte.htm
 //https://www.opengl.org/resources/libraries/glut/spec3/node76.html
-void minGL::displayText(const unsigned & x, const unsigned & y, const string & str)
+void minGL::displayText(const unsigned &x, const unsigned &y, const string &str)
 {
     int x1 = x;
+    glRasterPos2f(x1, y);
     for (unsigned i(0); i < str.size(); ++i)
     {
-        glRasterPos2f(x1, y);
         glutBitmapCharacter(GLUT_BITMAP_9_BY_15, str[i]);
-        x1 = x1 + glutBitmapWidth(GLUT_BITMAP_9_BY_15, str[i]);
+        // x1 = x1 + glutBitmapWidth(GLUT_BITMAP_9_BY_15, str[i]);
     }
 
     glFlush();
