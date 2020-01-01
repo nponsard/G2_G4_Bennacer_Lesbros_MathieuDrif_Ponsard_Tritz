@@ -26,75 +26,72 @@ const keyType KEY_SPACE({32, false});
 
 void initSpaceInvadersFigs(spaceInvaders &SI)
 {
-    figure player;
-    player.Add(rectangle(pos(0, 0), 110, 30, KGreen, KGreen));
-    player.Add(rectangle(pos(10, 30), 90, 10, KGreen, KGreen));
-    player.Add(rectangle(pos(40, 40), 30, 20, KGreen, KGreen));
-    player.Add(rectangle(pos(50, 60), 10, 10, KGreen, KGreen));
-
-    figure invader;
-    invader.Add(rectangle(pos(0, 15), 55, 5, KWhite, KWhite));
-    invader.Add(rectangle(pos(10, 10), 35, 5, KWhite, KWhite));
-    invader.Add(rectangle(pos(0, 10), 5, 5, KWhite, KWhite));
-    invader.Add(rectangle(pos(50, 10), 5, 5, KWhite, KWhite));
-
-    invader.Add(rectangle(pos(0, 5), 5, 5, KWhite, KWhite));
-    invader.Add(rectangle(pos(50, 5), 5, 5, KWhite, KWhite));
-    invader.Add(rectangle(pos(10, 5), 5, 5, KWhite, KWhite));
-    invader.Add(rectangle(pos(40, 5), 5, 5, KWhite, KWhite));
-
-    invader.Add(rectangle(pos(30, 0), 10, 5, KWhite, KWhite));
-    invader.Add(rectangle(pos(15, 0), 10, 5, KWhite, KWhite));
-
-    invader.Add(rectangle(pos(5, 20), 10, 5, KWhite, KWhite));
-    invader.Add(rectangle(pos(40, 20), 10, 5, KWhite, KWhite));
-    invader.Add(rectangle(pos(20, 20), 15, 5, KWhite, KWhite));
-
-    invader.Add(rectangle(pos(10, 25), 35, 5, KWhite, KWhite));
-
-    invader.Add(rectangle(pos(15, 30), 5, 5, KWhite, KWhite));
-    invader.Add(rectangle(pos(35, 30), 5, 5, KWhite, KWhite));
-
-    invader.Add(rectangle(pos(10, 35), 5, 5, KWhite, KWhite));
-    invader.Add(rectangle(pos(40, 35), 5, 5, KWhite, KWhite));
+    //player
+    SI.player.Add(rectangle(pos(0, 0), 110, 30, KGreen, KGreen));
+    SI.player.Add(rectangle(pos(10, 30), 90, 10, KGreen, KGreen));
+    SI.player.Add(rectangle(pos(40, 40), 30, 20, KGreen, KGreen));
+    SI.player.Add(rectangle(pos(50, 60), 10, 10, KGreen, KGreen));
 
 
 
-    figure bonusInvader;
-    bonusInvader.Add(rectangle(pos(50, 60), 60, 10, KRed, KRed));
+    //invader
+    SI.invaders.Add(rectangle(pos(0, 15), 55, 5, KWhite, KWhite));
+    SI.invaders.Add(rectangle(pos(10, 10), 35, 5, KWhite, KWhite));
+    SI.invaders.Add(rectangle(pos(0, 10), 5, 5, KWhite, KWhite));
+    SI.invaders.Add(rectangle(pos(50, 10), 5, 5, KWhite, KWhite));
 
-    bonusInvader.Add(rectangle(pos(30, 50), 100, 10, KRed, KRed));
+    SI.invaders.Add(rectangle(pos(0, 5), 5, 5, KWhite, KWhite));
+    SI.invaders.Add(rectangle(pos(50, 5), 5, 5, KWhite, KWhite));
+    SI.invaders.Add(rectangle(pos(10, 5), 5, 5, KWhite, KWhite));
+    SI.invaders.Add(rectangle(pos(40, 5), 5, 5, KWhite, KWhite));
 
-    bonusInvader.Add(rectangle(pos(20, 40), 120, 10, KRed, KRed));
+    SI.invaders.Add(rectangle(pos(30, 0), 10, 5, KWhite, KWhite));
+    SI.invaders.Add(rectangle(pos(15, 0), 10, 5, KWhite, KWhite));
 
-    bonusInvader.Add(rectangle(pos(10, 30), 20, 10, KRed, KRed));
-    bonusInvader.Add(rectangle(pos(40, 30), 20, 10, KRed, KRed));
-    bonusInvader.Add(rectangle(pos(70, 30), 20, 10, KRed, KRed));
-    bonusInvader.Add(rectangle(pos(100, 30), 20, 10, KRed, KRed));
-    bonusInvader.Add(rectangle(pos(130, 30), 20, 10, KRed, KRed));
+    SI.invaders.Add(rectangle(pos(5, 20), 10, 5, KWhite, KWhite));
+    SI.invaders.Add(rectangle(pos(40, 20), 10, 5, KWhite, KWhite));
+    SI.invaders.Add(rectangle(pos(20, 20), 15, 5, KWhite, KWhite));
 
-    bonusInvader.Add(rectangle(pos(0, 20), 160, 10, KRed, KRed));
-    bonusInvader.Add(rectangle(pos(20, 10), 30, 10, KRed, KRed));
-    bonusInvader.Add(rectangle(pos(70, 10), 20, 10, KRed, KRed));
-    bonusInvader.Add(rectangle(pos(110, 10), 30, 10, KRed, KRed));
-    bonusInvader.Add(rectangle(pos(30, 0), 10, 10, KRed, KRed));
-    bonusInvader.Add(rectangle(pos(120, 0), 10, 10, KRed, KRed));
+    SI.invaders.Add(rectangle(pos(10, 25), 35, 5, KWhite, KWhite));
 
+    SI.invaders.Add(rectangle(pos(15, 30), 5, 5, KWhite, KWhite));
+    SI.invaders.Add(rectangle(pos(35, 30), 5, 5, KWhite, KWhite));
 
+    SI.invaders.Add(rectangle(pos(10, 35), 5, 5, KWhite, KWhite));
+    SI.invaders.Add(rectangle(pos(40, 35), 5, 5, KWhite, KWhite));
 
 
-    figure playerTorpedo;
-    playerTorpedo.Add(rectangle(pos(0, 0), 5, 30, KWhite, KWhite));
 
-    figure invadersTorpedo;
-    invadersTorpedo.Add(rectangle(pos(5, 0), 5, 30, KWhite, KWhite));
-    invadersTorpedo.Add(rectangle(pos(0, 30), 15, 5, KWhite, KWhite));
+    //bonusInvader
+    SI.bonusInvader.Add(rectangle(pos(50, 60), 60, 10, KRed, KRed));
 
-    SI.player = player;
-    SI.invaders = invader;
-    SI.invadersTorpedo = invadersTorpedo;
-    SI.playerTorpedo = playerTorpedo;
-    SI.bonusInvader = bonusInvader;
+    SI.bonusInvader.Add(rectangle(pos(30, 50), 100, 10, KRed, KRed));
+
+    SI.bonusInvader.Add(rectangle(pos(20, 40), 120, 10, KRed, KRed));
+
+    SI.bonusInvader.Add(rectangle(pos(10, 30), 20, 10, KRed, KRed));
+    SI.bonusInvader.Add(rectangle(pos(40, 30), 20, 10, KRed, KRed));
+    SI.bonusInvader.Add(rectangle(pos(70, 30), 20, 10, KRed, KRed));
+    SI.bonusInvader.Add(rectangle(pos(100, 30), 20, 10, KRed, KRed));
+    SI.bonusInvader.Add(rectangle(pos(130, 30), 20, 10, KRed, KRed));
+
+    SI.bonusInvader.Add(rectangle(pos(0, 20), 160, 10, KRed, KRed));
+    SI.bonusInvader.Add(rectangle(pos(20, 10), 30, 10, KRed, KRed));
+    SI.bonusInvader.Add(rectangle(pos(70, 10), 20, 10, KRed, KRed));
+    SI.bonusInvader.Add(rectangle(pos(110, 10), 30, 10, KRed, KRed));
+    SI.bonusInvader.Add(rectangle(pos(30, 0), 10, 10, KRed, KRed));
+    SI.bonusInvader.Add(rectangle(pos(120, 0), 10, 10, KRed, KRed));
+
+
+
+    //playerTorpedo
+    SI.playerTorpedo.Add(rectangle(pos(0, 0), 5, 30, KWhite, KWhite));
+
+
+
+    //invadersTorpedo
+    SI.invadersTorpedo.Add(rectangle(pos(5, 0), 5, 30, KWhite, KWhite));
+    SI.invadersTorpedo.Add(rectangle(pos(0, 30), 15, 5, KWhite, KWhite));
 }
 
 void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigned &width)
@@ -117,7 +114,7 @@ void initSpaceInvaders(spaceInvaders &SI)
 
     SI.invadersVelocity = 1;
     SI.invadersMaxVelocity = 5;
-    SI.invadersVelocityStep = 0;
+    SI.invadersVelocityStep = 1;
 
     SI.shot = chrono::duration<int, milli>(200);
     SI.lastShot = chrono::steady_clock::now();
@@ -125,12 +122,18 @@ void initSpaceInvaders(spaceInvaders &SI)
     SI.invadersShot = chrono::duration<int, milli>(900);
     SI.invadersLastShot = chrono::steady_clock::now();
 
+    SI.bonusInvaders = chrono::duration<int, milli>(15000);
+    SI.LastBonusInvader = chrono::steady_clock::now();
+
+    SI.bonusInvaderPos = pos(0, 0);
     SI.playerPos = pos(0, 50); //placement intial joueur
     SI.lives = 3;
     SI.score = 0;
     SI.scoreForMissileDestruction = 50;
     SI.scoreStep = 100;
+    SI.scoreStepBonusInvaders = 500;
     SI.torpedoVelocity = 20;
+    SI.wave = 1;
 }
 
 void display(minGL &window, const vector<pos> &positions, const figure &fig)
@@ -144,12 +147,15 @@ void displaySpace(minGL &window, const spaceInvaders &SI)
     display(window, SI.invadersPos, SI.invaders);
     display(window, SI.playerTorpedoPos, SI.playerTorpedo);
     display(window, SI.invadersTorpedoPos, SI.invadersTorpedo);
+    if(!(SI.bonusInvaderPos == pos(0, 0)))
+        window << SI.bonusInvader + SI.bonusInvaderPos;
+
     window << SI.player + SI.playerPos;
 }
 
 void displayHUD(minGL &window, const spaceInvaders &SI)
 {
-    window << rectangle(pos(0, window.getWindowHeight()), pos(window.getWindowWidth() - 1, window.getWindowHeight() - 50), KGreen, KBlack);
+    window << rectangle(pos(0, window.getWindowHeight()), pos(window.getWindowWidth() - 1, window.getWindowHeight() - 70), KGreen, KBlack);
     window << rectangle(pos(0, 0), pos(window.getWindowWidth() - 1, 50), KGreen, KBlack);
     window << SI.player * 0.5 + pos(10, 8);
 }
@@ -158,12 +164,13 @@ void fillHUD(minGL &window, const spaceInvaders &SI)
 {
     //vies
     window.displayText(75, 12, to_string(SI.lives));
-    window.displayText(5, window.getWindowHeight() - 25, "Score : ");
-    window.displayText(85, window.getWindowHeight() - 25, to_string(SI.score));
+    window.displayText(5, window.getWindowHeight() - 40, "Score : ");
+    window.displayText(85, window.getWindowHeight() - 40, to_string(SI.score));
+    window.displayText(window.getWindowWidth()/2 - 40, window.getWindowHeight() - 40, "Wave : ");
+    window.displayText(window.getWindowWidth()/2 + 30, window.getWindowHeight() - 40, to_string(SI.wave));
 }
 
-bool collisions(spaceInvaders &SI,
-                pos &entity1,
+bool collisions(pos &entity1,
                 pos &entity2,
                 const unsigned &entityHeight,
                 const unsigned &VHeight,
@@ -193,7 +200,7 @@ void process(spaceInvaders &SI, minGL &window, const unsigned &height, const uns
                 //collision avec un invader
                 for (vector<pos>::iterator itInvadersPos(SI.invadersPos.begin()); !collision && itInvadersPos != SI.invadersPos.end(); ++itInvadersPos)
                 {
-                    collision = collisions(SI, *it, *itInvadersPos, 15, 15, 50, 50);
+                    collision = collisions(*it, *itInvadersPos, 15, 15, 50, 50);
                     if (collision)
                     {
                         SI.playerTorpedoPos.erase(it);
@@ -207,12 +214,27 @@ void process(spaceInvaders &SI, minGL &window, const unsigned &height, const uns
                     }
                 }
 
+                if(!collision)
+                {
+                    if(!(SI.bonusInvaderPos == pos(0, 0)))
+                    {
+                        collision = collisions(*it, SI.bonusInvaderPos, 15, 75, 50, 160);
+                        if(collision)
+                        {
+                            SI.playerTorpedoPos.erase(it);
+                            SI.bonusInvaderPos = pos(0, 0);
+                            SI.score += SI.scoreStepBonusInvaders;
+                        }
+                    }
+                }
+
+
                 if (!collision)
                 {
                     //collision avec un missile
                     for (vector<pos>::iterator itInvadersTorpedoPos(SI.invadersTorpedoPos.begin()); !collision && itInvadersTorpedoPos != SI.invadersTorpedoPos.end(); ++itInvadersTorpedoPos)
                     {
-                        collision = collisions(SI, *it, *itInvadersTorpedoPos, 15, 15, 15, 15);
+                        collision = collisions(*it, *itInvadersTorpedoPos, 15, 15, 15, 15);
                         if (collision)
                         {
                             SI.playerTorpedoPos.erase(it);
@@ -242,7 +264,7 @@ void process(spaceInvaders &SI, minGL &window, const unsigned &height, const uns
             if (it->getOrd() > 1)
             {
                 *it = pos(it->getAbs(), it->getOrd() - 1);                      //déplacement
-                collision = collisions(SI, *it, SI.playerPos, 15, 55, 15, 110); //collision avec le joueur
+                collision = collisions(*it, SI.playerPos, 15, 55, 15, 110); //collision avec le joueur
                 if (collision)
                 {
                     SI.invadersTorpedoPos.erase(it);
@@ -280,6 +302,40 @@ void process(spaceInvaders &SI, minGL &window, const unsigned &height, const uns
 
             SI.invadersLastShot = chrono::steady_clock::now();
         }
+
+        //ajouter invader bonus
+        now = chrono::steady_clock::now();
+        diff = now - SI.LastBonusInvader;
+        if(diff >= SI.bonusInvaders && SI.bonusInvaderPos == pos(0,0))
+            SI.bonusInvaderPos = pos(10, window.getWindowHeight() - 70);
+
+        //deplacer invader bonus
+        if(!(SI.bonusInvaderPos == pos(0, 0)))
+        {
+            if(SI.bonusInvaderPos.getAbs() == 10)
+            {
+                SI.bonusInvaderPos = pos(10, SI.bonusInvaderPos.getOrd() - (SI.invadersVelocity*5));
+                if(SI.bonusInvaderPos.getOrd() + 140 < window.getWindowHeight())
+                    SI.bonusInvaderPos = SI.bonusInvaderPos + pos(1, 0);
+            }
+            else if(SI.bonusInvaderPos.getAbs() + 160 + 10 < window.getWindowWidth())
+            {
+                SI.bonusInvaderPos = SI.bonusInvaderPos + pos(SI.invadersVelocity*5, 0);
+            }
+            else
+            {
+
+                if(SI.bonusInvaderPos.getOrd() + (SI.invadersVelocity*5) + 70 < window.getWindowHeight())
+                    SI.bonusInvaderPos = SI.bonusInvaderPos + pos(0, SI.invadersVelocity*5);
+                else
+                {
+                    SI.bonusInvaderPos = pos(0, 0);
+                    SI.LastBonusInvader = chrono::steady_clock::now();
+                }
+            }
+        }
+
+
 
         //déplacement
         bool downShift(false);
@@ -393,6 +449,7 @@ void mainSpaceInvaders(minGL &window)
         {
             iWin = false;
             SI = SIBase;
+            ++SI.wave;
             window.displayText(window.getWindowWidth() / 2 - 50, window.getWindowHeight() / 2, "vague suivante...");
             this_thread::sleep_for(chrono::duration<int, milli>(1000));
         }
