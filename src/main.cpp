@@ -20,9 +20,10 @@ const keyType UP({101, true});
 const keyType DOWN({103, true});
 const keyType LEFT({100, true});
 const keyType RIGHT({102, true});
-const keyType ESCAPE({27, false});
+const keyType KEY_ESCAPE({27, false});
 const keyType KeyS({115, false});
 const keyType KEY_SPACE({32, false});
+const keyType KEY_ENTER({13, false});
 
 void initSpaceInvadersFigs(spaceInvaders &SI)
 {
@@ -129,6 +130,7 @@ void initSpaceInvaders(spaceInvaders &SI)
     SI.playerPos = pos(0, 50); //placement intial joueur
     SI.lives = 3;
     SI.score = 0;
+    SI.bestScore = 0;
     SI.scoreForMissileDestruction = 50;
     SI.scoreStep = 100;
     SI.scoreStepBonusInvaders = 500;
@@ -166,7 +168,7 @@ void fillHUD(minGL &window, const spaceInvaders &SI)
     window.displayText(75, 12, to_string(SI.lives));
     window.displayText(5, window.getWindowHeight() - 40, "Score : ");
     window.displayText(85, window.getWindowHeight() - 40, to_string(SI.score));
-    window.displayText(window.getWindowWidth()/2 - 40, window.getWindowHeight() - 40, "Wave : ");
+    window.displayText(window.getWindowWidth()/2 - 40, window.getWindowHeight() - 40, "Vague : ");
     window.displayText(window.getWindowWidth()/2 + 30, window.getWindowHeight() - 40, to_string(SI.wave));
 }
 
@@ -184,7 +186,7 @@ bool collisions(pos &entity1,
     return false;
 }
 
-void process(spaceInvaders &SI, minGL &window, const unsigned &height, const unsigned &width, bool &iLoose, bool &iWin)
+void process(spaceInvaders &SI, minGL &window, const unsigned &height, const unsigned &width, bool &iLoose, bool &iWin, bool &pause)
 {
     //deplacement missiles joueur
     vector<pos>::iterator it(SI.playerTorpedoPos.begin());
@@ -426,42 +428,50 @@ void process(spaceInvaders &SI, minGL &window, const unsigned &height, const uns
                 SI.lastShot = chrono::steady_clock::now();
             }
         }
+        if(window.isPressed(KEY_ESCAPE))
+            pause = true;
     }
 }
 
-void mainSpaceInvaders(minGL &window)
+keyType SpaceInvadersMenu(const spaceInvaders & SI, minGL & window, const chrono::duration<double, milli> frameDuration)
 {
-
-    spaceInvaders SI, SIBase;
-    initSpaceInvaders(SI);
-    invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
-    SIBase = SI;
-
-    const chrono::duration<double, milli> frameDuration(33.3); //30fps
-
-    bool iLoose(false), iWin(false);
-
-    while (!iLoose)
+    keyType key(0, false);
+    double minInvaderSize(5.0), maxInvaderSize(5.5);
+    bool bigger(true);
+    double invaderSize(maxInvaderSize);
+    while(key == keyType(0, false))
     {
         chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
 
-        process(SI, window, window.getWindowHeight(), window.getWindowWidth(), iLoose, iWin);
-
-        if (iWin)
-        {
-            iWin = false;
-            SI = SIBase;
-            ++SI.wave;
-            SI.LastBonusInvader = chrono::steady_clock::now();
-            window.displayText(window.getWindowWidth() / 2 - 60, window.getWindowHeight() / 2, "vague suivante...");
-            this_thread::sleep_for(chrono::duration<int, milli>(1000));
-        }
-
         window.clearScreen();
-        displaySpace(window, SI);
-        displayHUD(window, SI);
+        window << SI.invaders * invaderSize + pos(window.getWindowWidth()/2 - (5*110), window.getWindowHeight()/2);
         window.updateGraphic();
-        fillHUD(window, SI);
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight()/2, "Appuyez sur entree pour jouer, echap pour quitter");
+        window.displayText(50 , window.getWindowHeight() - 50, "Meilleur score : ");
+        window.displayText(200 , window.getWindowHeight() - 50, to_string(SI.bestScore));
+
+        window.displayText(50 , window.getWindowHeight() - 70, "Dernier score : ");
+        window.displayText(200 , window.getWindowHeight() - 70, to_string(SI.score));
+
+        if(window.isPressed(KEY_ENTER))
+            key = KEY_ENTER;
+
+        if(window.isPressed(KEY_ESCAPE))
+            key = KEY_ESCAPE;
+
+
+        if(bigger)//animation menu
+        {
+            invaderSize += 0.005;
+            if(invaderSize >= maxInvaderSize)
+                bigger = false;
+        }
+        else
+        {
+            invaderSize -= 0.005;
+            if(invaderSize <= minInvaderSize)
+                bigger = true;
+        }
 
         chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
         chrono::duration<double, milli> diff(end - beg);
@@ -469,10 +479,95 @@ void mainSpaceInvaders(minGL &window)
             this_thread::sleep_for(frameDuration - diff);
     }
 
-    if (iLoose)
-        cout << "Lost" << endl;
-    else //iWin
-        cout << "Won" << endl;
+    return key;
+}
+
+void SIpause(const spaceInvaders & SI, minGL & window, const chrono::duration<double, milli> frameDuration)
+{
+    keyType key(0, false);
+    while(key == keyType(0, false))
+    {
+        chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
+
+        window.clearScreen();
+        window << SI.player * 2 + pos(100, 0);
+        window.updateGraphic();
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight()/2, "Appuyez sur entree pour continuer");
+        window.displayText(50 , window.getWindowHeight() - 50, "Meilleur score : ");
+        window.displayText(200 , window.getWindowHeight() - 50, to_string(SI.bestScore));
+
+        window.displayText(50 , window.getWindowHeight() - 70, "Score : ");
+        window.displayText(200 , window.getWindowHeight() - 70, to_string(SI.score));
+
+        if(window.isPressed(KEY_ENTER))
+            key = KEY_ENTER;
+
+        chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
+        chrono::duration<double, milli> diff(end - beg);
+        if (diff < frameDuration)
+            this_thread::sleep_for(frameDuration - diff);
+        cout << diff.count() << endl;
+    }
+}
+
+void mainSpaceInvaders(minGL &window)
+{
+
+    spaceInvaders SI, SIBase;//SI est utiliser pour le jeu et SIBase conserve les valeurs données par la fonction init sauf pour les scores
+    initSpaceInvaders(SI);
+    invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
+    SIBase = SI;
+
+    const chrono::duration<double, milli> frameDuration(33.3); //30fps
+
+    while(SpaceInvadersMenu(SIBase, window, frameDuration) != KEY_ESCAPE)
+    {
+        bool iLoose(false), iWin(false), pause(false);
+        SI.LastBonusInvader = chrono::steady_clock::now();//pour éviter un invader bonus a chaque debut de partie
+
+        while (!iLoose)
+        {
+            if(pause)
+            {
+                SIpause(SI, window, frameDuration);
+                SI.LastBonusInvader = chrono::steady_clock::now();//pour éviter un invader bonus a chaque sortie de pause
+                pause = false;
+            }
+
+            chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
+
+            process(SI, window, window.getWindowHeight(), window.getWindowWidth(), iLoose, iWin, pause);
+
+            if (iWin)
+            {
+                iWin = false;
+                SI = SIBase;
+                ++SI.wave;
+                SI.LastBonusInvader = chrono::steady_clock::now();//pour éviter un invader bonus a chaque nouvelle vague
+                window.displayText(window.getWindowWidth() / 2 - 60, window.getWindowHeight() / 2, "vague suivante...");
+                this_thread::sleep_for(chrono::duration<int, milli>(1000));
+            }
+            else
+                SIBase.score = SI.score;
+
+            window.clearScreen();
+            displaySpace(window, SI);
+            displayHUD(window, SI);
+            window.updateGraphic();
+            fillHUD(window, SI);
+
+            chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
+            chrono::duration<double, milli> diff(end - beg);
+            if (diff < frameDuration)
+                this_thread::sleep_for(frameDuration - diff);
+        }
+
+        if(SIBase.bestScore < SI.score)
+            SIBase.bestScore = SI.score;
+        SI = SIBase;
+        SI.score = 0;
+
+    }
 }
 
 int main()
