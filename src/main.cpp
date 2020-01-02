@@ -214,6 +214,7 @@ void process(spaceInvaders &SI, minGL &window, const unsigned &height, const uns
                     }
                 }
 
+                //collision avec un invader bonus
                 if(!collision)
                 {
                     if(!(SI.bonusInvaderPos == pos(0, 0)))
@@ -223,6 +224,7 @@ void process(spaceInvaders &SI, minGL &window, const unsigned &height, const uns
                         {
                             SI.playerTorpedoPos.erase(it);
                             SI.bonusInvaderPos = pos(0, 0);
+                            SI.LastBonusInvader = chrono::steady_clock::now();
                             SI.score += SI.scoreStepBonusInvaders;
                         }
                     }
@@ -450,7 +452,8 @@ void mainSpaceInvaders(minGL &window)
             iWin = false;
             SI = SIBase;
             ++SI.wave;
-            window.displayText(window.getWindowWidth() / 2 - 50, window.getWindowHeight() / 2, "vague suivante...");
+            SI.LastBonusInvader = chrono::steady_clock::now();
+            window.displayText(window.getWindowWidth() / 2 - 60, window.getWindowHeight() / 2, "vague suivante...");
             this_thread::sleep_for(chrono::duration<int, milli>(1000));
         }
 
