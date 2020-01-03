@@ -506,7 +506,6 @@ void SIpause(const spaceInvaders & SI, minGL & window, const chrono::duration<do
         chrono::duration<double, milli> diff(end - beg);
         if (diff < frameDuration)
             this_thread::sleep_for(frameDuration - diff);
-        cout << diff.count() << endl;
     }
 }
 
