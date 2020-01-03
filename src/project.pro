@@ -45,6 +45,7 @@ HEADERS += \
     tools/CstCodErr.h \
     tools/IEditable.h \
     tools/IEditable.hxx \
+    tools/entity.h \
     tools/myexception.h \
     tools/pixel.h \
     tools/spaceinvaders.h \

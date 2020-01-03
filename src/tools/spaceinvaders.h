@@ -4,6 +4,7 @@
 #include <vector>
 #include <chrono>
 #include "figs/figure.h"
+#include "entity.h"
 
 struct spaceInvaders
 {
@@ -32,11 +33,11 @@ struct spaceInvaders
 
     bool InvadersRight = true;
 
-    figure invaders;
-    figure player;
-    figure playerTorpedo;
-    figure invadersTorpedo;
-    figure bonusInvader;
+    entity invaders;
+    entity player;
+    entity playerTorpedo;
+    entity invadersTorpedo;
+    entity bonusInvader;
 
     pos playerPos;
     pos bonusInvaderPos;

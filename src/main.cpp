@@ -16,83 +16,95 @@
 
 using namespace std;
 
-const keyType UP({101, true});
-const keyType DOWN({103, true});
-const keyType LEFT({100, true});
-const keyType RIGHT({102, true});
+const keyType KEY_UP({101, true});
+const keyType KEY_DOWN({103, true});
+const keyType KEY_LEFT({100, true});
+const keyType KEY_RIGHT({102, true});
 const keyType KEY_ESCAPE({27, false});
-const keyType KeyS({115, false});
+const keyType KEY_S({115, false});
 const keyType KEY_SPACE({32, false});
 const keyType KEY_ENTER({13, false});
 
 void initSpaceInvadersFigs(spaceInvaders &SI)
 {
     //player
-    SI.player.Add(rectangle(pos(0, 0), 110, 30, KGreen, KGreen));
-    SI.player.Add(rectangle(pos(10, 30), 90, 10, KGreen, KGreen));
-    SI.player.Add(rectangle(pos(40, 40), 30, 20, KGreen, KGreen));
-    SI.player.Add(rectangle(pos(50, 60), 10, 10, KGreen, KGreen));
+    SI.player.entityWidth = 110;
+    SI.player.entityHeight = 70;
+    SI.player.entityFig.Add(rectangle(pos(0, 0), 110, 30, KGreen, KGreen));
+    SI.player.entityFig.Add(rectangle(pos(10, 30), 90, 10, KGreen, KGreen));
+    SI.player.entityFig.Add(rectangle(pos(40, 40), 30, 20, KGreen, KGreen));
+    SI.player.entityFig.Add(rectangle(pos(50, 60), 10, 10, KGreen, KGreen));
+
 
 
 
     //invader
-    SI.invaders.Add(rectangle(pos(0, 15), 55, 5, KWhite, KWhite));
-    SI.invaders.Add(rectangle(pos(10, 10), 35, 5, KWhite, KWhite));
-    SI.invaders.Add(rectangle(pos(0, 10), 5, 5, KWhite, KWhite));
-    SI.invaders.Add(rectangle(pos(50, 10), 5, 5, KWhite, KWhite));
+    SI.invaders.entityWidth = 55;
+    SI.invaders.entityHeight = 40;
+    SI.invaders.entityFig.Add(rectangle(pos(0, 15), 55, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(10, 10), 35, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(0, 10), 5, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(50, 10), 5, 5, KWhite, KWhite));
 
-    SI.invaders.Add(rectangle(pos(0, 5), 5, 5, KWhite, KWhite));
-    SI.invaders.Add(rectangle(pos(50, 5), 5, 5, KWhite, KWhite));
-    SI.invaders.Add(rectangle(pos(10, 5), 5, 5, KWhite, KWhite));
-    SI.invaders.Add(rectangle(pos(40, 5), 5, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(0, 5), 5, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(50, 5), 5, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(10, 5), 5, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(40, 5), 5, 5, KWhite, KWhite));
 
-    SI.invaders.Add(rectangle(pos(30, 0), 10, 5, KWhite, KWhite));
-    SI.invaders.Add(rectangle(pos(15, 0), 10, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(30, 0), 10, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(15, 0), 10, 5, KWhite, KWhite));
 
-    SI.invaders.Add(rectangle(pos(5, 20), 10, 5, KWhite, KWhite));
-    SI.invaders.Add(rectangle(pos(40, 20), 10, 5, KWhite, KWhite));
-    SI.invaders.Add(rectangle(pos(20, 20), 15, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(5, 20), 10, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(40, 20), 10, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(20, 20), 15, 5, KWhite, KWhite));
 
-    SI.invaders.Add(rectangle(pos(10, 25), 35, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(10, 25), 35, 5, KWhite, KWhite));
 
-    SI.invaders.Add(rectangle(pos(15, 30), 5, 5, KWhite, KWhite));
-    SI.invaders.Add(rectangle(pos(35, 30), 5, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(15, 30), 5, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(35, 30), 5, 5, KWhite, KWhite));
 
-    SI.invaders.Add(rectangle(pos(10, 35), 5, 5, KWhite, KWhite));
-    SI.invaders.Add(rectangle(pos(40, 35), 5, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(10, 35), 5, 5, KWhite, KWhite));
+    SI.invaders.entityFig.Add(rectangle(pos(40, 35), 5, 5, KWhite, KWhite));
 
 
 
     //bonusInvader
-    SI.bonusInvader.Add(rectangle(pos(50, 60), 60, 10, KRed, KRed));
+    SI.bonusInvader.entityWidth = 160;
+    SI.bonusInvader.entityHeight = 70;
+    SI.bonusInvader.entityFig.Add(rectangle(pos(50, 60), 60, 10, KRed, KRed));
 
-    SI.bonusInvader.Add(rectangle(pos(30, 50), 100, 10, KRed, KRed));
+    SI.bonusInvader.entityFig.Add(rectangle(pos(30, 50), 100, 10, KRed, KRed));
 
-    SI.bonusInvader.Add(rectangle(pos(20, 40), 120, 10, KRed, KRed));
+    SI.bonusInvader.entityFig.Add(rectangle(pos(20, 40), 120, 10, KRed, KRed));
 
-    SI.bonusInvader.Add(rectangle(pos(10, 30), 20, 10, KRed, KRed));
-    SI.bonusInvader.Add(rectangle(pos(40, 30), 20, 10, KRed, KRed));
-    SI.bonusInvader.Add(rectangle(pos(70, 30), 20, 10, KRed, KRed));
-    SI.bonusInvader.Add(rectangle(pos(100, 30), 20, 10, KRed, KRed));
-    SI.bonusInvader.Add(rectangle(pos(130, 30), 20, 10, KRed, KRed));
+    SI.bonusInvader.entityFig.Add(rectangle(pos(10, 30), 20, 10, KRed, KRed));
+    SI.bonusInvader.entityFig.Add(rectangle(pos(40, 30), 20, 10, KRed, KRed));
+    SI.bonusInvader.entityFig.Add(rectangle(pos(70, 30), 20, 10, KRed, KRed));
+    SI.bonusInvader.entityFig.Add(rectangle(pos(100, 30), 20, 10, KRed, KRed));
+    SI.bonusInvader.entityFig.Add(rectangle(pos(130, 30), 20, 10, KRed, KRed));
 
-    SI.bonusInvader.Add(rectangle(pos(0, 20), 160, 10, KRed, KRed));
-    SI.bonusInvader.Add(rectangle(pos(20, 10), 30, 10, KRed, KRed));
-    SI.bonusInvader.Add(rectangle(pos(70, 10), 20, 10, KRed, KRed));
-    SI.bonusInvader.Add(rectangle(pos(110, 10), 30, 10, KRed, KRed));
-    SI.bonusInvader.Add(rectangle(pos(30, 0), 10, 10, KRed, KRed));
-    SI.bonusInvader.Add(rectangle(pos(120, 0), 10, 10, KRed, KRed));
-
+    SI.bonusInvader.entityFig.Add(rectangle(pos(0, 20), 160, 10, KRed, KRed));
+    SI.bonusInvader.entityFig.Add(rectangle(pos(20, 10), 30, 10, KRed, KRed));
+    SI.bonusInvader.entityFig.Add(rectangle(pos(70, 10), 20, 10, KRed, KRed));
+    SI.bonusInvader.entityFig.Add(rectangle(pos(110, 10), 30, 10, KRed, KRed));
+    SI.bonusInvader.entityFig.Add(rectangle(pos(30, 0), 10, 10, KRed, KRed));
+    SI.bonusInvader.entityFig.Add(rectangle(pos(120, 0), 10, 10, KRed, KRed));
 
 
     //playerTorpedo
-    SI.playerTorpedo.Add(rectangle(pos(0, 0), 5, 30, KWhite, KWhite));
+    SI.playerTorpedo.entityWidth = 5;
+    SI.playerTorpedo.entityHeight = 30;
+    SI.playerTorpedo.entityFig.Add(rectangle(pos(0, 0), 5, 30, KWhite, KWhite));
+
+
 
 
 
     //invadersTorpedo
-    SI.invadersTorpedo.Add(rectangle(pos(5, 0), 5, 30, KWhite, KWhite));
-    SI.invadersTorpedo.Add(rectangle(pos(0, 30), 15, 5, KWhite, KWhite));
+    SI.invadersTorpedo.entityWidth = 15;
+    SI.invadersTorpedo.entityHeight = 30;
+    SI.invadersTorpedo.entityFig.Add(rectangle(pos(5, 0), 5, 30, KWhite, KWhite));
+    SI.invadersTorpedo.entityFig.Add(rectangle(pos(0, 30), 15, 5, KWhite, KWhite));
 }
 
 void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigned &width)
@@ -101,10 +113,10 @@ void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigne
     for (unsigned i(0); i < 4; ++i)
     {
         Xshift = 0;
-        while (Xshift + 55 /*invaderSize*/ + 110 /*marge*/ < width)
+        while (Xshift + SI.invaders.entityWidth + (2*SI.invaders.entityWidth) /*marge min*/ < width)
         {
             SI.invadersPos.push_back(pos(Xshift, height - 200 - (Yshift * i)));
-            Xshift += 110 + 50; /*distance entre invaders*/
+            Xshift += 3*SI.invaders.entityWidth; /*distance entre invaders*/
         }
     }
 }
@@ -146,41 +158,45 @@ void display(minGL &window, const vector<pos> &positions, const figure &fig)
 
 void displaySpace(minGL &window, const spaceInvaders &SI)
 {
-    display(window, SI.invadersPos, SI.invaders);
-    display(window, SI.playerTorpedoPos, SI.playerTorpedo);
-    display(window, SI.invadersTorpedoPos, SI.invadersTorpedo);
+    display(window, SI.invadersPos, SI.invaders.entityFig);
+    display(window, SI.playerTorpedoPos, SI.playerTorpedo.entityFig);
+    display(window, SI.invadersTorpedoPos, SI.invadersTorpedo.entityFig);
     if(!(SI.bonusInvaderPos == pos(0, 0)))
-        window << SI.bonusInvader + SI.bonusInvaderPos;
+        window << SI.bonusInvader.entityFig + SI.bonusInvaderPos;
 
-    window << SI.player + SI.playerPos;
+    window << SI.player.entityFig + SI.playerPos;
 }
 
 void displayHUD(minGL &window, const spaceInvaders &SI)
 {
     window << rectangle(pos(0, window.getWindowHeight()), pos(window.getWindowWidth() - 1, window.getWindowHeight() - 70), KGreen, KBlack);
     window << rectangle(pos(0, 0), pos(window.getWindowWidth() - 1, 50), KGreen, KBlack);
-    window << SI.player * 0.5 + pos(10, 8);
+    window << SI.player.entityFig * 0.5 + pos(10, 8);
 }
 
 void fillHUD(minGL &window, const spaceInvaders &SI)
 {
-    //vies
     window.displayText(75, 12, to_string(SI.lives));
+
     window.displayText(5, window.getWindowHeight() - 40, "Score : ");
-    window.displayText(85, window.getWindowHeight() - 40, to_string(SI.score));
+    window.displayText(80, window.getWindowHeight() - 40, to_string(SI.score));
+
     window.displayText(window.getWindowWidth()/2 - 40, window.getWindowHeight() - 40, "Vague : ");
     window.displayText(window.getWindowWidth()/2 + 30, window.getWindowHeight() - 40, to_string(SI.wave));
+
+    window.displayText(window.getWindowWidth() - 130, window.getWindowHeight() - 40, "Invaders : ");
+    window.displayText(window.getWindowWidth() - 25, window.getWindowHeight() - 40, to_string(SI.invadersPos.size()));
 }
 
 bool collisions(pos &entity1,
                 pos &entity2,
-                const unsigned &entityHeight,
-                const unsigned &VHeight,
-                const unsigned &entityWidth,
-                const unsigned &VWidth)
+                const unsigned &height1,
+                const unsigned &height2,
+                const unsigned &width1,
+                const unsigned &width2)
 {
-    if (entity1.getOrd() + entityHeight >= entity2.getOrd() && entity1.getOrd() + entityHeight <= entity2.getOrd() + VHeight)
-        if (entity1.getAbs() + entityWidth >= entity2.getAbs() && entity1.getAbs() <= entity2.getAbs() + VWidth)
+    if (entity1.getOrd() + height1 >= entity2.getOrd() && entity1.getOrd() + height1 <= entity2.getOrd() + height2)
+        if (entity1.getAbs() + width1 >= entity2.getAbs() && entity1.getAbs() <= entity2.getAbs() + width2)
             return true;
 
     return false;
@@ -202,7 +218,7 @@ void process(spaceInvaders &SI, minGL &window, const unsigned &height, const uns
                 //collision avec un invader
                 for (vector<pos>::iterator itInvadersPos(SI.invadersPos.begin()); !collision && itInvadersPos != SI.invadersPos.end(); ++itInvadersPos)
                 {
-                    collision = collisions(*it, *itInvadersPos, 15, 15, 50, 50);
+                    collision = collisions(*it, *itInvadersPos, SI.playerTorpedo.entityHeight, 15, SI.playerTorpedo.entityWidth, 50);
                     if (collision)
                     {
                         SI.playerTorpedoPos.erase(it);
@@ -414,9 +430,9 @@ void process(spaceInvaders &SI, minGL &window, const unsigned &height, const uns
         }
 
         //lecture clavier
-        if (window.isPressed(RIGHT) && SI.playerPos.getAbs() + 120 < window.getWindowWidth())
+        if (window.isPressed(KEY_RIGHT) && SI.playerPos.getAbs() + 120 < window.getWindowWidth())
             SI.playerPos.abs += 10;
-        if (window.isPressed(LEFT) && SI.playerPos.getAbs() > 10)
+        if (window.isPressed(KEY_LEFT) && SI.playerPos.getAbs() > 10)
             SI.playerPos.abs -= 10;
         if (window.isPressed(KEY_SPACE))
         {
@@ -444,7 +460,7 @@ keyType SpaceInvadersMenu(const spaceInvaders & SI, minGL & window, const chrono
         chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
 
         window.clearScreen();
-        window << SI.invaders * invaderSize + pos(window.getWindowWidth()/2 - (5*110), window.getWindowHeight()/2);
+        window << SI.invaders.entityFig * invaderSize + pos(window.getWindowWidth()/2 - (5*110), window.getWindowHeight()/2);
         window.updateGraphic();
         window.displayText(window.getWindowWidth() - 600, window.getWindowHeight()/2, "Appuyez sur entree pour jouer, echap pour quitter");
         window.displayText(50 , window.getWindowHeight() - 50, "Meilleur score : ");
@@ -490,7 +506,7 @@ void SIpause(const spaceInvaders & SI, minGL & window, const chrono::duration<do
         chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
 
         window.clearScreen();
-        window << SI.player * 2 + pos(100, 0);
+        window << SI.player.entityFig * 2 + pos(100, 0);
         window.updateGraphic();
         window.displayText(window.getWindowWidth() - 600, window.getWindowHeight()/2, "Appuyez sur entree pour continuer");
         window.displayText(50 , window.getWindowHeight() - 50, "Meilleur score : ");
