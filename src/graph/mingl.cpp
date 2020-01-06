@@ -51,6 +51,7 @@ minGL::~minGL()
 
 void minGL::updateGraphic()
 {
+    glFlush();
     glutPostRedisplay();
     glutMainLoopEvent();
 }
@@ -149,7 +150,7 @@ void minGL::displayText(const unsigned &x, const unsigned &y, const string &str)
         //x1 = x1 + glutBitmapWidth(GLUT_BITMAP_9_BY_15, str[i]);
     }
 
-    glFlush();
+    //glFlush();
 }
 
 void minGL::stopGaphic()
@@ -173,7 +174,7 @@ void minGL::callDisplay()
     glClear(GL_COLOR_BUFFER_BIT);
     glRasterPos2i(0, 0);
     glDrawPixels(windowWidth, windowHeight, GL_RGB, GL_UNSIGNED_BYTE, &screenBuffer[0]);
-    glFlush();
+    //glFlush();
 }
 void minGL::callKeyboard(unsigned char k, int x, int y)
 {
