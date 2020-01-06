@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <chrono>
-#include "figs/figure.h"
+#include "minGL/figs/figure.h"
 #include "entity.h"
 
 struct spaceInvaders
@@ -16,8 +16,6 @@ struct spaceInvaders
 
     std::chrono::duration<int, std::milli> bonusInvaders;
     std::chrono::time_point<std::chrono::steady_clock> LastBonusInvader;
-
-
 
     unsigned lives;
     unsigned score;
@@ -45,5 +43,6 @@ struct spaceInvaders
     std::vector<pos> playerTorpedoPos;
     std::vector<pos> invadersTorpedoPos;
 };
+void initSpaceInvadersFigs(spaceInvaders &SI);
 
 #endif // SPACEINVADERS_H
