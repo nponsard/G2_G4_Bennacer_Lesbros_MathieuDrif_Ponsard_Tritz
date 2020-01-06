@@ -51,6 +51,7 @@ minGL::~minGL()
 
 void minGL::updateGraphic()
 {
+    glFlush();
     glutPostRedisplay();
     glutMainLoopEvent();
 }
@@ -148,8 +149,6 @@ void minGL::displayText(const unsigned &x, const unsigned &y, const string &str)
         glutBitmapCharacter(GLUT_BITMAP_9_BY_15, str[i]);
         //x1 = x1 + glutBitmapWidth(GLUT_BITMAP_9_BY_15, str[i]);
     }
-
-    glFlush();
 }
 
 void minGL::stopGaphic()
