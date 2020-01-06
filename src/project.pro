@@ -4,20 +4,21 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    figs/basefig.cpp \
-    figs/circle.cpp \
-    figs/figure.cpp \
-    figs/line.cpp \
-    figs/rectangle.cpp \
-    figs/triangle.cpp \
-    graph/mingl.cpp \
-    graph/rgbcolor.cpp \
-    tools/CException.cxx \
-    tools/myexception.cpp \
-    tools/pixel.cpp \
-    graph/iminglinjectable.cpp \
-    tools/tools.cpp \
-    tools/pixelexception.cpp
+    minGL/figs/basefig.cpp \
+    minGL/figs/circle.cpp \
+    minGL/figs/figure.cpp \
+    minGL/figs/line.cpp \
+    minGL/figs/rectangle.cpp \
+    minGL/figs/triangle.cpp \
+    minGL/graph/mingl.cpp \
+    minGL/graph/rgbcolor.cpp \
+    minGL/tools/CException.cxx \
+    minGL/tools/myexception.cpp \
+    minGL/tools/pixel.cpp \
+    minGL/graph/iminglinjectable.cpp \
+    minGL/tools/tools.cpp \
+    minGL/tools/pixelexception.cpp \
+    utils/spaceinvaders.cpp
 
 QT += opengl core gui
 
@@ -29,26 +30,26 @@ INCLUDEPATH += /usr/include/GL/
 QMAKE_CXXFLAGS += -Wall
 
 HEADERS += \
-    figs/basefig.h \
-    figs/circle.h \
-    figs/figure.h \
-    figs/line.h \
-    figs/pos.h \
-    figs/rectangle.h \
-    figs/triangle.h \
-    graph/libgraphique_fonts.h \
-    graph/mingl.h \
-    graph/pos.h \
-    graph/rgbcolor.h \
-    tools/CException.h \
-    tools/CException.hxx \
-    tools/CstCodErr.h \
-    tools/IEditable.h \
-    tools/IEditable.hxx \
-    tools/entity.h \
-    tools/myexception.h \
-    tools/pixel.h \
-    tools/spaceinvaders.h \
-    tools/tools.h \
-    graph/iminglinjectable.h \
-    tools/pixelexception.h
+    minGL/figs/basefig.h \
+    minGL/figs/circle.h \
+    minGL/figs/figure.h \
+    minGL/figs/line.h \
+    minGL/figs/pos.h \
+    minGL/figs/rectangle.h \
+    minGL/figs/triangle.h \
+    minGL/graph/libgraphique_fonts.h \
+    minGL/graph/mingl.h \
+    minGL/graph/pos.h \
+    minGL/graph/rgbcolor.h \
+    minGL/tools/CException.h \
+    minGL/tools/CException.hxx \
+    minGL/tools/CstCodErr.h \
+    minGL/tools/IEditable.h \
+    minGL/tools/IEditable.hxx \
+    utils/entity.h \
+    minGL/tools/myexception.h \
+    minGL/tools/pixel.h \
+    utils/spaceinvaders.h \
+    minGL/tools/tools.h \
+    minGL/graph/iminglinjectable.h \
+    minGL/tools/pixelexception.h

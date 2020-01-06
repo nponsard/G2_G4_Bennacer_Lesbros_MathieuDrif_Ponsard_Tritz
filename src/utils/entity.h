@@ -1,7 +1,7 @@
 #ifndef ENTITY_H
 #define ENTITY_H
 
-#include "figs/figure.h"
+#include "minGL/figs/figure.h"
 
 struct entity
 {
