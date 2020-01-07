@@ -3,6 +3,11 @@
 #include "minGL/figs/figure.h"
 #include "minGL/figs/rectangle.h"
 
+///
+/// \brief Initialize the figures for MinGl
+/// \param SI : the struct containing the variables to initialize
+///
+
 void initSpaceInvadersFigs(spaceInvaders &SI)
 {
     //player

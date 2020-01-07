@@ -31,6 +31,7 @@ using namespace std;
 ///\enum KeyTypes
 ///\brief Constants corresponding to useful keys
 ///
+
 const keyType KEY_UP({101, true});
 const keyType KEY_DOWN({103, true});
 const keyType KEY_LEFT({100, true});
@@ -183,17 +184,17 @@ bool collisions(pos &entity1,
 }
 
 ///
-/// \brief updates the informations like the positions of the torpedoes,
+/// \brief Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets hit by a torpedo,
+///     kills the invaders touched by a player's torpedo, removes the torpedoes if they leave the screen, moves the invaders (including the bonus invader)
+///     and make one of them choosen randomly shoot.
 /// \param SI : the struct containing all the useful variables to be used and updated
-/// \param window :
-/// \param height
-/// \param width
-/// \param iLoose
-/// \param iWin
-/// \param pause
+/// \param height : window's height
+/// \param width : window's width
+/// \param iLoose : boolean which become true if the player lose its last life by being hit by an ennemy torpedo
+/// \param iWin : boolean which become true if there is no invader remaining in the wave
 ///
 
-void process(spaceInvaders &SI, minGL &window, const unsigned &height, const unsigned &width, bool &iLoose, bool &iWin, bool &pause)
+void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, bool &iLoose, bool &iWin)
 {
     //deplacement missiles joueur
     vector<pos>::iterator it(SI.playerTorpedoPos.begin());
@@ -317,7 +318,7 @@ void process(spaceInvaders &SI, minGL &window, const unsigned &height, const uns
         now = chrono::steady_clock::now();
         diff = now - SI.LastBonusInvader;
         if (diff >= SI.bonusInvaders && SI.bonusInvaderPos == pos(0, 0))
-            SI.bonusInvaderPos = pos(10, window.getWindowHeight() - 70);
+            SI.bonusInvaderPos = pos(10, height - 70);
 
         //deplacer invader bonus
         if (!(SI.bonusInvaderPos == pos(0, 0)))
@@ -325,17 +326,17 @@ void process(spaceInvaders &SI, minGL &window, const unsigned &height, const uns
             if (SI.bonusInvaderPos.getAbs() == 10)
             {
                 SI.bonusInvaderPos = pos(10, SI.bonusInvaderPos.getOrd() - (SI.invadersVelocity * 5));
-                if (SI.bonusInvaderPos.getOrd() + 140 < window.getWindowHeight())
+                if (SI.bonusInvaderPos.getOrd() + 140 < height)
                     SI.bonusInvaderPos = SI.bonusInvaderPos + pos(1, 0);
             }
-            else if (SI.bonusInvaderPos.getAbs() + 160 + 10 < window.getWindowWidth())
+            else if (SI.bonusInvaderPos.getAbs() + 160 + 10 < width)
             {
                 SI.bonusInvaderPos = SI.bonusInvaderPos + pos(SI.invadersVelocity * 5, 0);
             }
             else
             {
 
-                if (SI.bonusInvaderPos.getOrd() + (SI.invadersVelocity * 5) + 70 < window.getWindowHeight())
+                if (SI.bonusInvaderPos.getOrd() + (SI.invadersVelocity * 5) + 70 < height)
                     SI.bonusInvaderPos = SI.bonusInvaderPos + pos(0, SI.invadersVelocity * 5);
                 else
                 {
@@ -419,6 +420,13 @@ void process(spaceInvaders &SI, minGL &window, const unsigned &height, const uns
     }
 }
 
+///
+/// \brief Read the keyboard inputs and move the player accordingly
+/// \param window : contains the inputs and the size of the window
+/// \param SI : the struct containing all the useful variables (including the cooldown between shoots and the vector containing the player's torpedo)
+/// \param pause : boolean which become true if the player press the escape button
+///
+
 void ReadKeyboard(minGL & window, spaceInvaders & SI, bool & pause)
 {
     if (window.isPressed(KEY_RIGHT) && SI.playerPos.getAbs() + 120 < window.getWindowWidth())
@@ -437,6 +445,14 @@ void ReadKeyboard(minGL & window, spaceInvaders & SI, bool & pause)
     if (window.isPressed(KEY_ESCAPE))
         pause = true;
 }
+
+///
+/// \brief Display the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed
+/// \param SI : the struct containing all the useful variables (including the invader's picture and his score)
+/// \param window : the window on which the menu screen will be printed
+/// \param frameDuration : the time between each frame
+/// \return returns the key pressed if it is Enter (which will begin the game) or Escape (which will leave the game)
+///
 
 keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::duration<double, milli> frameDuration)
 {
@@ -486,6 +502,13 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
     return key;
 }
 
+///
+/// \brief Displays the pause screen and check if the player press Enter to leave the pause
+/// \param SI : the struct containing all the useful variables (including the player's picture and his score)
+/// \param window : the window on which the pause screen will be printed
+/// \param frameDuration : the time between each frame
+///
+
 void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<double, milli> frameDuration)
 {
     keyType key(0, false);
@@ -513,10 +536,16 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
     }
 }
 
+///
+/// \brief The main function of the game, which use the others to display the screen, get inputs ... and which manage the pause menu, the framerate,
+///     the success and defeat, the generation of the new waves, manage the highscore
+/// \param window : the window on which everything will be displayed
+///
+
 void mainSpaceInvaders(minGL &window)
 {
 
-    spaceInvaders SI, SIBase; //SI est utiliser pour le jeu et SIBase conserve les valeurs données par la fonction init sauf pour les scores
+    spaceInvaders SI, SIBase; //SI est utilisé pour le jeu et SIBase conserve les valeurs données par la fonction init sauf pour les scores
     initSpaceInvaders(SI);
     invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
     SIBase = SI;
@@ -539,7 +568,7 @@ void mainSpaceInvaders(minGL &window)
 
             chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
 
-            process(SI, window, window.getWindowHeight(), window.getWindowWidth(), iLoose, iWin, pause);
+            process(SI, window.getWindowHeight(), window.getWindowWidth(), iLoose, iWin);
             ReadKeyboard(window, SI, pause);
 
             if (iWin)
@@ -550,6 +579,7 @@ void mainSpaceInvaders(minGL &window)
                 SI.wave = wave + 1;
                 SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque nouvelle vague
                 window.displayText(window.getWindowWidth() / 2 - 60, window.getWindowHeight() / 2, "vague suivante...");
+                window.updateGraphic();
                 this_thread::sleep_for(chrono::duration<int, milli>(1000));
             }
             else
@@ -573,6 +603,11 @@ void mainSpaceInvaders(minGL &window)
         SI.score = 0;
     }
 }
+
+///
+/// \brief Initialize Glut and MinGl, creates a seed for randomness and launches the game.
+/// \return
+///
 
 int main()
 {
