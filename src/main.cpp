@@ -14,16 +14,37 @@
 
 #include "utils/spaceinvaders.h"
 
+///
+///\file main.cpp
+///\brief Main program
+///\author Clément MATHIEU--DRIF
+///\author Nils PONSARD
+///\author Hugo TRITZ
+///\author BENNACER Chakib
+///\author Raphaël LESBROS
+///
+
+
 using namespace std;
 
+///
+///\enum KeyTypes
+///\brief Constants corresponding to useful keys
+///
 const keyType KEY_UP({101, true});
 const keyType KEY_DOWN({103, true});
 const keyType KEY_LEFT({100, true});
 const keyType KEY_RIGHT({102, true});
 const keyType KEY_ESCAPE({27, false});
-const keyType KEY_S({115, false});
 const keyType KEY_SPACE({32, false});
 const keyType KEY_ENTER({13, false});
+
+///
+/// \brief Add invaders to the vector containing their pos until they fill their starting space
+/// \param SI : the struct containing all useful variables (including the size of the invaders and a vector containing all invaders' positions)
+/// \param height : the height of the space to fill with invaders
+/// \param width : the width of the space to fill with invaders
+///
 
 void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigned &width)
 {
@@ -38,6 +59,11 @@ void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigne
         }
     }
 }
+
+///
+/// \brief initialize the variables contained in a SpaceInvaders struct
+/// \param SI : the struct containing all the variables to initialize
+///
 
 void initSpaceInvaders(spaceInvaders &SI)
 {
@@ -68,11 +94,24 @@ void initSpaceInvaders(spaceInvaders &SI)
     SI.wave = 1;
 }
 
+///
+/// \brief display a figure at each position contained in a vector of positions
+/// \param window : the window on which the pictures are printed
+/// \param positions : the vector of positions where the picture must be displayed
+/// \param fig : the figure to be displayed
+///
+///
 void display(minGL &window, const vector<pos> &positions, const figure &fig)
 {
     for (vector<pos>::const_iterator it(positions.begin()); it != positions.end(); ++it)
         window << fig + *it;
 }
+
+///
+/// \brief display the torpedos, the ennemies and the player on the screen
+/// \param window : the window on which the pictures are printed
+/// \param SI : the struct containing all the useful variables (including the positions of the torpedoes, the ennemies and the player)
+///
 
 void displaySpace(minGL &window, const spaceInvaders &SI)
 {
@@ -84,6 +123,12 @@ void displaySpace(minGL &window, const spaceInvaders &SI)
 
     window << SI.player.entityFig + SI.playerPos;
 }
+
+///
+/// \brief display the spaces which will be filled with text on the screen
+/// \param window : the window on which the HUD will be printed
+/// \param SI : The strcut containing all the useful variables (including the picture of the player, used to show the lifes remaining)
+///
 
 void displayHUD(minGL &window, const spaceInvaders &SI)
 {
