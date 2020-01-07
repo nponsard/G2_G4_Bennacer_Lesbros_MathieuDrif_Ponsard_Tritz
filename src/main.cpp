@@ -137,6 +137,12 @@ void displayHUD(minGL &window, const spaceInvaders &SI)
     window << SI.player.entityFig * 0.5 + pos(10, 8);
 }
 
+///
+/// \brief display text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen
+/// \param window : the window on which the texte will be printed
+/// \param SI : the struct containing all the useful variables (including the wave number, the score, the lives remaining and the number of invaders alive)
+///
+
 void fillHUD(minGL &window, const spaceInvaders &SI)
 {
     window.displayText(75, 12, to_string(SI.lives));
@@ -151,6 +157,17 @@ void fillHUD(minGL &window, const spaceInvaders &SI)
     window.displayText(window.getWindowWidth() - 25, window.getWindowHeight() - 40, to_string(SI.invadersPos.size()));
 }
 
+///
+/// \brief Test if two entities collide
+/// \param entity1 : the position of the first entity
+/// \param entity2 : the position of the second entity
+/// \param height1 : the height of the first entity
+/// \param height2 : the height of the second entity
+/// \param width1 : the width of the first entity
+/// \param width2 : the width of the second entity
+/// \return return true if the entities collide, else returns false
+///
+
 bool collisions(pos &entity1,
                 pos &entity2,
                 const unsigned &height1,
@@ -164,6 +181,17 @@ bool collisions(pos &entity1,
 
     return false;
 }
+
+///
+/// \brief updates the informations like the positions of the torpedoes,
+/// \param SI : the struct containing all the useful variables to be used and updated
+/// \param window :
+/// \param height
+/// \param width
+/// \param iLoose
+/// \param iWin
+/// \param pause
+///
 
 void process(spaceInvaders &SI, minGL &window, const unsigned &height, const unsigned &width, bool &iLoose, bool &iWin, bool &pause)
 {
@@ -388,25 +416,26 @@ void process(spaceInvaders &SI, minGL &window, const unsigned &height, const uns
             else
                 iLoose = true;
         }
-
-        //lecture clavier
-        if (window.isPressed(KEY_RIGHT) && SI.playerPos.getAbs() + 120 < window.getWindowWidth())
-            SI.playerPos.abs += 10;
-        if (window.isPressed(KEY_LEFT) && SI.playerPos.getAbs() > 10)
-            SI.playerPos.abs -= 10;
-        if (window.isPressed(KEY_SPACE))
-        {
-            now = chrono::steady_clock::now();
-            diff = now - SI.lastShot;
-            if (diff >= SI.shot)
-            {
-                SI.playerTorpedoPos.push_back(SI.playerPos + pos(52, 50));
-                SI.lastShot = chrono::steady_clock::now();
-            }
-        }
-        if (window.isPressed(KEY_ESCAPE))
-            pause = true;
     }
+}
+
+void ReadKeyboard(minGL & window, spaceInvaders & SI, bool & pause)
+{
+    if (window.isPressed(KEY_RIGHT) && SI.playerPos.getAbs() + 120 < window.getWindowWidth())
+        SI.playerPos.abs += 10;
+    if (window.isPressed(KEY_LEFT) && SI.playerPos.getAbs() > 10)
+        SI.playerPos.abs -= 10;
+    if (window.isPressed(KEY_SPACE))
+    {
+        chrono::duration<double,milli> diff (chrono::steady_clock::now() - SI.lastShot);
+        if (diff >= SI.shot)
+        {
+            SI.playerTorpedoPos.push_back(SI.playerPos + pos(52, 50));
+            SI.lastShot = chrono::steady_clock::now();
+        }
+    }
+    if (window.isPressed(KEY_ESCAPE))
+        pause = true;
 }
 
 keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::duration<double, milli> frameDuration)
@@ -511,12 +540,14 @@ void mainSpaceInvaders(minGL &window)
             chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
 
             process(SI, window, window.getWindowHeight(), window.getWindowWidth(), iLoose, iWin, pause);
+            ReadKeyboard(window, SI, pause);
 
             if (iWin)
             {
                 iWin = false;
+                unsigned wave = SI.wave;
                 SI = SIBase;
-                ++SI.wave;
+                SI.wave = wave + 1;
                 SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque nouvelle vague
                 window.displayText(window.getWindowWidth() / 2 - 60, window.getWindowHeight() / 2, "vague suivante...");
                 this_thread::sleep_for(chrono::duration<int, milli>(1000));
