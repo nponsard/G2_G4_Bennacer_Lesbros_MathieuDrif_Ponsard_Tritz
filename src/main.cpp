@@ -13,6 +13,7 @@
 #include <thread>
 
 #include "utils/spaceinvaders.h"
+#include "utils/loadconfig.h"
 
 ///
 ///\file main.cpp
@@ -70,29 +71,31 @@ void initSpaceInvaders(spaceInvaders &SI)
 {
     initSpaceInvadersFigs(SI);
 
-    SI.invadersVelocity = 1;
-    SI.invadersMaxVelocity = 5;
-    SI.invadersVelocityStep = 1;
+    map<string,string> conf(loadConfig("config.yaml"));
 
-    SI.shot = chrono::duration<int, milli>(200);
+    SI.invadersVelocity = unsigned (stoul(conf["invadersVelocity"]));
+    SI.invadersMaxVelocity = unsigned (stoul(conf["invadersMaxVelocity"]));
+    SI.invadersVelocityStep = unsigned (stoul(conf["invadersVelocityStep"]));
+
+    SI.shot = chrono::duration<int, milli>(stoi(conf["shot"]));
     SI.lastShot = chrono::steady_clock::now();
 
-    SI.invadersShot = chrono::duration<int, milli>(900);
+    SI.invadersShot = chrono::duration<int, milli>(stoi(conf["invadersShot"]));
     SI.invadersLastShot = chrono::steady_clock::now();
 
-    SI.bonusInvaders = chrono::duration<int, milli>(15000);
+    SI.bonusInvaders = chrono::duration<int, milli>(stoi(conf["bonusInvaders"]));
     SI.LastBonusInvader = chrono::steady_clock::now();
 
-    SI.bonusInvaderPos = pos(0, 0);
-    SI.playerPos = pos(0, 50); //placement intial joueur
-    SI.lives = 3;
-    SI.score = 0;
-    SI.bestScore = 0;
-    SI.scoreForMissileDestruction = 50;
-    SI.scoreStep = 100;
-    SI.scoreStepBonusInvaders = 500;
-    SI.torpedoVelocity = 20;
-    SI.wave = 1;
+    SI.bonusInvaderPos = pos(unsigned (stoul(conf["bonusInvaderPosAbs"])), unsigned (stoul(conf["bonusInvaderPosOrd"])));
+    SI.playerPos = pos(unsigned (stoul(conf["playerPosAbs"])), unsigned (stoul(conf["playerPosOrd"]))); //placement intial joueur
+    SI.lives = unsigned (stoul(conf["lives"]));
+    SI.score = unsigned (stoul(conf["score"]));
+    SI.bestScore = unsigned (stoul(conf["bestScore"]));
+    SI.scoreForMissileDestruction = unsigned (stoul(conf["scoreForMissileDestruction"]));
+    SI.scoreStep = unsigned (stoul(conf["scoreStep"]));
+    SI.scoreStepBonusInvaders = unsigned (stoul(conf["scoreStepBonusInvaders"]));
+    SI.torpedoVelocity = unsigned (stoul(conf["torpedoVelocity"]));
+    SI.wave = unsigned (stoul(conf["wave"]));
 }
 
 ///
