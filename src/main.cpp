@@ -16,23 +16,21 @@
 #include "utils/loadconfig.h"
 
 ///
-///\file main.cpp
-///\brief Main program
-///\author Clément MATHIEU--DRIF
-///\author Nils PONSARD
-///\author Hugo TRITZ
-///\author BENNACER Chakib
-///\author Raphaël LESBROS
+/// \file main.cpp
+/// \brief Main program
+/// \author Clément MATHIEU--DRIF
+/// \author Nils PONSARD
+/// \author Hugo TRITZ
+/// \author BENNACER Chakib
+/// \author Raphaël LESBROS
 ///
-
 
 using namespace std;
 
 ///
-///\enum KeyTypes
-///\brief Constants corresponding to useful keys
+/// \enum KeyTypes
+/// \brief Constants corresponding to useful keys
 ///
-
 const keyType KEY_UP({101, true});
 const keyType KEY_DOWN({103, true});
 const keyType KEY_LEFT({100, true});
@@ -71,11 +69,11 @@ void initSpaceInvaders(spaceInvaders &SI)
 {
     initSpaceInvadersFigs(SI);
 
-    map<string,string> conf(loadConfig("config.yaml"));
+    map<string, string> conf(loadConfig("config.yaml"));
 
-    SI.invadersVelocity = unsigned (stoul(conf["invadersVelocity"]));
-    SI.invadersMaxVelocity = unsigned (stoul(conf["invadersMaxVelocity"]));
-    SI.invadersVelocityStep = unsigned (stoul(conf["invadersVelocityStep"]));
+    SI.invadersVelocity = unsigned(stoul(conf["invadersVelocity"]));
+    SI.invadersMaxVelocity = unsigned(stoul(conf["invadersMaxVelocity"]));
+    SI.invadersVelocityStep = unsigned(stoul(conf["invadersVelocityStep"]));
 
     SI.shot = chrono::duration<int, milli>(stoi(conf["shot"]));
     SI.lastShot = chrono::steady_clock::now();
@@ -86,16 +84,16 @@ void initSpaceInvaders(spaceInvaders &SI)
     SI.bonusInvaders = chrono::duration<int, milli>(stoi(conf["bonusInvaders"]));
     SI.LastBonusInvader = chrono::steady_clock::now();
 
-    SI.bonusInvaderPos = pos(unsigned (stoul(conf["bonusInvaderPosAbs"])), unsigned (stoul(conf["bonusInvaderPosOrd"])));
-    SI.playerPos = pos(unsigned (stoul(conf["playerPosAbs"])), unsigned (stoul(conf["playerPosOrd"]))); //placement intial joueur
-    SI.lives = unsigned (stoul(conf["lives"]));
-    SI.score = unsigned (stoul(conf["score"]));
-    SI.bestScore = unsigned (stoul(conf["bestScore"]));
-    SI.scoreForMissileDestruction = unsigned (stoul(conf["scoreForMissileDestruction"]));
-    SI.scoreStep = unsigned (stoul(conf["scoreStep"]));
-    SI.scoreStepBonusInvaders = unsigned (stoul(conf["scoreStepBonusInvaders"]));
-    SI.torpedoVelocity = unsigned (stoul(conf["torpedoVelocity"]));
-    SI.wave = unsigned (stoul(conf["wave"]));
+    SI.bonusInvaderPos = pos(unsigned(stoul(conf["bonusInvaderPosAbs"])), unsigned(stoul(conf["bonusInvaderPosOrd"])));
+    SI.playerPos = pos(unsigned(stoul(conf["playerPosAbs"])), unsigned(stoul(conf["playerPosOrd"]))); //placement intial joueur
+    SI.lives = unsigned(stoul(conf["lives"]));
+    SI.score = unsigned(stoul(conf["score"]));
+    SI.bestScore = unsigned(stoul(conf["bestScore"]));
+    SI.scoreForMissileDestruction = unsigned(stoul(conf["scoreForMissileDestruction"]));
+    SI.scoreStep = unsigned(stoul(conf["scoreStep"]));
+    SI.scoreStepBonusInvaders = unsigned(stoul(conf["scoreStepBonusInvaders"]));
+    SI.torpedoVelocity = unsigned(stoul(conf["torpedoVelocity"]));
+    SI.wave = unsigned(stoul(conf["wave"]));
 }
 
 ///
@@ -430,7 +428,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
 /// \param pause : boolean which become true if the player press the escape button
 ///
 
-void ReadKeyboard(minGL & window, spaceInvaders & SI, bool & pause)
+void ReadKeyboard(minGL &window, spaceInvaders &SI, bool &pause)
 {
     if (window.isPressed(KEY_RIGHT) && SI.playerPos.getAbs() + 120 < window.getWindowWidth())
         SI.playerPos.abs += 10;
@@ -438,7 +436,7 @@ void ReadKeyboard(minGL & window, spaceInvaders & SI, bool & pause)
         SI.playerPos.abs -= 10;
     if (window.isPressed(KEY_SPACE))
     {
-        chrono::duration<double,milli> diff (chrono::steady_clock::now() - SI.lastShot);
+        chrono::duration<double, milli> diff(chrono::steady_clock::now() - SI.lastShot);
         if (diff >= SI.shot)
         {
             SI.playerTorpedoPos.push_back(SI.playerPos + pos(52, 50));
