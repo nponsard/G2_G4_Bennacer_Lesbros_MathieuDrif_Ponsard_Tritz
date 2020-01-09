@@ -97,10 +97,6 @@ std::map<char, bool> minGL::get_key_2()
     return keyboardMap;
 }*/
 
-/*!
- *  \author     Nils Ponsard
- *  \brief      Change la couleur de remplacement lors de l'effacement, donc du fond d'écran  
- */
 void minGL::setBgColor(const RGBcolor &col)
 {
     bgColor = col;
@@ -138,13 +134,6 @@ void minGL::initGraphic()
     // Un tour de boucle pour lancer l'affichage
     glutMainLoopEvent();
 }
-
-/*!
- *  \brief      Indique si la touche est pressée (true) ou pas (false)
- *  \author     Nils Ponsard
- *  \return     Retourne `true` si la touche est pressée et `false` si elle ne l'est pas
- *  \param[in]  key : la touche concernée : code et spécial
- */
 bool minGL::isPressed(const keyType &key)
 {
     return keyboardMap[key];
@@ -152,18 +141,13 @@ bool minGL::isPressed(const keyType &key)
 
 //http://mperriss.free.fr/opengl/Guide_2D/texte.htm
 //https://www.opengl.org/resources/libraries/glut/spec3/node76.html
-
-/*!
- * \brief fonction légèrement modifiée pour enlever le bug du texte clignotant
- * 
- * 
- */
 void minGL::displayText(const unsigned &x, const unsigned &y, const string &str)
 {
     glRasterPos2f(x, y);
     for (unsigned i(0); i < str.size(); ++i)
     {
         glutBitmapCharacter(GLUT_BITMAP_9_BY_15, str[i]);
+        //x1 = x1 + glutBitmapWidth(GLUT_BITMAP_9_BY_15, str[i]);
     }
 }
 
@@ -182,11 +166,7 @@ void minGL::callReshape(int h, int w)
     glLoadIdentity();
     glViewport(0, 0, h, w);
 }
-/*!
- * \brief fonction légèrement modifiée pour enlever le bug du texte clignotant
- * 
- * 
- */
+
 void minGL::callDisplay()
 {
     glClear(GL_COLOR_BUFFER_BIT);
