@@ -1,0 +1,136 @@
+\hypertarget{classfigure}{}\doxysection{figure Class Reference}
+\label{classfigure}\index{figure@{figure}}
+
+
+{\ttfamily \#include $<$figure.\+h$>$}
+
+Inheritance diagram for figure\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classfigure}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename  = typename std\+::enable\+\_\+if$<$std\+::is\+\_\+base\+\_\+of$<$base\+Fig, T$>$\+::value$>$\+::type$>$ }\\void \mbox{\hyperlink{classfigure_a491aa40310e29bc8863661302b6bf063}{Add}} (const T \&Val)
+\item 
+\mbox{\hyperlink{classfigure}{figure}} \mbox{\hyperlink{classfigure_ae6bfe50cdd399f99235b9902b1aba57f}{operator+}} (const \mbox{\hyperlink{structpos}{pos}} \&pos\+\_\+) const
+\item 
+\mbox{\hyperlink{classfigure}{figure}} \mbox{\hyperlink{classfigure_a293c165e85a1cbf300d2228e581a1b53}{operator$\ast$}} (const float \&f) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classmin_g_l}{min\+GL}} \& \mbox{\hyperlink{classfigure_a6eafa22b33670ec82295429b7908b6f1}{\+\_\+\+Edit}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&Window) const  throw (myexception)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classbase_fig}{base\+Fig}} $>$ $>$ \mbox{\hyperlink{classfigure_ae5fefc18c10bdcc8ecb856f5ab747bc4}{v\+Fig}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfigure}{figure}} \mbox{\hyperlink{classfigure_a06d3f82525d894bdab2f2c04ee8b8d3d}{operator+}} (const \mbox{\hyperlink{structpos}{pos}} \&p, const \mbox{\hyperlink{classfigure}{figure}} \&f)
+\item 
+\mbox{\hyperlink{classfigure}{figure}} \mbox{\hyperlink{classfigure_ab9c84e3dff6d675342f1ced8b3e4cf30}{operator$\ast$}} (const float \&f, const \mbox{\hyperlink{classfigure}{figure}} \&fig)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 12 of file figure.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classfigure_a6eafa22b33670ec82295429b7908b6f1}\label{classfigure_a6eafa22b33670ec82295429b7908b6f1}} 
+\index{figure@{figure}!\_Edit@{\_Edit}}
+\index{\_Edit@{\_Edit}!figure@{figure}}
+\doxysubsubsection{\texorpdfstring{\_Edit()}{\_Edit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmin_g_l}{min\+GL}} \& figure\+::\+\_\+\+Edit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{Window }\end{DoxyParamCaption}) const throw ( \mbox{\hyperlink{classmyexception}{myexception}}) \hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbase_fig_a0d7e5a5f5430b9dd932082fc36754eb2}{base\+Fig}}.
+
+
+
+Definition at line 12 of file figure.\+cpp.
+
+\mbox{\Hypertarget{classfigure_a491aa40310e29bc8863661302b6bf063}\label{classfigure_a491aa40310e29bc8863661302b6bf063}} 
+\index{figure@{figure}!Add@{Add}}
+\index{Add@{Add}!figure@{figure}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily template$<$typename T , typename  = typename std\+::enable\+\_\+if$<$std\+::is\+\_\+base\+\_\+of$<$base\+Fig, T$>$\+::value$>$\+::type$>$ \\
+void figure\+::\+Add (\begin{DoxyParamCaption}\item[{const T \&}]{Val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 21 of file figure.\+h.
+
+\mbox{\Hypertarget{classfigure_a293c165e85a1cbf300d2228e581a1b53}\label{classfigure_a293c165e85a1cbf300d2228e581a1b53}} 
+\index{figure@{figure}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!figure@{figure}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfigure}{figure}} figure\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const float \&}]{f }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 48 of file figure.\+cpp.
+
+\mbox{\Hypertarget{classfigure_ae6bfe50cdd399f99235b9902b1aba57f}\label{classfigure_ae6bfe50cdd399f99235b9902b1aba57f}} 
+\index{figure@{figure}!operator+@{operator+}}
+\index{operator+@{operator+}!figure@{figure}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfigure}{figure}} figure\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structpos}{pos}} \&}]{pos\+\_\+ }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 65 of file figure.\+cpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classfigure_ab9c84e3dff6d675342f1ced8b3e4cf30}\label{classfigure_ab9c84e3dff6d675342f1ced8b3e4cf30}} 
+\index{figure@{figure}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!figure@{figure}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfigure}{figure}} operator$\ast$ (\begin{DoxyParamCaption}\item[{const float \&}]{f,  }\item[{const \mbox{\hyperlink{classfigure}{figure}} \&}]{fig }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 33 of file figure.\+h.
+
+\mbox{\Hypertarget{classfigure_a06d3f82525d894bdab2f2c04ee8b8d3d}\label{classfigure_a06d3f82525d894bdab2f2c04ee8b8d3d}} 
+\index{figure@{figure}!operator+@{operator+}}
+\index{operator+@{operator+}!figure@{figure}}
+\doxysubsubsection{\texorpdfstring{operator+}{operator+}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfigure}{figure}} operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structpos}{pos}} \&}]{p,  }\item[{const \mbox{\hyperlink{classfigure}{figure}} \&}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 29 of file figure.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classfigure_ae5fefc18c10bdcc8ecb856f5ab747bc4}\label{classfigure_ae5fefc18c10bdcc8ecb856f5ab747bc4}} 
+\index{figure@{figure}!vFig@{vFig}}
+\index{vFig@{vFig}!figure@{figure}}
+\doxysubsubsection{\texorpdfstring{vFig}{vFig}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classbase_fig}{base\+Fig}}$>$ $>$ figure\+::v\+Fig\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 16 of file figure.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/min\+G\+L/figs/\mbox{\hyperlink{figure_8h}{figure.\+h}}\item 
+src/min\+G\+L/figs/\mbox{\hyperlink{figure_8cpp}{figure.\+cpp}}\end{DoxyCompactItemize}

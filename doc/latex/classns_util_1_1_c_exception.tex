@@ -1,0 +1,123 @@
+\hypertarget{classns_util_1_1_c_exception}{}\doxysection{ns\+Util\+::C\+Exception Class Reference}
+\label{classns_util_1_1_c_exception}\index{nsUtil::CException@{nsUtil::CException}}
+
+
+{\ttfamily \#include $<$C\+Exception.\+h$>$}
+
+Inheritance diagram for ns\+Util\+::C\+Exception\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classns_util_1_1_c_exception}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classns_util_1_1_c_exception_abbe3226db9a4d16ded534417fc6b8630}{C\+Exception}} (const std\+::string \&Libelle=std\+::string(), const unsigned Cod\+Err=\mbox{\hyperlink{namespacens_util_addc80902d4ed0825e30d361dc8b0875fa5929fcf0dd89e1483c5ec4bec7a88635}{K\+No\+Exc}})  throw ()
+\item 
+virtual \mbox{\hyperlink{classns_util_1_1_c_exception_a65e50367993ddfc870d494a44097dd64}{$\sim$\+C\+Exception}} (void)  throw ()
+\item 
+const std\+::string \& \mbox{\hyperlink{classns_util_1_1_c_exception_a4dad3c5830b9a833529bc0019dbec914}{Get\+Libelle}} (void) const  throw ()
+\item 
+unsigned \mbox{\hyperlink{classns_util_1_1_c_exception_a5d48b2a1e96674e677fa3ff496ecc1b2}{Get\+Cod\+Err}} (void) const  throw ()
+\item 
+virtual const char $\ast$ \mbox{\hyperlink{classns_util_1_1_c_exception_aaea960659b54f88ab0ee6d191d38ea06}{what}} () const  throw ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::ostream \& \mbox{\hyperlink{classns_util_1_1_c_exception_a9d77059a2fd7992d0e78087fb4ee6992}{\+\_\+\+Edit}} (std\+::ostream \&os=std\+::cerr) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classns_util_1_1_c_exception_aa698b60d5a3a0e849f1e4f92bc9488d7}{m\+\_\+\+Libelle}}
+\item 
+unsigned \mbox{\hyperlink{classns_util_1_1_c_exception_a2d5f0ea0c3e6a9875b22904531296050}{m\+\_\+\+Cod\+Err}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 26 of file C\+Exception.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classns_util_1_1_c_exception_abbe3226db9a4d16ded534417fc6b8630}\label{classns_util_1_1_c_exception_abbe3226db9a4d16ded534417fc6b8630}} 
+\index{nsUtil::CException@{nsUtil::CException}!CException@{CException}}
+\index{CException@{CException}!nsUtil::CException@{nsUtil::CException}}
+\doxysubsubsection{\texorpdfstring{CException()}{CException()}}
+{\footnotesize\ttfamily ns\+Util\+::\+C\+Exception\+::\+C\+Exception (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Libelle = {\ttfamily std\+:\+:string()},  }\item[{const unsigned}]{Cod\+Err = {\ttfamily \mbox{\hyperlink{namespacens_util_addc80902d4ed0825e30d361dc8b0875fa5929fcf0dd89e1483c5ec4bec7a88635}{K\+No\+Exc}}} }\end{DoxyParamCaption}) throw ( ) }
+
+\mbox{\Hypertarget{classns_util_1_1_c_exception_a65e50367993ddfc870d494a44097dd64}\label{classns_util_1_1_c_exception_a65e50367993ddfc870d494a44097dd64}} 
+\index{nsUtil::CException@{nsUtil::CException}!````~CException@{$\sim$CException}}
+\index{````~CException@{$\sim$CException}!nsUtil::CException@{nsUtil::CException}}
+\doxysubsubsection{\texorpdfstring{$\sim$CException()}{~CException()}}
+{\footnotesize\ttfamily virtual ns\+Util\+::\+C\+Exception\+::$\sim$\+C\+Exception (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) throw ( ) \hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classns_util_1_1_c_exception_a9d77059a2fd7992d0e78087fb4ee6992}\label{classns_util_1_1_c_exception_a9d77059a2fd7992d0e78087fb4ee6992}} 
+\index{nsUtil::CException@{nsUtil::CException}!\_Edit@{\_Edit}}
+\index{\_Edit@{\_Edit}!nsUtil::CException@{nsUtil::CException}}
+\doxysubsubsection{\texorpdfstring{\_Edit()}{\_Edit()}}
+{\footnotesize\ttfamily ostream \& ns\+Util\+::\+C\+Exception\+::\+\_\+\+Edit (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os = {\ttfamily std\+:\+:cerr} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classns_util_1_1_i_editable_ab0e4cccf7bf765fb9eae1f513c8a4c36}{ns\+Util\+::\+I\+Editable}}.
+
+
+
+Definition at line 20 of file C\+Exception.\+cxx.
+
+\mbox{\Hypertarget{classns_util_1_1_c_exception_a5d48b2a1e96674e677fa3ff496ecc1b2}\label{classns_util_1_1_c_exception_a5d48b2a1e96674e677fa3ff496ecc1b2}} 
+\index{nsUtil::CException@{nsUtil::CException}!GetCodErr@{GetCodErr}}
+\index{GetCodErr@{GetCodErr}!nsUtil::CException@{nsUtil::CException}}
+\doxysubsubsection{\texorpdfstring{GetCodErr()}{GetCodErr()}}
+{\footnotesize\ttfamily unsigned ns\+Util\+::\+C\+Exception\+::\+Get\+Cod\+Err (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const throw ( ) }
+
+\mbox{\Hypertarget{classns_util_1_1_c_exception_a4dad3c5830b9a833529bc0019dbec914}\label{classns_util_1_1_c_exception_a4dad3c5830b9a833529bc0019dbec914}} 
+\index{nsUtil::CException@{nsUtil::CException}!GetLibelle@{GetLibelle}}
+\index{GetLibelle@{GetLibelle}!nsUtil::CException@{nsUtil::CException}}
+\doxysubsubsection{\texorpdfstring{GetLibelle()}{GetLibelle()}}
+{\footnotesize\ttfamily const std\+::string\& ns\+Util\+::\+C\+Exception\+::\+Get\+Libelle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const throw ( ) }
+
+\mbox{\Hypertarget{classns_util_1_1_c_exception_aaea960659b54f88ab0ee6d191d38ea06}\label{classns_util_1_1_c_exception_aaea960659b54f88ab0ee6d191d38ea06}} 
+\index{nsUtil::CException@{nsUtil::CException}!what@{what}}
+\index{what@{what}!nsUtil::CException@{nsUtil::CException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily virtual const char$\ast$ ns\+Util\+::\+C\+Exception\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const throw ( ) \hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classns_util_1_1_c_exception_a2d5f0ea0c3e6a9875b22904531296050}\label{classns_util_1_1_c_exception_a2d5f0ea0c3e6a9875b22904531296050}} 
+\index{nsUtil::CException@{nsUtil::CException}!m\_CodErr@{m\_CodErr}}
+\index{m\_CodErr@{m\_CodErr}!nsUtil::CException@{nsUtil::CException}}
+\doxysubsubsection{\texorpdfstring{m\_CodErr}{m\_CodErr}}
+{\footnotesize\ttfamily unsigned ns\+Util\+::\+C\+Exception\+::m\+\_\+\+Cod\+Err\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 30 of file C\+Exception.\+h.
+
+\mbox{\Hypertarget{classns_util_1_1_c_exception_aa698b60d5a3a0e849f1e4f92bc9488d7}\label{classns_util_1_1_c_exception_aa698b60d5a3a0e849f1e4f92bc9488d7}} 
+\index{nsUtil::CException@{nsUtil::CException}!m\_Libelle@{m\_Libelle}}
+\index{m\_Libelle@{m\_Libelle}!nsUtil::CException@{nsUtil::CException}}
+\doxysubsubsection{\texorpdfstring{m\_Libelle}{m\_Libelle}}
+{\footnotesize\ttfamily std\+::string ns\+Util\+::\+C\+Exception\+::m\+\_\+\+Libelle\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file C\+Exception.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/min\+G\+L/tools/\mbox{\hyperlink{_c_exception_8h}{C\+Exception.\+h}}\item 
+src/min\+G\+L/tools/\mbox{\hyperlink{_c_exception_8cxx}{C\+Exception.\+cxx}}\end{DoxyCompactItemize}

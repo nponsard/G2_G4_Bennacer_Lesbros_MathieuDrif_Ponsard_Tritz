@@ -17,14 +17,26 @@
 #include "../tools/pixelexception.h"
 
 /*!
+ * \brief keyType : type représentant une touche 
+ * \details Paire de int (numéro de la touche) et de bool (spécial oui/non)
+ * \author  Nils Ponsard
+ */
+typedef std::pair<int, bool> keyType; // cle, spécial
+/*!
+ * 
+ * \brief   keyMap : map des touches pressées 
+ * \details Map avec comme clef \ref keyType
+ * \author  Nils Ponsard
+ */
+typedef std::map<keyType, bool> keyMap;
+
+/*!
  * \brief The minGL class
  *          sert de classe de base à tout le bordel
  *
  */
 
 //pour les fonts et l'affichage des string voir : https://www.opengl.org/resources/libraries/glut/spec3/node76.html
-typedef std::pair<int, bool> keyType; // cle, spécial
-typedef std::map<keyType, bool> keyMap;
 class minGL
 {
 private:
@@ -60,7 +72,7 @@ public:
     void stopGaphic();
 
     bool isPressed(const keyType &key);
-    void displayText(const unsigned & x, const unsigned & y, const std::string &str);
+    void displayText(const unsigned &x, const unsigned &y, const std::string &str);
     minGL(const unsigned &Width = 640, const unsigned &Height = 480, const std::string &Name = std::string(), const RGBcolor &backGroungColor = KWhite);
     ~minGL();
     void updateGraphic();
