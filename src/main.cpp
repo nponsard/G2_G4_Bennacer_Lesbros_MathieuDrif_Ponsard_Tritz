@@ -231,6 +231,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                             SI.UpgradePos.push_back(upgrade);
                         }
                         SI.invadersPos.erase(itInvadersPos);
+                        system("aplay '../ressources/laser.wav' &");
                         SI.score += SI.scoreStep;
                         SI.scoreStep += 20;
                         if (SI.invadersVelocity + SI.invadersVelocityStep <= SI.invadersMaxVelocity)
@@ -253,6 +254,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                             upgrade.second = rand()%SI.upgradeTypes.size();
                             SI.UpgradePos.push_back(upgrade);
                             SI.playerTorpedoPos.erase(it);
+                            system("aplay '../ressources/laser.wav' &");
                             SI.bonusInvaderPos = pos(0, 0);
                             SI.LastBonusInvader = chrono::steady_clock::now();
                             SI.score += SI.scoreStepBonusInvaders;
@@ -516,7 +518,7 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
         window.clearScreen();
         window << SI.invaders.entityFig * invaderSize + pos(window.getWindowWidth() / 2 - (5 * 110), window.getWindowHeight() / 2);
         window.updateGraphic();
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur entree pour jouer, echap pour quitter");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur ENTREE pour jouer, ECHAP pour quitter");
         window.displayText(50, window.getWindowHeight() - 50, "Meilleur score : ");
         window.displayText(200, window.getWindowHeight() - 50, to_string(SI.bestScore));
 
@@ -560,6 +562,7 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
 
 void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<double, milli> frameDuration)
 {
+    bool OnQuit = false;
     keyType key(0, false);
     while (key == keyType(0, false))
     {
@@ -568,7 +571,8 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
         window.clearScreen();
         window << SI.player.entityFig * 2 + pos(100, 0);
         window.updateGraphic();
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur entree pour continuer");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur ENTREE pour continuer");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 -20, "Appuyez sur ECHAP pour continuer");
         window.displayText(50, window.getWindowHeight() - 50, "Meilleur score : ");
         window.displayText(200, window.getWindowHeight() - 50, to_string(SI.bestScore));
 
@@ -577,6 +581,15 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
 
         if (window.isPressed(KEY_ENTER))
             key = KEY_ENTER;
+        if (! window.isPressed(KEY_ESCAPE))
+        {
+            OnQuit =true ;
+        }
+        if (OnQuit)
+        {
+        if (window.isPressed(KEY_ESCAPE))
+            exit(EXIT_FAILURE);
+        }
 
         chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
         chrono::duration<double, milli> diff(end - beg);
@@ -593,7 +606,8 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
 
 void mainSpaceInvaders(minGL &window)
 {
-
+    system("touch ../ressources/running");
+    system("bash ../ressources/audio.bash &");
     spaceInvaders SI, SIBase; //SI est utilisé pour le jeu et SIBase conserve les valeurs données par la fonction init sauf pour les scores
     initSpaceInvaders(SI);
     invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
@@ -613,6 +627,7 @@ void mainSpaceInvaders(minGL &window)
                 SIpause(SI, window, frameDuration);
                 SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque sortie de pause
                 pause = false;
+
             }
 
             chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
@@ -655,6 +670,11 @@ void mainSpaceInvaders(minGL &window)
     }
 }
 
+void OnExit()
+{
+    system("rm ../ressources/running");
+    system("pkill aplay");
+}
 ///
 /// \brief Initialize Glut and MinGl, creates a seed for randomness and launches the game.
 /// \return
@@ -662,12 +682,16 @@ void mainSpaceInvaders(minGL &window)
 
 int main()
 {
+    atexit(OnExit);
     minGL window(1280, 720, "Space Invader", KBlack);
     window.initGlut();
     window.initGraphic();
 
     srand(time(NULL));
     mainSpaceInvaders(window);
+
+
+
 
     return 0;
 }
