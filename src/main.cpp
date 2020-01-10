@@ -110,6 +110,12 @@ void display(minGL &window, const vector<pos> &positions, const figure &fig)
         window << fig + *it;
 }
 
+void display(minGL &window, const vector<pair<pos, short>> &upgrades, const vector<figure> &figures)
+{
+    for (vector<pair<pos, short>>::const_iterator it(upgrades.begin()); it != upgrades.end(); ++it)
+        window << figures[it->second] + it->first;
+}
+
 ///
 /// \brief display the torpedos, the ennemies and the player on the screen
 /// \param window : the window on which the pictures are printed
@@ -123,7 +129,7 @@ void displaySpace(minGL &window, const spaceInvaders &SI)
     display(window, SI.invadersTorpedoPos, SI.invadersTorpedo.entityFig);
     if (!(SI.bonusInvaderPos == pos(0, 0)))
         window << SI.bonusInvader.entityFig + SI.bonusInvaderPos;
-    display(window, SI.lifeUpgradePos, SI.lifeUpgrade.entityFig);
+    display(window, SI.UpgradePos, SI.upgradeTypes);
 
     window << SI.player.entityFig + SI.playerPos;
 }
@@ -131,7 +137,7 @@ void displaySpace(minGL &window, const spaceInvaders &SI)
 ///
 /// \brief display the spaces which will be filled with text on the screen
 /// \param window : the window on which the HUD will be printed
-/// \param SI : The strcut containing all the useful variables (including the picture of the player, used to show the lifes remaining)
+/// \param SI : The struct containing all the useful variables (including the picture of the player, used to show the lifes remaining)
 ///
 
 void displayHUD(minGL &window, const spaceInvaders &SI)
@@ -217,9 +223,12 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                     if (collision)
                     {
                         SI.playerTorpedoPos.erase(it);
-                        if (rand()%10 == 1)
+                        if (rand()%2 == 1)
                         {
-                            SI.lifeUpgradePos.push_back(*itInvadersPos);
+                            std::pair<pos, short> upgrade;
+                            upgrade.first = *itInvadersPos;
+                            upgrade.second = rand()%SI.upgradeTypes.size();
+                            SI.UpgradePos.push_back(upgrade);
                         }
                         SI.invadersPos.erase(itInvadersPos);
                         SI.score += SI.scoreStep;
@@ -301,30 +310,30 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
     }
 
     //deplacement des bonus
-    it = SI.lifeUpgradePos.begin();
-    while (it != SI.lifeUpgradePos.end())
+    vector<std::pair<pos, short>>::iterator itupgrade = SI.UpgradePos.begin();
+    while (itupgrade != SI.UpgradePos.end())
     {
         bool collision(false);
         for (unsigned tempMove(0); !collision && tempMove < SI.upgradeVelocity; ++tempMove) //deplacer par pas de 1 pour verifier collisions meme quand vitesse élevée
         {
-            if (it->getOrd() > 1)
+            if (itupgrade->first.getOrd() > 1)
             {
-                *it = pos(it->getAbs(), it->getOrd() - 1);                  //déplacement
-                collision = collisions(*it, SI.playerPos, 15, 55, 15, 110); //collision avec le joueur
+                itupgrade->first = pos(itupgrade->first.getAbs(), itupgrade->first.getOrd() - 1);                  //déplacement
+                collision = collisions(itupgrade->first, SI.playerPos, 15, 55, 15, 110); //collision avec le joueur
                 if (collision)
                 {
-                    SI.lifeUpgradePos.erase(it);
+                    SI.UpgradePos.erase(itupgrade);
                     ++SI.lives;
                 }
             }
             else //collision avec le mur
             {
-                SI.lifeUpgradePos.erase(it);
+                SI.UpgradePos.erase(itupgrade);
                 collision = true;
             }
         }
         if (!collision)
-            ++it;
+            ++itupgrade;
     }
 
     if (SI.invadersPos.size() == 0)

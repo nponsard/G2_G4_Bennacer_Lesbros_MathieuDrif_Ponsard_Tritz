@@ -84,4 +84,5 @@ void initSpaceInvadersFigs(spaceInvaders &SI)
     SI.lifeUpgrade.entityHeight = 30;
     SI.lifeUpgrade.entityFig.Add(rectangle(pos(10,0), 10, 30, KGreen, KGreen));
     SI.lifeUpgrade.entityFig.Add(rectangle(pos(0,10), 30, 10, KGreen, KGreen));
+    SI.upgradeTypes.push_back(SI.lifeUpgrade.entityFig);
 }
