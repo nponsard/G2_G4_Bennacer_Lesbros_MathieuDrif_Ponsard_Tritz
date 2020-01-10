@@ -216,6 +216,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                     {
                         SI.playerTorpedoPos.erase(it);
                         SI.invadersPos.erase(itInvadersPos);
+                        system("aplay '../ressources/laser.wav' &");
                         SI.score += SI.scoreStep;
                         SI.scoreStep += 20;
                         if (SI.invadersVelocity + SI.invadersVelocityStep <= SI.invadersMaxVelocity)
@@ -234,6 +235,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                         if (collision)
                         {
                             SI.playerTorpedoPos.erase(it);
+                            system("aplay '../ressources/laser.wav' &");
                             SI.bonusInvaderPos = pos(0, 0);
                             SI.LastBonusInvader = chrono::steady_clock::now();
                             SI.score += SI.scoreStepBonusInvaders;
@@ -440,7 +442,6 @@ void ReadKeyboard(minGL &window, spaceInvaders &SI, bool &pause)
         if (diff >= SI.shot)
         {
             SI.playerTorpedoPos.push_back(SI.playerPos + pos(52, 50));
-            system("aplay '../ressources/laser.wav' &");
             SI.lastShot = chrono::steady_clock::now();
         }
     }
@@ -469,7 +470,7 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
         window.clearScreen();
         window << SI.invaders.entityFig * invaderSize + pos(window.getWindowWidth() / 2 - (5 * 110), window.getWindowHeight() / 2);
         window.updateGraphic();
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur entree pour jouer, echap pour quitter");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur ENTREE pour jouer, ECHAP pour quitter");
         window.displayText(50, window.getWindowHeight() - 50, "Meilleur score : ");
         window.displayText(200, window.getWindowHeight() - 50, to_string(SI.bestScore));
 
@@ -522,8 +523,8 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
         window.clearScreen();
         window << SI.player.entityFig * 2 + pos(100, 0);
         window.updateGraphic();
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur ENTER pour continuer");
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 -20, "Appuyez sur ESCAPE pour continuer");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur ENTREE pour continuer");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 -20, "Appuyez sur ECHAP pour continuer");
         window.displayText(50, window.getWindowHeight() - 50, "Meilleur score : ");
         window.displayText(200, window.getWindowHeight() - 50, to_string(SI.bestScore));
 
