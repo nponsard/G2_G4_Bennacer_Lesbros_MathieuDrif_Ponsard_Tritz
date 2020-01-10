@@ -6,6 +6,7 @@
 #include "minGL/figs/figure.h"
 #include "entity.h"
 
+
 struct spaceInvaders
 {
     std::chrono::duration<int, std::milli> shot;
@@ -28,6 +29,7 @@ struct spaceInvaders
     unsigned invadersMaxVelocity;
     unsigned invadersVelocityStep;
     unsigned wave;
+    unsigned upgradeVelocity;
 
     std::vector<std::pair<std::string, unsigned>> bestScores;
 
@@ -39,11 +41,18 @@ struct spaceInvaders
     entity invadersTorpedo;
     entity bonusInvader;
 
+    entity lifeUpgrade;
+    entity shootSpeedUpgrade;
+    entity scoreUpgrade;
+
     pos playerPos;
     pos bonusInvaderPos;
     std::vector<pos> invadersPos;
     std::vector<pos> playerTorpedoPos;
     std::vector<pos> invadersTorpedoPos;
+
+    std::vector<std::pair<pos, short>> UpgradePos;
+    std::vector<figure> upgradeTypes;
 };
 void initSpaceInvadersFigs(spaceInvaders &SI);
 
