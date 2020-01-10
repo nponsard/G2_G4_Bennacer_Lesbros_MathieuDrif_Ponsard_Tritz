@@ -16,6 +16,6 @@ struct AuthorizedKey {
                                                     "scoreStepBonusInvaders", "torpedoVelocity", "wave"};
 };
 
-std::map<std::string,std::string> loadConfig(std::string fileName);
+std::map<std::string,std::string> loadConfig(const std::string & fileName);
 
 #endif // LOADCONFIG_H

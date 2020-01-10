@@ -19,6 +19,9 @@ SOURCES += main.cpp \
     minGL/tools/tools.cpp \
     minGL/tools/pixelexception.cpp \
     utils/loadconfig.cpp \
+    utils/loadscore.cpp \
+    utils/savescores.cpp \
+    utils/scoresort.cpp \
     utils/spaceinvaders.cpp
 
 QT += opengl core gui
@@ -50,7 +53,10 @@ HEADERS += \
     utils/entity.h \
     minGL/tools/myexception.h \
     minGL/tools/pixel.h \
+    utils/loadScores.h \
     utils/loadconfig.h \
+    utils/savescores.h \
+    utils/scoresort.h \
     utils/spaceinvaders.h \
     minGL/tools/tools.h \
     minGL/graph/iminglinjectable.h \

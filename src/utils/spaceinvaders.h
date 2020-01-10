@@ -29,6 +29,8 @@ struct spaceInvaders
     unsigned invadersVelocityStep;
     unsigned wave;
 
+    std::vector<std::pair<std::string, unsigned>> bestScores;
+
     bool InvadersRight = true;
 
     entity invaders;

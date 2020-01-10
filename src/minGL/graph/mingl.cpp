@@ -77,6 +77,7 @@ void minGL::setPixel(const pos &pos_, const RGBcolor &col) throw(PixelException)
     screenBuffer[3 * (pos_.ord * windowWidth + pos_.abs) + 1] = col.Green;
     screenBuffer[3 * (pos_.ord * windowWidth + pos_.abs) + 2] = col.Blue;
 }
+
 /*
 char minGL::get_key()
 {

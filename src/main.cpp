@@ -14,6 +14,9 @@
 
 #include "utils/spaceinvaders.h"
 #include "utils/loadconfig.h"
+#include "utils/loadScores.h"
+#include "utils/scoresort.h"
+#include "utils/savescores.h"
 
 ///
 /// \file main.cpp
@@ -31,6 +34,8 @@ using namespace std;
 /// \enum KeyTypes
 /// \brief Constants corresponding to useful keys
 ///
+
+//http://mperriss.free.fr/opengl/Guide_2D/claviersouris.htm
 const keyType KEY_UP({101, true});
 const keyType KEY_DOWN({103, true});
 const keyType KEY_LEFT({100, true});
@@ -38,6 +43,7 @@ const keyType KEY_RIGHT({102, true});
 const keyType KEY_ESCAPE({27, false});
 const keyType KEY_SPACE({32, false});
 const keyType KEY_ENTER({13, false});
+const keyType KEY_RETURN({8, false});
 
 ///
 /// \brief Add invaders to the vector containing their pos until they fill their starting space
@@ -70,6 +76,7 @@ void initSpaceInvaders(spaceInvaders &SI)
     initSpaceInvadersFigs(SI);
 
     map<string, string> conf(loadConfig("config.yaml"));
+    SI.bestScores = loadScores("scores.yaml");
 
     SI.invadersVelocity = unsigned(stoul(conf["invadersVelocity"]));
     SI.invadersMaxVelocity = unsigned(stoul(conf["invadersMaxVelocity"]));
@@ -468,6 +475,16 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
         window.clearScreen();
         window << SI.invaders.entityFig * invaderSize + pos(window.getWindowWidth() / 2 - (5 * 110), window.getWindowHeight() / 2);
         window.updateGraphic();
+
+        window.displayText(window.getWindowWidth() - 420, window.getWindowHeight() / 2 + 260, "Meilleurs scores : ");
+
+        for(unsigned i(0); i < SI.bestScores.size() && i < 3; ++i)
+        {
+            window.displayText(window.getWindowWidth() - 400, window.getWindowHeight() / 2 + 220 - (25*i), SI.bestScores[i].first);
+            window.displayText(window.getWindowWidth() - 370, window.getWindowHeight() / 2 + 220 - (25*i), ":");
+            window.displayText(window.getWindowWidth() - 350, window.getWindowHeight() / 2 + 220 - (25*i), to_string(SI.bestScores[i].second));
+        }
+
         window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur entree pour jouer, echap pour quitter");
         window.displayText(50, window.getWindowHeight() - 50, "Meilleur score : ");
         window.displayText(200, window.getWindowHeight() - 50, to_string(SI.bestScore));
@@ -537,6 +554,60 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
     }
 }
 
+
+string ReadName(minGL & window, const chrono::duration<double, milli> frameDuration, const unsigned & nbCharMax = 3)
+{
+    string name;
+    keyType key(0, false);
+    while (key == keyType(0, false) || name.size() == 0)
+    {
+        key = keyType(0, false);
+        chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
+
+        window.clearScreen();
+        window << rectangle(pos(window.getWindowWidth()/2 - 100, window.getWindowHeight()/2 - 25), 200, 50, KWhite, KBlack);
+        window.updateGraphic();
+
+        window.displayText(window.getWindowWidth()/2 - 150, window.getWindowHeight() / 2 + 100, "Nouveau meilleur score, entrez votre nom");
+
+        window.displayText(window.getWindowWidth()/2 - 90, window.getWindowHeight() / 2 - 5, name);
+
+        if(name.size() < nbCharMax)
+        {
+            //lecture des lettres uniquement (ascii : 65 - 90)
+            bool pressed(false);
+            for(char keyVal(65); !pressed && keyVal <= 90; ++keyVal)
+            {
+                if(window.isPressed(keyType(keyVal, false)) || window.isPressed(keyType(keyVal + 32 , false)))//test majuscule et minuscule
+                {
+                    name.push_back(keyVal);
+                    pressed = true;
+                    this_thread::sleep_for(chrono::duration<int, milli>(50));//delai pour éviter répétition de touches
+                }
+            }
+        }
+        if(window.isPressed(KEY_RETURN))
+            if(name.size() != 0)
+            {
+                name.pop_back();
+                this_thread::sleep_for(chrono::duration<int, milli>(50));//delai pour éviter répétition de touches
+            }
+
+        if (window.isPressed(KEY_ENTER))
+        {
+            key = KEY_ENTER;
+            this_thread::sleep_for(chrono::duration<int, milli>(50));//delai pour éviter répétition de touches
+        }
+
+        chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
+        chrono::duration<double, milli> diff(end - beg);
+        if (diff < frameDuration)
+            this_thread::sleep_for(frameDuration - diff);
+    }
+
+    return name;
+}
+
 ///
 /// \brief The main function of the game, which use the others to display the screen, get inputs ... and which manage the pause menu, the framerate,
 ///     the success and defeat, the generation of the new waves, manage the highscore
@@ -602,6 +673,23 @@ void mainSpaceInvaders(minGL &window)
             SIBase.bestScore = SI.score;
         SI = SIBase;
         SI.score = 0;
+
+        //update bestScores vector
+        if(SIBase.bestScores.size() < 3)
+        {
+            string name(ReadName(window, frameDuration));
+            SIBase.bestScores.push_back(make_pair(name, SIBase.score));
+            scoreSort(SIBase.bestScores);
+            saveScores(SIBase.bestScores, "scores.yaml");
+        }
+        else if(SIBase.bestScores[SIBase.bestScores.size() - 1].second < SIBase.score)
+        {
+            string name(ReadName(window, frameDuration));
+            SIBase.bestScores.push_back(make_pair(name, SIBase.score));
+            scoreSort(SIBase.bestScores);
+            SIBase.bestScores.pop_back();
+            saveScores(SIBase.bestScores, "scores.yaml");
+        }
     }
 }
 
