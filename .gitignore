@@ -7,3 +7,4 @@ build*/*
 *.fls
 *.log
 *.synctex.gz
+project.pro.user
