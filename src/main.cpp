@@ -560,11 +560,10 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
 /// \param frameDuration : the time between each frame
 ///
 
-void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<double, milli> frameDuration)
+void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<double, milli> frameDuration, bool & iLoose)
 {
-    bool OnQuit = false;
     keyType key(0, false);
-    while (key == keyType(0, false))
+    while (key == keyType(0, false) && !iLoose)
     {
         chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
 
@@ -572,7 +571,7 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
         window << SI.player.entityFig * 2 + pos(100, 0);
         window.updateGraphic();
         window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur ENTREE pour continuer");
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 -20, "Appuyez sur ECHAP pour continuer");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 -20, "Appuyez sur ECHAP pour quitter la partie");
         window.displayText(50, window.getWindowHeight() - 50, "Meilleur score : ");
         window.displayText(200, window.getWindowHeight() - 50, to_string(SI.bestScore));
 
@@ -581,14 +580,11 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
 
         if (window.isPressed(KEY_ENTER))
             key = KEY_ENTER;
-        if (! window.isPressed(KEY_ESCAPE))
-        {
-            OnQuit =true ;
-        }
-        if (OnQuit)
-        {
+
         if (window.isPressed(KEY_ESCAPE))
-            exit(EXIT_FAILURE);
+        {
+            iLoose = true;
+            this_thread::sleep_for(chrono::duration<int, milli>(50));//delai pour éviter répétition de touches
         }
 
         chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
@@ -606,8 +602,7 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
 
 void mainSpaceInvaders(minGL &window)
 {
-    system("touch ../ressources/running");
-    system("bash ../ressources/audio.bash &");
+    system("aplay '../ressources/theme.wav' &");
     spaceInvaders SI, SIBase; //SI est utilisé pour le jeu et SIBase conserve les valeurs données par la fonction init sauf pour les scores
     initSpaceInvaders(SI);
     invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
@@ -622,14 +617,6 @@ void mainSpaceInvaders(minGL &window)
 
         while (!iLoose)
         {
-            if (pause)
-            {
-                SIpause(SI, window, frameDuration);
-                SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque sortie de pause
-                pause = false;
-
-            }
-
             chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
 
             process(SI, window.getWindowHeight(), window.getWindowWidth(), iLoose, iWin);
@@ -657,6 +644,14 @@ void mainSpaceInvaders(minGL &window)
             window.updateGraphic();
             fillHUD(window, SI);
 
+            if (pause)
+            {
+                this_thread::sleep_for(chrono::duration<int, milli>(50));//delai pour éviter répétition de touches
+                SIpause(SI, window, frameDuration, iLoose);
+                SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque sortie de pause
+                pause = false;
+            }
+
             chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
             chrono::duration<double, milli> diff(end - beg);
             if (diff < frameDuration)
@@ -672,7 +667,6 @@ void mainSpaceInvaders(minGL &window)
 
 void OnExit()
 {
-    system("rm ../ressources/running");
     system("pkill aplay");
 }
 ///
