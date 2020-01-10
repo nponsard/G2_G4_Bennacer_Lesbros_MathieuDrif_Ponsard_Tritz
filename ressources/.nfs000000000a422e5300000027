@@ -1,6 +1,6 @@
 #!/bin/bash
 cd ../ressources
 
-while [ -f running ];
+while [ 1 ];
     do aplay 'theme.wav' 
 done
