@@ -5,7 +5,7 @@
 
 using namespace std;
 
-map<string, string> loadConfig(string fileName)
+map<string, string> loadConfig(const string & fileName)
 {
     map<string, unsigned> defaultUnsignedConfig;
     defaultUnsignedConfig["invadersVelocity"] = 1;
