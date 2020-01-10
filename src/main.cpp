@@ -74,6 +74,7 @@ void initSpaceInvaders(spaceInvaders &SI)
     SI.invadersVelocity = unsigned(stoul(conf["invadersVelocity"]));
     SI.invadersMaxVelocity = unsigned(stoul(conf["invadersMaxVelocity"]));
     SI.invadersVelocityStep = unsigned(stoul(conf["invadersVelocityStep"]));
+    SI.upgradeVelocity = unsigned(stoul(conf["upgradeVelocity"]));
 
     SI.shot = chrono::duration<int, milli>(stoi(conf["shot"]));
     SI.lastShot = chrono::steady_clock::now();
@@ -109,6 +110,12 @@ void display(minGL &window, const vector<pos> &positions, const figure &fig)
         window << fig + *it;
 }
 
+void display(minGL &window, const vector<pair<pos, short>> &upgrades, const vector<figure> &figures)
+{
+    for (vector<pair<pos, short>>::const_iterator it(upgrades.begin()); it != upgrades.end(); ++it)
+        window << figures[it->second] + it->first;
+}
+
 ///
 /// \brief display the torpedos, the ennemies and the player on the screen
 /// \param window : the window on which the pictures are printed
@@ -122,6 +129,7 @@ void displaySpace(minGL &window, const spaceInvaders &SI)
     display(window, SI.invadersTorpedoPos, SI.invadersTorpedo.entityFig);
     if (!(SI.bonusInvaderPos == pos(0, 0)))
         window << SI.bonusInvader.entityFig + SI.bonusInvaderPos;
+    display(window, SI.UpgradePos, SI.upgradeTypes);
 
     window << SI.player.entityFig + SI.playerPos;
 }
@@ -129,7 +137,7 @@ void displaySpace(minGL &window, const spaceInvaders &SI)
 ///
 /// \brief display the spaces which will be filled with text on the screen
 /// \param window : the window on which the HUD will be printed
-/// \param SI : The strcut containing all the useful variables (including the picture of the player, used to show the lifes remaining)
+/// \param SI : The struct containing all the useful variables (including the picture of the player, used to show the lifes remaining)
 ///
 
 void displayHUD(minGL &window, const spaceInvaders &SI)
@@ -215,6 +223,13 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                     if (collision)
                     {
                         SI.playerTorpedoPos.erase(it);
+                        if (rand()% max(unsigned(4),(10-SI.wave/5)) == 0)
+                        {
+                            std::pair<pos, short> upgrade;
+                            upgrade.first = *itInvadersPos + pos(SI.invaders.entityWidth /2, SI.invaders.entityHeight /2) + pos(-15, -15);
+                            upgrade.second = rand()%SI.upgradeTypes.size();
+                            SI.UpgradePos.push_back(upgrade);
+                        }
                         SI.invadersPos.erase(itInvadersPos);
                         SI.score += SI.scoreStep;
                         SI.scoreStep += 20;
@@ -233,6 +248,10 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                         collision = collisions(*it, SI.bonusInvaderPos, 15, 75, 50, 160);
                         if (collision)
                         {
+                            std::pair<pos, short> upgrade;
+                            upgrade.first = SI.bonusInvaderPos + pos(SI.bonusInvader.entityWidth /2, SI.bonusInvader.entityHeight /2) + pos(-15, -15);
+                            upgrade.second = rand()%SI.upgradeTypes.size();
+                            SI.UpgradePos.push_back(upgrade);
                             SI.playerTorpedoPos.erase(it);
                             SI.bonusInvaderPos = pos(0, 0);
                             SI.LastBonusInvader = chrono::steady_clock::now();
@@ -292,6 +311,35 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
         }
         if (!collision)
             ++it;
+    }
+
+    //deplacement des bonus
+    vector<std::pair<pos, short>>::iterator itupgrade = SI.UpgradePos.begin();
+    while (itupgrade != SI.UpgradePos.end())
+    {
+        bool collision(false);
+        for (unsigned tempMove(0); !collision && tempMove < SI.upgradeVelocity; ++tempMove) //deplacer par pas de 1 pour verifier collisions meme quand vitesse élevée
+        {
+            if (itupgrade->first.getOrd() > 1)
+            {
+                itupgrade->first = pos(itupgrade->first.getAbs(), itupgrade->first.getOrd() - 1);                  //déplacement
+                collision = collisions(itupgrade->first, SI.playerPos, 15, 55, 15, 110); //collision avec le joueur
+                if (collision)
+                {
+                    if (itupgrade->second == 0) ++SI.lives;
+                    if (itupgrade->second == 1) SI.shot -= SI.shot / 10;
+                    if(itupgrade->second == 2) SI.score += 10 + SI.wave * 10;
+                    SI.UpgradePos.erase(itupgrade);
+                }
+            }
+            else //collision avec le mur
+            {
+                SI.UpgradePos.erase(itupgrade);
+                collision = true;
+            }
+        }
+        if (!collision)
+            ++itupgrade;
     }
 
     if (SI.invadersPos.size() == 0)
@@ -576,7 +624,9 @@ void mainSpaceInvaders(minGL &window)
             {
                 iWin = false;
                 unsigned wave = SI.wave;
+                unsigned lives = SI.lives;
                 SI = SIBase;
+                SI.lives = lives;
                 SI.wave = wave + 1;
                 SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque nouvelle vague
                 window.displayText(window.getWindowWidth() / 2 - 60, window.getWindowHeight() / 2, "vague suivante...");

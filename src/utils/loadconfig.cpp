@@ -26,6 +26,7 @@ map<string, string> loadConfig(string fileName)
     defaultUnsignedConfig["scoreStepBonusInvaders"] = 500;
     defaultUnsignedConfig["torpedoVelocity"] = 20;
     defaultUnsignedConfig["wave"] = 1;
+    defaultUnsignedConfig["upgradeVelocity"] = 10;
 
     map<string, string> result;
     ifstream ifs(fileName);
