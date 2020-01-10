@@ -78,4 +78,10 @@ void initSpaceInvadersFigs(spaceInvaders &SI)
     SI.invadersTorpedo.entityHeight = 30;
     SI.invadersTorpedo.entityFig.Add(rectangle(pos(5, 0), 5, 30, KWhite, KWhite));
     SI.invadersTorpedo.entityFig.Add(rectangle(pos(0, 30), 15, 5, KWhite, KWhite));
+
+    //upgrades
+    SI.lifeUpgrade.entityWidth = 30;
+    SI.lifeUpgrade.entityHeight = 30;
+    SI.lifeUpgrade.entityFig.Add(rectangle(pos(10,0), 10, 30, KGreen, KGreen));
+    SI.lifeUpgrade.entityFig.Add(rectangle(pos(0,10), 30, 10, KGreen, KGreen));
 }

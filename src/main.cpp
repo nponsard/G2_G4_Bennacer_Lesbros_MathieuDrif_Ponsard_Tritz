@@ -74,6 +74,7 @@ void initSpaceInvaders(spaceInvaders &SI)
     SI.invadersVelocity = unsigned(stoul(conf["invadersVelocity"]));
     SI.invadersMaxVelocity = unsigned(stoul(conf["invadersMaxVelocity"]));
     SI.invadersVelocityStep = unsigned(stoul(conf["invadersVelocityStep"]));
+    SI.upgradeVelocity = unsigned(stoul(conf["upgradeVelocity"]));
 
     SI.shot = chrono::duration<int, milli>(stoi(conf["shot"]));
     SI.lastShot = chrono::steady_clock::now();
@@ -122,6 +123,7 @@ void displaySpace(minGL &window, const spaceInvaders &SI)
     display(window, SI.invadersTorpedoPos, SI.invadersTorpedo.entityFig);
     if (!(SI.bonusInvaderPos == pos(0, 0)))
         window << SI.bonusInvader.entityFig + SI.bonusInvaderPos;
+    display(window, SI.lifeUpgradePos, SI.lifeUpgrade.entityFig);
 
     window << SI.player.entityFig + SI.playerPos;
 }
@@ -215,6 +217,10 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                     if (collision)
                     {
                         SI.playerTorpedoPos.erase(it);
+                        if (rand()%10 == 1)
+                        {
+                            SI.lifeUpgradePos.push_back(*itInvadersPos);
+                        }
                         SI.invadersPos.erase(itInvadersPos);
                         SI.score += SI.scoreStep;
                         SI.scoreStep += 20;
@@ -287,6 +293,33 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
             else //collision avec le mur
             {
                 SI.invadersTorpedoPos.erase(it);
+                collision = true;
+            }
+        }
+        if (!collision)
+            ++it;
+    }
+
+    //deplacement des bonus
+    it = SI.lifeUpgradePos.begin();
+    while (it != SI.lifeUpgradePos.end())
+    {
+        bool collision(false);
+        for (unsigned tempMove(0); !collision && tempMove < SI.upgradeVelocity; ++tempMove) //deplacer par pas de 1 pour verifier collisions meme quand vitesse élevée
+        {
+            if (it->getOrd() > 1)
+            {
+                *it = pos(it->getAbs(), it->getOrd() - 1);                  //déplacement
+                collision = collisions(*it, SI.playerPos, 15, 55, 15, 110); //collision avec le joueur
+                if (collision)
+                {
+                    SI.lifeUpgradePos.erase(it);
+                    ++SI.lives;
+                }
+            }
+            else //collision avec le mur
+            {
+                SI.lifeUpgradePos.erase(it);
                 collision = true;
             }
         }

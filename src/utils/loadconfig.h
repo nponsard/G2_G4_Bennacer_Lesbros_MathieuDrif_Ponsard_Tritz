@@ -13,7 +13,7 @@ struct AuthorizedKey {
     /* List of authorized key for the type unsigned in a struct CMyParam*/
     const std::vector<std::string> VParamUnsigned {"invadersVelocity", "invadersMaxVelocity", "invadersVelocityStep", "shot", "invadersShot", "bonusInvaders", "bonusInvaderPosAbs",
                                                     "bonusInvaderPosOrd", "playerPosAbs", "playerPosOrd", "lives", "score", "bestScore", "scoreForMissileDestruction", "scoreStep",
-                                                    "scoreStepBonusInvaders", "torpedoVelocity", "wave"};
+                                                    "scoreStepBonusInvaders", "torpedoVelocity", "wave", "upgradeSpeed"};
 };
 
 std::map<std::string,std::string> loadConfig(std::string fileName);

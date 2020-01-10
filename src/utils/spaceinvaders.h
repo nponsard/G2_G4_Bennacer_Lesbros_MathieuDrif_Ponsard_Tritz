@@ -28,6 +28,7 @@ struct spaceInvaders
     unsigned invadersMaxVelocity;
     unsigned invadersVelocityStep;
     unsigned wave;
+    unsigned upgradeVelocity;
 
     bool InvadersRight = true;
 
@@ -36,12 +37,15 @@ struct spaceInvaders
     entity playerTorpedo;
     entity invadersTorpedo;
     entity bonusInvader;
+    entity lifeUpgrade;
 
     pos playerPos;
     pos bonusInvaderPos;
     std::vector<pos> invadersPos;
     std::vector<pos> playerTorpedoPos;
     std::vector<pos> invadersTorpedoPos;
+
+    std::vector<pos> lifeUpgradePos;
 };
 void initSpaceInvadersFigs(spaceInvaders &SI);
 
