@@ -141,7 +141,7 @@ void minGL::initGraphic()
 
 /*!
  *  \brief      Indique si la touche est pressée (true) ou pas (false)
- *  \author     Nils Ponsard
+ *  
  *  \return     Retourne `true` si la touche est pressée et `false` si elle ne l'est pas
  *  \param[in]  key : la touche concernée : code et spécial
  */
@@ -154,9 +154,10 @@ bool minGL::isPressed(const keyType &key)
 //https://www.opengl.org/resources/libraries/glut/spec3/node76.html
 
 /*!
- * \brief fonction légèrement modifiée pour enlever le bug du texte clignotant
- * 
- * 
+ * \brief fonction qui affiche du texte à l'écran
+ * \param[in] x : position x
+ * \param[in] y : position y
+ * \param[in] str : texte à afficher
  */
 void minGL::displayText(const unsigned &x, const unsigned &y, const string &str)
 {
@@ -192,7 +193,6 @@ void minGL::callDisplay()
     glClear(GL_COLOR_BUFFER_BIT);
     glRasterPos2i(0, 0);
     glDrawPixels(windowWidth, windowHeight, GL_RGB, GL_UNSIGNED_BYTE, &screenBuffer[0]);
-    //glFlush();
 }
 void minGL::callKeyboard(unsigned char k, int x, int y)
 {

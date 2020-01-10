@@ -19,14 +19,14 @@
 /*!
  * \brief keyType : type représentant une touche 
  * \details Paire de int (numéro de la touche) et de bool (spécial oui/non)
- * \author  Nils Ponsard
+ * 
  */
 typedef std::pair<int, bool> keyType; // cle, spécial
 /*!
  * 
  * \brief   keyMap : map des touches pressées 
  * \details Map avec comme clef \ref keyType
- * \author  Nils Ponsard
+ * 
  */
 typedef std::map<keyType, bool> keyMap;
 

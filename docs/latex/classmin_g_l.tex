@@ -19,7 +19,7 @@ void \mbox{\hyperlink{classmin_g_l_a6bf6a7901b5b1bae7bdb70d1b4febbb9}{stop\+Gaph
 bool \mbox{\hyperlink{classmin_g_l_adff92859de3c014f93d32088d3f322f3}{is\+Pressed}} (const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \&key)
 \begin{DoxyCompactList}\small\item\em Indique si la touche est pressée (true) ou pas (false) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmin_g_l_a4fe4d62f6c9f623e83b3a9d173d55587}{display\+Text}} (const unsigned \&x, const unsigned \&y, const std\+::string \&str)
-\begin{DoxyCompactList}\small\item\em fonction légèrement modifiée pour enlever le bug du texte clignotant \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em fonction qui affiche du texte à l\textquotesingle{}écran \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmin_g_l_a46c6a0cb355064ed0f12dedd30c48c5f}{min\+GL}} (const unsigned \&Width=640, const unsigned \&Height=480, const std\+::string \&Name=std\+::string(), const \mbox{\hyperlink{class_r_g_bcolor}{R\+G\+Bcolor}} \&back\+Groung\+Color=\mbox{\hyperlink{rgbcolor_8h_a1028593e1455524da080d607df152047}{K\+White}})
 \item 
 \mbox{\hyperlink{classmin_g_l_a2f36acb2afa9735dedf4deed97ad578e}{$\sim$min\+GL}} ()
@@ -95,11 +95,20 @@ Definition at line 59 of file mingl.\+cpp.
 
 
 
-fonction légèrement modifiée pour enlever le bug du texte clignotant 
+fonction qui affiche du texte à l\textquotesingle{}écran 
 
 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x} & \+: position x \\
+\hline
+\mbox{\texttt{ in}}  & {\em y} & \+: position y \\
+\hline
+\mbox{\texttt{ in}}  & {\em str} & \+: texte à afficher \\
+\hline
+\end{DoxyParams}
 
-Definition at line 161 of file mingl.\+cpp.
+
+Definition at line 162 of file mingl.\+cpp.
 
 \mbox{\Hypertarget{classmin_g_l_a4825c324a765ab4e88f1251b56a632ba}\label{classmin_g_l_a4825c324a765ab4e88f1251b56a632ba}} 
 \index{minGL@{minGL}!getWindowHeight@{getWindowHeight}}
@@ -109,7 +118,7 @@ Definition at line 161 of file mingl.\+cpp.
 
 
 
-Definition at line 224 of file mingl.\+cpp.
+Definition at line 225 of file mingl.\+cpp.
 
 \mbox{\Hypertarget{classmin_g_l_aeacac18399d4e02212d5632d889e8a10}\label{classmin_g_l_aeacac18399d4e02212d5632d889e8a10}} 
 \index{minGL@{minGL}!getWindowWidth@{getWindowWidth}}
@@ -119,7 +128,7 @@ Definition at line 224 of file mingl.\+cpp.
 
 
 
-Definition at line 219 of file mingl.\+cpp.
+Definition at line 220 of file mingl.\+cpp.
 
 \mbox{\Hypertarget{classmin_g_l_a0799c37d9c100c752cefdd0285dce159}\label{classmin_g_l_a0799c37d9c100c752cefdd0285dce159}} 
 \index{minGL@{minGL}!initGlut@{initGlut}}
@@ -151,9 +160,6 @@ Definition at line 116 of file mingl.\+cpp.
 
 Indique si la touche est pressée (true) ou pas (false) 
 
-\begin{DoxyAuthor}{Author}
-Nils Ponsard 
-\end{DoxyAuthor}
 \begin{DoxyReturn}{Returns}
 Retourne {\ttfamily true} si la touche est pressée et {\ttfamily false} si elle ne l\textquotesingle{}est pas 
 \end{DoxyReturn}
@@ -202,7 +208,7 @@ Definition at line 66 of file mingl.\+cpp.
 
 
 
-Definition at line 170 of file mingl.\+cpp.
+Definition at line 171 of file mingl.\+cpp.
 
 \mbox{\Hypertarget{classmin_g_l_a99da1c9d9a0db279975f591b2d4897fd}\label{classmin_g_l_a99da1c9d9a0db279975f591b2d4897fd}} 
 \index{minGL@{minGL}!updateGraphic@{updateGraphic}}
