@@ -674,7 +674,7 @@ string ReadName(minGL & window, const chrono::duration<double, milli> frameDurat
 
 void mainSpaceInvaders(minGL &window)
 {
-    system("aplay '../ressources/theme.wav' &");
+    system("bash ../ressources/audioSpaceInvaders.bash &");
     spaceInvaders SI, SIBase; //SI est utilisé pour le jeu et SIBase conserve les valeurs données par la fonction init sauf pour les scores
     initSpaceInvaders(SI);
     invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
@@ -772,9 +772,6 @@ int main()
 
     srand(time(NULL));
     mainSpaceInvaders(window);
-
-
-
 
     return 0;
 }
