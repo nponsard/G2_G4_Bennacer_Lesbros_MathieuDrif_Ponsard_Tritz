@@ -226,7 +226,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                         if (rand()%2 == 1)
                         {
                             std::pair<pos, short> upgrade;
-                            upgrade.first = *itInvadersPos;
+                            upgrade.first = *itInvadersPos + pos(SI.invaders.entityWidth /2, SI.invaders.entityHeight /2) + pos(-15, -15);
                             upgrade.second = rand()%SI.upgradeTypes.size();
                             SI.UpgradePos.push_back(upgrade);
                         }
@@ -248,6 +248,10 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                         collision = collisions(*it, SI.bonusInvaderPos, 15, 75, 50, 160);
                         if (collision)
                         {
+                            std::pair<pos, short> upgrade;
+                            upgrade.first = SI.bonusInvaderPos + pos(SI.bonusInvader.entityWidth /2, SI.bonusInvader.entityHeight /2) + pos(-15, -15);
+                            upgrade.second = rand()%SI.upgradeTypes.size();
+                            SI.UpgradePos.push_back(upgrade);
                             SI.playerTorpedoPos.erase(it);
                             SI.bonusInvaderPos = pos(0, 0);
                             SI.LastBonusInvader = chrono::steady_clock::now();
@@ -322,8 +326,9 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                 collision = collisions(itupgrade->first, SI.playerPos, 15, 55, 15, 110); //collision avec le joueur
                 if (collision)
                 {
+                    if (itupgrade->second == 0) ++SI.lives;
                     SI.UpgradePos.erase(itupgrade);
-                    ++SI.lives;
+                    if (itupgrade->second == 1) SI.shot -= SI.shot / 10;
                 }
             }
             else //collision avec le mur
@@ -618,7 +623,9 @@ void mainSpaceInvaders(minGL &window)
             {
                 iWin = false;
                 unsigned wave = SI.wave;
+                unsigned lives = SI.lives;
                 SI = SIBase;
+                SI.lives = lives;
                 SI.wave = wave + 1;
                 SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque nouvelle vague
                 window.displayText(window.getWindowWidth() / 2 - 60, window.getWindowHeight() / 2, "vague suivante...");

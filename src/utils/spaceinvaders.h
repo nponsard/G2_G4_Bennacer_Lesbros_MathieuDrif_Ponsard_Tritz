@@ -38,7 +38,9 @@ struct spaceInvaders
     entity playerTorpedo;
     entity invadersTorpedo;
     entity bonusInvader;
+
     entity lifeUpgrade;
+    entity shootSpeedUpgrade;
 
     pos playerPos;
     pos bonusInvaderPos;
