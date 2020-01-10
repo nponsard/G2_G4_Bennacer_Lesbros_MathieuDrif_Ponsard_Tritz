@@ -223,7 +223,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                     if (collision)
                     {
                         SI.playerTorpedoPos.erase(it);
-                        if (rand()%2 == 1)
+                        if (rand()% max(unsigned(4),(10-SI.wave/5)) == 0)
                         {
                             std::pair<pos, short> upgrade;
                             upgrade.first = *itInvadersPos + pos(SI.invaders.entityWidth /2, SI.invaders.entityHeight /2) + pos(-15, -15);
@@ -327,8 +327,9 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                 if (collision)
                 {
                     if (itupgrade->second == 0) ++SI.lives;
-                    SI.UpgradePos.erase(itupgrade);
                     if (itupgrade->second == 1) SI.shot -= SI.shot / 10;
+                    if(itupgrade->second == 2) SI.score += 10 + SI.wave * 10;
+                    SI.UpgradePos.erase(itupgrade);
                 }
             }
             else //collision avec le mur

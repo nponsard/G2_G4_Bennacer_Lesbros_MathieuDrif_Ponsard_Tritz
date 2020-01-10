@@ -41,6 +41,7 @@ struct spaceInvaders
 
     entity lifeUpgrade;
     entity shootSpeedUpgrade;
+    entity scoreUpgrade;
 
     pos playerPos;
     pos bonusInvaderPos;
