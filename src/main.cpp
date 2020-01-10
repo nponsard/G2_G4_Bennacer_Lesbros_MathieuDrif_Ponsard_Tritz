@@ -440,6 +440,7 @@ void ReadKeyboard(minGL &window, spaceInvaders &SI, bool &pause)
         if (diff >= SI.shot)
         {
             SI.playerTorpedoPos.push_back(SI.playerPos + pos(52, 50));
+            system("aplay '../ressources/laser.wav' &");
             SI.lastShot = chrono::steady_clock::now();
         }
     }
@@ -545,7 +546,8 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
 
 void mainSpaceInvaders(minGL &window)
 {
-
+    system("touch ../ressources/running");
+    system("bash ../ressources/audio.bash &");
     spaceInvaders SI, SIBase; //SI est utilisé pour le jeu et SIBase conserve les valeurs données par la fonction init sauf pour les scores
     initSpaceInvaders(SI);
     invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
@@ -618,6 +620,8 @@ int main()
 
     srand(time(NULL));
     mainSpaceInvaders(window);
+
+    system("rm ../ressources/running");
 
     return 0;
 }
