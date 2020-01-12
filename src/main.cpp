@@ -676,6 +676,7 @@ string ReadName(minGL &window, const chrono::duration<double, milli> frameDurati
 
 void mainSpaceInvaders(minGL &window)
 {
+    //https://downloads.khinsider.com/game-soundtracks/album/space-invaders-91-sega-genesis
     system("bash ../ressources/audioSpaceInvaders.bash &");
     spaceInvaders SI, SIBase; //SI est utilisé pour le jeu et SIBase conserve les valeurs données par la fonction init sauf pour les scores
     initSpaceInvaders(SI);
@@ -756,10 +757,13 @@ void mainSpaceInvaders(minGL &window)
     }
 }
 
-void OnExit()
+void killMusic()
 {
-    system("pkill aplay");
+    system("pkill -f 'bash ../ressources/audioSpaceInvaders.bash'");
+    system("pkill -f 'aplay ../ressources/theme.wav'");
 }
+
+
 ///
 /// \brief Initialize Glut and MinGl, creates a seed for randomness and launches the game.
 /// \return
@@ -767,7 +771,9 @@ void OnExit()
 
 int main()
 {
-    atexit(OnExit);
+    //https://en.cppreference.com/w/cpp/utility/program/atexit
+    atexit(killMusic);
+
     minGL window(1280, 720, "Space Invader", KBlack);
     window.initGlut();
     window.initGraphic();
