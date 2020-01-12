@@ -664,7 +664,7 @@ string ReadName(minGL &window, const chrono::duration<double, milli> frameDurati
         if (diff < frameDuration)
             this_thread::sleep_for(frameDuration - diff);
     }
-    this_thread::sleep_for(chrono::duration<int, milli>(100)); //delai pour éviter répétition de touches en arrivant au menu
+    window.resetKey(KEY_ENTER); //éviter répétition de touches en arrivant au menu
     return name;
 }
 

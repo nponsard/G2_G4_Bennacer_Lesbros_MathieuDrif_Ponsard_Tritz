@@ -151,6 +151,16 @@ bool minGL::isPressed(const keyType &key)
     return keyboardMap[key];
 }
 
+/*!
+ *
+ * \todo documentation
+ * 
+ */
+void minGL::resetKey(const keyType &key)
+{
+    keyboardMap[key] = false;
+}
+
 //http://mperriss.free.fr/opengl/Guide_2D/texte.htm
 //https://www.opengl.org/resources/libraries/glut/spec3/node76.html
 
