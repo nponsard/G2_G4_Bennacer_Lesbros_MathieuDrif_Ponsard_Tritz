@@ -219,22 +219,22 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
         bool collision(false);                                                              //collision avec un mur, un invader ou un missile d'invader
         for (unsigned tempMove(0); !collision && tempMove < SI.torpedoVelocity; ++tempMove) //deplacer par pas de 1 pour verifier les collisions meme quand la vitesse des missiles est élevée
         {
-            if (it->getOrd() + 1 + 30 /*taille missile*/ < height)
+            if (it->getOrd() + 1 + SI.playerTorpedo.entityHeight < height)
             {
                 *it = *it + pos(0, 1); //déplacement
 
                 //collision avec un invader
                 for (vector<pos>::iterator itInvadersPos(SI.invadersPos.begin()); !collision && itInvadersPos != SI.invadersPos.end(); ++itInvadersPos)
                 {
-                    collision = collisions(*it, *itInvadersPos, SI.playerTorpedo.entityHeight, 15, SI.playerTorpedo.entityWidth, 50);
+                    collision = collisions(*it, *itInvadersPos, SI.playerTorpedo.entityHeight, SI.invaders.entityHeight, SI.playerTorpedo.entityWidth, SI.invaders.entityWidth);
                     if (collision)
                     {
                         SI.playerTorpedoPos.erase(it);
-                        if (rand()% max(unsigned(4),(10-SI.wave/5)) == 0)
+                        if (rand() % max(unsigned(4), (10 - SI.wave / 5)) == 0)
                         {
                             std::pair<pos, short> upgrade;
-                            upgrade.first = *itInvadersPos + pos(SI.invaders.entityWidth /2, SI.invaders.entityHeight /2) + pos(-15, -15);
-                            upgrade.second = rand()%SI.upgradeTypes.size();
+                            upgrade.first = *itInvadersPos + pos(SI.invaders.entityWidth / 2, SI.invaders.entityHeight / 2) + pos(-15, -15);
+                            upgrade.second = rand() % SI.upgradeTypes.size();
                             SI.UpgradePos.push_back(upgrade);
                         }
                         SI.invadersPos.erase(itInvadersPos);
@@ -253,12 +253,12 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                 {
                     if (!(SI.bonusInvaderPos == pos(0, 0)))
                     {
-                        collision = collisions(*it, SI.bonusInvaderPos, 15, 75, 50, 160);
+                        collision = collisions(*it, SI.bonusInvaderPos, SI.playerTorpedo.entityHeight, SI.bonusInvader.entityHeight, SI.playerTorpedo.entityWidth, SI.bonusInvader.entityWidth);
                         if (collision)
                         {
                             std::pair<pos, short> upgrade;
-                            upgrade.first = SI.bonusInvaderPos + pos(SI.bonusInvader.entityWidth /2, SI.bonusInvader.entityHeight /2) + pos(-15, -15);
-                            upgrade.second = rand()%SI.upgradeTypes.size();
+                            upgrade.first = SI.bonusInvaderPos + pos(SI.bonusInvader.entityWidth / 2, SI.bonusInvader.entityHeight / 2) + pos(-15, -15);
+                            upgrade.second = rand() % SI.upgradeTypes.size();
                             SI.UpgradePos.push_back(upgrade);
                             SI.playerTorpedoPos.erase(it);
                             system("aplay '../ressources/laser.wav' &");
@@ -274,7 +274,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                     //collision avec un missile
                     for (vector<pos>::iterator itInvadersTorpedoPos(SI.invadersTorpedoPos.begin()); !collision && itInvadersTorpedoPos != SI.invadersTorpedoPos.end(); ++itInvadersTorpedoPos)
                     {
-                        collision = collisions(*it, *itInvadersTorpedoPos, 15, 15, 15, 15);
+                        collision = collisions(*it, *itInvadersTorpedoPos, SI.playerTorpedo.entityHeight, SI.invadersTorpedo.entityHeight, SI.playerTorpedo.entityWidth, SI.invadersTorpedo.entityWidth);
                         if (collision)
                         {
                             SI.playerTorpedoPos.erase(it);
@@ -303,8 +303,8 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
         {
             if (it->getOrd() > 1)
             {
-                *it = pos(it->getAbs(), it->getOrd() - 1);                  //déplacement
-                collision = collisions(*it, SI.playerPos, 15, 55, 15, 110); //collision avec le joueur
+                *it = pos(it->getAbs(), it->getOrd() - 1);                                                                                                                 //déplacement
+                collision = collisions(*it, SI.playerPos, SI.invadersTorpedo.entityHeight, SI.player.entityHeight, SI.invadersTorpedo.entityWidth, SI.player.entityWidth); //collision avec le joueur
                 if (collision)
                 {
                     SI.invadersTorpedoPos.erase(it);
@@ -331,13 +331,16 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
         {
             if (itupgrade->first.getOrd() > 1)
             {
-                itupgrade->first = pos(itupgrade->first.getAbs(), itupgrade->first.getOrd() - 1);                  //déplacement
-                collision = collisions(itupgrade->first, SI.playerPos, 15, 55, 15, 110); //collision avec le joueur
+                itupgrade->first = pos(itupgrade->first.getAbs(), itupgrade->first.getOrd() - 1);                                                                               //déplacement
+                collision = collisions(itupgrade->first, SI.playerPos, SI.lifeUpgrade.entityHeight, SI.player.entityHeight, SI.lifeUpgrade.entityWidth, SI.player.entityWidth); //collision avec le joueur, on utilise lifeUpgrade pour la collision de base
                 if (collision)
                 {
-                    if (itupgrade->second == 0) ++SI.lives;
-                    if (itupgrade->second == 1) SI.shot -= SI.shot / 10;
-                    if(itupgrade->second == 2) SI.score += 10 + SI.wave * 10;
+                    if (itupgrade->second == 0)
+                        ++SI.lives;
+                    if (itupgrade->second == 1)
+                        SI.shot -= SI.shot / 10;
+                    if (itupgrade->second == 2)
+                        SI.score += 10 + SI.wave * 10;
                     SI.UpgradePos.erase(itupgrade);
                 }
             }
@@ -416,7 +419,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                 if (it2->getAbs() > extremum->getAbs())
                     extremum = it2;
 
-            if (extremum->getAbs() + SI.invadersVelocity + 55 /*invaders size*/ < width)
+            if (extremum->getAbs() + SI.invadersVelocity + SI.invaders.entityWidth < width)
             {
                 //deplacer tous les invaders
                 it = SI.invadersPos.begin();
@@ -462,7 +465,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                 if (it2->getOrd() < extremum->getOrd())
                     extremum = it2;
 
-            if (extremum->getOrd() > 30 /*invader height*/ + 50 /*score height*/ + 70 /*player height*/)
+            if (extremum->getOrd() > SI.invaders.entityHeight + 50 /*score height*/ + SI.player.entityHeight)
             {
                 //deplacer tous les invaders
                 it = SI.invadersPos.begin();
@@ -487,7 +490,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
 
 void ReadKeyboard(minGL &window, spaceInvaders &SI, bool &pause)
 {
-    if (window.isPressed(KEY_RIGHT) && SI.playerPos.getAbs() + 120 < window.getWindowWidth())
+    if (window.isPressed(KEY_RIGHT) && SI.playerPos.getAbs() + SI.player.entityWidth + 10 < window.getWindowWidth())
         SI.playerPos.abs += 10;
     if (window.isPressed(KEY_LEFT) && SI.playerPos.getAbs() > 10)
         SI.playerPos.abs -= 10;
@@ -528,11 +531,11 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
 
         window.displayText(window.getWindowWidth() - 420, window.getWindowHeight() / 2 + 260, "Meilleurs scores : ");
 
-        for(unsigned i(0); i < SI.bestScores.size() && i < 3; ++i)
+        for (unsigned i(0); i < SI.bestScores.size() && i < 3; ++i)
         {
-            window.displayText(window.getWindowWidth() - 400, window.getWindowHeight() / 2 + 220 - (25*i), SI.bestScores[i].first);
-            window.displayText(window.getWindowWidth() - 370, window.getWindowHeight() / 2 + 220 - (25*i), ":");
-            window.displayText(window.getWindowWidth() - 350, window.getWindowHeight() / 2 + 220 - (25*i), to_string(SI.bestScores[i].second));
+            window.displayText(window.getWindowWidth() - 400, window.getWindowHeight() / 2 + 220 - (25 * i), SI.bestScores[i].first);
+            window.displayText(window.getWindowWidth() - 370, window.getWindowHeight() / 2 + 220 - (25 * i), ":");
+            window.displayText(window.getWindowWidth() - 350, window.getWindowHeight() / 2 + 220 - (25 * i), to_string(SI.bestScores[i].second));
         }
 
         window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur entree pour jouer, echap pour quitter");
@@ -578,7 +581,7 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
 /// \param frameDuration : the time between each frame
 ///
 
-void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<double, milli> frameDuration, bool & iLoose)
+void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<double, milli> frameDuration, bool &iLoose)
 {
     keyType key(0, false);
     while (key == keyType(0, false) && !iLoose)
@@ -589,7 +592,7 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
         window << SI.player.entityFig * 2 + pos(100, 0);
         window.updateGraphic();
         window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur ENTREE pour continuer");
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 -20, "Appuyez sur ECHAP pour quitter la partie");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 - 20, "Appuyez sur ECHAP pour quitter la partie");
         window.displayText(50, window.getWindowHeight() - 50, "Meilleur score : ");
         window.displayText(200, window.getWindowHeight() - 50, to_string(SI.bestScore));
 
@@ -602,7 +605,7 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
         if (window.isPressed(KEY_ESCAPE))
         {
             iLoose = true;
-            this_thread::sleep_for(chrono::duration<int, milli>(50));//delai pour éviter répétition de touches
+            this_thread::sleep_for(chrono::duration<int, milli>(50)); //delai pour éviter répétition de touches
         }
 
         chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
@@ -612,8 +615,7 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
     }
 }
 
-
-string ReadName(minGL & window, const chrono::duration<double, milli> frameDuration, const unsigned & nbCharMax = 3)
+string ReadName(minGL &window, const chrono::duration<double, milli> frameDuration, const unsigned &nbCharMax = 3)
 {
     string name;
     keyType key(0, false);
@@ -623,38 +625,38 @@ string ReadName(minGL & window, const chrono::duration<double, milli> frameDurat
         chrono::time_point<chrono::steady_clock> beg(chrono::steady_clock::now());
 
         window.clearScreen();
-        window << rectangle(pos(window.getWindowWidth()/2 - 100, window.getWindowHeight()/2 - 25), 200, 50, KWhite, KBlack);
+        window << rectangle(pos(window.getWindowWidth() / 2 - 100, window.getWindowHeight() / 2 - 25), 200, 50, KWhite, KBlack);
         window.updateGraphic();
 
-        window.displayText(window.getWindowWidth()/2 - 150, window.getWindowHeight() / 2 + 100, "Nouveau meilleur score, entrez votre nom");
+        window.displayText(window.getWindowWidth() / 2 - 150, window.getWindowHeight() / 2 + 100, "Nouveau meilleur score, entrez votre nom");
 
-        window.displayText(window.getWindowWidth()/2 - 90, window.getWindowHeight() / 2 - 5, name);
+        window.displayText(window.getWindowWidth() / 2 - 90, window.getWindowHeight() / 2 - 5, name);
 
-        if(name.size() < nbCharMax)
+        if (name.size() < nbCharMax)
         {
             //lecture des lettres uniquement (ascii : 65 - 90)
             bool pressed(false);
-            for(char keyVal(65); !pressed && keyVal <= 90; ++keyVal)
+            for (char keyVal(65); !pressed && keyVal <= 90; ++keyVal)
             {
-                if(window.isPressed(keyType(keyVal, false)) || window.isPressed(keyType(keyVal + 32 , false)))//test majuscule et minuscule
+                if (window.isPressed(keyType(keyVal, false)) || window.isPressed(keyType(keyVal + 32, false))) //test majuscule et minuscule
                 {
                     name.push_back(keyVal);
                     pressed = true;
-                    this_thread::sleep_for(chrono::duration<int, milli>(50));//delai pour éviter répétition de touches
+                    this_thread::sleep_for(chrono::duration<int, milli>(50)); //delai pour éviter répétition de touches
                 }
             }
         }
-        if(window.isPressed(KEY_RETURN))
-            if(name.size() != 0)
+        if (window.isPressed(KEY_RETURN))
+            if (name.size() != 0)
             {
                 name.pop_back();
-                this_thread::sleep_for(chrono::duration<int, milli>(50));//delai pour éviter répétition de touches
+                this_thread::sleep_for(chrono::duration<int, milli>(50)); //delai pour éviter répétition de touches
             }
 
         if (window.isPressed(KEY_ENTER))
         {
             key = KEY_ENTER;
-            this_thread::sleep_for(chrono::duration<int, milli>(50));//delai pour éviter répétition de touches
+            this_thread::sleep_for(chrono::duration<int, milli>(50)); //delai pour éviter répétition de touches
         }
 
         chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
@@ -662,7 +664,7 @@ string ReadName(minGL & window, const chrono::duration<double, milli> frameDurat
         if (diff < frameDuration)
             this_thread::sleep_for(frameDuration - diff);
     }
-
+    window.resetKey(KEY_ENTER); //éviter répétition de touches en arrivant au menu
     return name;
 }
 
@@ -718,7 +720,7 @@ void mainSpaceInvaders(minGL &window)
 
             if (pause)
             {
-                this_thread::sleep_for(chrono::duration<int, milli>(50));//delai pour éviter répétition de touches
+                this_thread::sleep_for(chrono::duration<int, milli>(50)); //delai pour éviter répétition de touches
                 SIpause(SI, window, frameDuration, iLoose);
                 SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque sortie de pause
                 pause = false;
@@ -736,14 +738,14 @@ void mainSpaceInvaders(minGL &window)
         SI.score = 0;
 
         //update bestScores vector
-        if(SIBase.bestScores.size() < 3)
+        if (SIBase.bestScores.size() < 3)
         {
             string name(ReadName(window, frameDuration));
             SIBase.bestScores.push_back(make_pair(name, SIBase.score));
             scoreSort(SIBase.bestScores);
             saveScores(SIBase.bestScores, "scores.yaml");
         }
-        else if(SIBase.bestScores[SIBase.bestScores.size() - 1].second < SIBase.score)
+        else if (SIBase.bestScores[SIBase.bestScores.size() - 1].second < SIBase.score)
         {
             string name(ReadName(window, frameDuration));
             SIBase.bestScores.push_back(make_pair(name, SIBase.score));
