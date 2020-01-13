@@ -3,21 +3,55 @@
 {\ttfamily \#include \char`\"{}loadconfig.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-map$<$ string, string $>$ \mbox{\hyperlink{loadconfig_8cpp_a4257d8013c0d7fea0e9e20d50e104c24}{load\+Config}} (string file\+Name)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{loadconfig_8cpp_a64b9b051eb5b61b57950a500c7742ae0}{create\+Conf}} (const string \&file\+Name, map$<$ string, unsigned $>$ Map)
+\begin{DoxyCompactList}\small\item\em create the default config file \end{DoxyCompactList}\item 
+map$<$ string, string $>$ \mbox{\hyperlink{loadconfig_8cpp_a329d1172504e8296ecc66570a2a019da}{load\+Config}} (const string \&file\+Name)
+\begin{DoxyCompactList}\small\item\em load config file \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{loadconfig_8cpp_a4257d8013c0d7fea0e9e20d50e104c24}\label{loadconfig_8cpp_a4257d8013c0d7fea0e9e20d50e104c24}} 
+\mbox{\Hypertarget{loadconfig_8cpp_a64b9b051eb5b61b57950a500c7742ae0}\label{loadconfig_8cpp_a64b9b051eb5b61b57950a500c7742ae0}} 
+\index{loadconfig.cpp@{loadconfig.cpp}!createConf@{createConf}}
+\index{createConf@{createConf}!loadconfig.cpp@{loadconfig.cpp}}
+\doxysubsubsection{\texorpdfstring{createConf()}{createConf()}}
+{\footnotesize\ttfamily void create\+Conf (\begin{DoxyParamCaption}\item[{const string \&}]{file\+Name,  }\item[{map$<$ string, unsigned $>$}]{Map }\end{DoxyParamCaption})}
+
+
+
+create the default config file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & of the file to create \\
+\hline
+{\em map} & containing value to put in the file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 14 of file loadconfig.\+cpp.
+
+\mbox{\Hypertarget{loadconfig_8cpp_a329d1172504e8296ecc66570a2a019da}\label{loadconfig_8cpp_a329d1172504e8296ecc66570a2a019da}} 
 \index{loadconfig.cpp@{loadconfig.cpp}!loadConfig@{loadConfig}}
 \index{loadConfig@{loadConfig}!loadconfig.cpp@{loadconfig.cpp}}
 \doxysubsubsection{\texorpdfstring{loadConfig()}{loadConfig()}}
-{\footnotesize\ttfamily map$<$string, string$>$ load\+Config (\begin{DoxyParamCaption}\item[{string}]{file\+Name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily map$<$string, string$>$ load\+Config (\begin{DoxyParamCaption}\item[{const string \&}]{file\+Name }\end{DoxyParamCaption})}
 
 
 
-Definition at line 7 of file loadconfig.\+cpp.
+load config file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & of the config file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 31 of file loadconfig.\+cpp.
 

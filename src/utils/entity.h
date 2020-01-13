@@ -3,6 +3,11 @@
 
 #include "minGL/figs/figure.h"
 
+/*!
+ *  \brief struct associant une figure à une largeur et une hauteur
+ *  
+ * 
+ */
 struct entity
 {
     unsigned entityHeight;

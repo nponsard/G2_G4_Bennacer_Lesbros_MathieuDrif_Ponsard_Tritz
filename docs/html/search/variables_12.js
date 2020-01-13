@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['vfig_411',['vFig',['../classfigure.html#ae5fefc18c10bdcc8ecb856f5ab747bc4',1,'figure']]],
-  ['vparamunsigned_412',['VParamUnsigned',['../struct_authorized_key.html#a871173f4b0c89c91289a10f0ddc1cadd',1,'AuthorizedKey']]]
+  ['upgradepos_453',['UpgradePos',['../structspace_invaders.html#addce84a931902a6f9bbd4e5b26ae1616',1,'spaceInvaders']]],
+  ['upgradetypes_454',['upgradeTypes',['../structspace_invaders.html#af03b5260f0258d0864a63da8c1934eef',1,'spaceInvaders']]],
+  ['upgradevelocity_455',['upgradeVelocity',['../structspace_invaders.html#afdd9b1f77a191db6441689fa983b7124',1,'spaceInvaders']]]
 ];

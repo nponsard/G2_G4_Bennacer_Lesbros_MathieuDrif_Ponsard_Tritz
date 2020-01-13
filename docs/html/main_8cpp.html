@@ -105,6 +105,9 @@ $(document).ready(function(){initNavTree('main_8cpp.html',''); initResizable(); 
 <code>#include &lt;thread&gt;</code><br />
 <code>#include &quot;<a class="el" href="spaceinvaders_8h_source.html">utils/spaceinvaders.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="loadconfig_8h_source.html">utils/loadconfig.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="load_scores_8h_source.html">utils/loadScores.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="scoresort_8h_source.html">utils/scoresort.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="savescores_8h_source.html">utils/savescores.h</a>&quot;</code><br />
 </div>
 <p><a href="main_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -124,6 +127,8 @@ Functions</h2></td></tr>
 <tr class="separator:adf36a6b9c333fe142b44223c01ca52ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa89fe11c6a08a96d88eb644c6c96effa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="mingl_8h.html#ab47ee0b728e0f5acc9ba19301a01798b">keyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa89fe11c6a08a96d88eb644c6c96effa">KEY_ENTER</a> ({13, false})</td></tr>
 <tr class="separator:aa89fe11c6a08a96d88eb644c6c96effa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5add5cc153950658ca297235042a117d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="mingl_8h.html#ab47ee0b728e0f5acc9ba19301a01798b">keyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5add5cc153950658ca297235042a117d">KEY_RETURN</a> ({8, false})</td></tr>
+<tr class="separator:a5add5cc153950658ca297235042a117d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dad421af4a8916521afa23c1ab85134"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a1dad421af4a8916521afa23c1ab85134">invadersGeneration</a> (<a class="el" href="structspace_invaders.html">spaceInvaders</a> &amp;SI, const unsigned &amp;height, const unsigned &amp;width)</td></tr>
 <tr class="memdesc:a1dad421af4a8916521afa23c1ab85134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add invaders to the vector containing their pos until they fill their starting space.  <a href="main_8cpp.html#a1dad421af4a8916521afa23c1ab85134">More...</a><br /></td></tr>
 <tr class="separator:a1dad421af4a8916521afa23c1ab85134"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,6 +138,8 @@ Functions</h2></td></tr>
 <tr class="memitem:ad08634716e92a71688805904e5e4e4cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ad08634716e92a71688805904e5e4e4cb">display</a> (<a class="el" href="classmin_g_l.html">minGL</a> &amp;window, const vector&lt; <a class="el" href="structpos.html">pos</a> &gt; &amp;positions, const <a class="el" href="classfigure.html">figure</a> &amp;fig)</td></tr>
 <tr class="memdesc:ad08634716e92a71688805904e5e4e4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">display a figure at each position contained in a vector of positions  <a href="main_8cpp.html#ad08634716e92a71688805904e5e4e4cb">More...</a><br /></td></tr>
 <tr class="separator:ad08634716e92a71688805904e5e4e4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac109063b2e637b456f78e050c7f4ec75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac109063b2e637b456f78e050c7f4ec75">display</a> (<a class="el" href="classmin_g_l.html">minGL</a> &amp;window, const vector&lt; pair&lt; <a class="el" href="structpos.html">pos</a>, short &gt;&gt; &amp;upgrades, const vector&lt; <a class="el" href="classfigure.html">figure</a> &gt; &amp;figures)</td></tr>
+<tr class="separator:ac109063b2e637b456f78e050c7f4ec75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac41565061b5d9d85c584ba075ae5b430"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ac41565061b5d9d85c584ba075ae5b430">displaySpace</a> (<a class="el" href="classmin_g_l.html">minGL</a> &amp;window, const <a class="el" href="structspace_invaders.html">spaceInvaders</a> &amp;SI)</td></tr>
 <tr class="memdesc:ac41565061b5d9d85c584ba075ae5b430"><td class="mdescLeft">&#160;</td><td class="mdescRight">display the torpedos, the ennemies and the player on the screen  <a href="main_8cpp.html#ac41565061b5d9d85c584ba075ae5b430">More...</a><br /></td></tr>
 <tr class="separator:ac41565061b5d9d85c584ba075ae5b430"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,12 +161,16 @@ Functions</h2></td></tr>
 <tr class="memitem:acb09fd5530dac6cdb8a763af79e1ebc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="mingl_8h.html#ab47ee0b728e0f5acc9ba19301a01798b">keyType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#acb09fd5530dac6cdb8a763af79e1ebc4">SpaceInvadersMenu</a> (const <a class="el" href="structspace_invaders.html">spaceInvaders</a> &amp;SI, <a class="el" href="classmin_g_l.html">minGL</a> &amp;window, const chrono::duration&lt; double, milli &gt; frameDuration)</td></tr>
 <tr class="memdesc:acb09fd5530dac6cdb8a763af79e1ebc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed.  <a href="main_8cpp.html#acb09fd5530dac6cdb8a763af79e1ebc4">More...</a><br /></td></tr>
 <tr class="separator:acb09fd5530dac6cdb8a763af79e1ebc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ceb612dbb9511992680192b6f7d8b4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a1ceb612dbb9511992680192b6f7d8b4a">SIpause</a> (const <a class="el" href="structspace_invaders.html">spaceInvaders</a> &amp;SI, <a class="el" href="classmin_g_l.html">minGL</a> &amp;window, const chrono::duration&lt; double, milli &gt; frameDuration)</td></tr>
-<tr class="memdesc:a1ceb612dbb9511992680192b6f7d8b4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the pause screen and check if the player press Enter to leave the pause.  <a href="main_8cpp.html#a1ceb612dbb9511992680192b6f7d8b4a">More...</a><br /></td></tr>
-<tr class="separator:a1ceb612dbb9511992680192b6f7d8b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc083af96fab5f1a4c287f4ff09ba63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#afbc083af96fab5f1a4c287f4ff09ba63">SIpause</a> (const <a class="el" href="structspace_invaders.html">spaceInvaders</a> &amp;SI, <a class="el" href="classmin_g_l.html">minGL</a> &amp;window, const chrono::duration&lt; double, milli &gt; frameDuration, bool &amp;iLoose)</td></tr>
+<tr class="memdesc:afbc083af96fab5f1a4c287f4ff09ba63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the pause screen and check if the player press Enter to leave the pause.  <a href="main_8cpp.html#afbc083af96fab5f1a4c287f4ff09ba63">More...</a><br /></td></tr>
+<tr class="separator:afbc083af96fab5f1a4c287f4ff09ba63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63dc32cfb9fffe0479de85c623e159b6"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a63dc32cfb9fffe0479de85c623e159b6">ReadName</a> (<a class="el" href="classmin_g_l.html">minGL</a> &amp;window, const chrono::duration&lt; double, milli &gt; frameDuration, const unsigned &amp;nbCharMax=3)</td></tr>
+<tr class="separator:a63dc32cfb9fffe0479de85c623e159b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1883dd55c8b9fa49439a49a3e08cb24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ad1883dd55c8b9fa49439a49a3e08cb24">mainSpaceInvaders</a> (<a class="el" href="classmin_g_l.html">minGL</a> &amp;window)</td></tr>
 <tr class="memdesc:ad1883dd55c8b9fa49439a49a3e08cb24"><td class="mdescLeft">&#160;</td><td class="mdescRight">The main function of the game, which use the others to display the screen, get inputs ... and which manage the pause menu, the framerate, the success and defeat, the generation of the new waves, manage the highscore.  <a href="main_8cpp.html#ad1883dd55c8b9fa49439a49a3e08cb24">More...</a><br /></td></tr>
 <tr class="separator:ad1883dd55c8b9fa49439a49a3e08cb24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827a00dce9688cb83ea6652acfa50393"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a827a00dce9688cb83ea6652acfa50393">killMusic</a> ()</td></tr>
+<tr class="separator:a827a00dce9688cb83ea6652acfa50393"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Glut and MinGl, creates a seed for randomness and launches the game.  <a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">More...</a><br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,12 +253,48 @@ Raphaël LESBROS </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>return true if the entities collide, else returns false </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00173">173</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00188">188</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac109063b2e637b456f78e050c7f4ec75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac109063b2e637b456f78e050c7f4ec75">&#9670;&nbsp;</a></span>display() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmin_g_l.html">minGL</a> &amp;&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; pair&lt; <a class="el" href="structpos.html">pos</a>, short &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>upgrades</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const vector&lt; <a class="el" href="classfigure.html">figure</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>figures</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00120">120</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
 <a id="ad08634716e92a71688805904e5e4e4cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad08634716e92a71688805904e5e4e4cb">&#9670;&nbsp;</a></span>display()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad08634716e92a71688805904e5e4e4cb">&#9670;&nbsp;</a></span>display() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,7 +335,7 @@ Raphaël LESBROS </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00106">106</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00114">114</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -322,12 +369,12 @@ Raphaël LESBROS </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">window</td><td>: the window on which the HUD will be printed </td></tr>
-    <tr><td class="paramname">SI</td><td>: The strcut containing all the useful variables (including the picture of the player, used to show the lifes remaining) </td></tr>
+    <tr><td class="paramname">SI</td><td>: The struct containing all the useful variables (including the picture of the player, used to show the lifes remaining) </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00135">135</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00150">150</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -366,7 +413,7 @@ Raphaël LESBROS </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00118">118</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00132">132</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -405,7 +452,7 @@ Raphaël LESBROS </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00148">148</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00163">163</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -433,7 +480,7 @@ Raphaël LESBROS </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00068">68</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00074">74</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -479,7 +526,7 @@ Raphaël LESBROS </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00049">49</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00055">55</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -555,6 +602,24 @@ Raphaël LESBROS </dd></dl>
 
 </div>
 </div>
+<a id="a5add5cc153950658ca297235042a117d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5add5cc153950658ca297235042a117d">&#9670;&nbsp;</a></span>KEY_RETURN()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="mingl_8h.html#ab47ee0b728e0f5acc9ba19301a01798b">keyType</a> KEY_RETURN </td>
+          <td>(</td>
+          <td class="paramtype">{8, false}&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a91429b25d7a424d5f2a1593d02b66100"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a91429b25d7a424d5f2a1593d02b66100">&#9670;&nbsp;</a></span>KEY_RIGHT()</h2>
 
@@ -609,6 +674,25 @@ Raphaël LESBROS </dd></dl>
 
 </div>
 </div>
+<a id="a827a00dce9688cb83ea6652acfa50393"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a827a00dce9688cb83ea6652acfa50393">&#9670;&nbsp;</a></span>killMusic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void killMusic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00760">760</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -627,7 +711,7 @@ Raphaël LESBROS </dd></dl>
 <p>Initialize Glut and MinGl, creates a seed for randomness and launches the game. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00613">613</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00772">772</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -655,7 +739,7 @@ Raphaël LESBROS </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00546">546</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00677">677</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -715,7 +799,7 @@ Raphaël LESBROS </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00198">198</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00213">213</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -761,12 +845,48 @@ Raphaël LESBROS </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00431">431</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00491">491</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a1ceb612dbb9511992680192b6f7d8b4a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ceb612dbb9511992680192b6f7d8b4a">&#9670;&nbsp;</a></span>SIpause()</h2>
+<a id="a63dc32cfb9fffe0479de85c623e159b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63dc32cfb9fffe0479de85c623e159b6">&#9670;&nbsp;</a></span>ReadName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ReadName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classmin_g_l.html">minGL</a> &amp;&#160;</td>
+          <td class="paramname"><em>window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const chrono::duration&lt; double, milli &gt;&#160;</td>
+          <td class="paramname"><em>frameDuration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
+          <td class="paramname"><em>nbCharMax</em> = <code>3</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00618">618</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afbc083af96fab5f1a4c287f4ff09ba63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbc083af96fab5f1a4c287f4ff09ba63">&#9670;&nbsp;</a></span>SIpause()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -787,7 +907,13 @@ Raphaël LESBROS </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const chrono::duration&lt; double, milli &gt;&#160;</td>
-          <td class="paramname"><em>frameDuration</em>&#160;</td>
+          <td class="paramname"><em>frameDuration</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>iLoose</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -807,7 +933,7 @@ Raphaël LESBROS </dd></dl>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00513">513</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00584">584</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -854,7 +980,7 @@ Raphaël LESBROS </dd></dl>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>returns the key pressed if it is Enter (which will begin the game) or Escape (which will leave the game) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00458">458</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00518">518</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>

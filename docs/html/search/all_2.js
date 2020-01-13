@@ -4,10 +4,11 @@ var searchData=
   ['basefig_2ecpp_7',['basefig.cpp',['../basefig_8cpp.html',1,'']]],
   ['basefig_2eh_8',['basefig.h',['../basefig_8h.html',1,'']]],
   ['bestscore_9',['bestScore',['../structspace_invaders.html#aa0a18991c9083966aea6f9a454e5f5f1',1,'spaceInvaders']]],
-  ['bind_5fcallback_10',['BIND_CALLBACK',['../mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11',1,'mingl.cpp']]],
-  ['blue_11',['Blue',['../class_r_g_bcolor.html#a73774e11ad57d7ee84dd7f676a7f162a',1,'RGBcolor']]],
-  ['bonusinvader_12',['bonusInvader',['../structspace_invaders.html#a055eaff2d3227d400a8178aeddba9a6d',1,'spaceInvaders']]],
-  ['bonusinvaderpos_13',['bonusInvaderPos',['../structspace_invaders.html#a05c4f1a1c2f5d8a4e77e12540ddc0382',1,'spaceInvaders']]],
-  ['bonusinvaders_14',['bonusInvaders',['../structspace_invaders.html#a7ba35db78f60a792fed662f406694d34',1,'spaceInvaders']]],
-  ['bordercolor_15',['borderColor',['../classcircle.html#acc4617f21654b0ba093d7f0fe9613342',1,'circle::borderColor()'],['../classbase_fig.html#a996944e2b56b621d07b55ee10d8683af',1,'baseFig::borderColor()']]]
+  ['bestscores_10',['bestScores',['../structspace_invaders.html#a4a545e5c9fd1226deac5db769b5dcedd',1,'spaceInvaders']]],
+  ['bind_5fcallback_11',['BIND_CALLBACK',['../mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11',1,'mingl.cpp']]],
+  ['blue_12',['Blue',['../class_r_g_bcolor.html#a73774e11ad57d7ee84dd7f676a7f162a',1,'RGBcolor']]],
+  ['bonusinvader_13',['bonusInvader',['../structspace_invaders.html#a055eaff2d3227d400a8178aeddba9a6d',1,'spaceInvaders']]],
+  ['bonusinvaderpos_14',['bonusInvaderPos',['../structspace_invaders.html#a05c4f1a1c2f5d8a4e77e12540ddc0382',1,'spaceInvaders']]],
+  ['bonusinvaders_15',['bonusInvaders',['../structspace_invaders.html#a7ba35db78f60a792fed662f406694d34',1,'spaceInvaders']]],
+  ['bordercolor_16',['borderColor',['../classcircle.html#acc4617f21654b0ba093d7f0fe9613342',1,'circle::borderColor()'],['../classbase_fig.html#a996944e2b56b621d07b55ee10d8683af',1,'baseFig::borderColor()']]]
 ];
