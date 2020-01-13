@@ -2,8 +2,22 @@
 #include <fstream>
 #include <algorithm>
 #include <sstream>
+#include <iostream>
 
 using namespace std;
+
+void createConf(const string & fileName, map<string, unsigned> Map){
+    ofstream file(fileName);
+    if(!file.is_open()) {
+        cerr << "impossible d'écrire le fichier :" << fileName <<endl;
+        return;
+    }
+
+    for(map<string, unsigned>::iterator it(Map.begin()); it != Map.end(); ++it)
+    {
+         file << it->first << " : " << it->second << endl;
+    }
+}
 
 map<string, string> loadConfig(const string & fileName)
 {
@@ -30,37 +44,42 @@ map<string, string> loadConfig(const string & fileName)
 
     map<string, string> result;
     ifstream ifs(fileName);
-    string line;
-    string key;
-    char sep;
-    AuthorizedKey AK;
+    if(!ifs.is_open()) createConf(fileName, defaultUnsignedConfig);
+    else {
+
+        string line;
+        string key;
+        char sep;
+        AuthorizedKey AK;
 
 
-    if(ifs.is_open())
-    {
-        while(true)
+        if(ifs.is_open())
         {
-            getline(ifs, line);
-
-            if (ifs.eof())
-                break;
-
-            istringstream istr;
-            istr.str(line);
-            istr >> key;
-
-            //unsigned
-            if (find(AK.VParamUnsigned.begin(), AK.VParamUnsigned.end(), key) != AK.VParamUnsigned.end())
+            while(true)
             {
-                istr >> sep;
-                unsigned val;
-                istr >> val;
-                if(!istr.fail())
-                    result[key] = to_string(val);
-                else
-                    result[key] = to_string(defaultUnsignedConfig[key]);
+                getline(ifs, line);
+
+                if (ifs.eof())
+                    break;
+
+                istringstream istr;
+                istr.str(line);
+                istr >> key;
+
+                //unsigned
+                if (find(AK.VParamUnsigned.begin(), AK.VParamUnsigned.end(), key) != AK.VParamUnsigned.end())
+                {
+                    istr >> sep;
+                    unsigned val;
+                    istr >> val;
+                    if(!istr.fail())
+                        result[key] = to_string(val);
+                    else
+                        result[key] = to_string(defaultUnsignedConfig[key]);
+                }
             }
         }
+
     }
 
     //ajouter les valeurs des champs absents du fichier
@@ -73,3 +92,4 @@ map<string, string> loadConfig(const string & fileName)
     }
     return result;
 }
+
