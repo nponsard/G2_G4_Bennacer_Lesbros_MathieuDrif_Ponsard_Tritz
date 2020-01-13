@@ -17,6 +17,7 @@
 #include "utils/loadScores.h"
 #include "utils/scoresort.h"
 #include "utils/savescores.h"
+#include "utils/music.h"
 
 ///
 /// \file main.cpp
@@ -481,6 +482,8 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
     }
 }
 
+bool playmusic(true);
+
 ///
 /// \brief Read the keyboard inputs and move the player accordingly
 /// \param window : contains the inputs and the size of the window
@@ -503,6 +506,7 @@ void ReadKeyboard(minGL &window, spaceInvaders &SI, bool &pause)
             SI.lastShot = chrono::steady_clock::now();
         }
     }
+
     if (window.isPressed(KEY_ESCAPE))
         pause = true;
 }
@@ -593,6 +597,8 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
         window.updateGraphic();
         window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur ENTREE pour continuer");
         window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 - 20, "Appuyez sur ECHAP pour quitter la partie");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 - 40, "Appuyez sur ESPACE pour arreter/démarrer la musique");
+
         window.displayText(50, window.getWindowHeight() - 50, "Meilleur score : ");
         window.displayText(200, window.getWindowHeight() - 50, to_string(SI.bestScore));
 
@@ -607,7 +613,19 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
             iLoose = true;
             this_thread::sleep_for(chrono::duration<int, milli>(50)); //delai pour éviter répétition de touches
         }
-
+        if (window.isPressed(KEY_SPACE))
+        {
+            if (playmusic)
+            {
+                killMusic();
+                playmusic = false;
+            }
+            else
+            {
+                startMusic();
+                playmusic = true;
+            }
+                }
         chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
         chrono::duration<double, milli> diff(end - beg);
         if (diff < frameDuration)
@@ -677,9 +695,9 @@ string ReadName(minGL &window, const chrono::duration<double, milli> frameDurati
 void mainSpaceInvaders(minGL &window)
 {
     //https://downloads.khinsider.com/game-soundtracks/album/space-invaders-91-sega-genesis
-    system("bash ../ressources/audioSpaceInvaders.bash &");
     spaceInvaders SI, SIBase; //SI est utilisé pour le jeu et SIBase conserve les valeurs données par la fonction init sauf pour les scores
     initSpaceInvaders(SI);
+    startMusic();
     invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
     SIBase = SI;
 
@@ -756,13 +774,6 @@ void mainSpaceInvaders(minGL &window)
         }
     }
 }
-
-void killMusic()
-{
-    system("pkill -f 'bash ../ressources/audioSpaceInvaders.bash'");
-    system("pkill -f 'aplay ../ressources/theme.wav'");
-}
-
 
 ///
 /// \brief Initialize Glut and MinGl, creates a seed for randomness and launches the game.
