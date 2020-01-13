@@ -99,9 +99,6 @@ void initSpaceInvaders(spaceInvaders &SI)
     SI.bonusInvaderPos = pos(unsigned(stoul(conf["bonusInvaderPosAbs"])), unsigned(stoul(conf["bonusInvaderPosOrd"])));
     SI.playerPos = pos(unsigned(stoul(conf["playerPosAbs"])), unsigned(stoul(conf["playerPosOrd"]))); //placement intial joueur
     SI.lives = unsigned(stoul(conf["lives"]));
-    SI.score = unsigned(stoul(conf["score"]));
-    //SI.bestScore = unsigned(stoul(conf["bestScore"]));
-    SI.bestScore = SI.bestScores[0].second;
     SI.scoreForMissileDestruction = unsigned(stoul(conf["scoreForMissileDestruction"]));
     SI.scoreStep = unsigned(stoul(conf["scoreStep"]));
     SI.scoreStepBonusInvaders = unsigned(stoul(conf["scoreStepBonusInvaders"]));
@@ -561,9 +558,6 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
 
         window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur entree pour jouer, echap pour quitter");
 
-        window.displayText(50, window.getWindowHeight() - 50, "Meilleur score : ");
-        window.displayText(200, window.getWindowHeight() - 50, to_string(SI.bestScore));
-
         window.displayText(50, window.getWindowHeight() - 70, "Dernier score : ");
         window.displayText(200, window.getWindowHeight() - 70, to_string(SI.score));
 
@@ -615,9 +609,6 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
         window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur ENTREE pour continuer");
         window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 - 20, "Appuyez sur ECHAP pour quitter la partie");
         window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 - 40, "Appuyez sur ESPACE pour arreter/démarrer la musique");
-
-        window.displayText(50, window.getWindowHeight() - 50, "Meilleur score : ");
-        window.displayText(200, window.getWindowHeight() - 50, to_string(SI.bestScore));
 
         window.displayText(50, window.getWindowHeight() - 70, "Score : ");
         window.displayText(200, window.getWindowHeight() - 70, to_string(SI.score));
@@ -771,8 +762,6 @@ void mainSpaceInvaders(minGL &window)
                 this_thread::sleep_for(frameDuration - diff);
         }
 
-        if (SIBase.bestScore < SI.score)
-            SIBase.bestScore = SI.score;
         SI = SIBase;
         SI.score = 0;
 

@@ -43,8 +43,6 @@ map<string, string> loadConfig(const string & fileName)
     defaultUnsignedConfig["playerPosAbs"] = 0;
     defaultUnsignedConfig["playerPosOrd"] = 50;
     defaultUnsignedConfig["lives"] = 3;
-    defaultUnsignedConfig["score"] = 0;
-    defaultUnsignedConfig["bestScore"] = 0;
     defaultUnsignedConfig["scoreForMissileDestruction"] = 50;
     defaultUnsignedConfig["scoreStep"] = 100;
     defaultUnsignedConfig["scoreStepBonusInvaders"] = 1000;

@@ -32,3 +32,17 @@ void scoreSort(vector<pair<string, unsigned>> &scores)
 {
     sort(scores.begin(), scores.end(), compPairs);
 }
+
+
+void scoreInsertion(vector<pair<string, unsigned>> & scores, const string &nom, const unsigned & score)
+{
+    unsigned i(0);
+    while(i < scores.size() && scores[i].second < score)
+        ++i;
+
+    scores.resize(scores.size() + 1);
+    for(unsigned j(scores.size()); j-- > i + 1; )
+        scores[j] = scores[j - 1];
+
+    scores[i] = make_pair(nom, score);
+}

@@ -26,7 +26,6 @@ struct spaceInvaders
 
     unsigned lives;
     unsigned score;
-    unsigned bestScore;
     unsigned scoreStep;
     unsigned scoreStepBonusInvaders;
     unsigned scoreForMissileDestruction;
