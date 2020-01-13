@@ -5,7 +5,7 @@
 <area shape="rect" id="node5" href="$main_8cpp.html#ad7204fff1f31826ccb9b3165f4be92aa" title="display text to show the score, the lives remaining, the wave number and the number of invaders remai..." alt="" coords="349,107,417,133"/>
 <area shape="rect" id="node6" href="$main_8cpp.html#ada592260988cd1e3144c6b2f883b1c50" title="Read the keyboard inputs and move the player accordingly." alt="" coords="325,157,441,184"/>
 <area shape="rect" id="node7" href="$main_8cpp.html#a63dc32cfb9fffe0479de85c623e159b6" title=" " alt="" coords="336,208,431,235"/>
-<area shape="rect" id="node8" href="$main_8cpp.html#afbc083af96fab5f1a4c287f4ff09ba63" title="Displays the pause screen and check if the player press Enter to leave the pause." alt="" coords="347,259,420,285"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#a6f6eb5db37f7b274c9373c72a7d58d23" title="Displays the pause screen and check if the player press Enter to leave the pause." alt="" coords="347,259,420,285"/>
 <area shape="rect" id="node9" href="$main_8cpp.html#acb09fd5530dac6cdb8a763af79e1ebc4" title="Display the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed." alt="" coords="307,309,460,336"/>
 <area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initialize Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,157,60,184"/>
 </map>
