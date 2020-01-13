@@ -80,9 +80,9 @@ void initSpaceInvaders(spaceInvaders &SI)
     map<string, string> conf(loadConfig("config.yaml"));
     SI.bestScores = loadScores("scores.yaml");
 
-    SI.invadersVelocity = unsigned(stoul(conf["invadersVelocity"]));
     SI.invadersMaxVelocity = unsigned(stoul(conf["invadersMaxVelocity"]));
-    SI.invadersVelocityStep = unsigned(stoul(conf["invadersVelocityStep"]));
+    SI.invadersMinVelocity = unsigned(stoul(conf["invadersMinVelocity"]));
+    SI.invadersVelocity = SI.invadersMinVelocity;
     SI.upgradeVelocity = unsigned(stoul(conf["upgradeVelocity"]));
 
     SI.shot = chrono::duration<int, milli>(stoi(conf["shot"]));
@@ -92,6 +92,7 @@ void initSpaceInvaders(spaceInvaders &SI)
     SI.invadersLastShot = chrono::steady_clock::now();
 
     SI.bonusInvaders = chrono::duration<int, milli>(stoi(conf["bonusInvaders"]));
+    SI.bonusInvaderVelocityFactor = unsigned(stoul(conf["bonusInvaderVelocityFactor"]));
     SI.LastBonusInvader = chrono::steady_clock::now();
 
     SI.bonusInvaderPos = pos(unsigned(stoul(conf["bonusInvaderPosAbs"])), unsigned(stoul(conf["bonusInvaderPosOrd"])));
@@ -214,7 +215,7 @@ bool collisions(pos &entity1,
 ///     and make one of them choosen randomly shoot.
 /// \param SI : the struct containing all the useful variables to be used and updated
 /// \param height : window's height
-/// \param width : window's width
+/// \param width : windSI.invadersPos.size()ow's width
 /// \param iLoose : boolean which become true if the player lose its last life by being hit by an ennemy torpedo
 /// \param iWin : boolean which become true if there is no invader remaining in the wave
 ///
@@ -239,29 +240,28 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                     if (collision)
                     {
                         SI.playerTorpedoPos.erase(it);
-                        if (rand() % max(unsigned(4), (10 - SI.wave / 5)) == 0)//generation bonus
-                        {
-                            std::pair<pos, short> upgrade;
-                            upgrade.first = itInvadersPos->first + pos(SI.invaders.entityWidth / 2, SI.invaders.entityHeight / 2) + pos(-15, -15);
-                            upgrade.second = rand() % SI.upgradeTypes.size();
-                            SI.UpgradePos.push_back(upgrade);
-                        }
+
                         if(itInvadersPos->second == 1)
                         {
+                            if (rand() % max(unsigned(4), (10 - SI.wave / 5)) == 0)//generation bonus
+                            {
+                                std::pair<pos, short> upgrade;
+                                upgrade.first = itInvadersPos->first + pos(SI.invaders.entityWidth / 2, SI.invaders.entityHeight / 2) + pos(-15, -15);
+                                upgrade.second = rand() % SI.upgradeTypes.size();
+                                SI.UpgradePos.push_back(upgrade);
+                            }
                             SI.invadersPos.erase(itInvadersPos);
-                            system("aplay '../ressources/invadersDeath.wav' &");
+                            system("aplay -q '../ressources/invadersDeath.wav' &");
                             SI.score += SI.scoreStep;
                             SI.scoreStep += 20;
 
-                            if (SI.invadersVelocity + SI.invadersVelocityStep <= SI.invadersMaxVelocity)
-                                SI.invadersVelocity += SI.invadersVelocityStep;
-                            else if (SI.invadersVelocity != SI.invadersMaxVelocity)
-                                SI.invadersVelocity = SI.invadersMaxVelocity;
+                            if(SI.invadersPos.size() != 0)
+                                SI.invadersVelocity = min(unsigned(SI.invadersMinVelocity + ((SI.invadersMaxVelocity - SI.invadersMinVelocity) * 3 / SI.invadersPos.size())), SI.invadersMaxVelocity);
                         }
                         else
                         {
                             --itInvadersPos->second;
-                            system("aplay '../ressources/invadersTouch.wav' &");
+                            system("aplay -q '../ressources/invadersHit.wav' &");
                         }
                     }
                 }
@@ -279,7 +279,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                             upgrade.second = rand() % SI.upgradeTypes.size();
                             SI.UpgradePos.push_back(upgrade);
                             SI.playerTorpedoPos.erase(it);
-                            system("aplay '../ressources/invadersDeath.wav' &");
+                            system("aplay -q '../ressources/bonusInvaderDeath.wav' &");
                             SI.bonusInvaderPos = pos(0, 0);
                             SI.LastBonusInvader = chrono::steady_clock::now();
                             SI.score += SI.scoreStepBonusInvaders;
@@ -400,24 +400,26 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
         if (diff >= SI.bonusInvaders && SI.bonusInvaderPos == pos(0, 0))
             SI.bonusInvaderPos = pos(10, height - 70);
 
+        //déplacement
+
         //deplacer invader bonus
         if (!(SI.bonusInvaderPos == pos(0, 0)))
         {
-            if (SI.bonusInvaderPos.getAbs() == 10)
+            if (SI.bonusInvaderPos.getAbs() == 10)//descente
             {
-                SI.bonusInvaderPos = pos(10, SI.bonusInvaderPos.getOrd() - (SI.invadersVelocity * 5));
-                if (SI.bonusInvaderPos.getOrd() + 140 < height)
+                SI.bonusInvaderPos = pos(10, SI.bonusInvaderPos.getOrd() - (SI.invadersVelocity * SI.bonusInvaderVelocityFactor));
+                if (SI.bonusInvaderPos.getOrd() + 150 < height)
                     SI.bonusInvaderPos = SI.bonusInvaderPos + pos(1, 0);
             }
-            else if (SI.bonusInvaderPos.getAbs() + 160 + 10 < width)
+            else if (SI.bonusInvaderPos.getAbs() + SI.bonusInvader.entityWidth + (SI.invadersVelocity * SI.bonusInvaderVelocityFactor) < width)
             {
-                SI.bonusInvaderPos = SI.bonusInvaderPos + pos(SI.invadersVelocity * 5, 0);
+                SI.bonusInvaderPos = SI.bonusInvaderPos + pos(SI.invadersVelocity * SI.bonusInvaderVelocityFactor, 0);
             }
             else
             {
 
-                if (SI.bonusInvaderPos.getOrd() + (SI.invadersVelocity * 5) + 70 < height)
-                    SI.bonusInvaderPos = SI.bonusInvaderPos + pos(0, SI.invadersVelocity * 5);
+                if (SI.bonusInvaderPos.getOrd() + (SI.invadersVelocity * SI.bonusInvaderVelocityFactor) + SI.bonusInvader.entityHeight < height)
+                    SI.bonusInvaderPos = SI.bonusInvaderPos + pos(0, SI.invadersVelocity * SI.bonusInvaderVelocityFactor);
                 else
                 {
                     SI.bonusInvaderPos = pos(0, 0);
@@ -426,7 +428,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
             }
         }
 
-        //déplacement
+
         bool downShift(false);
         //SI.invadersPos.size() != 0 car win = false
         //trouver pos max invaders
@@ -548,7 +550,7 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
         window << SI.invaders.entityFig * invaderSize + pos(window.getWindowWidth() / 2 - (5 * 110), window.getWindowHeight() / 2);
         window.updateGraphic();
 
-        window.displayText(window.getWindowWidth() - 420, window.getWindowHeight() / 2 + 260, "Meilleurs scores : ");
+        window.displayText(window.getWindowWidth() - 400, window.getWindowHeight() / 2 + 260, "Podium : ");
 
         for (unsigned i(0); i < SI.bestScores.size() && i < 3; ++i)
         {
@@ -699,6 +701,7 @@ void mainSpaceInvaders(minGL &window)
     system("bash ../ressources/audioSpaceInvaders.bash &");
     spaceInvaders SI, SIBase; //SI est utilisé pour le jeu et SIBase conserve les valeurs données par la fonction init sauf pour les scores
     initSpaceInvaders(SI);
+
     invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
     SIBase = SI;
     const chrono::duration<double, milli> frameDuration(33.3); //30fps
@@ -779,7 +782,7 @@ void mainSpaceInvaders(minGL &window)
 void killMusic()
 {
     system("pkill -f 'bash ../ressources/audioSpaceInvaders.bash'");
-    system("pkill -f 'aplay ../ressources/theme.wav'");
+    system("pkill -f 'aplay -q ../ressources/theme.wav'");
 }
 
 
