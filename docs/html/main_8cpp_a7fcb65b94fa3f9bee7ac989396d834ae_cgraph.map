@@ -1,0 +1,5 @@
+<map id="displayHUD" name="displayHUD">
+<area shape="rect" id="node1" title="display the spaces which will be filled with text on the screen" alt="" coords="5,31,104,57"/>
+<area shape="rect" id="node2" href="$classmin_g_l.html#a4825c324a765ab4e88f1251b56a632ba" title=" " alt="" coords="152,5,340,32"/>
+<area shape="rect" id="node3" href="$classmin_g_l.html#aeacac18399d4e02212d5632d889e8a10" title=" " alt="" coords="155,56,337,83"/>
+</map>

@@ -2,6 +2,13 @@
 
 #include "mingl.h"
 
+/*!
+ * \file mingl.cpp
+ * \brief version légèrement modifiée 
+ * 
+ * 
+ */
+
 using namespace std;
 using namespace nsUtil;
 
@@ -77,6 +84,7 @@ void minGL::setPixel(const pos &pos_, const RGBcolor &col) throw(PixelException)
     screenBuffer[3 * (pos_.ord * windowWidth + pos_.abs) + 1] = col.Green;
     screenBuffer[3 * (pos_.ord * windowWidth + pos_.abs) + 2] = col.Blue;
 }
+
 /*
 char minGL::get_key()
 {
@@ -137,6 +145,7 @@ void minGL::initGraphic()
 
     // Un tour de boucle pour lancer l'affichage
     glutMainLoopEvent();
+    glutSetKeyRepeat(GLUT_KEY_REPEAT_OFF); // on désactive la répétition des touches
 }
 
 /*!
@@ -148,6 +157,16 @@ void minGL::initGraphic()
 bool minGL::isPressed(const keyType &key)
 {
     return keyboardMap[key];
+}
+
+/*!
+ *
+ * \todo documentation
+ * 
+ */
+void minGL::resetKey(const keyType &key)
+{
+    keyboardMap[key] = false;
 }
 
 //http://mperriss.free.fr/opengl/Guide_2D/texte.htm

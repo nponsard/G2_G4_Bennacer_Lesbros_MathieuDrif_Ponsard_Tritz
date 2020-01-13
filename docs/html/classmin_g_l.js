@@ -8,6 +8,7 @@ var classmin_g_l =
     [ "getWindowWidth", "classmin_g_l.html#aeacac18399d4e02212d5632d889e8a10", null ],
     [ "initGraphic", "classmin_g_l.html#a2fc771e1dda196da4341375d1bbc40e0", null ],
     [ "isPressed", "classmin_g_l.html#adff92859de3c014f93d32088d3f322f3", null ],
+    [ "resetKey", "classmin_g_l.html#a37b8dfb172809782b32664c507bfce9d", null ],
     [ "setBgColor", "classmin_g_l.html#a40ed6a589b798e2d78ccf1702d69bc30", null ],
     [ "setPixel", "classmin_g_l.html#a0ea8d3c8b60858157716afeb39560c38", null ],
     [ "stopGaphic", "classmin_g_l.html#a6bf6a7901b5b1bae7bdb70d1b4febbb9", null ],

@@ -19,6 +19,17 @@ Main program.
 {\ttfamily \#include $<$thread$>$}\newline
 {\ttfamily \#include \char`\"{}utils/spaceinvaders.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}utils/loadconfig.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils/load\+Scores.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils/scoresort.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils/savescores.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,12 +47,16 @@ const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \
 \item 
 const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \mbox{\hyperlink{main_8cpp_aa89fe11c6a08a96d88eb644c6c96effa}{K\+E\+Y\+\_\+\+E\+N\+T\+ER}} (\{13, false\})
 \item 
+const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \mbox{\hyperlink{main_8cpp_a5add5cc153950658ca297235042a117d}{K\+E\+Y\+\_\+\+R\+E\+T\+U\+RN}} (\{8, false\})
+\item 
 void \mbox{\hyperlink{main_8cpp_a1dad421af4a8916521afa23c1ab85134}{invaders\+Generation}} (\mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, const unsigned \&height, const unsigned \&width)
 \begin{DoxyCompactList}\small\item\em Add invaders to the vector containing their pos until they fill their starting space. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a2be98a767fac8753a8c75e926030f11c}{init\+Space\+Invaders}} (\mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
 \begin{DoxyCompactList}\small\item\em initialize the variables contained in a Space\+Invaders struct \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_ad08634716e92a71688805904e5e4e4cb}{display}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const vector$<$ \mbox{\hyperlink{structpos}{pos}} $>$ \&positions, const \mbox{\hyperlink{classfigure}{figure}} \&fig)
 \begin{DoxyCompactList}\small\item\em display a figure at each position contained in a vector of positions \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ac109063b2e637b456f78e050c7f4ec75}{display}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const vector$<$ pair$<$ \mbox{\hyperlink{structpos}{pos}}, short $>$$>$ \&upgrades, const vector$<$ \mbox{\hyperlink{classfigure}{figure}} $>$ \&figures)
+\item 
 void \mbox{\hyperlink{main_8cpp_ac41565061b5d9d85c584ba075ae5b430}{display\+Space}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
 \begin{DoxyCompactList}\small\item\em display the torpedos, the ennemies and the player on the screen \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a7fcb65b94fa3f9bee7ac989396d834ae}{display\+H\+UD}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
@@ -56,10 +71,14 @@ void \mbox{\hyperlink{main_8cpp_ada592260988cd1e3144c6b2f883b1c50}{Read\+Keyboar
 \begin{DoxyCompactList}\small\item\em Read the keyboard inputs and move the player accordingly. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \mbox{\hyperlink{main_8cpp_acb09fd5530dac6cdb8a763af79e1ebc4}{Space\+Invaders\+Menu}} (const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, \mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const chrono\+::duration$<$ double, milli $>$ frame\+Duration)
 \begin{DoxyCompactList}\small\item\em Display the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{main_8cpp_a1ceb612dbb9511992680192b6f7d8b4a}{S\+Ipause}} (const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, \mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const chrono\+::duration$<$ double, milli $>$ frame\+Duration)
+void \mbox{\hyperlink{main_8cpp_afbc083af96fab5f1a4c287f4ff09ba63}{S\+Ipause}} (const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, \mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const chrono\+::duration$<$ double, milli $>$ frame\+Duration, bool \&i\+Loose)
 \begin{DoxyCompactList}\small\item\em Displays the pause screen and check if the player press Enter to leave the pause. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{main_8cpp_a63dc32cfb9fffe0479de85c623e159b6}{Read\+Name}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const chrono\+::duration$<$ double, milli $>$ frame\+Duration, const unsigned \&nb\+Char\+Max=3)
+\item 
 void \mbox{\hyperlink{main_8cpp_ad1883dd55c8b9fa49439a49a3e08cb24}{main\+Space\+Invaders}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window)
 \begin{DoxyCompactList}\small\item\em The main function of the game, which use the others to display the screen, get inputs ... and which manage the pause menu, the framerate, the success and defeat, the generation of the new waves, manage the highscore. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a827a00dce9688cb83ea6652acfa50393}{kill\+Music}} ()
+\item 
 int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \begin{DoxyCompactList}\small\item\em Initialize Glut and Min\+Gl, creates a seed for randomness and launches the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -111,12 +130,38 @@ return true if the entities collide, else returns false
 \end{DoxyReturn}
 
 
-Definition at line 173 of file main.\+cpp.
+Definition at line 188 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{main_8cpp_aebcced80e93e3dcb361a32cbc6b0a302_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_aebcced80e93e3dcb361a32cbc6b0a302_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_ac109063b2e637b456f78e050c7f4ec75}\label{main_8cpp_ac109063b2e637b456f78e050c7f4ec75}} 
+\index{main.cpp@{main.cpp}!display@{display}}
+\index{display@{display}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const vector$<$ pair$<$ \mbox{\hyperlink{structpos}{pos}}, short $>$$>$ \&}]{upgrades,  }\item[{const vector$<$ \mbox{\hyperlink{classfigure}{figure}} $>$ \&}]{figures }\end{DoxyParamCaption})}
+
+
+
+Definition at line 120 of file main.\+cpp.
 
 \mbox{\Hypertarget{main_8cpp_ad08634716e92a71688805904e5e4e4cb}\label{main_8cpp_ad08634716e92a71688805904e5e4e4cb}} 
 \index{main.cpp@{main.cpp}!display@{display}}
 \index{display@{display}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{display()}{display()}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily void display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const vector$<$ \mbox{\hyperlink{structpos}{pos}} $>$ \&}]{positions,  }\item[{const \mbox{\hyperlink{classfigure}{figure}} \&}]{fig }\end{DoxyParamCaption})}
 
 
@@ -134,8 +179,16 @@ display a figure at each position contained in a vector of positions
 \end{DoxyParams}
 
 
-Definition at line 106 of file main.\+cpp.
+Definition at line 114 of file main.\+cpp.
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ad08634716e92a71688805904e5e4e4cb_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_a7fcb65b94fa3f9bee7ac989396d834ae}\label{main_8cpp_a7fcb65b94fa3f9bee7ac989396d834ae}} 
 \index{main.cpp@{main.cpp}!displayHUD@{displayHUD}}
 \index{displayHUD@{displayHUD}!main.cpp@{main.cpp}}
@@ -150,13 +203,29 @@ display the spaces which will be filled with text on the screen
 \begin{DoxyParams}{Parameters}
 {\em window} & \+: the window on which the H\+UD will be printed \\
 \hline
-{\em SI} & \+: The strcut containing all the useful variables (including the picture of the player, used to show the lifes remaining) \\
+{\em SI} & \+: The struct containing all the useful variables (including the picture of the player, used to show the lifes remaining) \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 135 of file main.\+cpp.
+Definition at line 150 of file main.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{main_8cpp_a7fcb65b94fa3f9bee7ac989396d834ae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a7fcb65b94fa3f9bee7ac989396d834ae_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_ac41565061b5d9d85c584ba075ae5b430}\label{main_8cpp_ac41565061b5d9d85c584ba075ae5b430}} 
 \index{main.cpp@{main.cpp}!displaySpace@{displaySpace}}
 \index{displaySpace@{displaySpace}!main.cpp@{main.cpp}}
@@ -176,8 +245,24 @@ display the torpedos, the ennemies and the player on the screen
 \end{DoxyParams}
 
 
-Definition at line 118 of file main.\+cpp.
+Definition at line 132 of file main.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{main_8cpp_ac41565061b5d9d85c584ba075ae5b430_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ac41565061b5d9d85c584ba075ae5b430_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_ad7204fff1f31826ccb9b3165f4be92aa}\label{main_8cpp_ad7204fff1f31826ccb9b3165f4be92aa}} 
 \index{main.cpp@{main.cpp}!fillHUD@{fillHUD}}
 \index{fillHUD@{fillHUD}!main.cpp@{main.cpp}}
@@ -197,8 +282,24 @@ display text to show the score, the lives remaining, the wave number and the num
 \end{DoxyParams}
 
 
-Definition at line 148 of file main.\+cpp.
+Definition at line 163 of file main.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{main_8cpp_ad7204fff1f31826ccb9b3165f4be92aa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ad7204fff1f31826ccb9b3165f4be92aa_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_a2be98a767fac8753a8c75e926030f11c}\label{main_8cpp_a2be98a767fac8753a8c75e926030f11c}} 
 \index{main.cpp@{main.cpp}!initSpaceInvaders@{initSpaceInvaders}}
 \index{initSpaceInvaders@{initSpaceInvaders}!main.cpp@{main.cpp}}
@@ -216,8 +317,24 @@ initialize the variables contained in a Space\+Invaders struct
 \end{DoxyParams}
 
 
-Definition at line 68 of file main.\+cpp.
+Definition at line 74 of file main.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a2be98a767fac8753a8c75e926030f11c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a2be98a767fac8753a8c75e926030f11c_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_a1dad421af4a8916521afa23c1ab85134}\label{main_8cpp_a1dad421af4a8916521afa23c1ab85134}} 
 \index{main.cpp@{main.cpp}!invadersGeneration@{invadersGeneration}}
 \index{invadersGeneration@{invadersGeneration}!main.cpp@{main.cpp}}
@@ -239,8 +356,16 @@ Add invaders to the vector containing their pos until they fill their starting s
 \end{DoxyParams}
 
 
-Definition at line 49 of file main.\+cpp.
+Definition at line 55 of file main.\+cpp.
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a1dad421af4a8916521afa23c1ab85134_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_a017c23494eb187ffd36d951d94b328a3}\label{main_8cpp_a017c23494eb187ffd36d951d94b328a3}} 
 \index{main.cpp@{main.cpp}!KEY\_DOWN@{KEY\_DOWN}}
 \index{KEY\_DOWN@{KEY\_DOWN}!main.cpp@{main.cpp}}
@@ -253,36 +378,108 @@ Definition at line 49 of file main.\+cpp.
 \doxysubsubsection{\texorpdfstring{KEY\_ENTER()}{KEY\_ENTER()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} K\+E\+Y\+\_\+\+E\+N\+T\+ER (\begin{DoxyParamCaption}\item[{\{13, false\}}]{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_aa89fe11c6a08a96d88eb644c6c96effa_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_a40959b51e292d9c608a945e0a193c4fd}\label{main_8cpp_a40959b51e292d9c608a945e0a193c4fd}} 
 \index{main.cpp@{main.cpp}!KEY\_ESCAPE@{KEY\_ESCAPE}}
 \index{KEY\_ESCAPE@{KEY\_ESCAPE}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{KEY\_ESCAPE()}{KEY\_ESCAPE()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} K\+E\+Y\+\_\+\+E\+S\+C\+A\+PE (\begin{DoxyParamCaption}\item[{\{27, false\}}]{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a40959b51e292d9c608a945e0a193c4fd_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_a180a8df32cf1bac466be2714b4be3a36}\label{main_8cpp_a180a8df32cf1bac466be2714b4be3a36}} 
 \index{main.cpp@{main.cpp}!KEY\_LEFT@{KEY\_LEFT}}
 \index{KEY\_LEFT@{KEY\_LEFT}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{KEY\_LEFT()}{KEY\_LEFT()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} K\+E\+Y\+\_\+\+L\+E\+FT (\begin{DoxyParamCaption}\item[{\{100, true\}}]{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a180a8df32cf1bac466be2714b4be3a36_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_a5add5cc153950658ca297235042a117d}\label{main_8cpp_a5add5cc153950658ca297235042a117d}} 
+\index{main.cpp@{main.cpp}!KEY\_RETURN@{KEY\_RETURN}}
+\index{KEY\_RETURN@{KEY\_RETURN}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{KEY\_RETURN()}{KEY\_RETURN()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} K\+E\+Y\+\_\+\+R\+E\+T\+U\+RN (\begin{DoxyParamCaption}\item[{\{8, false\}}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a5add5cc153950658ca297235042a117d_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_a91429b25d7a424d5f2a1593d02b66100}\label{main_8cpp_a91429b25d7a424d5f2a1593d02b66100}} 
 \index{main.cpp@{main.cpp}!KEY\_RIGHT@{KEY\_RIGHT}}
 \index{KEY\_RIGHT@{KEY\_RIGHT}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{KEY\_RIGHT()}{KEY\_RIGHT()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} K\+E\+Y\+\_\+\+R\+I\+G\+HT (\begin{DoxyParamCaption}\item[{\{102, true\}}]{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a91429b25d7a424d5f2a1593d02b66100_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_adf36a6b9c333fe142b44223c01ca52ee}\label{main_8cpp_adf36a6b9c333fe142b44223c01ca52ee}} 
 \index{main.cpp@{main.cpp}!KEY\_SPACE@{KEY\_SPACE}}
 \index{KEY\_SPACE@{KEY\_SPACE}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{KEY\_SPACE()}{KEY\_SPACE()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} K\+E\+Y\+\_\+\+S\+P\+A\+CE (\begin{DoxyParamCaption}\item[{\{32, false\}}]{ }\end{DoxyParamCaption})}
 
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_adf36a6b9c333fe142b44223c01ca52ee_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_a004ed861c1bd550033184d85b28e6b74}\label{main_8cpp_a004ed861c1bd550033184d85b28e6b74}} 
 \index{main.cpp@{main.cpp}!KEY\_UP@{KEY\_UP}}
 \index{KEY\_UP@{KEY\_UP}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{KEY\_UP()}{KEY\_UP()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} K\+E\+Y\+\_\+\+UP (\begin{DoxyParamCaption}\item[{\{101, true\}}]{ }\end{DoxyParamCaption})}
 
+\mbox{\Hypertarget{main_8cpp_a827a00dce9688cb83ea6652acfa50393}\label{main_8cpp_a827a00dce9688cb83ea6652acfa50393}} 
+\index{main.cpp@{main.cpp}!killMusic@{killMusic}}
+\index{killMusic@{killMusic}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{killMusic()}{killMusic()}}
+{\footnotesize\ttfamily void kill\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 760 of file main.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{main_8cpp_a827a00dce9688cb83ea6652acfa50393_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
 \index{main.cpp@{main.cpp}!main@{main}}
 \index{main@{main}!main.cpp@{main.cpp}}
@@ -298,8 +495,16 @@ Initialize Glut and Min\+Gl, creates a seed for randomness and launches the game
 \end{DoxyReturn}
 
 
-Definition at line 613 of file main.\+cpp.
+Definition at line 772 of file main.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_ad1883dd55c8b9fa49439a49a3e08cb24}\label{main_8cpp_ad1883dd55c8b9fa49439a49a3e08cb24}} 
 \index{main.cpp@{main.cpp}!mainSpaceInvaders@{mainSpaceInvaders}}
 \index{mainSpaceInvaders@{mainSpaceInvaders}!main.cpp@{main.cpp}}
@@ -317,8 +522,24 @@ The main function of the game, which use the others to display the screen, get i
 \end{DoxyParams}
 
 
-Definition at line 546 of file main.\+cpp.
+Definition at line 677 of file main.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ad1883dd55c8b9fa49439a49a3e08cb24_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{main_8cpp_ad1883dd55c8b9fa49439a49a3e08cb24_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_a350e996a354865b6064bab50134646dc}\label{main_8cpp_a350e996a354865b6064bab50134646dc}} 
 \index{main.cpp@{main.cpp}!process@{process}}
 \index{process@{process}!main.cpp@{main.cpp}}
@@ -344,8 +565,24 @@ Updates the informations like the positions of the torpedoes, the lifes remainin
 \end{DoxyParams}
 
 
-Definition at line 198 of file main.\+cpp.
+Definition at line 213 of file main.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{main_8cpp_a350e996a354865b6064bab50134646dc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a350e996a354865b6064bab50134646dc_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_ada592260988cd1e3144c6b2f883b1c50}\label{main_8cpp_ada592260988cd1e3144c6b2f883b1c50}} 
 \index{main.cpp@{main.cpp}!ReadKeyboard@{ReadKeyboard}}
 \index{ReadKeyboard@{ReadKeyboard}!main.cpp@{main.cpp}}
@@ -367,13 +604,55 @@ Read the keyboard inputs and move the player accordingly.
 \end{DoxyParams}
 
 
-Definition at line 431 of file main.\+cpp.
+Definition at line 491 of file main.\+cpp.
 
-\mbox{\Hypertarget{main_8cpp_a1ceb612dbb9511992680192b6f7d8b4a}\label{main_8cpp_a1ceb612dbb9511992680192b6f7d8b4a}} 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{main_8cpp_ada592260988cd1e3144c6b2f883b1c50_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ada592260988cd1e3144c6b2f883b1c50_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_a63dc32cfb9fffe0479de85c623e159b6}\label{main_8cpp_a63dc32cfb9fffe0479de85c623e159b6}} 
+\index{main.cpp@{main.cpp}!ReadName@{ReadName}}
+\index{ReadName@{ReadName}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ReadName()}{ReadName()}}
+{\footnotesize\ttfamily string Read\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const chrono\+::duration$<$ double, milli $>$}]{frame\+Duration,  }\item[{const unsigned \&}]{nb\+Char\+Max = {\ttfamily 3} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 618 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a63dc32cfb9fffe0479de85c623e159b6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a63dc32cfb9fffe0479de85c623e159b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8cpp_afbc083af96fab5f1a4c287f4ff09ba63}\label{main_8cpp_afbc083af96fab5f1a4c287f4ff09ba63}} 
 \index{main.cpp@{main.cpp}!SIpause@{SIpause}}
 \index{SIpause@{SIpause}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{SIpause()}{SIpause()}}
-{\footnotesize\ttfamily void S\+Ipause (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI,  }\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const chrono\+::duration$<$ double, milli $>$}]{frame\+Duration }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void S\+Ipause (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI,  }\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const chrono\+::duration$<$ double, milli $>$}]{frame\+Duration,  }\item[{bool \&}]{i\+Loose }\end{DoxyParamCaption})}
 
 
 
@@ -390,8 +669,24 @@ Displays the pause screen and check if the player press Enter to leave the pause
 \end{DoxyParams}
 
 
-Definition at line 513 of file main.\+cpp.
+Definition at line 584 of file main.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_afbc083af96fab5f1a4c287f4ff09ba63_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_afbc083af96fab5f1a4c287f4ff09ba63_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{main_8cpp_acb09fd5530dac6cdb8a763af79e1ebc4}\label{main_8cpp_acb09fd5530dac6cdb8a763af79e1ebc4}} 
 \index{main.cpp@{main.cpp}!SpaceInvadersMenu@{SpaceInvadersMenu}}
 \index{SpaceInvadersMenu@{SpaceInvadersMenu}!main.cpp@{main.cpp}}
@@ -416,5 +711,21 @@ returns the key pressed if it is Enter (which will begin the game) or Escape (wh
 \end{DoxyReturn}
 
 
-Definition at line 458 of file main.\+cpp.
+Definition at line 518 of file main.\+cpp.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_acb09fd5530dac6cdb8a763af79e1ebc4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_acb09fd5530dac6cdb8a763af79e1ebc4_icgraph}
+\end{center}
+\end{figure}

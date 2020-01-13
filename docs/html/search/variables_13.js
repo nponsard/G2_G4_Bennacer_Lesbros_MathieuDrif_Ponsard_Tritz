@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['wave_413',['wave',['../structspace_invaders.html#a17916aa42c7222aae16f537619d44d9f',1,'spaceInvaders']]]
+  ['vfig_459',['vFig',['../classfigure.html#ae5fefc18c10bdcc8ecb856f5ab747bc4',1,'figure']]],
+  ['vparamunsigned_460',['VParamUnsigned',['../struct_authorized_key.html#a871173f4b0c89c91289a10f0ddc1cadd',1,'AuthorizedKey']]]
 ];

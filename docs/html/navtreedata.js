@@ -23,6 +23,10 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Space invader", "index.html", [
+    [ "Développé par :", "index.html#autotoc_md1", null ],
+    [ "Requirements", "index.html#autotoc_md2", null ],
+    [ "how to compile", "index.html#autotoc_md3", null ],
+    [ "Todo List", "todo.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -59,7 +63,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "__circle_8cpp.html",
-"myexception_8cpp_source.html"
+"main_8cpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

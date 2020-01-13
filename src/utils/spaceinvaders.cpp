@@ -2,6 +2,8 @@
 #include "entity.h"
 #include "minGL/figs/figure.h"
 #include "minGL/figs/rectangle.h"
+#include "minGL/figs/triangle.h"
+#include "minGL/figs/circle.h"
 
 ///
 /// \brief Initialize the figures for MinGl
@@ -78,4 +80,25 @@ void initSpaceInvadersFigs(spaceInvaders &SI)
     SI.invadersTorpedo.entityHeight = 30;
     SI.invadersTorpedo.entityFig.Add(rectangle(pos(5, 0), 5, 30, KWhite, KWhite));
     SI.invadersTorpedo.entityFig.Add(rectangle(pos(0, 30), 15, 5, KWhite, KWhite));
+
+    //upgrades
+    SI.lifeUpgrade.entityWidth = 30;
+    SI.lifeUpgrade.entityHeight = 30;
+    SI.lifeUpgrade.entityFig.Add(rectangle(pos(10,0), 10, 30, KGreen, KGreen));
+    SI.lifeUpgrade.entityFig.Add(rectangle(pos(0,10), 30, 10, KGreen, KGreen));
+
+    SI.shootSpeedUpgrade.entityWidth = 30;
+    SI.shootSpeedUpgrade.entityHeight = 30;
+    SI.shootSpeedUpgrade.entityFig.Add(triangle(pos(15,30), pos(15,15), pos(0,15), KYellow, KYellow));
+    SI.shootSpeedUpgrade.entityFig.Add(triangle(pos(30,30), pos(15,15), pos(15,30), KYellow, KYellow));
+    SI.shootSpeedUpgrade.entityFig.Add(triangle(pos(2,0), pos(27,18), pos(12,19), KYellow, KYellow));
+
+    SI.scoreUpgrade.entityWidth = 30;
+    SI.scoreUpgrade.entityHeight = 30;
+    SI.scoreUpgrade.entityFig.Add(circle(pos(15,15), 15, RGBcolor({200, 200,   0}), KYellow));
+    SI.scoreUpgrade.entityFig.Add(rectangle(pos(12,8), pos(18,22), KBlack, RGBcolor({200, 200,   0})));
+
+    SI.upgradeTypes.push_back(SI.lifeUpgrade.entityFig);
+    SI.upgradeTypes.push_back(SI.shootSpeedUpgrade.entityFig);
+    SI.upgradeTypes.push_back(SI.scoreUpgrade.entityFig);
 }
