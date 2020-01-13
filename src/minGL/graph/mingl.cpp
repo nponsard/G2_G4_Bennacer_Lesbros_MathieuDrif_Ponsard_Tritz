@@ -2,6 +2,15 @@
 
 #include "mingl.h"
 
+/*!
+ * \file mingl.cpp
+ * \brief version légèrement modifiée 
+ * 
+ * 
+ */
+
+
+
 using namespace std;
 using namespace nsUtil;
 
