@@ -44,7 +44,6 @@ minGL::minGL(const unsigned &Width, const unsigned &Height, const std::string &N
                                                                                                                         bgColor(backGroungColor)
 {
     screenBuffer.resize(Width * Height * 3);
-    glutSetKeyRepeat(GLUT_KEY_REPEAT_OFF);
     // initGlut();
     // initGraphic();
 }
@@ -146,6 +145,7 @@ void minGL::initGraphic()
 
     // Un tour de boucle pour lancer l'affichage
     glutMainLoopEvent();
+    glutSetKeyRepeat(GLUT_KEY_REPEAT_OFF); // on désactive la répétition des touches
 }
 
 /*!
