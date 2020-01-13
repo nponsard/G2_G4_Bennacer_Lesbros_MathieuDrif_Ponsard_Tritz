@@ -58,12 +58,12 @@ void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigne
 {
     SI.invadersPos.clear();
     unsigned Xshift, Yshift(55);
-    for (unsigned i(0); i < (SI.wave-1) % 4 + 1 ; ++i)
+    for (unsigned i(0); i < (SI.wave - 1) % 4 + 1; ++i)
     {
         Xshift = 0;
         while (Xshift + SI.invaders.entityWidth + (2 * SI.invaders.entityWidth) /*marge min*/ < width)
         {
-            SI.invadersPos.push_back(make_pair(pos(Xshift, height - 200 - (Yshift * i)), (SI.wave-1) / 4 + 1));
+            SI.invadersPos.push_back(make_pair(pos(Xshift, height - 200 - (Yshift * i)), (SI.wave - 1) / 4 + 1));
             Xshift += 3 * SI.invaders.entityWidth; /*distance entre invaders*/
         }
     }
@@ -121,7 +121,6 @@ void display(minGL &window, const vector<pos> &positions, const figure &fig)
     for (vector<pos>::const_iterator it(positions.begin()); it != positions.end(); ++it)
         window << fig + *it;
 }
-
 
 void display(minGL &window, const vector<pair<pos, short>> &upgrades, const vector<figure> &figures)
 {
@@ -243,9 +242,9 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                     {
                         SI.playerTorpedoPos.erase(it);
 
-                        if(itInvadersPos->second == 1)
+                        if (itInvadersPos->second == 1)
                         {
-                            if (rand() % max(unsigned(4), (10 - SI.wave / 5)) == 0)//generation bonus
+                            if (rand() % max(unsigned(4), (10 - SI.wave / 5)) == 0) //generation bonus
                             {
                                 std::pair<pos, short> upgrade;
                                 upgrade.first = itInvadersPos->first + pos(SI.invaders.entityWidth / 2, SI.invaders.entityHeight / 2) + pos(-15, -15);
@@ -257,7 +256,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                             SI.score += SI.scoreStep;
                             SI.scoreStep += 20;
 
-                            if(SI.invadersPos.size() != 0)
+                            if (SI.invadersPos.size() != 0)
                                 SI.invadersVelocity = min(unsigned(SI.invadersMinVelocity + ((SI.invadersMaxVelocity - SI.invadersMinVelocity) * 3 / SI.invadersPos.size())), SI.invadersMaxVelocity);
                         }
                         else
@@ -384,8 +383,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
         chrono::duration<double, milli> diff(now - SI.invadersLastShot);
         if (diff >= SI.invadersShot)
         {
-            vector<pair<pos, unsigned>>::iterator itInvaders(SI.invadersPos.begin()
-                                                             + (rand() % SI.invadersPos.size()));//choix d'un invader
+            vector<pair<pos, unsigned>>::iterator itInvaders(SI.invadersPos.begin() + (rand() % SI.invadersPos.size())); //choix d'un invader
             //trouver l'invader le plus bas dans cette colonne
             for (vector<pair<pos, unsigned>>::iterator it2(SI.invadersPos.begin()); it2 != SI.invadersPos.end(); ++it2)
                 if (it2->first.getAbs() == itInvaders->first.getAbs() && it2->first.getOrd() < itInvaders->first.getOrd())
@@ -407,7 +405,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
         //deplacer invader bonus
         if (!(SI.bonusInvaderPos == pos(0, 0)))
         {
-            if (SI.bonusInvaderPos.getAbs() == 10)//descente
+            if (SI.bonusInvaderPos.getAbs() == 10) //descente
             {
                 SI.bonusInvaderPos = pos(10, SI.bonusInvaderPos.getOrd() - (SI.invadersVelocity * SI.bonusInvaderVelocityFactor));
                 if (SI.bonusInvaderPos.getOrd() + 150 < height)
@@ -429,7 +427,6 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                 }
             }
         }
-
 
         bool downShift(false);
         //SI.invadersPos.size() != 0 car win = false
@@ -631,7 +628,7 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
         if (window.isPressed(KEY_ESCAPE))
         {
             iLoose = true;
-            this_thread::sleep_for(chrono::duration<int, milli>(50)); //delai pour éviter répétition de touches
+            window.resetKey(KEY_RETURN); // éviter répétition de touches
         }
         if (window.isPressed(KEY_SPACE))
         {
@@ -681,7 +678,8 @@ string ReadName(minGL &window, const chrono::duration<double, milli> frameDurati
                 {
                     name.push_back(keyVal);
                     pressed = true;
-                    this_thread::sleep_for(chrono::duration<int, milli>(50)); //delai pour éviter répétition de touches
+                    window.resetKey(keyType(keyVal, false));      // éviter répétition de touches
+                    window.resetKey(keyType(keyVal + 32, false)); // éviter répétition de touches
                 }
             }
         }
@@ -689,13 +687,13 @@ string ReadName(minGL &window, const chrono::duration<double, milli> frameDurati
             if (name.size() != 0)
             {
                 name.pop_back();
-                this_thread::sleep_for(chrono::duration<int, milli>(50)); //delai pour éviter répétition de touches
+                window.resetKey(KEY_RETURN); // éviter répétition de touches
             }
 
         if (window.isPressed(KEY_ENTER))
         {
             key = KEY_ENTER;
-            this_thread::sleep_for(chrono::duration<int, milli>(50)); //delai pour éviter répétition de touches
+            window.resetKey(KEY_ENTER);
         }
 
         chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
