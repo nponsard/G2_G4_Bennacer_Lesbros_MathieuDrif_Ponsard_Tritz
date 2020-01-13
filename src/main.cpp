@@ -97,7 +97,8 @@ void initSpaceInvaders(spaceInvaders &SI)
     SI.playerPos = pos(unsigned(stoul(conf["playerPosAbs"])), unsigned(stoul(conf["playerPosOrd"]))); //placement intial joueur
     SI.lives = unsigned(stoul(conf["lives"]));
     SI.score = unsigned(stoul(conf["score"]));
-    SI.bestScore = unsigned(stoul(conf["bestScore"]));
+    //SI.bestScore = unsigned(stoul(conf["bestScore"]));
+    SI.bestScore = SI.bestScores[0].second;
     SI.scoreForMissileDestruction = unsigned(stoul(conf["scoreForMissileDestruction"]));
     SI.scoreStep = unsigned(stoul(conf["scoreStep"]));
     SI.scoreStepBonusInvaders = unsigned(stoul(conf["scoreStepBonusInvaders"]));
