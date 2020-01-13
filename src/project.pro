@@ -22,7 +22,8 @@ SOURCES += main.cpp \
     utils/loadscore.cpp \
     utils/savescores.cpp \
     utils/scoresort.cpp \
-    utils/spaceinvaders.cpp
+    utils/spaceinvaders.cpp \
+    utils/music.cpp
 
 QT += opengl core gui
 
@@ -60,4 +61,5 @@ HEADERS += \
     utils/spaceinvaders.h \
     minGL/tools/tools.h \
     minGL/graph/iminglinjectable.h \
-    minGL/tools/pixelexception.h
+    minGL/tools/pixelexception.h \
+    utils/music.h

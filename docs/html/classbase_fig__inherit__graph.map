@@ -1,0 +1,8 @@
+<map id="baseFig" name="baseFig">
+<area shape="rect" id="node1" title=" " alt="" coords="120,80,192,107"/>
+<area shape="rect" id="node3" href="$classfigure.html" title=" " alt="" coords="5,155,64,181"/>
+<area shape="rect" id="node4" href="$classline.html" title=" " alt="" coords="89,155,135,181"/>
+<area shape="rect" id="node5" href="$classrectangle.html" title=" " alt="" coords="160,155,243,181"/>
+<area shape="rect" id="node6" href="$classtriangle.html" title=" " alt="" coords="267,155,339,181"/>
+<area shape="rect" id="node2" href="$class_imin_gl_injectable.html" title=" " alt="" coords="91,5,221,32"/>
+</map>
