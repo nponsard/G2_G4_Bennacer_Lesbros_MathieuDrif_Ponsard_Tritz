@@ -6,6 +6,12 @@
 #include "minGL/figs/figure.h"
 #include "entity.h"
 
+/*!
+ * \brief struct gérant toutes les variables du jeu et les paramètres
+ * 
+ * 
+ * 
+ */
 
 struct spaceInvaders
 {

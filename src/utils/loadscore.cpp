@@ -6,7 +6,14 @@
 
 using namespace std;
 
-vector<pair<string, unsigned>> loadScores(const string & fileName)
+/*!
+ *
+ * \brief chargue les scores depuis le fichier
+ * 
+ * 
+ */
+
+vector<pair<string, unsigned>> loadScores(const string &fileName)
 {
     vector<pair<string, unsigned>> scores;
     unsigned nb(0);
@@ -16,9 +23,9 @@ vector<pair<string, unsigned>> loadScores(const string & fileName)
     unsigned value;
     char sep;
 
-    if(ifs.is_open())
+    if (ifs.is_open())
     {
-        while(nb < 3)
+        while (nb < 3)
         {
             getline(ifs, line);
 
@@ -31,12 +38,12 @@ vector<pair<string, unsigned>> loadScores(const string & fileName)
 
             istr >> sep;
             istr >> value;
-            if(!istr.fail())
+            if (!istr.fail())
             {
-                if(name.size() > 3)
+                if (name.size() > 3)
                     name = string(name, 0, 3);
 
-                for(char & c : name)
+                for (char &c : name)
                     c = toupper(c);
 
                 scores.push_back(make_pair(name, value));

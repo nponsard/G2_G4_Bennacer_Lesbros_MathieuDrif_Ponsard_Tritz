@@ -5,11 +5,12 @@ var indexSectionsWithContent =
   2: "n",
   3: "_bcefilmprst",
   4: "_abcdfgiklmoprstuw~",
-  5: "abcdefghiklmnoprstvw",
+  5: "abcdefghiklmnoprstuvw",
   6: "k",
   7: "k",
   8: "o",
-  9: "bc"
+  9: "bc",
+  10: "t"
 };
 
 var indexSectionNames =
@@ -23,7 +24,8 @@ var indexSectionNames =
   6: "typedefs",
   7: "enumvalues",
   8: "related",
-  9: "defines"
+  9: "defines",
+  10: "pages"
 };
 
 var indexSectionLabels =
@@ -37,6 +39,7 @@ var indexSectionLabels =
   6: "Typedefs",
   7: "Enumerator",
   8: "Friends",
-  9: "Macros"
+  9: "Macros",
+  10: "Pages"
 };
 
