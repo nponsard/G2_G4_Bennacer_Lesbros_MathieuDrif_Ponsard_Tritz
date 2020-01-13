@@ -9,8 +9,6 @@
  * 
  */
 
-
-
 using namespace std;
 using namespace nsUtil;
 
@@ -147,6 +145,7 @@ void minGL::initGraphic()
 
     // Un tour de boucle pour lancer l'affichage
     glutMainLoopEvent();
+    glutSetKeyRepeat(GLUT_KEY_REPEAT_OFF); // on désactive la répétition des touches
 }
 
 /*!
