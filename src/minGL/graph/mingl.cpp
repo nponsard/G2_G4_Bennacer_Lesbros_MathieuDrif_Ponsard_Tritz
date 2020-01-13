@@ -9,8 +9,6 @@
  * 
  */
 
-
-
 using namespace std;
 using namespace nsUtil;
 
@@ -46,6 +44,7 @@ minGL::minGL(const unsigned &Width, const unsigned &Height, const std::string &N
                                                                                                                         bgColor(backGroungColor)
 {
     screenBuffer.resize(Width * Height * 3);
+    glutSetKeyRepeat(GLUT_KEY_REPEAT_OFF);
     // initGlut();
     // initGraphic();
 }
