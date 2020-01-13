@@ -6,6 +6,11 @@
 
 using namespace std;
 
+///
+/// \brief create the default config file
+/// \param name of the file to create
+/// \param map containing value to put in the file
+///
 void createConf(const string & fileName, map<string, unsigned> Map){
     ofstream file(fileName);
     if(!file.is_open()) {
@@ -19,6 +24,10 @@ void createConf(const string & fileName, map<string, unsigned> Map){
     }
 }
 
+///
+/// \brief load config file
+/// \param name of the config file
+///
 map<string, string> loadConfig(const string & fileName)
 {
     map<string, unsigned> defaultUnsignedConfig;
