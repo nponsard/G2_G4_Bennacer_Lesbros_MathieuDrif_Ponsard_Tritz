@@ -504,8 +504,6 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
     }
 }
 
-bool playmusic(true);
-
 ///
 /// \brief Read the keyboard inputs and move the player accordingly
 /// \param window : contains the inputs and the size of the window
@@ -607,7 +605,7 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
 /// \param frameDuration : the time between each frame
 ///
 
-void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<double, milli> frameDuration, bool &iLoose)
+void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<double, milli> frameDuration, bool &iLoose, bool &playmusic)
 {
     keyType key(0, false);
     while (key == keyType(0, false) && !iLoose)
@@ -717,6 +715,7 @@ string ReadName(minGL &window, const chrono::duration<double, milli> frameDurati
 
 void mainSpaceInvaders(minGL &window)
 {
+    bool playmusic(true);
     //https://downloads.khinsider.com/game-soundtracks/album/space-invaders-91-sega-genesis
     spaceInvaders SI, SIBase; //SI est utilisé pour le jeu et SIBase conserve les valeurs données par la fonction init sauf pour les scores
     initSpaceInvaders(SI);
@@ -763,7 +762,7 @@ void mainSpaceInvaders(minGL &window)
             if (pause)
             {
                 this_thread::sleep_for(chrono::duration<int, milli>(50)); //delai pour éviter répétition de touches
-                SIpause(SI, window, frameDuration, iLoose);
+                SIpause(SI, window, frameDuration, iLoose, playmusic);
                 SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque sortie de pause
                 pause = false;
             }
