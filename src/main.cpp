@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <thread>
+#include <utility>
 
 #include "utils/spaceinvaders.h"
 #include "utils/loadconfig.h"
@@ -55,13 +56,14 @@ const keyType KEY_RETURN({8, false});
 
 void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigned &width)
 {
+    SI.invadersPos.clear();
     unsigned Xshift, Yshift(55);
-    for (unsigned i(0); i < 4; ++i)
+    for (unsigned i(0); i < (SI.wave-1) % 4 + 1 ; ++i)
     {
         Xshift = 0;
         while (Xshift + SI.invaders.entityWidth + (2 * SI.invaders.entityWidth) /*marge min*/ < width)
         {
-            SI.invadersPos.push_back(pos(Xshift, height - 200 - (Yshift * i)));
+            SI.invadersPos.push_back(make_pair(pos(Xshift, height - 200 - (Yshift * i)), (SI.wave-1) / 4 + 1));
             Xshift += 3 * SI.invaders.entityWidth; /*distance entre invaders*/
         }
     }
@@ -79,9 +81,9 @@ void initSpaceInvaders(spaceInvaders &SI)
     map<string, string> conf(loadConfig("config.yaml"));
     SI.bestScores = loadScores("scores.yaml");
 
-    SI.invadersVelocity = unsigned(stoul(conf["invadersVelocity"]));
     SI.invadersMaxVelocity = unsigned(stoul(conf["invadersMaxVelocity"]));
-    SI.invadersVelocityStep = unsigned(stoul(conf["invadersVelocityStep"]));
+    SI.invadersMinVelocity = unsigned(stoul(conf["invadersMinVelocity"]));
+    SI.invadersVelocity = SI.invadersMinVelocity;
     SI.upgradeVelocity = unsigned(stoul(conf["upgradeVelocity"]));
 
     SI.shot = chrono::duration<int, milli>(stoi(conf["shot"]));
@@ -91,13 +93,15 @@ void initSpaceInvaders(spaceInvaders &SI)
     SI.invadersLastShot = chrono::steady_clock::now();
 
     SI.bonusInvaders = chrono::duration<int, milli>(stoi(conf["bonusInvaders"]));
+    SI.bonusInvaderVelocityFactor = unsigned(stoul(conf["bonusInvaderVelocityFactor"]));
     SI.LastBonusInvader = chrono::steady_clock::now();
 
     SI.bonusInvaderPos = pos(unsigned(stoul(conf["bonusInvaderPosAbs"])), unsigned(stoul(conf["bonusInvaderPosOrd"])));
     SI.playerPos = pos(unsigned(stoul(conf["playerPosAbs"])), unsigned(stoul(conf["playerPosOrd"]))); //placement intial joueur
     SI.lives = unsigned(stoul(conf["lives"]));
     SI.score = unsigned(stoul(conf["score"]));
-    SI.bestScore = unsigned(stoul(conf["bestScore"]));
+    //SI.bestScore = unsigned(stoul(conf["bestScore"]));
+    SI.bestScore = SI.bestScores[0].second;
     SI.scoreForMissileDestruction = unsigned(stoul(conf["scoreForMissileDestruction"]));
     SI.scoreStep = unsigned(stoul(conf["scoreStep"]));
     SI.scoreStepBonusInvaders = unsigned(stoul(conf["scoreStepBonusInvaders"]));
@@ -118,10 +122,17 @@ void display(minGL &window, const vector<pos> &positions, const figure &fig)
         window << fig + *it;
 }
 
+
 void display(minGL &window, const vector<pair<pos, short>> &upgrades, const vector<figure> &figures)
 {
     for (vector<pair<pos, short>>::const_iterator it(upgrades.begin()); it != upgrades.end(); ++it)
         window << figures[it->second] + it->first;
+}
+
+void display(minGL &window, const vector<pair<pos, unsigned>> &positions, const figure &fig)
+{
+    for (vector<pair<pos, unsigned>>::const_iterator it(positions.begin()); it != positions.end(); ++it)
+        window << fig + it->first;
 }
 
 ///
@@ -206,7 +217,7 @@ bool collisions(pos &entity1,
 ///     and make one of them choosen randomly shoot.
 /// \param SI : the struct containing all the useful variables to be used and updated
 /// \param height : window's height
-/// \param width : window's width
+/// \param width : windSI.invadersPos.size()ow's width
 /// \param iLoose : boolean which become true if the player lose its last life by being hit by an ennemy torpedo
 /// \param iWin : boolean which become true if there is no invader remaining in the wave
 ///
@@ -225,27 +236,35 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                 *it = *it + pos(0, 1); //déplacement
 
                 //collision avec un invader
-                for (vector<pos>::iterator itInvadersPos(SI.invadersPos.begin()); !collision && itInvadersPos != SI.invadersPos.end(); ++itInvadersPos)
+                for (vector<pair<pos, unsigned>>::iterator itInvadersPos(SI.invadersPos.begin()); !collision && itInvadersPos != SI.invadersPos.end(); ++itInvadersPos)
                 {
-                    collision = collisions(*it, *itInvadersPos, SI.playerTorpedo.entityHeight, SI.invaders.entityHeight, SI.playerTorpedo.entityWidth, SI.invaders.entityWidth);
+                    collision = collisions(*it, itInvadersPos->first, SI.playerTorpedo.entityHeight, SI.invaders.entityHeight, SI.playerTorpedo.entityWidth, SI.invaders.entityWidth);
                     if (collision)
                     {
                         SI.playerTorpedoPos.erase(it);
-                        if (rand() % max(unsigned(4), (10 - SI.wave / 5)) == 0)
+
+                        if(itInvadersPos->second == 1)
                         {
-                            std::pair<pos, short> upgrade;
-                            upgrade.first = *itInvadersPos + pos(SI.invaders.entityWidth / 2, SI.invaders.entityHeight / 2) + pos(-15, -15);
-                            upgrade.second = rand() % SI.upgradeTypes.size();
-                            SI.UpgradePos.push_back(upgrade);
+                            if (rand() % max(unsigned(4), (10 - SI.wave / 5)) == 0)//generation bonus
+                            {
+                                std::pair<pos, short> upgrade;
+                                upgrade.first = itInvadersPos->first + pos(SI.invaders.entityWidth / 2, SI.invaders.entityHeight / 2) + pos(-15, -15);
+                                upgrade.second = rand() % SI.upgradeTypes.size();
+                                SI.UpgradePos.push_back(upgrade);
+                            }
+                            SI.invadersPos.erase(itInvadersPos);
+                            system("aplay -q '../ressources/invadersDeath.wav' &");
+                            SI.score += SI.scoreStep;
+                            SI.scoreStep += 20;
+
+                            if(SI.invadersPos.size() != 0)
+                                SI.invadersVelocity = min(unsigned(SI.invadersMinVelocity + ((SI.invadersMaxVelocity - SI.invadersMinVelocity) * 3 / SI.invadersPos.size())), SI.invadersMaxVelocity);
                         }
-                        SI.invadersPos.erase(itInvadersPos);
-                        system("aplay '../ressources/laser.wav' &");
-                        SI.score += SI.scoreStep;
-                        SI.scoreStep += 20;
-                        if (SI.invadersVelocity + SI.invadersVelocityStep <= SI.invadersMaxVelocity)
-                            SI.invadersVelocity += SI.invadersVelocityStep;
-                        else if (SI.invadersVelocity != SI.invadersMaxVelocity)
-                            SI.invadersVelocity = SI.invadersMaxVelocity;
+                        else
+                        {
+                            --itInvadersPos->second;
+                            system("aplay -q '../ressources/invadersHit.wav' &");
+                        }
                     }
                 }
 
@@ -262,7 +281,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                             upgrade.second = rand() % SI.upgradeTypes.size();
                             SI.UpgradePos.push_back(upgrade);
                             SI.playerTorpedoPos.erase(it);
-                            system("aplay '../ressources/laser.wav' &");
+                            system("aplay -q '../ressources/bonusInvaderDeath.wav' &");
                             SI.bonusInvaderPos = pos(0, 0);
                             SI.LastBonusInvader = chrono::steady_clock::now();
                             SI.score += SI.scoreStepBonusInvaders;
@@ -341,7 +360,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                     if (itupgrade->second == 1)
                         SI.shot -= SI.shot / 10;
                     if (itupgrade->second == 2)
-                        SI.score += 10 + SI.wave * 10;
+                        SI.score += SI.wave * 100;
                     SI.UpgradePos.erase(itupgrade);
                 }
             }
@@ -365,13 +384,14 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
         chrono::duration<double, milli> diff(now - SI.invadersLastShot);
         if (diff >= SI.invadersShot)
         {
-            it = SI.invadersPos.begin() + (rand() % SI.invadersPos.size()); //choix d'un invader
+            vector<pair<pos, unsigned>>::iterator itInvaders(SI.invadersPos.begin()
+                                                             + (rand() % SI.invadersPos.size()));//choix d'un invader
             //trouver l'invader le plus bas dans cette colonne
-            for (vector<pos>::iterator it2(SI.invadersPos.begin()); it2 != SI.invadersPos.end(); ++it2)
-                if (it2->getAbs() == it->getAbs() && it2->getOrd() < it->getOrd())
-                    it = it2;
+            for (vector<pair<pos, unsigned>>::iterator it2(SI.invadersPos.begin()); it2 != SI.invadersPos.end(); ++it2)
+                if (it2->first.getAbs() == itInvaders->first.getAbs() && it2->first.getOrd() < itInvaders->first.getOrd())
+                    itInvaders = it2;
 
-            SI.invadersTorpedoPos.push_back(pos(it->getAbs() + 27, it->getOrd()));
+            SI.invadersTorpedoPos.push_back(pos(itInvaders->first.getAbs() + 27, itInvaders->first.getOrd()));
 
             SI.invadersLastShot = chrono::steady_clock::now();
         }
@@ -382,24 +402,26 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
         if (diff >= SI.bonusInvaders && SI.bonusInvaderPos == pos(0, 0))
             SI.bonusInvaderPos = pos(10, height - 70);
 
+        //déplacement
+
         //deplacer invader bonus
         if (!(SI.bonusInvaderPos == pos(0, 0)))
         {
-            if (SI.bonusInvaderPos.getAbs() == 10)
+            if (SI.bonusInvaderPos.getAbs() == 10)//descente
             {
-                SI.bonusInvaderPos = pos(10, SI.bonusInvaderPos.getOrd() - (SI.invadersVelocity * 5));
-                if (SI.bonusInvaderPos.getOrd() + 140 < height)
+                SI.bonusInvaderPos = pos(10, SI.bonusInvaderPos.getOrd() - (SI.invadersVelocity * SI.bonusInvaderVelocityFactor));
+                if (SI.bonusInvaderPos.getOrd() + 150 < height)
                     SI.bonusInvaderPos = SI.bonusInvaderPos + pos(1, 0);
             }
-            else if (SI.bonusInvaderPos.getAbs() + 160 + 10 < width)
+            else if (SI.bonusInvaderPos.getAbs() + SI.bonusInvader.entityWidth + (SI.invadersVelocity * SI.bonusInvaderVelocityFactor) < width)
             {
-                SI.bonusInvaderPos = SI.bonusInvaderPos + pos(SI.invadersVelocity * 5, 0);
+                SI.bonusInvaderPos = SI.bonusInvaderPos + pos(SI.invadersVelocity * SI.bonusInvaderVelocityFactor, 0);
             }
             else
             {
 
-                if (SI.bonusInvaderPos.getOrd() + (SI.invadersVelocity * 5) + 70 < height)
-                    SI.bonusInvaderPos = SI.bonusInvaderPos + pos(0, SI.invadersVelocity * 5);
+                if (SI.bonusInvaderPos.getOrd() + (SI.invadersVelocity * SI.bonusInvaderVelocityFactor) + SI.bonusInvader.entityHeight < height)
+                    SI.bonusInvaderPos = SI.bonusInvaderPos + pos(0, SI.invadersVelocity * SI.bonusInvaderVelocityFactor);
                 else
                 {
                     SI.bonusInvaderPos = pos(0, 0);
@@ -408,26 +430,26 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
             }
         }
 
-        //déplacement
+
         bool downShift(false);
         //SI.invadersPos.size() != 0 car win = false
         //trouver pos max invaders
-        vector<pos>::iterator extremum(SI.invadersPos.begin());
+        vector<pair<pos, unsigned>>::iterator extremum(SI.invadersPos.begin());
 
         if (SI.InvadersRight)
         {
-            for (vector<pos>::iterator it2(extremum + 1); it2 != SI.invadersPos.end(); ++it2)
-                if (it2->getAbs() > extremum->getAbs())
+            for (vector<pair<pos, unsigned>>::iterator it2(extremum + 1); it2 != SI.invadersPos.end(); ++it2)
+                if (it2->first.getAbs() > extremum->first.getAbs())
                     extremum = it2;
 
-            if (extremum->getAbs() + SI.invadersVelocity + SI.invaders.entityWidth < width)
+            if (extremum->first.getAbs() + SI.invadersVelocity + SI.invaders.entityWidth < width)
             {
                 //deplacer tous les invaders
-                it = SI.invadersPos.begin();
-                while (it != SI.invadersPos.end())
+                vector<pair<pos, unsigned>>::iterator itInvaders(SI.invadersPos.begin());
+                while (itInvaders != SI.invadersPos.end())
                 {
-                    *it = pos(it->getAbs() + SI.invadersVelocity, it->getOrd());
-                    ++it;
+                    itInvaders->first = pos(itInvaders->first.getAbs() + SI.invadersVelocity, itInvaders->first.getOrd());
+                    ++itInvaders;
                 }
             }
             else
@@ -438,18 +460,18 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
         }
         else
         {
-            for (vector<pos>::iterator it2(SI.invadersPos.begin() + 1); it2 != SI.invadersPos.end(); ++it2)
-                if (it2->getAbs() < extremum->getAbs())
+            for (vector<pair<pos, unsigned>>::iterator it2(SI.invadersPos.begin() + 1); it2 != SI.invadersPos.end(); ++it2)
+                if (it2->first.getAbs() < extremum->first.getAbs())
                     extremum = it2;
 
-            if (extremum->getAbs() > SI.invadersVelocity)
+            if (extremum->first.getAbs() > SI.invadersVelocity)
             {
                 //deplacer tous les invaders
-                it = SI.invadersPos.begin();
-                while (it != SI.invadersPos.end())
+                vector<pair<pos, unsigned>>::iterator itInvaders(SI.invadersPos.begin());
+                while (itInvaders != SI.invadersPos.end())
                 {
-                    *it = pos(it->getAbs() - SI.invadersVelocity, it->getOrd());
-                    ++it;
+                    itInvaders->first = pos(itInvaders->first.getAbs() - SI.invadersVelocity, itInvaders->first.getOrd());
+                    ++itInvaders;
                 }
             }
             else
@@ -462,18 +484,18 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
         if (downShift)
         {
             extremum = SI.invadersPos.begin();
-            for (vector<pos>::iterator it2(SI.invadersPos.begin() + 1); it2 != SI.invadersPos.end(); ++it2)
-                if (it2->getOrd() < extremum->getOrd())
+            for (vector<pair<pos, unsigned>>::iterator it2(SI.invadersPos.begin() + 1); it2 != SI.invadersPos.end(); ++it2)
+                if (it2->first.getOrd() < extremum->first.getOrd())
                     extremum = it2;
 
-            if (extremum->getOrd() > SI.invaders.entityHeight + 50 /*score height*/ + SI.player.entityHeight)
+            if (extremum->first.getOrd() > SI.invaders.entityHeight + 50 /*score height*/ + SI.player.entityHeight)
             {
                 //deplacer tous les invaders
-                it = SI.invadersPos.begin();
-                while (it != SI.invadersPos.end())
+                vector<pair<pos, unsigned>>::iterator itInvaders(SI.invadersPos.begin());
+                while (itInvaders != SI.invadersPos.end())
                 {
-                    *it = pos(it->getAbs(), it->getOrd() - 30);
-                    ++it;
+                    itInvaders->first = pos(itInvaders->first.getAbs(), itInvaders->first.getOrd() - 30);
+                    ++itInvaders;
                 }
             }
             else
@@ -531,7 +553,7 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
         window << SI.invaders.entityFig * invaderSize + pos(window.getWindowWidth() / 2 - (5 * 110), window.getWindowHeight() / 2);
         window.updateGraphic();
 
-        window.displayText(window.getWindowWidth() - 420, window.getWindowHeight() / 2 + 260, "Meilleurs scores : ");
+        window.displayText(window.getWindowWidth() - 400, window.getWindowHeight() / 2 + 260, "Podium : ");
 
         for (unsigned i(0); i < SI.bestScores.size() && i < 3; ++i)
         {
@@ -700,7 +722,6 @@ void mainSpaceInvaders(minGL &window)
     startMusic();
     invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
     SIBase = SI;
-
     const chrono::duration<double, milli> frameDuration(33.3); //30fps
 
     while (SpaceInvadersMenu(SIBase, window, frameDuration) != KEY_ESCAPE)
@@ -715,6 +736,8 @@ void mainSpaceInvaders(minGL &window)
             process(SI, window.getWindowHeight(), window.getWindowWidth(), iLoose, iWin);
             ReadKeyboard(window, SI, pause);
 
+            SIBase.score = SI.score;
+
             if (iWin)
             {
                 iWin = false;
@@ -724,12 +747,11 @@ void mainSpaceInvaders(minGL &window)
                 SI.lives = lives;
                 SI.wave = wave + 1;
                 SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque nouvelle vague
+                invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
                 window.displayText(window.getWindowWidth() / 2 - 60, window.getWindowHeight() / 2, "vague suivante...");
                 window.updateGraphic();
                 this_thread::sleep_for(chrono::duration<int, milli>(1000));
             }
-            else
-                SIBase.score = SI.score;
 
             window.clearScreen();
             displaySpace(window, SI);

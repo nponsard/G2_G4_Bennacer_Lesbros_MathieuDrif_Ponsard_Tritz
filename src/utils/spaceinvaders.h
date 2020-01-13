@@ -33,9 +33,10 @@ struct spaceInvaders
     unsigned torpedoVelocity;
     unsigned invadersVelocity;
     unsigned invadersMaxVelocity;
-    unsigned invadersVelocityStep;
+    unsigned invadersMinVelocity;
     unsigned wave;
     unsigned upgradeVelocity;
+    unsigned bonusInvaderVelocityFactor;
 
     std::vector<std::pair<std::string, unsigned>> bestScores;
 
@@ -53,7 +54,7 @@ struct spaceInvaders
 
     pos playerPos;
     pos bonusInvaderPos;
-    std::vector<pos> invadersPos;
+    std::vector<std::pair<pos, unsigned>> invadersPos;
     std::vector<pos> playerTorpedoPos;
     std::vector<pos> invadersTorpedoPos;
 
