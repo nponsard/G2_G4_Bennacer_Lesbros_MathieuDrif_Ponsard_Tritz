@@ -625,7 +625,8 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
                 startMusic();
                 playmusic = true;
             }
-                }
+            window.resetKey(KEY_SPACE);
+        }
         chrono::time_point<chrono::steady_clock> end(chrono::steady_clock::now());
         chrono::duration<double, milli> diff(end - beg);
         if (diff < frameDuration)
