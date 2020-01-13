@@ -358,7 +358,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                     if (itupgrade->second == 1)
                         SI.shot -= SI.shot / 10;
                     if (itupgrade->second == 2)
-                        SI.score += 10 + SI.wave * 10;
+                        SI.score += SI.wave * 100;
                     SI.UpgradePos.erase(itupgrade);
                 }
             }
@@ -699,8 +699,6 @@ void mainSpaceInvaders(minGL &window)
     system("bash ../ressources/audioSpaceInvaders.bash &");
     spaceInvaders SI, SIBase; //SI est utilisé pour le jeu et SIBase conserve les valeurs données par la fonction init sauf pour les scores
     initSpaceInvaders(SI);
-    SI.wave = 9;
-
     invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
     SIBase = SI;
     const chrono::duration<double, milli> frameDuration(33.3); //30fps
@@ -717,6 +715,8 @@ void mainSpaceInvaders(minGL &window)
             process(SI, window.getWindowHeight(), window.getWindowWidth(), iLoose, iWin);
             ReadKeyboard(window, SI, pause);
 
+            SIBase.score = SI.score;
+
             if (iWin)
             {
                 iWin = false;
@@ -731,8 +731,6 @@ void mainSpaceInvaders(minGL &window)
                 window.updateGraphic();
                 this_thread::sleep_for(chrono::duration<int, milli>(1000));
             }
-            else
-                SIBase.score = SI.score;
 
             window.clearScreen();
             displaySpace(window, SI);
