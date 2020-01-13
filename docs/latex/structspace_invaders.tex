@@ -11,8 +11,7 @@ struct gérant toutes les variables du jeu et les paramètres
 
 
 
-Collaboration diagram for space\+Invaders\+:
-\nopagebreak
+Collaboration diagram for space\+Invaders\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -52,11 +51,13 @@ unsigned \mbox{\hyperlink{structspace_invaders_a258a3070ef6da0c4ebc718427f8205e5
 \item 
 unsigned \mbox{\hyperlink{structspace_invaders_a206b72cc7fea3cc876bf071c0edf31b5}{invaders\+Max\+Velocity}}
 \item 
-unsigned \mbox{\hyperlink{structspace_invaders_aa36186401ba0fe3155e34a9fdc3d8d7d}{invaders\+Velocity\+Step}}
+unsigned \mbox{\hyperlink{structspace_invaders_aaccf4e0d75d02b2f79c4b58b738da5c1}{invaders\+Min\+Velocity}}
 \item 
 unsigned \mbox{\hyperlink{structspace_invaders_a17916aa42c7222aae16f537619d44d9f}{wave}}
 \item 
 unsigned \mbox{\hyperlink{structspace_invaders_afdd9b1f77a191db6441689fa983b7124}{upgrade\+Velocity}}
+\item 
+unsigned \mbox{\hyperlink{structspace_invaders_a0464a1bbf4bcec70612eeee33c75334f}{bonus\+Invader\+Velocity\+Factor}}
 \item 
 std\+::vector$<$ std\+::pair$<$ std\+::string, unsigned $>$ $>$ \mbox{\hyperlink{structspace_invaders_a4a545e5c9fd1226deac5db769b5dcedd}{best\+Scores}}
 \item 
@@ -82,7 +83,7 @@ bool \mbox{\hyperlink{structspace_invaders_a8e1ad16c71a98bf2c099c42fbf88414f}{In
 \item 
 \mbox{\hyperlink{structpos}{pos}} \mbox{\hyperlink{structspace_invaders_a05c4f1a1c2f5d8a4e77e12540ddc0382}{bonus\+Invader\+Pos}}
 \item 
-std\+::vector$<$ \mbox{\hyperlink{structpos}{pos}} $>$ \mbox{\hyperlink{structspace_invaders_a32aa2db01459a56b81bdddf935af8dc3}{invaders\+Pos}}
+std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structpos}{pos}}, unsigned $>$ $>$ \mbox{\hyperlink{structspace_invaders_a31454e2337e596f47ac0eec83ec8baae}{invaders\+Pos}}
 \item 
 std\+::vector$<$ \mbox{\hyperlink{structpos}{pos}} $>$ \mbox{\hyperlink{structspace_invaders_a110568f12870caa3cc572d338fb5de47}{player\+Torpedo\+Pos}}
 \item 
@@ -122,7 +123,7 @@ Definition at line 29 of file spaceinvaders.\+h.
 
 
 
-Definition at line 40 of file spaceinvaders.\+h.
+Definition at line 41 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a055eaff2d3227d400a8178aeddba9a6d}\label{structspace_invaders_a055eaff2d3227d400a8178aeddba9a6d}} 
 \index{spaceInvaders@{spaceInvaders}!bonusInvader@{bonusInvader}}
@@ -132,7 +133,7 @@ Definition at line 40 of file spaceinvaders.\+h.
 
 
 
-Definition at line 48 of file spaceinvaders.\+h.
+Definition at line 49 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a05c4f1a1c2f5d8a4e77e12540ddc0382}\label{structspace_invaders_a05c4f1a1c2f5d8a4e77e12540ddc0382}} 
 \index{spaceInvaders@{spaceInvaders}!bonusInvaderPos@{bonusInvaderPos}}
@@ -142,7 +143,7 @@ Definition at line 48 of file spaceinvaders.\+h.
 
 
 
-Definition at line 55 of file spaceinvaders.\+h.
+Definition at line 56 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a7ba35db78f60a792fed662f406694d34}\label{structspace_invaders_a7ba35db78f60a792fed662f406694d34}} 
 \index{spaceInvaders@{spaceInvaders}!bonusInvaders@{bonusInvaders}}
@@ -154,6 +155,16 @@ Definition at line 55 of file spaceinvaders.\+h.
 
 Definition at line 24 of file spaceinvaders.\+h.
 
+\mbox{\Hypertarget{structspace_invaders_a0464a1bbf4bcec70612eeee33c75334f}\label{structspace_invaders_a0464a1bbf4bcec70612eeee33c75334f}} 
+\index{spaceInvaders@{spaceInvaders}!bonusInvaderVelocityFactor@{bonusInvaderVelocityFactor}}
+\index{bonusInvaderVelocityFactor@{bonusInvaderVelocityFactor}!spaceInvaders@{spaceInvaders}}
+\doxysubsubsection{\texorpdfstring{bonusInvaderVelocityFactor}{bonusInvaderVelocityFactor}}
+{\footnotesize\ttfamily unsigned space\+Invaders\+::bonus\+Invader\+Velocity\+Factor}
+
+
+
+Definition at line 39 of file spaceinvaders.\+h.
+
 \mbox{\Hypertarget{structspace_invaders_a94b20dc7689317a9cecd91d58aee8e94}\label{structspace_invaders_a94b20dc7689317a9cecd91d58aee8e94}} 
 \index{spaceInvaders@{spaceInvaders}!invaders@{invaders}}
 \index{invaders@{invaders}!spaceInvaders@{spaceInvaders}}
@@ -162,7 +173,7 @@ Definition at line 24 of file spaceinvaders.\+h.
 
 
 
-Definition at line 44 of file spaceinvaders.\+h.
+Definition at line 45 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a0083f152ff96777e064a60e8bb3f2050}\label{structspace_invaders_a0083f152ff96777e064a60e8bb3f2050}} 
 \index{spaceInvaders@{spaceInvaders}!invadersLastShot@{invadersLastShot}}
@@ -184,15 +195,25 @@ Definition at line 22 of file spaceinvaders.\+h.
 
 Definition at line 35 of file spaceinvaders.\+h.
 
-\mbox{\Hypertarget{structspace_invaders_a32aa2db01459a56b81bdddf935af8dc3}\label{structspace_invaders_a32aa2db01459a56b81bdddf935af8dc3}} 
+\mbox{\Hypertarget{structspace_invaders_aaccf4e0d75d02b2f79c4b58b738da5c1}\label{structspace_invaders_aaccf4e0d75d02b2f79c4b58b738da5c1}} 
+\index{spaceInvaders@{spaceInvaders}!invadersMinVelocity@{invadersMinVelocity}}
+\index{invadersMinVelocity@{invadersMinVelocity}!spaceInvaders@{spaceInvaders}}
+\doxysubsubsection{\texorpdfstring{invadersMinVelocity}{invadersMinVelocity}}
+{\footnotesize\ttfamily unsigned space\+Invaders\+::invaders\+Min\+Velocity}
+
+
+
+Definition at line 36 of file spaceinvaders.\+h.
+
+\mbox{\Hypertarget{structspace_invaders_a31454e2337e596f47ac0eec83ec8baae}\label{structspace_invaders_a31454e2337e596f47ac0eec83ec8baae}} 
 \index{spaceInvaders@{spaceInvaders}!invadersPos@{invadersPos}}
 \index{invadersPos@{invadersPos}!spaceInvaders@{spaceInvaders}}
 \doxysubsubsection{\texorpdfstring{invadersPos}{invadersPos}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structpos}{pos}}$>$ space\+Invaders\+::invaders\+Pos}
+{\footnotesize\ttfamily std\+::vector$<$std\+::pair$<$\mbox{\hyperlink{structpos}{pos}}, unsigned$>$ $>$ space\+Invaders\+::invaders\+Pos}
 
 
 
-Definition at line 56 of file spaceinvaders.\+h.
+Definition at line 57 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a8e1ad16c71a98bf2c099c42fbf88414f}\label{structspace_invaders_a8e1ad16c71a98bf2c099c42fbf88414f}} 
 \index{spaceInvaders@{spaceInvaders}!InvadersRight@{InvadersRight}}
@@ -202,7 +223,7 @@ Definition at line 56 of file spaceinvaders.\+h.
 
 
 
-Definition at line 42 of file spaceinvaders.\+h.
+Definition at line 43 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a61c474d3246b2269b047233d259d5051}\label{structspace_invaders_a61c474d3246b2269b047233d259d5051}} 
 \index{spaceInvaders@{spaceInvaders}!invadersShot@{invadersShot}}
@@ -222,7 +243,7 @@ Definition at line 21 of file spaceinvaders.\+h.
 
 
 
-Definition at line 47 of file spaceinvaders.\+h.
+Definition at line 48 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_ab4019fc92f1859ea0636cec703a4ac35}\label{structspace_invaders_ab4019fc92f1859ea0636cec703a4ac35}} 
 \index{spaceInvaders@{spaceInvaders}!invadersTorpedoPos@{invadersTorpedoPos}}
@@ -232,7 +253,7 @@ Definition at line 47 of file spaceinvaders.\+h.
 
 
 
-Definition at line 58 of file spaceinvaders.\+h.
+Definition at line 59 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a258a3070ef6da0c4ebc718427f8205e5}\label{structspace_invaders_a258a3070ef6da0c4ebc718427f8205e5}} 
 \index{spaceInvaders@{spaceInvaders}!invadersVelocity@{invadersVelocity}}
@@ -243,16 +264,6 @@ Definition at line 58 of file spaceinvaders.\+h.
 
 
 Definition at line 34 of file spaceinvaders.\+h.
-
-\mbox{\Hypertarget{structspace_invaders_aa36186401ba0fe3155e34a9fdc3d8d7d}\label{structspace_invaders_aa36186401ba0fe3155e34a9fdc3d8d7d}} 
-\index{spaceInvaders@{spaceInvaders}!invadersVelocityStep@{invadersVelocityStep}}
-\index{invadersVelocityStep@{invadersVelocityStep}!spaceInvaders@{spaceInvaders}}
-\doxysubsubsection{\texorpdfstring{invadersVelocityStep}{invadersVelocityStep}}
-{\footnotesize\ttfamily unsigned space\+Invaders\+::invaders\+Velocity\+Step}
-
-
-
-Definition at line 36 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_ab1439cba4e8cc366d272c82b54b65546}\label{structspace_invaders_ab1439cba4e8cc366d272c82b54b65546}} 
 \index{spaceInvaders@{spaceInvaders}!LastBonusInvader@{LastBonusInvader}}
@@ -282,7 +293,7 @@ Definition at line 19 of file spaceinvaders.\+h.
 
 
 
-Definition at line 50 of file spaceinvaders.\+h.
+Definition at line 51 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a2d38e0e741291959dde8948164a361cb}\label{structspace_invaders_a2d38e0e741291959dde8948164a361cb}} 
 \index{spaceInvaders@{spaceInvaders}!lives@{lives}}
@@ -302,7 +313,7 @@ Definition at line 27 of file spaceinvaders.\+h.
 
 
 
-Definition at line 45 of file spaceinvaders.\+h.
+Definition at line 46 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a1ccf192ffdc4b31e918c55cae6b67027}\label{structspace_invaders_a1ccf192ffdc4b31e918c55cae6b67027}} 
 \index{spaceInvaders@{spaceInvaders}!playerPos@{playerPos}}
@@ -312,7 +323,7 @@ Definition at line 45 of file spaceinvaders.\+h.
 
 
 
-Definition at line 54 of file spaceinvaders.\+h.
+Definition at line 55 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_af29b482318f1c648a1ad57d6e92582f5}\label{structspace_invaders_af29b482318f1c648a1ad57d6e92582f5}} 
 \index{spaceInvaders@{spaceInvaders}!playerTorpedo@{playerTorpedo}}
@@ -322,7 +333,7 @@ Definition at line 54 of file spaceinvaders.\+h.
 
 
 
-Definition at line 46 of file spaceinvaders.\+h.
+Definition at line 47 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a110568f12870caa3cc572d338fb5de47}\label{structspace_invaders_a110568f12870caa3cc572d338fb5de47}} 
 \index{spaceInvaders@{spaceInvaders}!playerTorpedoPos@{playerTorpedoPos}}
@@ -332,7 +343,7 @@ Definition at line 46 of file spaceinvaders.\+h.
 
 
 
-Definition at line 57 of file spaceinvaders.\+h.
+Definition at line 58 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_aababf1699ccf35e4101d5797e299e598}\label{structspace_invaders_aababf1699ccf35e4101d5797e299e598}} 
 \index{spaceInvaders@{spaceInvaders}!score@{score}}
@@ -382,7 +393,7 @@ Definition at line 31 of file spaceinvaders.\+h.
 
 
 
-Definition at line 52 of file spaceinvaders.\+h.
+Definition at line 53 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_aeea0b19f8842bf19a47b22fbf7c99f42}\label{structspace_invaders_aeea0b19f8842bf19a47b22fbf7c99f42}} 
 \index{spaceInvaders@{spaceInvaders}!shootSpeedUpgrade@{shootSpeedUpgrade}}
@@ -392,7 +403,7 @@ Definition at line 52 of file spaceinvaders.\+h.
 
 
 
-Definition at line 51 of file spaceinvaders.\+h.
+Definition at line 52 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a075fb34e6fe170e4a4a5229f4fada1ec}\label{structspace_invaders_a075fb34e6fe170e4a4a5229f4fada1ec}} 
 \index{spaceInvaders@{spaceInvaders}!shot@{shot}}
@@ -422,7 +433,7 @@ Definition at line 33 of file spaceinvaders.\+h.
 
 
 
-Definition at line 60 of file spaceinvaders.\+h.
+Definition at line 61 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_af03b5260f0258d0864a63da8c1934eef}\label{structspace_invaders_af03b5260f0258d0864a63da8c1934eef}} 
 \index{spaceInvaders@{spaceInvaders}!upgradeTypes@{upgradeTypes}}
@@ -432,7 +443,7 @@ Definition at line 60 of file spaceinvaders.\+h.
 
 
 
-Definition at line 61 of file spaceinvaders.\+h.
+Definition at line 62 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_afdd9b1f77a191db6441689fa983b7124}\label{structspace_invaders_afdd9b1f77a191db6441689fa983b7124}} 
 \index{spaceInvaders@{spaceInvaders}!upgradeVelocity@{upgradeVelocity}}
