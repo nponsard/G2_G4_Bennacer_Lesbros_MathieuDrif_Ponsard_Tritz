@@ -53,7 +53,7 @@ struct spaceInvaders
 
     pos playerPos;
     pos bonusInvaderPos;
-    std::vector<pos> invadersPos;
+    std::vector<std::pair<pos, unsigned>> invadersPos;
     std::vector<pos> playerTorpedoPos;
     std::vector<pos> invadersTorpedoPos;
 
