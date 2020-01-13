@@ -249,16 +249,20 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                         if(itInvadersPos->second == 1)
                         {
                             SI.invadersPos.erase(itInvadersPos);
+                            system("aplay '../ressources/invadersDeath.wav' &");
                             SI.score += SI.scoreStep;
                             SI.scoreStep += 20;
+
+                            if (SI.invadersVelocity + SI.invadersVelocityStep <= SI.invadersMaxVelocity)
+                                SI.invadersVelocity += SI.invadersVelocityStep;
+                            else if (SI.invadersVelocity != SI.invadersMaxVelocity)
+                                SI.invadersVelocity = SI.invadersMaxVelocity;
                         }
                         else
+                        {
                             --itInvadersPos->second;
-                        system("aplay '../ressources/laser.wav' &");
-                        if (SI.invadersVelocity + SI.invadersVelocityStep <= SI.invadersMaxVelocity)
-                            SI.invadersVelocity += SI.invadersVelocityStep;
-                        else if (SI.invadersVelocity != SI.invadersMaxVelocity)
-                            SI.invadersVelocity = SI.invadersMaxVelocity;
+                            system("aplay '../ressources/invadersTouch.wav' &");
+                        }
                     }
                 }
 
@@ -275,7 +279,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                             upgrade.second = rand() % SI.upgradeTypes.size();
                             SI.UpgradePos.push_back(upgrade);
                             SI.playerTorpedoPos.erase(it);
-                            system("aplay '../ressources/laser.wav' &");
+                            system("aplay '../ressources/invadersDeath.wav' &");
                             SI.bonusInvaderPos = pos(0, 0);
                             SI.LastBonusInvader = chrono::steady_clock::now();
                             SI.score += SI.scoreStepBonusInvaders;
