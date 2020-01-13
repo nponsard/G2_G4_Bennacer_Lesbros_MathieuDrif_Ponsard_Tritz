@@ -614,12 +614,15 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
         window.displayText(200, window.getWindowHeight() - 70, to_string(SI.score));
 
         if (window.isPressed(KEY_ENTER))
+        {
             key = KEY_ENTER;
+            window.resetKey(KEY_ENTER); // éviter répétition de touches
+        }
 
         if (window.isPressed(KEY_ESCAPE))
         {
             iLoose = true;
-            window.resetKey(KEY_RETURN); // éviter répétition de touches
+            window.resetKey(KEY_ESCAPE); // éviter répétition de touches
         }
         if (window.isPressed(KEY_SPACE))
         {
@@ -750,7 +753,7 @@ void mainSpaceInvaders(minGL &window)
 
             if (pause)
             {
-                this_thread::sleep_for(chrono::duration<int, milli>(50)); //delai pour éviter répétition de touches
+                window.resetKey(KEY_ESCAPE); // éviter répétition de touches
                 SIpause(SI, window, frameDuration, iLoose, playmusic);
                 SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque sortie de pause
                 pause = false;
