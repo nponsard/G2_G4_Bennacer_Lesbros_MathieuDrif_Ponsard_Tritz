@@ -772,15 +772,13 @@ void mainSpaceInvaders(minGL &window)
         if (SIBase.bestScores.size() < 3)
         {
             string name(ReadName(window, frameDuration));
-            SIBase.bestScores.push_back(make_pair(name, SIBase.score));
-            scoreSort(SIBase.bestScores);
+            insertScore(SIBase.bestScores, name, SIBase.score);
             saveScores(SIBase.bestScores, "scores.yaml");
         }
         else if (SIBase.bestScores[SIBase.bestScores.size() - 1].second < SIBase.score)
         {
             string name(ReadName(window, frameDuration));
-            SIBase.bestScores.push_back(make_pair(name, SIBase.score));
-            scoreSort(SIBase.bestScores);
+            insertScore(SIBase.bestScores, name, SIBase.score);
             SIBase.bestScores.pop_back();
             saveScores(SIBase.bestScores, "scores.yaml");
         }

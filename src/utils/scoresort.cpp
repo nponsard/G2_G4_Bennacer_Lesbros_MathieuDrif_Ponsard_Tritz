@@ -34,10 +34,10 @@ void scoreSort(vector<pair<string, unsigned>> &scores)
 }
 
 
-void scoreInsertion(vector<pair<string, unsigned>> & scores, const string &nom, const unsigned & score)
+void insertScore(vector<pair<string, unsigned>> & scores, const string &nom, const unsigned & score)
 {
     unsigned i(0);
-    while(i < scores.size() && scores[i].second < score)
+    while(i < scores.size() && scores[i].second > score)
         ++i;
 
     scores.resize(scores.size() + 1);
