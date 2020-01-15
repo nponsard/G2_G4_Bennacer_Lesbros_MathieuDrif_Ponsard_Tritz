@@ -175,7 +175,7 @@ void fillHUD(minGL &window, const spaceInvaders &SI)
     window.displayText(5, window.getWindowHeight() - 40, "Score : ");
     window.displayText(80, window.getWindowHeight() - 40, to_string(SI.score));
 
-    window.displayText(window.getWindowWidth() / 2 - 40, window.getWindowHeight() - 40, "Vague : ");
+    window.displayText(window.getWindowWidth() / 2 - 40, window.getWindowHeight() - 40, "Wave : ");
     window.displayText(window.getWindowWidth() / 2 + 30, window.getWindowHeight() - 40, to_string(SI.wave));
 
     window.displayText(window.getWindowWidth() - 130, window.getWindowHeight() - 40, "Invaders : ");
@@ -547,7 +547,7 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
         window << SI.invaders.entityFig * invaderSize + pos(window.getWindowWidth() / 2 - (5 * 110), window.getWindowHeight() / 2);
         window.updateGraphic();
 
-        window.displayText(window.getWindowWidth() - 400, window.getWindowHeight() / 2 + 260, "Podium : ");
+        window.displayText(window.getWindowWidth() - 400, window.getWindowHeight() / 2 + 260, "Leaderboard : ");
 
         for (unsigned i(0); i < SI.bestScores.size() && i < 3; ++i)
         {
@@ -556,9 +556,9 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
             window.displayText(window.getWindowWidth() - 350, window.getWindowHeight() / 2 + 220 - (25 * i), to_string(SI.bestScores[i].second));
         }
 
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur entree pour jouer, echap pour quitter");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Press ENTER to play, or ESCAPE to quit");
 
-        window.displayText(50, window.getWindowHeight() - 70, "Dernier score : ");
+        window.displayText(50, window.getWindowHeight() - 70, "Last score : ");
         window.displayText(200, window.getWindowHeight() - 70, to_string(SI.score));
 
         if (window.isPressed(KEY_ENTER))
@@ -606,9 +606,9 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
         window.clearScreen();
         window << SI.player.entityFig * 2 + pos(100, 0);
         window.updateGraphic();
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur ENTREE pour continuer");
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 - 20, "Appuyez sur ECHAP pour quitter la partie");
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 - 40, "Appuyez sur ESPACE pour arreter/démarrer la musique");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Press ENTER to resume game");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 - 20, "Press ESCAPE to quit");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 - 40, "Press SPACE to stop/play music");
 
         window.displayText(50, window.getWindowHeight() - 70, "Score : ");
         window.displayText(200, window.getWindowHeight() - 70, to_string(SI.score));
@@ -658,7 +658,7 @@ string ReadName(minGL &window, const chrono::duration<double, milli> frameDurati
         window << rectangle(pos(window.getWindowWidth() / 2 - 100, window.getWindowHeight() / 2 - 25), 200, 50, KWhite, KBlack);
         window.updateGraphic();
 
-        window.displayText(window.getWindowWidth() / 2 - 150, window.getWindowHeight() / 2 + 100, "Nouveau meilleur score, entrez votre nom");
+        window.displayText(window.getWindowWidth() / 2 - 150, window.getWindowHeight() / 2 + 100, "New highscore, type your name : ");
 
         window.displayText(window.getWindowWidth() / 2 - 90, window.getWindowHeight() / 2 - 5, name);
 
@@ -740,7 +740,7 @@ void mainSpaceInvaders(minGL &window)
                 SI.wave = wave + 1;
                 SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque nouvelle vague
                 invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
-                window.displayText(window.getWindowWidth() / 2 - 60, window.getWindowHeight() / 2, "vague suivante...");
+                window.displayText(window.getWindowWidth() / 2 - 60, window.getWindowHeight() / 2, "Next wave...");
                 window.updateGraphic();
                 this_thread::sleep_for(chrono::duration<int, milli>(1000));
             }
