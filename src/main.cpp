@@ -49,9 +49,9 @@ const keyType KEY_RETURN({8, false});
 
 ///
 /// \brief Add invaders to the vector containing their pos until they fill their starting space
-/// \param SI : the struct containing all useful variables (including the size of the invaders and a vector containing all invaders' positions)
-/// \param height : the height of the space to fill with invaders
-/// \param width : the width of the space to fill with invaders
+/// \param SI : struct containing all useful variables (including the size of the invaders and a vector containing all invaders' positions)
+/// \param height : window's height
+/// \param width : window's width
 ///
 
 void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigned &width)
@@ -80,6 +80,7 @@ void initSpaceInvaders(spaceInvaders &SI)
 
     map<string, string> conf(loadConfig("config.yaml"));
     SI.bestScores = loadScores("scores.yaml");
+    SI.score = 0;
 
     SI.invadersMaxVelocity = unsigned(stoul(conf["invadersMaxVelocity"]));
     SI.invadersMinVelocity = unsigned(stoul(conf["invadersMinVelocity"]));
@@ -108,9 +109,9 @@ void initSpaceInvaders(spaceInvaders &SI)
 
 ///
 /// \brief display a figure at each position contained in a vector of positions
-/// \param window : the window on which the pictures are printed
-/// \param positions : the vector of positions where the picture must be displayed
-/// \param fig : the figure to be displayed
+/// \param window : window on which the pictures are printed
+/// \param positions : vector of positions where the picture must be displayed
+/// \param fig : figure to be displayed
 ///
 ///
 void display(minGL &window, const vector<pos> &positions, const figure &fig)
@@ -119,11 +120,25 @@ void display(minGL &window, const vector<pos> &positions, const figure &fig)
         window << fig + *it;
 }
 
+///
+/// \brief display a figure at each position contained in a vector of pairs containing positions and the type of the upgrade(only works for the upgrades)
+/// \param window : window on which the pictures are printed
+/// \param upgrades : vector pairs containing the positions where the picture must be displayed
+/// \param figures : vector of figures to be displayed
+///
+
 void display(minGL &window, const vector<pair<pos, short>> &upgrades, const vector<figure> &figures)
 {
     for (vector<pair<pos, short>>::const_iterator it(upgrades.begin()); it != upgrades.end(); ++it)
         window << figures[it->second] + it->first;
 }
+
+///
+/// \brief display a figure at each position contained in a vector of pairs containing positions (only works for the invaders)
+/// \param window : window on which the pictures are printed
+/// \param positions : vector of pairs containig the positions where the picture must be displayed
+/// \param fig : figure to be displayed
+///
 
 void display(minGL &window, const vector<pair<pos, unsigned>> &positions, const figure &fig)
 {
@@ -150,9 +165,9 @@ void displaySpace(minGL &window, const spaceInvaders &SI)
 }
 
 ///
-/// \brief display the spaces which will be filled with text on the screen
-/// \param window : the window on which the HUD will be printed
-/// \param SI : The struct containing all the useful variables (including the picture of the player, used to show the lifes remaining)
+/// \brief display spaces which will be filled with text on the screen
+/// \param window : window on which the HUD will be printed
+/// \param SI : struct containing all the useful variables (including the picture of the player, used to show the lifes remaining)
 ///
 
 void displayHUD(minGL &window, const spaceInvaders &SI)
@@ -164,8 +179,8 @@ void displayHUD(minGL &window, const spaceInvaders &SI)
 
 ///
 /// \brief display text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen
-/// \param window : the window on which the texte will be printed
-/// \param SI : the struct containing all the useful variables (including the wave number, the score, the lives remaining and the number of invaders alive)
+/// \param window : window on which the texte will be printed
+/// \param SI : struct containing all the useful variables (including the wave number, the score, the lives remaining and the number of invaders alive)
 ///
 
 void fillHUD(minGL &window, const spaceInvaders &SI)
@@ -211,7 +226,7 @@ bool collisions(pos &entity1,
 /// \brief Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets hit by a torpedo,
 ///     kills the invaders touched by a player's torpedo, removes the torpedoes if they leave the screen, moves the invaders (including the bonus invader)
 ///     and make one of them choosen randomly shoot.
-/// \param SI : the struct containing all the useful variables to be used and updated
+/// \param SI : struct containing all the useful variables to be used and updated
 /// \param height : window's height
 /// \param width : windSI.invadersPos.size()ow's width
 /// \param iLoose : boolean which become true if the player lose its last life by being hit by an ennemy torpedo
@@ -501,7 +516,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
 ///
 /// \brief Read the keyboard inputs and move the player accordingly
 /// \param window : contains the inputs and the size of the window
-/// \param SI : the struct containing all the useful variables (including the cooldown between shoots and the vector containing the player's torpedo)
+/// \param SI : struct containing all the useful variables (including the cooldown between shoots and the vector containing the player's torpedo)
 /// \param pause : boolean which become true if the player press the escape button
 ///
 
@@ -527,9 +542,9 @@ void ReadKeyboard(minGL &window, spaceInvaders &SI, bool &pause)
 
 ///
 /// \brief Display the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed
-/// \param SI : the struct containing all the useful variables (including the invader's picture and his score)
-/// \param window : the window on which the menu screen will be printed
-/// \param frameDuration : the time between each frame
+/// \param SI : struct containing all the useful variables (including the invader's picture and his score)
+/// \param window : window on which the menu screen will be printed
+/// \param frameDuration : time between each frame
 /// \return returns the key pressed if it is Enter (which will begin the game) or Escape (which will leave the game)
 ///
 

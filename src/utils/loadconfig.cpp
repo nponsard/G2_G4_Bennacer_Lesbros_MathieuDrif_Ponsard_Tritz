@@ -61,30 +61,27 @@ map<string, string> loadConfig(const string & fileName)
         AuthorizedKey AK;
 
 
-        if(ifs.is_open())
+        while(true)
         {
-            while(true)
+            getline(ifs, line);
+
+            if (ifs.eof())
+                break;
+
+            istringstream istr;
+            istr.str(line);
+            istr >> key;
+
+            //unsigned
+            if (find(AK.VParamUnsigned.begin(), AK.VParamUnsigned.end(), key) != AK.VParamUnsigned.end())
             {
-                getline(ifs, line);
-
-                if (ifs.eof())
-                    break;
-
-                istringstream istr;
-                istr.str(line);
-                istr >> key;
-
-                //unsigned
-                if (find(AK.VParamUnsigned.begin(), AK.VParamUnsigned.end(), key) != AK.VParamUnsigned.end())
-                {
-                    istr >> sep;
-                    unsigned val;
-                    istr >> val;
-                    if(!istr.fail())
-                        result[key] = to_string(val);
-                    else
-                        result[key] = to_string(defaultUnsignedConfig[key]);
-                }
+                istr >> sep;
+                unsigned val;
+                istr >> val;
+                if(!istr.fail())
+                    result[key] = to_string(val);
+                else
+                    result[key] = to_string(defaultUnsignedConfig[key]);
             }
         }
 
