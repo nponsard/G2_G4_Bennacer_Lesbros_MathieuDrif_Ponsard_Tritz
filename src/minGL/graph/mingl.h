@@ -17,22 +17,24 @@
 #include "../tools/pixelexception.h"
 
 /*!
- * \brief keyType : type représentant une touche 
- * \details Paire de int (numéro de la touche) et de bool (spécial oui/non)
+ * \brief keyType : custom type representing a key of the keyboard 
+ * \details It's a pair of int and bool <br>
+ *          <ul><li> the int is for the keycode </li>
+ *              <li> the bool indicates if it's special or not (true -> special, false-> not special)</li></ul>
  * 
  */
 typedef std::pair<int, bool> keyType; // cle, spécial
 /*!
  * 
- * \brief   keyMap : map des touches pressées 
- * \details Map avec comme clef \ref keyType
+ * \brief   keyMap : map of the pressed keys
+ * \details The keys are \ref keyType and is linked to true if pressed and false if not pressed (or reset)
  * 
  */
 typedef std::map<keyType, bool> keyMap;
 
 /*!
- * \brief The minGL class
- *          sert de classe de base à tout le bordel
+ * \brief minGL class: 
+ *        the entry point to draw thing on the screen
  *
  */
 
