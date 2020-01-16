@@ -6,14 +6,14 @@ using namespace std;
 //http://www.cplusplus.com/reference/algorithm/sort/
 
 /*!
- * \brief premet de comparer les paires de score ( teste si a>b )
- * \description renvoie true si a > b
- *          utilisé par l'algorithme sort de la bibliothèque algorithm
- * \param[in] a : premier score
- * \param[in] b : deuxième score 
- * \return <ul>
- *          <li> vrai si a>b</li>
- *          <li> faux is a<b</li>
+ * \brief Compares scores contained in the pairs of name - score
+ *          is used by the sort algorithm in the algorithm library
+ * \param a : first pair containing the score
+ * \param b : second pair containing the score
+ * \return returns :
+ *          <ul>
+ *          <li> true if a>b</li>
+ *          <li> false if a<b</li>
  *         </ul>
  */
 bool compPairs(const pair<string, unsigned> &a, const pair<string, unsigned> &b)
@@ -23,8 +23,8 @@ bool compPairs(const pair<string, unsigned> &a, const pair<string, unsigned> &b)
 
 /*!
  *
- * \brief trie tous les scores
- * \param scores : vector de paire pseudo - score
+ * \brief Sorts all the scores contained in pairs of name - score
+ * \param scores : vector containing pairs of name - score
  * 
  */
 
@@ -33,6 +33,12 @@ void scoreSort(vector<pair<string, unsigned>> &scores)
     sort(scores.begin(), scores.end(), compPairs);
 }
 
+/*!
+ * \brief Inserts a new pair of name - score in the right position in a vector
+ * \param scores : vector containing pairs of name - score, in which the new score will be added
+ * \param nom : the name corresponding to the score which will be added
+ * \param score : the score which will be added to the vector
+ */
 
 void insertScore(vector<pair<string, unsigned>> & scores, const string &nom, const unsigned & score)
 {

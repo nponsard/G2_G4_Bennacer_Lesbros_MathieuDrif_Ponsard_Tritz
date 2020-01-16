@@ -6,7 +6,7 @@
 #include "minGL/figs/circle.h"
 
 ///
-/// \brief Initialize the figures for MinGl
+/// \brief Initializes the entities which contain the figures for MinGl
 /// \param SI : the struct containing the variables to initialize
 ///
 

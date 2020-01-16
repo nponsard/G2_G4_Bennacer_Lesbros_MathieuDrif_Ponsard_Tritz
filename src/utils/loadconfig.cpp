@@ -7,9 +7,9 @@
 using namespace std;
 
 ///
-/// \brief create the default config file
+/// \brief Creates the default config file
 /// \param name of the file to create
-/// \param map containing value to put in the file
+/// \param map containing the values to put in the file
 ///
 void createConf(const string & fileName, map<string, unsigned> Map)
 {
@@ -26,9 +26,11 @@ void createConf(const string & fileName, map<string, unsigned> Map)
 }
 
 ///
-/// \brief load config file
-/// \param name of the config file
+/// \brief loads the config file
+/// \param fileName : the name of the file to read
+/// \return returns a map of strings - strings : the first one is the name of the variable, the other is its value
 ///
+
 map<string, string> loadConfig(const string & fileName)
 {
     map<string, unsigned> defaultUnsignedConfig;
