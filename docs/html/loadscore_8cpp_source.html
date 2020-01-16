@@ -94,53 +94,53 @@ $(document).ready(function(){initNavTree('loadscore_8cpp_source.html',''); initR
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span>std;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="loadscore_8cpp.html#ad975ce7fcccd7b848ad144b386e941c6">   16</a></span>&#160;vector&lt;pair&lt;string, unsigned&gt;&gt; <a class="code" href="loadscore_8cpp.html#ad975ce7fcccd7b848ad144b386e941c6">loadScores</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;fileName)</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    vector&lt;pair&lt;string, unsigned&gt;&gt; scores;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">unsigned</span> nb(0);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    ifstream ifs(fileName);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classline.html">line</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">string</span> name;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">unsigned</span> value;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">char</span> sep;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span> (ifs.is_open())</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">while</span> (nb &lt; 3)</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            getline(ifs, <a class="code" href="classline.html">line</a>);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">if</span> (ifs.eof())</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            istringstream istr;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            istr.str(<a class="code" href="classline.html">line</a>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            istr &gt;&gt; name;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            istr &gt;&gt; sep;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            istr &gt;&gt; value;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">if</span> (!istr.fail())</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">if</span> (name.size() &gt; 3)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    name = string(name, 0, 3);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">char</span> &amp;c : name)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    c = toupper(c);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                scores.push_back(make_pair(name, value));</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            ++nb;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="scoresort_8cpp.html#aae114c09489147c07b30e5c9c617a659">scoreSort</a>(scores);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> scores;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="loadscore_8cpp.html#ad975ce7fcccd7b848ad144b386e941c6">   15</a></span>&#160;vector&lt;pair&lt;string, unsigned&gt;&gt; <a class="code" href="loadscore_8cpp.html#ad975ce7fcccd7b848ad144b386e941c6">loadScores</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp;fileName)</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    vector&lt;pair&lt;string, unsigned&gt;&gt; scores;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">unsigned</span> nb(0);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    ifstream ifs(fileName);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classline.html">line</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">string</span> name;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">unsigned</span> value;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">char</span> sep;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (ifs.is_open())</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">while</span> (nb &lt; 3)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            getline(ifs, <a class="code" href="classline.html">line</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span> (ifs.eof())</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            istringstream istr;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            istr.str(<a class="code" href="classline.html">line</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            istr &gt;&gt; name;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            istr &gt;&gt; sep;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            istr &gt;&gt; value;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordflow">if</span> (!istr.fail())</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">if</span> (name.size() &gt; 3)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    name = string(name, 0, 3);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">char</span> &amp;c : name)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    c = toupper(c);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                scores.push_back(make_pair(name, value));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            ++nb;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="scoresort_8cpp.html#aae114c09489147c07b30e5c9c617a659">scoreSort</a>(scores);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">return</span> scores;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="ascoresort_8h_html"><div class="ttname"><a href="scoresort_8h.html">scoresort.h</a></div></div>
-<div class="ttc" id="aloadscore_8cpp_html_ad975ce7fcccd7b848ad144b386e941c6"><div class="ttname"><a href="loadscore_8cpp.html#ad975ce7fcccd7b848ad144b386e941c6">loadScores</a></div><div class="ttdeci">vector&lt; pair&lt; string, unsigned &gt; &gt; loadScores(const string &amp;fileName)</div><div class="ttdoc">charge les scores depuis le fichier</div><div class="ttdef"><b>Definition:</b> <a href="loadscore_8cpp_source.html#l00016">loadscore.cpp:16</a></div></div>
-<div class="ttc" id="ascoresort_8cpp_html_aae114c09489147c07b30e5c9c617a659"><div class="ttname"><a href="scoresort_8cpp.html#aae114c09489147c07b30e5c9c617a659">scoreSort</a></div><div class="ttdeci">void scoreSort(vector&lt; pair&lt; string, unsigned &gt;&gt; &amp;scores)</div><div class="ttdoc">trie tous les scores</div><div class="ttdef"><b>Definition:</b> <a href="scoresort_8cpp_source.html#l00031">scoresort.cpp:31</a></div></div>
+<div class="ttc" id="aloadscore_8cpp_html_ad975ce7fcccd7b848ad144b386e941c6"><div class="ttname"><a href="loadscore_8cpp.html#ad975ce7fcccd7b848ad144b386e941c6">loadScores</a></div><div class="ttdeci">vector&lt; pair&lt; string, unsigned &gt; &gt; loadScores(const string &amp;fileName)</div><div class="ttdoc">loads the scores containing in a file in a vector of pairs linking the names and the scores</div><div class="ttdef"><b>Definition:</b> <a href="loadscore_8cpp_source.html#l00015">loadscore.cpp:15</a></div></div>
+<div class="ttc" id="ascoresort_8cpp_html_aae114c09489147c07b30e5c9c617a659"><div class="ttname"><a href="scoresort_8cpp.html#aae114c09489147c07b30e5c9c617a659">scoreSort</a></div><div class="ttdeci">void scoreSort(vector&lt; pair&lt; string, unsigned &gt;&gt; &amp;scores)</div><div class="ttdoc">Sorts all the scores contained in pairs of name - score.</div><div class="ttdef"><b>Definition:</b> <a href="scoresort_8cpp_source.html#l00031">scoresort.cpp:31</a></div></div>
 <div class="ttc" id="aload_scores_8h_html"><div class="ttname"><a href="load_scores_8h.html">loadScores.h</a></div></div>
 <div class="ttc" id="aclassline_html"><div class="ttname"><a href="classline.html">line</a></div><div class="ttdef"><b>Definition:</b> <a href="line_8h_source.html#l00008">line.h:8</a></div></div>
 <!-- start footer part -->

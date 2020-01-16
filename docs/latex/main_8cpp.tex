@@ -24,8 +24,7 @@ Main program.
 {\ttfamily \#include \char`\"{}utils/scoresort.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}utils/savescores.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}utils/music.\+h\char`\"{}}\newline
-Include dependency graph for main.\+cpp\+:
-\nopagebreak
+Include dependency graph for main.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -52,37 +51,37 @@ const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \
 const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \mbox{\hyperlink{main_8cpp_a5add5cc153950658ca297235042a117d}{K\+E\+Y\+\_\+\+R\+E\+T\+U\+RN}} (\{8, false\})
 \item 
 void \mbox{\hyperlink{main_8cpp_a1dad421af4a8916521afa23c1ab85134}{invaders\+Generation}} (\mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, const unsigned \&height, const unsigned \&width)
-\begin{DoxyCompactList}\small\item\em Add invaders to the vector containing their pos until they fill their starting space. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Adds invaders to the vector containing their pos until they fill their starting space. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a2be98a767fac8753a8c75e926030f11c}{init\+Space\+Invaders}} (\mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
-\begin{DoxyCompactList}\small\item\em initialize the variables contained in a Space\+Invaders struct \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em initializes the variables contained in a Space\+Invaders struct \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_ad08634716e92a71688805904e5e4e4cb}{display}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const vector$<$ \mbox{\hyperlink{structpos}{pos}} $>$ \&positions, const \mbox{\hyperlink{classfigure}{figure}} \&fig)
-\begin{DoxyCompactList}\small\item\em display a figure at each position contained in a vector of positions \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em displays a figure at each position contained in a vector of positions \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_ac109063b2e637b456f78e050c7f4ec75}{display}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const vector$<$ pair$<$ \mbox{\hyperlink{structpos}{pos}}, short $>$$>$ \&upgrades, const vector$<$ \mbox{\hyperlink{classfigure}{figure}} $>$ \&figures)
-\item 
+\begin{DoxyCompactList}\small\item\em displays a figure at each position contained in a vector of pairs containing positions and the type of the upgrade(only works for the upgrades) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a5c4956dfe5ed355504c40686530ab9c3}{display}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const vector$<$ pair$<$ \mbox{\hyperlink{structpos}{pos}}, unsigned $>$$>$ \&positions, const \mbox{\hyperlink{classfigure}{figure}} \&fig)
-\item 
+\begin{DoxyCompactList}\small\item\em displays a figure at each position contained in a vector of pairs containing positions (only works for the invaders) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_ac41565061b5d9d85c584ba075ae5b430}{display\+Space}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
-\begin{DoxyCompactList}\small\item\em display the torpedos, the ennemies and the player on the screen \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em displays the torpedos, the ennemies and the player on the screen \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a7fcb65b94fa3f9bee7ac989396d834ae}{display\+H\+UD}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
-\begin{DoxyCompactList}\small\item\em display the spaces which will be filled with text on the screen \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em displays spaces which will be filled with text on the screen \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_ad7204fff1f31826ccb9b3165f4be92aa}{fill\+H\+UD}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
-\begin{DoxyCompactList}\small\item\em display text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em displays text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{main_8cpp_aebcced80e93e3dcb361a32cbc6b0a302}{collisions}} (\mbox{\hyperlink{structpos}{pos}} \&entity1, \mbox{\hyperlink{structpos}{pos}} \&entity2, const unsigned \&height1, const unsigned \&height2, const unsigned \&width1, const unsigned \&width2)
-\begin{DoxyCompactList}\small\item\em Test if two entities collide. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Tests if two entities collide. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a350e996a354865b6064bab50134646dc}{process}} (\mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, const unsigned \&height, const unsigned \&width, bool \&i\+Loose, bool \&i\+Win)
 \begin{DoxyCompactList}\small\item\em Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets hit by a torpedo, kills the invaders touched by a player\textquotesingle{}s torpedo, removes the torpedoes if they leave the screen, moves the invaders (including the bonus invader) and make one of them choosen randomly shoot. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_ada592260988cd1e3144c6b2f883b1c50}{Read\+Keyboard}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, bool \&pause)
-\begin{DoxyCompactList}\small\item\em Read the keyboard inputs and move the player accordingly. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Reads the keyboard inputs and move the player accordingly. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \mbox{\hyperlink{main_8cpp_acb09fd5530dac6cdb8a763af79e1ebc4}{Space\+Invaders\+Menu}} (const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, \mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const chrono\+::duration$<$ double, milli $>$ frame\+Duration)
-\begin{DoxyCompactList}\small\item\em Display the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Displays the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_a6f6eb5db37f7b274c9373c72a7d58d23}{S\+Ipause}} (const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, \mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const chrono\+::duration$<$ double, milli $>$ frame\+Duration, bool \&i\+Loose, bool \&playmusic)
 \begin{DoxyCompactList}\small\item\em Displays the pause screen and check if the player press Enter to leave the pause. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{main_8cpp_a63dc32cfb9fffe0479de85c623e159b6}{Read\+Name}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const chrono\+::duration$<$ double, milli $>$ frame\+Duration, const unsigned \&nb\+Char\+Max=3)
-\item 
+\begin{DoxyCompactList}\small\item\em Displays the screen in which the player can enter his name if he did a new highscore, and read the keyboard input to allow him to enter his name. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8cpp_ad1883dd55c8b9fa49439a49a3e08cb24}{main\+Space\+Invaders}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window)
 \begin{DoxyCompactList}\small\item\em The main function of the game, which use the others to display the screen, get inputs ... and which manage the pause menu, the framerate, the success and defeat, the generation of the new waves, manage the highscore. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
-\begin{DoxyCompactList}\small\item\em Initialize Glut and Min\+Gl, creates a seed for randomness and launches the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initializes Glut and Min\+Gl, creates a seed for randomness and launches the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -110,7 +109,7 @@ Raphaël L\+E\+S\+B\+R\+OS
 
 
 
-Test if two entities collide. 
+Tests if two entities collide. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -128,20 +127,22 @@ Test if two entities collide.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-return true if the entities collide, else returns false 
+returns true if the entities collide, else returns false 
 \end{DoxyReturn}
 
 
-Definition at line 200 of file main.\+cpp.
+Definition at line 211 of file main.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=252pt]{main_8cpp_aebcced80e93e3dcb361a32cbc6b0a302_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -156,7 +157,20 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 126 of file main.\+cpp.
+displays a figure at each position contained in a vector of pairs containing positions and the type of the upgrade(only works for the upgrades) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: window on which the pictures are printed \\
+\hline
+{\em upgrades} & \+: vector pairs containing the positions where the picture must be displayed \\
+\hline
+{\em figures} & \+: vector of figures to be displayed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 130 of file main.\+cpp.
 
 \mbox{\Hypertarget{main_8cpp_a5c4956dfe5ed355504c40686530ab9c3}\label{main_8cpp_a5c4956dfe5ed355504c40686530ab9c3}} 
 \index{main.cpp@{main.cpp}!display@{display}}
@@ -166,7 +180,20 @@ Definition at line 126 of file main.\+cpp.
 
 
 
-Definition at line 132 of file main.\+cpp.
+displays a figure at each position contained in a vector of pairs containing positions (only works for the invaders) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: window on which the pictures are printed \\
+\hline
+{\em positions} & \+: vector of pairs containig the positions where the picture must be displayed \\
+\hline
+{\em fig} & \+: figure to be displayed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 143 of file main.\+cpp.
 
 \mbox{\Hypertarget{main_8cpp_ad08634716e92a71688805904e5e4e4cb}\label{main_8cpp_ad08634716e92a71688805904e5e4e4cb}} 
 \index{main.cpp@{main.cpp}!display@{display}}
@@ -176,22 +203,23 @@ Definition at line 132 of file main.\+cpp.
 
 
 
-display a figure at each position contained in a vector of positions 
+displays a figure at each position contained in a vector of positions 
 
 
 \begin{DoxyParams}{Parameters}
-{\em window} & \+: the window on which the pictures are printed \\
+{\em window} & \+: window on which the pictures are printed \\
 \hline
-{\em positions} & \+: the vector of positions where the picture must be displayed \\
+{\em positions} & \+: vector of positions where the picture must be displayed \\
 \hline
-{\em fig} & \+: the figure to be displayed \\
+{\em fig} & \+: figure to be displayed \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 119 of file main.\+cpp.
+Definition at line 117 of file main.\+cpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -206,27 +234,29 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-display the spaces which will be filled with text on the screen 
+displays spaces which will be filled with text on the screen 
 
 
 \begin{DoxyParams}{Parameters}
-{\em window} & \+: the window on which the H\+UD will be printed \\
+{\em window} & \+: window on which the H\+UD will be printed \\
 \hline
-{\em SI} & \+: The struct containing all the useful variables (including the picture of the player, used to show the lifes remaining) \\
+{\em SI} & \+: struct containing all the useful variables (including the picture of the player, used to show the lifes remaining) \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 162 of file main.\+cpp.
+Definition at line 173 of file main.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=331pt]{main_8cpp_a7fcb65b94fa3f9bee7ac989396d834ae_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -241,7 +271,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-display the torpedos, the ennemies and the player on the screen 
+displays the torpedos, the ennemies and the player on the screen 
 
 
 \begin{DoxyParams}{Parameters}
@@ -252,16 +282,18 @@ display the torpedos, the ennemies and the player on the screen
 \end{DoxyParams}
 
 
-Definition at line 144 of file main.\+cpp.
+Definition at line 155 of file main.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=249pt]{main_8cpp_ac41565061b5d9d85c584ba075ae5b430_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -276,27 +308,29 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-display text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen 
+displays text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen 
 
 
 \begin{DoxyParams}{Parameters}
-{\em window} & \+: the window on which the texte will be printed \\
+{\em window} & \+: window on which the texte will be printed \\
 \hline
-{\em SI} & \+: the struct containing all the useful variables (including the wave number, the score, the lives remaining and the number of invaders alive) \\
+{\em SI} & \+: struct containing all the useful variables (including the wave number, the score, the lives remaining and the number of invaders alive) \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 175 of file main.\+cpp.
+Definition at line 186 of file main.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=308pt]{main_8cpp_ad7204fff1f31826ccb9b3165f4be92aa_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -311,7 +345,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-initialize the variables contained in a Space\+Invaders struct 
+initializes the variables contained in a Space\+Invaders struct 
 
 
 \begin{DoxyParams}{Parameters}
@@ -330,7 +364,8 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{main_8cpp_a2be98a767fac8753a8c75e926030f11c_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -345,22 +380,23 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Add invaders to the vector containing their pos until they fill their starting space. 
+Adds invaders to the vector containing their pos until they fill their starting space. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em SI} & \+: the struct containing all useful variables (including the size of the invaders and a vector containing all invaders\textquotesingle{} positions) \\
+{\em SI} & \+: struct containing all useful variables (including the size of the invaders and a vector containing all invaders\textquotesingle{} positions) \\
 \hline
-{\em height} & \+: the height of the space to fill with invaders \\
+{\em height} & \+: window\textquotesingle{}s height \\
 \hline
-{\em width} & \+: the width of the space to fill with invaders \\
+{\em width} & \+: window\textquotesingle{}s width \\
 \hline
 \end{DoxyParams}
 
 
 Definition at line 57 of file main.\+cpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -407,7 +443,8 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{KEY\_LEFT()}{KEY\_LEFT()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} K\+E\+Y\+\_\+\+L\+E\+FT (\begin{DoxyParamCaption}\item[{\{100, true\}}]{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -420,7 +457,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{KEY\_RETURN()}{KEY\_RETURN()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} K\+E\+Y\+\_\+\+R\+E\+T\+U\+RN (\begin{DoxyParamCaption}\item[{\{8, false\}}]{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -433,7 +471,8 @@ Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{KEY\_RIGHT()}{KEY\_RIGHT()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} K\+E\+Y\+\_\+\+R\+I\+G\+HT (\begin{DoxyParamCaption}\item[{\{102, true\}}]{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -468,14 +507,14 @@ Here is the caller graph for this function\+:
 
 
 
-Initialize Glut and Min\+Gl, creates a seed for randomness and launches the game. 
+Initializes Glut and Min\+Gl, creates a seed for randomness and launches the game. 
 
 \begin{DoxyReturn}{Returns}
 
 \end{DoxyReturn}
 
 
-Definition at line 805 of file main.\+cpp.
+Definition at line 816 of file main.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -502,7 +541,7 @@ The main function of the game, which use the others to display the screen, get i
 \end{DoxyParams}
 
 
-Definition at line 716 of file main.\+cpp.
+Definition at line 731 of file main.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -512,7 +551,8 @@ Here is the call graph for this function\+:
 \includegraphics[width=350pt]{main_8cpp_ad1883dd55c8b9fa49439a49a3e08cb24_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -531,7 +571,7 @@ Updates the informations like the positions of the torpedoes, the lifes remainin
 
 
 \begin{DoxyParams}{Parameters}
-{\em SI} & \+: the struct containing all the useful variables to be used and updated \\
+{\em SI} & \+: struct containing all the useful variables to be used and updated \\
 \hline
 {\em height} & \+: window\textquotesingle{}s height \\
 \hline
@@ -544,16 +584,18 @@ Updates the informations like the positions of the torpedoes, the lifes remainin
 \end{DoxyParams}
 
 
-Definition at line 225 of file main.\+cpp.
+Definition at line 236 of file main.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=342pt]{main_8cpp_a350e996a354865b6064bab50134646dc_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -568,29 +610,31 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Read the keyboard inputs and move the player accordingly. 
+Reads the keyboard inputs and move the player accordingly. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em window} & \+: contains the inputs and the size of the window \\
 \hline
-{\em SI} & \+: the struct containing all the useful variables (including the cooldown between shoots and the vector containing the player\textquotesingle{}s torpedo) \\
+{\em SI} & \+: struct containing all the useful variables (including the cooldown between shoots and the vector containing the player\textquotesingle{}s torpedo) \\
 \hline
 {\em pause} & \+: boolean which become true if the player press the escape button \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 514 of file main.\+cpp.
+Definition at line 523 of file main.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=340pt]{main_8cpp_ada592260988cd1e3144c6b2f883b1c50_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -605,16 +649,34 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 657 of file main.\+cpp.
+Displays the screen in which the player can enter his name if he did a new highscore, and read the keyboard input to allow him to enter his name. 
 
-Here is the call graph for this function\+:\nopagebreak
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: window on which the input screen will be displayed, and contain the informations about the keyboard inputs \\
+\hline
+{\em frame\+Duration} & \+: time between each frame \\
+\hline
+{\em nb\+Char\+Max} & \+: the maximum size of the name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns a string corresponding to the name input 
+\end{DoxyReturn}
+
+
+Definition at line 671 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{main_8cpp_a63dc32cfb9fffe0479de85c623e159b6_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -642,7 +704,7 @@ Displays the pause screen and check if the player press Enter to leave the pause
 \end{DoxyParams}
 
 
-Definition at line 608 of file main.\+cpp.
+Definition at line 614 of file main.\+cpp.
 
 Here is the call graph for this function\+:
 \nopagebreak
@@ -668,15 +730,15 @@ Here is the caller graph for this function\+:
 
 
 
-Display the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed. 
+Displays the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em SI} & \+: the struct containing all the useful variables (including the invader\textquotesingle{}s picture and his score) \\
+{\em SI} & \+: struct containing all the useful variables (including the invader\textquotesingle{}s picture and his score) \\
 \hline
-{\em window} & \+: the window on which the menu screen will be printed \\
+{\em window} & \+: window on which the menu screen will be printed \\
 \hline
-{\em frame\+Duration} & \+: the time between each frame \\
+{\em frame\+Duration} & \+: time between each frame \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -684,16 +746,18 @@ returns the key pressed if it is Enter (which will begin the game) or Escape (wh
 \end{DoxyReturn}
 
 
-Definition at line 542 of file main.\+cpp.
+Definition at line 551 of file main.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{main_8cpp_acb09fd5530dac6cdb8a763af79e1ebc4_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

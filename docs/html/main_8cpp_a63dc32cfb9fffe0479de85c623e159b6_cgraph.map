@@ -1,13 +1,13 @@
 <map id="ReadName" name="ReadName">
-<area shape="rect" id="node1" title=" " alt="" coords="5,208,100,235"/>
+<area shape="rect" id="node1" title="Displays the screen in which the player can enter his name if he did a new highscore,..." alt="" coords="5,208,100,235"/>
 <area shape="rect" id="node2" href="$classmin_g_l.html#a0ce6824246059b2f9db17b27a7f8fd65" title=" " alt="" coords="168,5,316,32"/>
-<area shape="rect" id="node4" href="$classmin_g_l.html#a4fe4d62f6c9f623e83b3a9d173d55587" title="fonction qui affiche du texte à l&#39;écran" alt="" coords="169,56,315,83"/>
+<area shape="rect" id="node4" href="$classmin_g_l.html#a4fe4d62f6c9f623e83b3a9d173d55587" title="draw text to the screen" alt="" coords="169,56,315,83"/>
 <area shape="rect" id="node5" href="$classmin_g_l.html#a4825c324a765ab4e88f1251b56a632ba" title=" " alt="" coords="148,107,336,133"/>
 <area shape="rect" id="node6" href="$classmin_g_l.html#aeacac18399d4e02212d5632d889e8a10" title=" " alt="" coords="151,157,333,184"/>
-<area shape="rect" id="node7" href="$classmin_g_l.html#adff92859de3c014f93d32088d3f322f3" title="Indique si la touche est pressée (true) ou pas (false)" alt="" coords="175,208,309,235"/>
+<area shape="rect" id="node7" href="$classmin_g_l.html#adff92859de3c014f93d32088d3f322f3" title="Tell if the key is pressed (true) or not (false)" alt="" coords="175,208,309,235"/>
 <area shape="rect" id="node8" href="$main_8cpp.html#aa89fe11c6a08a96d88eb644c6c96effa" title=" " alt="" coords="193,259,291,285"/>
 <area shape="rect" id="node9" href="$main_8cpp.html#a5add5cc153950658ca297235042a117d" title=" " alt="" coords="188,309,296,336"/>
-<area shape="rect" id="node10" href="$classmin_g_l.html#a37b8dfb172809782b32664c507bfce9d" title=" " alt="" coords="177,360,307,387"/>
+<area shape="rect" id="node10" href="$classmin_g_l.html#a37b8dfb172809782b32664c507bfce9d" title="set the key passed in parameter to not pressed (used in menus)" alt="" coords="177,360,307,387"/>
 <area shape="rect" id="node11" href="$classmin_g_l.html#a99da1c9d9a0db279975f591b2d4897fd" title=" " alt="" coords="159,411,325,437"/>
 <area shape="rect" id="node3" href="$classmin_g_l.html#a0ea8d3c8b60858157716afeb39560c38" title=" " alt="" coords="384,5,507,32"/>
 </map>
