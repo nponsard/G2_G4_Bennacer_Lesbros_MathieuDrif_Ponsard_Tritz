@@ -4,7 +4,7 @@
 <area shape="rect" id="node3" href="$classmin_g_l.html#a2fc771e1dda196da4341375d1bbc40e0" title=" " alt="" coords="112,107,255,133"/>
 <area shape="rect" id="node6" href="$music_8cpp.html#a827a00dce9688cb83ea6652acfa50393" title="stops the music" alt="" coords="562,157,642,184"/>
 <area shape="rect" id="node7" href="$main_8cpp.html#ad1883dd55c8b9fa49439a49a3e08cb24" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,613,259,640"/>
-<area shape="rect" id="node4" href="$classmin_g_l.html#a0ce6824246059b2f9db17b27a7f8fd65" title=" " alt="" coords="528,309,676,336"/>
+<area shape="rect" id="node4" href="$classmin_g_l.html#a0ce6824246059b2f9db17b27a7f8fd65" title="clear the screen \description fills the screen with the background color" alt="" coords="528,309,676,336"/>
 <area shape="rect" id="node5" href="$classmin_g_l.html#a0ea8d3c8b60858157716afeb39560c38" title=" " alt="" coords="744,309,867,336"/>
 <area shape="rect" id="node8" href="$main_8cpp.html#a7fcb65b94fa3f9bee7ac989396d834ae" title="displays spaces which will be filled with text on the screen" alt="" coords="334,309,433,336"/>
 <area shape="rect" id="node9" href="$classmin_g_l.html#a4825c324a765ab4e88f1251b56a632ba" title=" " alt="" coords="508,360,696,387"/>

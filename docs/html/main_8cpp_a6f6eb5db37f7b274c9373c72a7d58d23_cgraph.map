@@ -1,6 +1,6 @@
 <map id="SIpause" name="SIpause">
 <area shape="rect" id="node1" title="Displays the pause screen and check if the player press Enter to leave the pause." alt="" coords="5,284,79,311"/>
-<area shape="rect" id="node2" href="$classmin_g_l.html#a0ce6824246059b2f9db17b27a7f8fd65" title=" " alt="" coords="147,5,295,32"/>
+<area shape="rect" id="node2" href="$classmin_g_l.html#a0ce6824246059b2f9db17b27a7f8fd65" title="clear the screen \description fills the screen with the background color" alt="" coords="147,5,295,32"/>
 <area shape="rect" id="node4" href="$classmin_g_l.html#a4fe4d62f6c9f623e83b3a9d173d55587" title="draw text to the screen" alt="" coords="147,56,294,83"/>
 <area shape="rect" id="node5" href="$classmin_g_l.html#a4825c324a765ab4e88f1251b56a632ba" title=" " alt="" coords="127,107,315,133"/>
 <area shape="rect" id="node6" href="$classmin_g_l.html#aeacac18399d4e02212d5632d889e8a10" title=" " alt="" coords="129,157,312,184"/>

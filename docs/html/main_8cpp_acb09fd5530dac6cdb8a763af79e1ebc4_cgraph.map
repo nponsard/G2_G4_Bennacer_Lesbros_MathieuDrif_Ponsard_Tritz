@@ -1,6 +1,6 @@
 <map id="SpaceInvadersMenu" name="SpaceInvadersMenu">
 <area shape="rect" id="node1" title="Displays the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed." alt="" coords="5,183,159,209"/>
-<area shape="rect" id="node2" href="$classmin_g_l.html#a0ce6824246059b2f9db17b27a7f8fd65" title=" " alt="" coords="227,5,375,32"/>
+<area shape="rect" id="node2" href="$classmin_g_l.html#a0ce6824246059b2f9db17b27a7f8fd65" title="clear the screen \description fills the screen with the background color" alt="" coords="227,5,375,32"/>
 <area shape="rect" id="node4" href="$classmin_g_l.html#a4fe4d62f6c9f623e83b3a9d173d55587" title="draw text to the screen" alt="" coords="227,56,374,83"/>
 <area shape="rect" id="node5" href="$classmin_g_l.html#a4825c324a765ab4e88f1251b56a632ba" title=" " alt="" coords="207,107,395,133"/>
 <area shape="rect" id="node6" href="$classmin_g_l.html#aeacac18399d4e02212d5632d889e8a10" title=" " alt="" coords="209,157,392,184"/>

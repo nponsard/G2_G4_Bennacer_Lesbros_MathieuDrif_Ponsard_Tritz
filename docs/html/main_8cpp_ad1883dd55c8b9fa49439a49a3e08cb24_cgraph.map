@@ -1,6 +1,6 @@
 <map id="mainSpaceInvaders" name="mainSpaceInvaders">
 <area shape="rect" id="node1" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="5,478,156,505"/>
-<area shape="rect" id="node2" href="$classmin_g_l.html#a0ce6824246059b2f9db17b27a7f8fd65" title=" " alt="" coords="425,250,573,277"/>
+<area shape="rect" id="node2" href="$classmin_g_l.html#a0ce6824246059b2f9db17b27a7f8fd65" title="clear the screen \description fills the screen with the background color" alt="" coords="425,250,573,277"/>
 <area shape="rect" id="node4" href="$main_8cpp.html#a7fcb65b94fa3f9bee7ac989396d834ae" title="displays spaces which will be filled with text on the screen" alt="" coords="231,47,330,74"/>
 <area shape="rect" id="node5" href="$classmin_g_l.html#a4825c324a765ab4e88f1251b56a632ba" title=" " alt="" coords="405,47,593,74"/>
 <area shape="rect" id="node6" href="$classmin_g_l.html#aeacac18399d4e02212d5632d889e8a10" title=" " alt="" coords="408,149,591,175"/>

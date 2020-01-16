@@ -63,6 +63,12 @@ void minGL::updateGraphic()
     glutMainLoopEvent();
 }
 
+/*!
+ * 
+ * \brief clear the screen
+ * \description fills the screen with the background color
+ * 
+ */
 void minGL::clearScreen() throw(myexception)
 {
     for (unsigned i(0); i < windowWidth; ++i)
@@ -182,7 +188,7 @@ void minGL::resetKey(const keyType &key)
  * \brief draw text to the screen
  * \param[in] x : position x
  * \param[in] y : position y
- * \param[in] str : texte to draw
+ * \param[in] str : text to draw
  */
 void minGL::displayText(const unsigned &x, const unsigned &y, const string &str)
 {
