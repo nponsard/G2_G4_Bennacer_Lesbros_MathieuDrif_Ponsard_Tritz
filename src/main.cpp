@@ -341,6 +341,8 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                     SI.invadersTorpedoPos.erase(it);
                     if (--SI.lives == 0)
                         iLoose = true;
+                    else
+                        system("aplay -q '../ressources/loseLife.wav' &");
                 }
             }
             else //collision avec le mur
@@ -779,6 +781,7 @@ void mainSpaceInvaders(minGL &window)
             if (diff < frameDuration)
                 this_thread::sleep_for(frameDuration - diff);
         }
+        system("aplay -q '../ressources/gameOver.wav' &");
 
         SI = SIBase;
         SI.score = 0;
