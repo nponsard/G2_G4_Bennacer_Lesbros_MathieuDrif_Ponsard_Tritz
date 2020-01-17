@@ -4,8 +4,8 @@
 
 /*!
  * \file mingl.cpp
- * \brief version légèrement modifiée 
- * 
+ * \brief Modified version of mingl to match our requirements
+ * \description modified the management of the keyboard to be non-blocking and detect how long the key is pressed, added the option to change the color of the background and the ability to display text
  * 
  */
 
@@ -63,6 +63,12 @@ void minGL::updateGraphic()
     glutMainLoopEvent();
 }
 
+/*!
+ * 
+ * \brief clear the screen
+ * \description fills the screen with the background color
+ * 
+ */
 void minGL::clearScreen() throw(myexception)
 {
     for (unsigned i(0); i < windowWidth; ++i)
@@ -106,8 +112,9 @@ std::map<char, bool> minGL::get_key_2()
 }*/
 
 /*!
- *  \author     Nils Ponsard
- *  \brief      Change la couleur de remplacement lors de l'effacement, donc du fond d'écran  
+ *    
+ *  \brief      Changes the color of the background
+ *  \param[in]  col : the filling color
  */
 void minGL::setBgColor(const RGBcolor &col)
 {
@@ -120,6 +127,11 @@ void minGL::setBgColor(const RGBcolor &col)
 //    glutInit(&tmp, NULL);
 
 //}
+
+/*
+ * \brief Removed the key repetition (keyRepeat)
+ * 
+ */
 
 void minGL::initGraphic()
 {
@@ -149,10 +161,10 @@ void minGL::initGraphic()
 }
 
 /*!
- *  \brief      Indique si la touche est pressée (true) ou pas (false)
+ *  \brief      Tell if the key is pressed (true) or not (false)
  *  
- *  \return     Retourne `true` si la touche est pressée et `false` si elle ne l'est pas
- *  \param[in]  key : la touche concernée : code et spécial
+ *  \return     Returns `true` if the key is pressed and `false` if the key is not pressed
+ *  \param[in]  key : the keypair (keyType) corresponding to the key you want to check
  */
 bool minGL::isPressed(const keyType &key)
 {
@@ -161,7 +173,7 @@ bool minGL::isPressed(const keyType &key)
 
 /*!
  *
- * \todo documentation
+ * \brief set the key passed in parameter to not pressed (used in menus)
  * 
  */
 void minGL::resetKey(const keyType &key)
@@ -173,10 +185,10 @@ void minGL::resetKey(const keyType &key)
 //https://www.opengl.org/resources/libraries/glut/spec3/node76.html
 
 /*!
- * \brief fonction qui affiche du texte à l'écran
+ * \brief draw text to the screen
  * \param[in] x : position x
  * \param[in] y : position y
- * \param[in] str : texte à afficher
+ * \param[in] str : text to draw
  */
 void minGL::displayText(const unsigned &x, const unsigned &y, const string &str)
 {
@@ -203,7 +215,7 @@ void minGL::callReshape(int h, int w)
     glViewport(0, 0, h, w);
 }
 /*!
- * \brief fonction légèrement modifiée pour enlever le bug du texte clignotant
+ * \brief modified function to solve a bug when displaying text
  * 
  * 
  */

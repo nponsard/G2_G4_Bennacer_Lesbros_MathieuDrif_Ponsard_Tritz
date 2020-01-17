@@ -48,10 +48,10 @@ const keyType KEY_ENTER({13, false});
 const keyType KEY_RETURN({8, false});
 
 ///
-/// \brief Add invaders to the vector containing their pos until they fill their starting space
-/// \param SI : the struct containing all useful variables (including the size of the invaders and a vector containing all invaders' positions)
-/// \param height : the height of the space to fill with invaders
-/// \param width : the width of the space to fill with invaders
+/// \brief Adds invaders to the vector containing their pos until they fill their starting space
+/// \param SI : struct containing all useful variables (including the size of the invaders and a vector containing all invaders' positions)
+/// \param height : window's height
+/// \param width : window's width
 ///
 
 void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigned &width)
@@ -70,7 +70,7 @@ void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigne
 }
 
 ///
-/// \brief initialize the variables contained in a SpaceInvaders struct
+/// \brief initializes the variables contained in a SpaceInvaders struct
 /// \param SI : the struct containing all the variables to initialize
 ///
 
@@ -80,6 +80,7 @@ void initSpaceInvaders(spaceInvaders &SI)
 
     map<string, string> conf(loadConfig("config.yaml"));
     SI.bestScores = loadScores("scores.yaml");
+    SI.score = 0;
 
     SI.invadersMaxVelocity = unsigned(stoul(conf["invadersMaxVelocity"]));
     SI.invadersMinVelocity = unsigned(stoul(conf["invadersMinVelocity"]));
@@ -99,9 +100,6 @@ void initSpaceInvaders(spaceInvaders &SI)
     SI.bonusInvaderPos = pos(unsigned(stoul(conf["bonusInvaderPosAbs"])), unsigned(stoul(conf["bonusInvaderPosOrd"])));
     SI.playerPos = pos(unsigned(stoul(conf["playerPosAbs"])), unsigned(stoul(conf["playerPosOrd"]))); //placement intial joueur
     SI.lives = unsigned(stoul(conf["lives"]));
-    SI.score = unsigned(stoul(conf["score"]));
-    //SI.bestScore = unsigned(stoul(conf["bestScore"]));
-    SI.bestScore = SI.bestScores[0].second;
     SI.scoreForMissileDestruction = unsigned(stoul(conf["scoreForMissileDestruction"]));
     SI.scoreStep = unsigned(stoul(conf["scoreStep"]));
     SI.scoreStepBonusInvaders = unsigned(stoul(conf["scoreStepBonusInvaders"]));
@@ -110,10 +108,10 @@ void initSpaceInvaders(spaceInvaders &SI)
 }
 
 ///
-/// \brief display a figure at each position contained in a vector of positions
-/// \param window : the window on which the pictures are printed
-/// \param positions : the vector of positions where the picture must be displayed
-/// \param fig : the figure to be displayed
+/// \brief displays a figure at each position contained in a vector of positions
+/// \param window : window on which the pictures are printed
+/// \param positions : vector of positions where the picture must be displayed
+/// \param fig : figure to be displayed
 ///
 ///
 void display(minGL &window, const vector<pos> &positions, const figure &fig)
@@ -122,11 +120,25 @@ void display(minGL &window, const vector<pos> &positions, const figure &fig)
         window << fig + *it;
 }
 
+///
+/// \brief displays a figure at each position contained in a vector of pairs containing positions and the type of the upgrade(only works for the upgrades)
+/// \param window : window on which the pictures are printed
+/// \param upgrades : vector pairs containing the positions where the picture must be displayed
+/// \param figures : vector of figures to be displayed
+///
+
 void display(minGL &window, const vector<pair<pos, short>> &upgrades, const vector<figure> &figures)
 {
     for (vector<pair<pos, short>>::const_iterator it(upgrades.begin()); it != upgrades.end(); ++it)
         window << figures[it->second] + it->first;
 }
+
+///
+/// \brief displays a figure at each position contained in a vector of pairs containing positions (only works for the invaders)
+/// \param window : window on which the pictures are printed
+/// \param positions : vector of pairs containig the positions where the picture must be displayed
+/// \param fig : figure to be displayed
+///
 
 void display(minGL &window, const vector<pair<pos, unsigned>> &positions, const figure &fig)
 {
@@ -135,7 +147,7 @@ void display(minGL &window, const vector<pair<pos, unsigned>> &positions, const 
 }
 
 ///
-/// \brief display the torpedos, the ennemies and the player on the screen
+/// \brief displays the torpedos, the ennemies and the player on the screen
 /// \param window : the window on which the pictures are printed
 /// \param SI : the struct containing all the useful variables (including the positions of the torpedoes, the ennemies and the player)
 ///
@@ -153,9 +165,9 @@ void displaySpace(minGL &window, const spaceInvaders &SI)
 }
 
 ///
-/// \brief display the spaces which will be filled with text on the screen
-/// \param window : the window on which the HUD will be printed
-/// \param SI : The struct containing all the useful variables (including the picture of the player, used to show the lifes remaining)
+/// \brief displays spaces which will be filled with text on the screen
+/// \param window : window on which the HUD will be printed
+/// \param SI : struct containing all the useful variables (including the picture of the player, used to show the lifes remaining)
 ///
 
 void displayHUD(minGL &window, const spaceInvaders &SI)
@@ -166,9 +178,9 @@ void displayHUD(minGL &window, const spaceInvaders &SI)
 }
 
 ///
-/// \brief display text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen
-/// \param window : the window on which the texte will be printed
-/// \param SI : the struct containing all the useful variables (including the wave number, the score, the lives remaining and the number of invaders alive)
+/// \brief displays text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen
+/// \param window : window on which the texte will be printed
+/// \param SI : struct containing all the useful variables (including the wave number, the score, the lives remaining and the number of invaders alive)
 ///
 
 void fillHUD(minGL &window, const spaceInvaders &SI)
@@ -178,7 +190,7 @@ void fillHUD(minGL &window, const spaceInvaders &SI)
     window.displayText(5, window.getWindowHeight() - 40, "Score : ");
     window.displayText(80, window.getWindowHeight() - 40, to_string(SI.score));
 
-    window.displayText(window.getWindowWidth() / 2 - 40, window.getWindowHeight() - 40, "Vague : ");
+    window.displayText(window.getWindowWidth() / 2 - 40, window.getWindowHeight() - 40, "Wave : ");
     window.displayText(window.getWindowWidth() / 2 + 30, window.getWindowHeight() - 40, to_string(SI.wave));
 
     window.displayText(window.getWindowWidth() - 130, window.getWindowHeight() - 40, "Invaders : ");
@@ -186,14 +198,14 @@ void fillHUD(minGL &window, const spaceInvaders &SI)
 }
 
 ///
-/// \brief Test if two entities collide
+/// \brief Tests if two entities collide
 /// \param entity1 : the position of the first entity
 /// \param entity2 : the position of the second entity
 /// \param height1 : the height of the first entity
 /// \param height2 : the height of the second entity
 /// \param width1 : the width of the first entity
 /// \param width2 : the width of the second entity
-/// \return return true if the entities collide, else returns false
+/// \return returns true if the entities collide, else returns false
 ///
 
 bool collisions(pos &entity1,
@@ -203,7 +215,7 @@ bool collisions(pos &entity1,
                 const unsigned &width1,
                 const unsigned &width2)
 {
-    if (entity1.getOrd() + height1 >= entity2.getOrd() && entity1.getOrd() + height1 <= entity2.getOrd() + height2)
+    if (entity1.getOrd() + height1 >= entity2.getOrd() && entity1.getOrd() <= entity2.getOrd() + height2)
         if (entity1.getAbs() + width1 >= entity2.getAbs() && entity1.getAbs() <= entity2.getAbs() + width2)
             return true;
 
@@ -214,7 +226,7 @@ bool collisions(pos &entity1,
 /// \brief Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets hit by a torpedo,
 ///     kills the invaders touched by a player's torpedo, removes the torpedoes if they leave the screen, moves the invaders (including the bonus invader)
 ///     and make one of them choosen randomly shoot.
-/// \param SI : the struct containing all the useful variables to be used and updated
+/// \param SI : struct containing all the useful variables to be used and updated
 /// \param height : window's height
 /// \param width : windSI.invadersPos.size()ow's width
 /// \param iLoose : boolean which become true if the player lose its last life by being hit by an ennemy torpedo
@@ -329,6 +341,8 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                     SI.invadersTorpedoPos.erase(it);
                     if (--SI.lives == 0)
                         iLoose = true;
+                    else
+                        system("aplay -q '../ressources/loseLife.wav' &");
                 }
             }
             else //collision avec le mur
@@ -502,9 +516,9 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
 }
 
 ///
-/// \brief Read the keyboard inputs and move the player accordingly
+/// \brief Reads the keyboard inputs and move the player accordingly
 /// \param window : contains the inputs and the size of the window
-/// \param SI : the struct containing all the useful variables (including the cooldown between shoots and the vector containing the player's torpedo)
+/// \param SI : struct containing all the useful variables (including the cooldown between shoots and the vector containing the player's torpedo)
 /// \param pause : boolean which become true if the player press the escape button
 ///
 
@@ -529,10 +543,10 @@ void ReadKeyboard(minGL &window, spaceInvaders &SI, bool &pause)
 }
 
 ///
-/// \brief Display the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed
-/// \param SI : the struct containing all the useful variables (including the invader's picture and his score)
-/// \param window : the window on which the menu screen will be printed
-/// \param frameDuration : the time between each frame
+/// \brief Displays the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed
+/// \param SI : struct containing all the useful variables (including the invader's picture and his score)
+/// \param window : window on which the menu screen will be printed
+/// \param frameDuration : time between each frame
 /// \return returns the key pressed if it is Enter (which will begin the game) or Escape (which will leave the game)
 ///
 
@@ -550,7 +564,7 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
         window << SI.invaders.entityFig * invaderSize + pos(window.getWindowWidth() / 2 - (5 * 110), window.getWindowHeight() / 2);
         window.updateGraphic();
 
-        window.displayText(window.getWindowWidth() - 400, window.getWindowHeight() / 2 + 260, "Podium : ");
+        window.displayText(window.getWindowWidth() - 400, window.getWindowHeight() / 2 + 260, "Leaderboard : ");
 
         for (unsigned i(0); i < SI.bestScores.size() && i < 3; ++i)
         {
@@ -559,12 +573,9 @@ keyType SpaceInvadersMenu(const spaceInvaders &SI, minGL &window, const chrono::
             window.displayText(window.getWindowWidth() - 350, window.getWindowHeight() / 2 + 220 - (25 * i), to_string(SI.bestScores[i].second));
         }
 
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur entree pour jouer, echap pour quitter");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Press ENTER to play, or ESCAPE to quit");
 
-        window.displayText(50, window.getWindowHeight() - 50, "Meilleur score : ");
-        window.displayText(200, window.getWindowHeight() - 50, to_string(SI.bestScore));
-
-        window.displayText(50, window.getWindowHeight() - 70, "Dernier score : ");
+        window.displayText(50, window.getWindowHeight() - 70, "Last score : ");
         window.displayText(200, window.getWindowHeight() - 70, to_string(SI.score));
 
         if (window.isPressed(KEY_ENTER))
@@ -612,23 +623,23 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
         window.clearScreen();
         window << SI.player.entityFig * 2 + pos(100, 0);
         window.updateGraphic();
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Appuyez sur ENTREE pour continuer");
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 - 20, "Appuyez sur ECHAP pour quitter la partie");
-        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 - 40, "Appuyez sur ESPACE pour arreter/démarrer la musique");
-
-        window.displayText(50, window.getWindowHeight() - 50, "Meilleur score : ");
-        window.displayText(200, window.getWindowHeight() - 50, to_string(SI.bestScore));
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2, "Press ENTER to resume game");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 - 20, "Press ESCAPE to quit");
+        window.displayText(window.getWindowWidth() - 600, window.getWindowHeight() / 2 - 40, "Press SPACE to stop/play music");
 
         window.displayText(50, window.getWindowHeight() - 70, "Score : ");
         window.displayText(200, window.getWindowHeight() - 70, to_string(SI.score));
 
         if (window.isPressed(KEY_ENTER))
+        {
             key = KEY_ENTER;
+            window.resetKey(KEY_ENTER); // éviter répétition de touches
+        }
 
         if (window.isPressed(KEY_ESCAPE))
         {
             iLoose = true;
-            window.resetKey(KEY_RETURN); // éviter répétition de touches
+            window.resetKey(KEY_ESCAPE); // éviter répétition de touches
         }
         if (window.isPressed(KEY_SPACE))
         {
@@ -651,6 +662,14 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
     }
 }
 
+///
+/// \brief Displays the screen in which the player can enter his name if he did a new highscore, and read the keyboard input to allow him to enter his name
+/// \param window : window on which the input screen will be displayed, and contain the informations about the keyboard inputs
+/// \param frameDuration : time between each frame
+/// \param nbCharMax : the maximum size of the name
+/// \return returns a string corresponding to the name input
+///
+
 string ReadName(minGL &window, const chrono::duration<double, milli> frameDuration, const unsigned &nbCharMax = 3)
 {
     string name;
@@ -664,7 +683,7 @@ string ReadName(minGL &window, const chrono::duration<double, milli> frameDurati
         window << rectangle(pos(window.getWindowWidth() / 2 - 100, window.getWindowHeight() / 2 - 25), 200, 50, KWhite, KBlack);
         window.updateGraphic();
 
-        window.displayText(window.getWindowWidth() / 2 - 150, window.getWindowHeight() / 2 + 100, "Nouveau meilleur score, entrez votre nom");
+        window.displayText(window.getWindowWidth() / 2 - 150, window.getWindowHeight() / 2 + 100, "New highscore, type your name : ");
 
         window.displayText(window.getWindowWidth() / 2 - 90, window.getWindowHeight() / 2 - 5, name);
 
@@ -746,7 +765,7 @@ void mainSpaceInvaders(minGL &window)
                 SI.wave = wave + 1;
                 SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque nouvelle vague
                 invadersGeneration(SI, window.getWindowHeight(), window.getWindowWidth());
-                window.displayText(window.getWindowWidth() / 2 - 60, window.getWindowHeight() / 2, "vague suivante...");
+                window.displayText(window.getWindowWidth() / 2 - 60, window.getWindowHeight() / 2, "Next wave...");
                 window.updateGraphic();
                 this_thread::sleep_for(chrono::duration<int, milli>(1000));
             }
@@ -759,7 +778,7 @@ void mainSpaceInvaders(minGL &window)
 
             if (pause)
             {
-                this_thread::sleep_for(chrono::duration<int, milli>(50)); //delai pour éviter répétition de touches
+                window.resetKey(KEY_ESCAPE); // éviter répétition de touches
                 SIpause(SI, window, frameDuration, iLoose, playmusic);
                 SI.LastBonusInvader = chrono::steady_clock::now(); //pour éviter un invader bonus a chaque sortie de pause
                 pause = false;
@@ -770,9 +789,8 @@ void mainSpaceInvaders(minGL &window)
             if (diff < frameDuration)
                 this_thread::sleep_for(frameDuration - diff);
         }
+        system("aplay -q '../ressources/gameOver.wav' &");
 
-        if (SIBase.bestScore < SI.score)
-            SIBase.bestScore = SI.score;
         SI = SIBase;
         SI.score = 0;
 
@@ -780,15 +798,13 @@ void mainSpaceInvaders(minGL &window)
         if (SIBase.bestScores.size() < 3)
         {
             string name(ReadName(window, frameDuration));
-            SIBase.bestScores.push_back(make_pair(name, SIBase.score));
-            scoreSort(SIBase.bestScores);
+            insertScore(SIBase.bestScores, name, SIBase.score);
             saveScores(SIBase.bestScores, "scores.yaml");
         }
         else if (SIBase.bestScores[SIBase.bestScores.size() - 1].second < SIBase.score)
         {
             string name(ReadName(window, frameDuration));
-            SIBase.bestScores.push_back(make_pair(name, SIBase.score));
-            scoreSort(SIBase.bestScores);
+            insertScore(SIBase.bestScores, name, SIBase.score);
             SIBase.bestScores.pop_back();
             saveScores(SIBase.bestScores, "scores.yaml");
         }
@@ -796,7 +812,7 @@ void mainSpaceInvaders(minGL &window)
 }
 
 ///
-/// \brief Initialize Glut and MinGl, creates a seed for randomness and launches the game.
+/// \brief Initializes Glut and MinGl, creates a seed for randomness and launches the game.
 /// \return
 ///
 

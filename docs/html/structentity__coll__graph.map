@@ -1,5 +1,5 @@
 <map id="entity" name="entity">
-<area shape="rect" id="node1" title="struct associant une figure à une largeur et une hauteur" alt="" coords="61,351,121,377"/>
+<area shape="rect" id="node1" title="structure containing a figure and its corresponding height and width" alt="" coords="61,351,121,377"/>
 <area shape="rect" id="node2" href="$classfigure.html" title=" " alt="" coords="62,261,121,288"/>
 <area shape="rect" id="node3" href="$classbase_fig.html" title=" " alt="" coords="55,185,127,212"/>
 <area shape="rect" id="node4" href="$class_imin_gl_injectable.html" title=" " alt="" coords="5,81,135,108"/>

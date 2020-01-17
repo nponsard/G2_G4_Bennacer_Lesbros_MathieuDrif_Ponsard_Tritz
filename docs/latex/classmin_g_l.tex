@@ -2,7 +2,7 @@
 \label{classmin_g_l}\index{minGL@{minGL}}
 
 
-The \mbox{\hyperlink{classmin_g_l}{min\+GL}} class sert de classe de base à tout le bordel.  
+\mbox{\hyperlink{classmin_g_l}{min\+GL}} class\+: the entry point to draw thing on the screen  
 
 
 
@@ -17,11 +17,11 @@ void \mbox{\hyperlink{classmin_g_l_a2fc771e1dda196da4341375d1bbc40e0}{init\+Grap
 void \mbox{\hyperlink{classmin_g_l_a6bf6a7901b5b1bae7bdb70d1b4febbb9}{stop\+Gaphic}} ()
 \item 
 bool \mbox{\hyperlink{classmin_g_l_adff92859de3c014f93d32088d3f322f3}{is\+Pressed}} (const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \&key)
-\begin{DoxyCompactList}\small\item\em Indique si la touche est pressée (true) ou pas (false) \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Tell if the key is pressed (true) or not (false) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmin_g_l_a37b8dfb172809782b32664c507bfce9d}{reset\+Key}} (const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \&key)
-\item 
+\begin{DoxyCompactList}\small\item\em set the key passed in parameter to not pressed (used in menus) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmin_g_l_a4fe4d62f6c9f623e83b3a9d173d55587}{display\+Text}} (const unsigned \&x, const unsigned \&y, const std\+::string \&str)
-\begin{DoxyCompactList}\small\item\em fonction qui affiche du texte à l\textquotesingle{}écran \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em draw text to the screen \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classmin_g_l_a46c6a0cb355064ed0f12dedd30c48c5f}{min\+GL}} (const unsigned \&Width=640, const unsigned \&Height=480, const std\+::string \&Name=std\+::string(), const \mbox{\hyperlink{class_r_g_bcolor}{R\+G\+Bcolor}} \&back\+Groung\+Color=\mbox{\hyperlink{rgbcolor_8h_a1028593e1455524da080d607df152047}{K\+White}})
 \item 
 \mbox{\hyperlink{classmin_g_l_a2f36acb2afa9735dedf4deed97ad578e}{$\sim$min\+GL}} ()
@@ -29,12 +29,11 @@ void \mbox{\hyperlink{classmin_g_l_a4fe4d62f6c9f623e83b3a9d173d55587}{display\+T
 void \mbox{\hyperlink{classmin_g_l_a99da1c9d9a0db279975f591b2d4897fd}{update\+Graphic}} ()
 \item 
 void \mbox{\hyperlink{classmin_g_l_a0ce6824246059b2f9db17b27a7f8fd65}{clear\+Screen}} ()  throw (myexception)
-\item 
+\begin{DoxyCompactList}\small\item\em clear the screen \textbackslash{}description fills the screen with the background color \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classmin_g_l_a0ea8d3c8b60858157716afeb39560c38}{set\+Pixel}} (const \mbox{\hyperlink{structpos}{pos}} \&pos\+\_\+, const \mbox{\hyperlink{class_r_g_bcolor}{R\+G\+Bcolor}} \&col)  throw (\+Pixel\+Exception)
 \item 
 void \mbox{\hyperlink{classmin_g_l_a40ed6a589b798e2d78ccf1702d69bc30}{set\+Bg\+Color}} (const \mbox{\hyperlink{class_r_g_bcolor}{R\+G\+Bcolor}} \&col)
-\begin{DoxyCompactList}\small\item\em Change la couleur de remplacement lors de l\textquotesingle{}effacement, donc du fond d\textquotesingle{}écran ~\newline
- \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Changes the color of the background. \end{DoxyCompactList}\item 
 unsigned \mbox{\hyperlink{classmin_g_l_aeacac18399d4e02212d5632d889e8a10}{get\+Window\+Width}} () const
 \item 
 unsigned \mbox{\hyperlink{classmin_g_l_a4825c324a765ab4e88f1251b56a632ba}{get\+Window\+Height}} () const
@@ -47,11 +46,11 @@ static void \mbox{\hyperlink{classmin_g_l_a0799c37d9c100c752cefdd0285dce159}{ini
 
 
 \doxysubsection{Detailed Description}
-The \mbox{\hyperlink{classmin_g_l}{min\+GL}} class sert de classe de base à tout le bordel. 
+\mbox{\hyperlink{classmin_g_l}{min\+GL}} class\+: the entry point to draw thing on the screen 
 
 
 
-Definition at line 40 of file mingl.\+h.
+Definition at line 42 of file mingl.\+h.
 
 
 
@@ -94,9 +93,14 @@ Here is the call graph for this function\+:\nopagebreak
 
 
 
-Definition at line 66 of file mingl.\+cpp.
+clear the screen \textbackslash{}description fills the screen with the background color 
 
-Here is the call graph for this function\+:\nopagebreak
+
+
+Definition at line 72 of file mingl.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -119,7 +123,7 @@ Here is the caller graph for this function\+:
 
 
 
-fonction qui affiche du texte à l\textquotesingle{}écran 
+draw text to the screen 
 
 
 \begin{DoxyParams}[1]{Parameters}
@@ -127,15 +131,14 @@ fonction qui affiche du texte à l\textquotesingle{}écran
 \hline
 \mbox{\texttt{ in}}  & {\em y} & \+: position y \\
 \hline
-\mbox{\texttt{ in}}  & {\em str} & \+: texte à afficher \\
+\mbox{\texttt{ in}}  & {\em str} & \+: text to draw \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 181 of file mingl.\+cpp.
+Definition at line 193 of file mingl.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -150,10 +153,9 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 243 of file mingl.\+cpp.
+Definition at line 255 of file mingl.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -168,10 +170,9 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 238 of file mingl.\+cpp.
+Definition at line 250 of file mingl.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -186,7 +187,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 66 of file mingl.\+h.
+Definition at line 68 of file mingl.\+h.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -203,9 +204,10 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Definition at line 124 of file mingl.\+cpp.
+Definition at line 136 of file mingl.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -227,22 +229,21 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-Indique si la touche est pressée (true) ou pas (false) 
+Tell if the key is pressed (true) or not (false) 
 
 \begin{DoxyReturn}{Returns}
-Retourne {\ttfamily true} si la touche est pressée et {\ttfamily false} si elle ne l\textquotesingle{}est pas 
+Returns {\ttfamily true} if the key is pressed and {\ttfamily false} if the key is not pressed 
 \end{DoxyReturn}
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em key} & \+: la touche concernée \+: code et spécial \\
+\mbox{\texttt{ in}}  & {\em key} & \+: the keypair (key\+Type) corresponding to the key you want to check \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line 157 of file mingl.\+cpp.
+Definition at line 169 of file mingl.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -255,14 +256,15 @@ Here is the caller graph for this function\+:
 \doxysubsubsection{\texorpdfstring{resetKey()}{resetKey()}}
 {\footnotesize\ttfamily void min\+G\+L\+::reset\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \&}]{key }\end{DoxyParamCaption})}
 
-\begin{DoxyRefDesc}{Todo}
-\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]documentation\end{DoxyRefDesc}
 
 
-Definition at line 167 of file mingl.\+cpp.
+set the key passed in parameter to not pressed (used in menus) 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Definition at line 179 of file mingl.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -277,15 +279,16 @@ Here is the caller graph for this function\+:
 
 
 
-Change la couleur de remplacement lors de l\textquotesingle{}effacement, donc du fond d\textquotesingle{}écran ~\newline
- 
-
-\begin{DoxyAuthor}{Author}
-Nils Ponsard 
-\end{DoxyAuthor}
+Changes the color of the background. 
 
 
-Definition at line 112 of file mingl.\+cpp.
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em col} & \+: the filling color \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 119 of file mingl.\+cpp.
 
 \mbox{\Hypertarget{classmin_g_l_a0ea8d3c8b60858157716afeb39560c38}\label{classmin_g_l_a0ea8d3c8b60858157716afeb39560c38}} 
 \index{minGL@{minGL}!setPixel@{setPixel}}
@@ -295,7 +298,7 @@ Definition at line 112 of file mingl.\+cpp.
 
 
 
-Definition at line 73 of file mingl.\+cpp.
+Definition at line 79 of file mingl.\+cpp.
 
 Here is the caller graph for this function\+:
 \nopagebreak
@@ -313,7 +316,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line 190 of file mingl.\+cpp.
+Definition at line 202 of file mingl.\+cpp.
 
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
@@ -332,8 +335,7 @@ Here is the caller graph for this function\+:\nopagebreak
 
 Definition at line 59 of file mingl.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -1,44 +1,45 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Initialize Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,81,60,108"/>
+<area shape="rect" id="node1" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,81,60,108"/>
 <area shape="rect" id="node2" href="$classmin_g_l.html#a0799c37d9c100c752cefdd0285dce159" title=" " alt="" coords="123,5,243,32"/>
 <area shape="rect" id="node3" href="$classmin_g_l.html#a2fc771e1dda196da4341375d1bbc40e0" title=" " alt="" coords="112,107,255,133"/>
-<area shape="rect" id="node6" href="$music_8cpp.html#a827a00dce9688cb83ea6652acfa50393" title=" " alt="" coords="562,132,642,159"/>
-<area shape="rect" id="node7" href="$main_8cpp.html#ad1883dd55c8b9fa49439a49a3e08cb24" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,588,259,615"/>
-<area shape="rect" id="node4" href="$classmin_g_l.html#a0ce6824246059b2f9db17b27a7f8fd65" title=" " alt="" coords="528,360,676,387"/>
-<area shape="rect" id="node5" href="$classmin_g_l.html#a0ea8d3c8b60858157716afeb39560c38" title=" " alt="" coords="744,360,867,387"/>
-<area shape="rect" id="node8" href="$main_8cpp.html#a7fcb65b94fa3f9bee7ac989396d834ae" title="display the spaces which will be filled with text on the screen" alt="" coords="334,309,433,336"/>
-<area shape="rect" id="node9" href="$classmin_g_l.html#a4825c324a765ab4e88f1251b56a632ba" title=" " alt="" coords="508,259,696,285"/>
+<area shape="rect" id="node6" href="$music_8cpp.html#a827a00dce9688cb83ea6652acfa50393" title="stops the music" alt="" coords="562,157,642,184"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#ad1883dd55c8b9fa49439a49a3e08cb24" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,613,259,640"/>
+<area shape="rect" id="node4" href="$classmin_g_l.html#a0ce6824246059b2f9db17b27a7f8fd65" title="clear the screen \description fills the screen with the background color" alt="" coords="528,309,676,336"/>
+<area shape="rect" id="node5" href="$classmin_g_l.html#a0ea8d3c8b60858157716afeb39560c38" title=" " alt="" coords="744,309,867,336"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#a7fcb65b94fa3f9bee7ac989396d834ae" title="displays spaces which will be filled with text on the screen" alt="" coords="334,309,433,336"/>
+<area shape="rect" id="node9" href="$classmin_g_l.html#a4825c324a765ab4e88f1251b56a632ba" title=" " alt="" coords="508,360,696,387"/>
 <area shape="rect" id="node10" href="$classmin_g_l.html#aeacac18399d4e02212d5632d889e8a10" title=" " alt="" coords="511,411,693,437"/>
-<area shape="rect" id="node11" href="$main_8cpp.html#ac41565061b5d9d85c584ba075ae5b430" title="display the torpedos, the ennemies and the player on the screen" alt="" coords="329,1145,437,1172"/>
-<area shape="rect" id="node13" href="$classmin_g_l.html#a4fe4d62f6c9f623e83b3a9d173d55587" title="fonction qui affiche du texte à l&#39;écran" alt="" coords="529,461,675,488"/>
-<area shape="rect" id="node14" href="$main_8cpp.html#ad7204fff1f31826ccb9b3165f4be92aa" title="display text to show the score, the lives remaining, the wave number and the number of invaders remai..." alt="" coords="349,360,417,387"/>
-<area shape="rect" id="node15" href="$main_8cpp.html#a2be98a767fac8753a8c75e926030f11c" title="initialize the variables contained in a SpaceInvaders struct" alt="" coords="314,1247,453,1273"/>
-<area shape="rect" id="node21" href="$scoresort_8cpp.html#aae114c09489147c07b30e5c9c617a659" title="trie tous les scores" alt="" coords="764,1348,847,1375"/>
-<area shape="rect" id="node23" href="$main_8cpp.html#a1dad421af4a8916521afa23c1ab85134" title="Add invaders to the vector containing their pos until they fill their starting space." alt="" coords="308,208,459,235"/>
-<area shape="rect" id="node24" href="$main_8cpp.html#a40959b51e292d9c608a945e0a193c4fd" title=" " alt="" coords="550,715,654,741"/>
-<area shape="rect" id="node25" href="$main_8cpp.html#a350e996a354865b6064bab50134646dc" title="Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets ..." alt="" coords="347,1044,419,1071"/>
-<area shape="rect" id="node29" href="$main_8cpp.html#ada592260988cd1e3144c6b2f883b1c50" title="Read the keyboard inputs and move the player accordingly." alt="" coords="325,816,441,843"/>
-<area shape="rect" id="node34" href="$main_8cpp.html#a63dc32cfb9fffe0479de85c623e159b6" title=" " alt="" coords="336,461,431,488"/>
-<area shape="rect" id="node38" href="$classmin_g_l.html#a99da1c9d9a0db279975f591b2d4897fd" title=" " alt="" coords="519,613,685,640"/>
-<area shape="rect" id="node39" href="$savescores_8cpp.html#a3c4a3b5a4336efea9adcf59cbe94e42e" title="enregistre les scores dans le fichier" alt="" coords="335,664,431,691"/>
-<area shape="rect" id="node40" href="$main_8cpp.html#a6f6eb5db37f7b274c9373c72a7d58d23" title="Displays the pause screen and check if the player press Enter to leave the pause." alt="" coords="347,613,420,640"/>
-<area shape="rect" id="node41" href="$music_8cpp.html#a78dd3d52046309f4ec566e29fc0453c4" title=" " alt="" coords="557,968,647,995"/>
-<area shape="rect" id="node42" href="$main_8cpp.html#acb09fd5530dac6cdb8a763af79e1ebc4" title="Display the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed." alt="" coords="307,563,460,589"/>
-<area shape="rect" id="node12" href="$main_8cpp.html#ad08634716e92a71688805904e5e4e4cb" title="display a figure at each position contained in a vector of positions" alt="" coords="567,1171,637,1197"/>
-<area shape="rect" id="node16" href="$spaceinvaders_8cpp.html#a45522f1b42ffdac3a44e19c9adf46c35" title="Initialize the figures for MinGl." alt="" coords="520,1221,684,1248"/>
-<area shape="rect" id="node18" href="$loadconfig_8cpp.html#a329d1172504e8296ecc66570a2a019da" title="load config file" alt="" coords="557,1272,647,1299"/>
-<area shape="rect" id="node20" href="$loadscore_8cpp.html#ad975ce7fcccd7b848ad144b386e941c6" title="charge les scores depuis le fichier" alt="" coords="555,1323,649,1349"/>
-<area shape="rect" id="node17" href="$classfigure.html#a491aa40310e29bc8863661302b6bf063" title=" " alt="" coords="759,1221,851,1248"/>
-<area shape="rect" id="node19" href="$loadconfig_8cpp.html#a64b9b051eb5b61b57950a500c7742ae0" title="create the default config file" alt="" coords="759,1272,852,1299"/>
-<area shape="rect" id="node22" href="$scoresort_8cpp.html#a9a321fef08f8312c5f75772f1d819176" title="premet de comparer les paires de score ( teste si a&gt;b ) \description renvoie true si a &gt; b utilisé pa..." alt="" coords="915,1348,1004,1375"/>
-<area shape="rect" id="node26" href="$main_8cpp.html#aebcced80e93e3dcb361a32cbc6b0a302" title="Test if two entities collide." alt="" coords="561,1069,643,1096"/>
-<area shape="rect" id="node27" href="$structpos.html#aee6663c0d242807aa207918b050e9a2f" title=" " alt="" coords="756,1019,855,1045"/>
-<area shape="rect" id="node28" href="$structpos.html#ab910b01032e7fa33583352bdcf7685d8" title=" " alt="" coords="757,1095,854,1121"/>
-<area shape="rect" id="node30" href="$classmin_g_l.html#adff92859de3c014f93d32088d3f322f3" title="Indique si la touche est pressée (true) ou pas (false)" alt="" coords="535,664,669,691"/>
-<area shape="rect" id="node31" href="$main_8cpp.html#a180a8df32cf1bac466be2714b4be3a36" title=" " alt="" coords="560,867,644,893"/>
-<area shape="rect" id="node32" href="$main_8cpp.html#a91429b25d7a424d5f2a1593d02b66100" title=" " alt="" coords="555,917,649,944"/>
-<area shape="rect" id="node33" href="$main_8cpp.html#adf36a6b9c333fe142b44223c01ca52ee" title=" " alt="" coords="555,765,649,792"/>
-<area shape="rect" id="node35" href="$main_8cpp.html#aa89fe11c6a08a96d88eb644c6c96effa" title=" " alt="" coords="553,563,651,589"/>
-<area shape="rect" id="node36" href="$main_8cpp.html#a5add5cc153950658ca297235042a117d" title=" " alt="" coords="548,309,656,336"/>
-<area shape="rect" id="node37" href="$classmin_g_l.html#a37b8dfb172809782b32664c507bfce9d" title=" " alt="" coords="537,512,667,539"/>
+<area shape="rect" id="node11" href="$main_8cpp.html#ac41565061b5d9d85c584ba075ae5b430" title="displays the torpedos, the ennemies and the player on the screen" alt="" coords="329,1171,437,1197"/>
+<area shape="rect" id="node13" href="$classmin_g_l.html#a4fe4d62f6c9f623e83b3a9d173d55587" title="draw text to the screen" alt="" coords="529,461,675,488"/>
+<area shape="rect" id="node14" href="$main_8cpp.html#ad7204fff1f31826ccb9b3165f4be92aa" title="displays text to show the score, the lives remaining, the wave number and the number of invaders rema..." alt="" coords="349,360,417,387"/>
+<area shape="rect" id="node15" href="$main_8cpp.html#a2be98a767fac8753a8c75e926030f11c" title="initializes the variables contained in a SpaceInvaders struct" alt="" coords="314,1272,453,1299"/>
+<area shape="rect" id="node23" href="$scoresort_8cpp.html#af63d753caa01aaadb90287e45989c8bc" title="Inserts a new pair of name &#45; score in the right position in a vector." alt="" coords="336,1323,431,1349"/>
+<area shape="rect" id="node24" href="$main_8cpp.html#a1dad421af4a8916521afa23c1ab85134" title="Adds invaders to the vector containing their pos until they fill their starting space." alt="" coords="308,208,459,235"/>
+<area shape="rect" id="node25" href="$main_8cpp.html#a40959b51e292d9c608a945e0a193c4fd" title=" " alt="" coords="550,765,654,792"/>
+<area shape="rect" id="node26" href="$main_8cpp.html#a350e996a354865b6064bab50134646dc" title="Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets ..." alt="" coords="347,1095,419,1121"/>
+<area shape="rect" id="node30" href="$main_8cpp.html#ada592260988cd1e3144c6b2f883b1c50" title="Reads the keyboard inputs and move the player accordingly." alt="" coords="325,867,441,893"/>
+<area shape="rect" id="node35" href="$main_8cpp.html#a63dc32cfb9fffe0479de85c623e159b6" title="Displays the screen in which the player can enter his name if he did a new highscore,..." alt="" coords="336,512,431,539"/>
+<area shape="rect" id="node38" href="$classmin_g_l.html#a37b8dfb172809782b32664c507bfce9d" title="set the key passed in parameter to not pressed (used in menus)" alt="" coords="537,664,667,691"/>
+<area shape="rect" id="node39" href="$classmin_g_l.html#a99da1c9d9a0db279975f591b2d4897fd" title=" " alt="" coords="519,613,685,640"/>
+<area shape="rect" id="node40" href="$savescores_8cpp.html#a3c4a3b5a4336efea9adcf59cbe94e42e" title="saves the scores in a file" alt="" coords="335,664,431,691"/>
+<area shape="rect" id="node41" href="$main_8cpp.html#a6f6eb5db37f7b274c9373c72a7d58d23" title="Displays the pause screen and check if the player press Enter to leave the pause." alt="" coords="347,613,420,640"/>
+<area shape="rect" id="node42" href="$music_8cpp.html#a78dd3d52046309f4ec566e29fc0453c4" title="starts the music" alt="" coords="557,867,647,893"/>
+<area shape="rect" id="node43" href="$main_8cpp.html#acb09fd5530dac6cdb8a763af79e1ebc4" title="Displays the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed." alt="" coords="307,563,460,589"/>
+<area shape="rect" id="node12" href="$main_8cpp.html#ad08634716e92a71688805904e5e4e4cb" title="displays a figure at each position contained in a vector of positions" alt="" coords="567,1221,637,1248"/>
+<area shape="rect" id="node16" href="$spaceinvaders_8cpp.html#a45522f1b42ffdac3a44e19c9adf46c35" title="Initializes the entities which contain the figures for MinGl." alt="" coords="520,1373,684,1400"/>
+<area shape="rect" id="node18" href="$loadconfig_8cpp.html#a329d1172504e8296ecc66570a2a019da" title="loads the config file" alt="" coords="557,1272,647,1299"/>
+<area shape="rect" id="node20" href="$loadscore_8cpp.html#ad975ce7fcccd7b848ad144b386e941c6" title="loads the scores containing in a file in a vector of pairs linking the names and the scores" alt="" coords="555,1323,649,1349"/>
+<area shape="rect" id="node17" href="$classfigure.html#a491aa40310e29bc8863661302b6bf063" title=" " alt="" coords="759,1373,851,1400"/>
+<area shape="rect" id="node19" href="$loadconfig_8cpp.html#a64b9b051eb5b61b57950a500c7742ae0" title="Creates the default config file." alt="" coords="759,1272,852,1299"/>
+<area shape="rect" id="node21" href="$scoresort_8cpp.html#aae114c09489147c07b30e5c9c617a659" title="Sorts all the scores contained in pairs of name &#45; score." alt="" coords="764,1323,847,1349"/>
+<area shape="rect" id="node22" href="$scoresort_8cpp.html#a9a321fef08f8312c5f75772f1d819176" title="Compares scores contained in the pairs of name &#45; score is used by the sort algorithm in the algorithm..." alt="" coords="915,1323,1004,1349"/>
+<area shape="rect" id="node27" href="$main_8cpp.html#aebcced80e93e3dcb361a32cbc6b0a302" title="Tests if two entities collide." alt="" coords="561,1120,643,1147"/>
+<area shape="rect" id="node28" href="$structpos.html#aee6663c0d242807aa207918b050e9a2f" title=" " alt="" coords="756,1069,855,1096"/>
+<area shape="rect" id="node29" href="$structpos.html#ab910b01032e7fa33583352bdcf7685d8" title=" " alt="" coords="757,1145,854,1172"/>
+<area shape="rect" id="node31" href="$classmin_g_l.html#adff92859de3c014f93d32088d3f322f3" title="Tell if the key is pressed (true) or not (false)" alt="" coords="535,715,669,741"/>
+<area shape="rect" id="node32" href="$main_8cpp.html#a180a8df32cf1bac466be2714b4be3a36" title=" " alt="" coords="560,917,644,944"/>
+<area shape="rect" id="node33" href="$main_8cpp.html#a91429b25d7a424d5f2a1593d02b66100" title=" " alt="" coords="555,968,649,995"/>
+<area shape="rect" id="node34" href="$main_8cpp.html#adf36a6b9c333fe142b44223c01ca52ee" title=" " alt="" coords="555,816,649,843"/>
+<area shape="rect" id="node36" href="$main_8cpp.html#aa89fe11c6a08a96d88eb644c6c96effa" title=" " alt="" coords="553,563,651,589"/>
+<area shape="rect" id="node37" href="$main_8cpp.html#a5add5cc153950658ca297235042a117d" title=" " alt="" coords="548,512,656,539"/>
 </map>

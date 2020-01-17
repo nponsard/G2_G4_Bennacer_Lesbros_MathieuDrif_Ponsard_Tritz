@@ -16,7 +16,7 @@ Include dependency graph for loadscore.\+cpp\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 vector$<$ pair$<$ string, unsigned $>$ $>$ \mbox{\hyperlink{loadscore_8cpp_ad975ce7fcccd7b848ad144b386e941c6}{load\+Scores}} (const string \&file\+Name)
-\begin{DoxyCompactList}\small\item\em charge les scores depuis le fichier \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em loads the scores containing in a file in a vector of pairs linking the names and the scores \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -28,22 +28,28 @@ vector$<$ pair$<$ string, unsigned $>$ $>$ \mbox{\hyperlink{loadscore_8cpp_ad975
 
 
 
-charge les scores depuis le fichier 
+loads the scores containing in a file in a vector of pairs linking the names and the scores 
 
 
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & \+: name of the file in which the scores are contained \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns a vector of pairs name -\/ score 
+\end{DoxyReturn}
 
-Definition at line 16 of file loadscore.\+cpp.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Definition at line 15 of file loadscore.\+cpp.
+
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{loadscore_8cpp_ad975ce7fcccd7b848ad144b386e941c6_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

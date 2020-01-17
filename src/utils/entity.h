@@ -4,9 +4,7 @@
 #include "minGL/figs/figure.h"
 
 /*!
- *  \brief struct associant une figure à une largeur et une hauteur
- *  
- * 
+ *  \brief structure containing a figure and its corresponding height and width
  */
 struct entity
 {

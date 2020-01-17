@@ -7,9 +7,9 @@
 using namespace std;
 
 ///
-/// \brief create the default config file
+/// \brief Creates the default config file
 /// \param name of the file to create
-/// \param map containing value to put in the file
+/// \param map containing the values to put in the file
 ///
 void createConf(const string & fileName, map<string, unsigned> Map)
 {
@@ -26,9 +26,11 @@ void createConf(const string & fileName, map<string, unsigned> Map)
 }
 
 ///
-/// \brief load config file
-/// \param name of the config file
+/// \brief loads the config file
+/// \param fileName : the name of the file to read
+/// \return returns a map of strings - strings : the first one is the name of the variable, the other is its value
 ///
+
 map<string, string> loadConfig(const string & fileName)
 {
     map<string, unsigned> defaultUnsignedConfig;
@@ -43,8 +45,6 @@ map<string, string> loadConfig(const string & fileName)
     defaultUnsignedConfig["playerPosAbs"] = 0;
     defaultUnsignedConfig["playerPosOrd"] = 50;
     defaultUnsignedConfig["lives"] = 3;
-    defaultUnsignedConfig["score"] = 0;
-    defaultUnsignedConfig["bestScore"] = 0;
     defaultUnsignedConfig["scoreForMissileDestruction"] = 50;
     defaultUnsignedConfig["scoreStep"] = 100;
     defaultUnsignedConfig["scoreStepBonusInvaders"] = 1000;
@@ -63,30 +63,27 @@ map<string, string> loadConfig(const string & fileName)
         AuthorizedKey AK;
 
 
-        if(ifs.is_open())
+        while(true)
         {
-            while(true)
+            getline(ifs, line);
+
+            if (ifs.eof())
+                break;
+
+            istringstream istr;
+            istr.str(line);
+            istr >> key;
+
+            //unsigned
+            if (find(AK.VParamUnsigned.begin(), AK.VParamUnsigned.end(), key) != AK.VParamUnsigned.end())
             {
-                getline(ifs, line);
-
-                if (ifs.eof())
-                    break;
-
-                istringstream istr;
-                istr.str(line);
-                istr >> key;
-
-                //unsigned
-                if (find(AK.VParamUnsigned.begin(), AK.VParamUnsigned.end(), key) != AK.VParamUnsigned.end())
-                {
-                    istr >> sep;
-                    unsigned val;
-                    istr >> val;
-                    if(!istr.fail())
-                        result[key] = to_string(val);
-                    else
-                        result[key] = to_string(defaultUnsignedConfig[key]);
-                }
+                istr >> sep;
+                unsigned val;
+                istr >> val;
+                if(!istr.fail())
+                    result[key] = to_string(val);
+                else
+                    result[key] = to_string(defaultUnsignedConfig[key]);
             }
         }
 
