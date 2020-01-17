@@ -11,7 +11,8 @@ using namespace std;
 /// \param name of the file to create
 /// \param map containing value to put in the file
 ///
-void createConf(const string & fileName, map<string, unsigned> Map){
+void createConf(const string & fileName, map<string, unsigned> Map)
+{
     ofstream file(fileName);
     if(!file.is_open()) {
         cerr << "impossible d'écrire le fichier :" << fileName <<endl;
@@ -31,12 +32,12 @@ void createConf(const string & fileName, map<string, unsigned> Map){
 map<string, string> loadConfig(const string & fileName)
 {
     map<string, unsigned> defaultUnsignedConfig;
-    defaultUnsignedConfig["invadersVelocity"] = 1;
-    defaultUnsignedConfig["invadersMaxVelocity"] = 5;
-    defaultUnsignedConfig["invadersVelocityStep"] = 5;
+    defaultUnsignedConfig["invadersMaxVelocity"] = 8;
+    defaultUnsignedConfig["invadersMinVelocity"] = 2;
     defaultUnsignedConfig["shot"] = 200;
     defaultUnsignedConfig["invadersShot"] = 900;
     defaultUnsignedConfig["bonusInvaders"] = 15000;
+    defaultUnsignedConfig["bonusInvaderVelocityFactor"] = 3;
     defaultUnsignedConfig["bonusInvaderPosAbs"] = 0;
     defaultUnsignedConfig["bonusInvaderPosOrd"] = 0;
     defaultUnsignedConfig["playerPosAbs"] = 0;
@@ -46,7 +47,7 @@ map<string, string> loadConfig(const string & fileName)
     defaultUnsignedConfig["bestScore"] = 0;
     defaultUnsignedConfig["scoreForMissileDestruction"] = 50;
     defaultUnsignedConfig["scoreStep"] = 100;
-    defaultUnsignedConfig["scoreStepBonusInvaders"] = 500;
+    defaultUnsignedConfig["scoreStepBonusInvaders"] = 1000;
     defaultUnsignedConfig["torpedoVelocity"] = 20;
     defaultUnsignedConfig["wave"] = 1;
     defaultUnsignedConfig["upgradeVelocity"] = 10;

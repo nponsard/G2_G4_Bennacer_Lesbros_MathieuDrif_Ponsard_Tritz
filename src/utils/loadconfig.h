@@ -18,7 +18,7 @@ struct AuthorizedKey
     /* List of authorized key for the type string in a struct CMyParam*/
     // const std::vector<std::string> VParamString {};
     /* List of authorized key for the type unsigned in a struct CMyParam*/
-    const std::vector<std::string> VParamUnsigned{"invadersVelocity", "invadersMaxVelocity", "invadersVelocityStep", "shot", "invadersShot", "bonusInvaders", "bonusInvaderPosAbs",
+    const std::vector<std::string> VParamUnsigned{"invadersMaxVelocity", "invadersMinVelocity", "shot", "invadersShot", "bonusInvaders", "bonusInvaderVelocityFactor", "bonusInvaderPosAbs",
                                                   "bonusInvaderPosOrd", "playerPosAbs", "playerPosOrd", "lives", "score", "bestScore", "scoreForMissileDestruction", "scoreStep",
                                                   "scoreStepBonusInvaders", "torpedoVelocity", "wave", "upgradeSpeed"};
 };

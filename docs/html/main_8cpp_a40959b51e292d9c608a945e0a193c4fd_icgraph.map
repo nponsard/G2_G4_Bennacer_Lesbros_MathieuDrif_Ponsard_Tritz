@@ -2,7 +2,7 @@
 <area shape="rect" id="node1" title=" " alt="" coords="508,54,612,81"/>
 <area shape="rect" id="node2" href="$main_8cpp.html#ad1883dd55c8b9fa49439a49a3e08cb24" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,54,259,81"/>
 <area shape="rect" id="node4" href="$main_8cpp.html#ada592260988cd1e3144c6b2f883b1c50" title="Read the keyboard inputs and move the player accordingly." alt="" coords="325,29,441,55"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#afbc083af96fab5f1a4c287f4ff09ba63" title="Displays the pause screen and check if the player press Enter to leave the pause." alt="" coords="347,79,420,106"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a6f6eb5db37f7b274c9373c72a7d58d23" title="Displays the pause screen and check if the player press Enter to leave the pause." alt="" coords="347,79,420,106"/>
 <area shape="rect" id="node6" href="$main_8cpp.html#acb09fd5530dac6cdb8a763af79e1ebc4" title="Display the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed." alt="" coords="307,130,460,157"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initialize Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,54,60,81"/>
 </map>

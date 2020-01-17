@@ -8,7 +8,7 @@ using namespace std;
 
 /*!
  *
- * \brief chargue les scores depuis le fichier
+ * \brief charge les scores depuis le fichier
  * 
  * 
  */

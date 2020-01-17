@@ -1,5 +1,5 @@
 <map id="loadScores" name="loadScores">
-<area shape="rect" id="node1" title="chargue les scores depuis le fichier" alt="" coords="5,5,99,32"/>
+<area shape="rect" id="node1" title="charge les scores depuis le fichier" alt="" coords="5,5,99,32"/>
 <area shape="rect" id="node2" href="$scoresort_8cpp.html#aae114c09489147c07b30e5c9c617a659" title="trie tous les scores" alt="" coords="147,5,229,32"/>
 <area shape="rect" id="node3" href="$scoresort_8cpp.html#a9a321fef08f8312c5f75772f1d819176" title="premet de comparer les paires de score ( teste si a&gt;b ) \description renvoie true si a &gt; b utilisé pa..." alt="" coords="277,5,367,32"/>
 </map>

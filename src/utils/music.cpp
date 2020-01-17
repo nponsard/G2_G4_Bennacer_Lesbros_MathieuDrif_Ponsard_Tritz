@@ -8,5 +8,6 @@ void startMusic()
 void killMusic()
 {
     system("pkill -f 'bash ../ressources/audioSpaceInvaders.bash'");
-    system("pkill -f 'aplay ../ressources/theme.wav'");
+    system("pkill -f 'aplay -q ../ressources/theme.wav'");
 }
+
