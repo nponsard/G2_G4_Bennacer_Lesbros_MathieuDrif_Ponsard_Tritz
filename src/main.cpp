@@ -215,7 +215,7 @@ bool collisions(pos &entity1,
                 const unsigned &width1,
                 const unsigned &width2)
 {
-    if (entity1.getOrd() + height1 >= entity2.getOrd() && entity1.getOrd() + height1 <= entity2.getOrd() + height2)
+    if (entity1.getOrd() + height1 >= entity2.getOrd() && entity1.getOrd() <= entity2.getOrd() + height2)
         if (entity1.getAbs() + width1 >= entity2.getAbs() && entity1.getAbs() <= entity2.getAbs() + width2)
             return true;
 
