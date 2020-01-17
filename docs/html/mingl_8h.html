@@ -134,7 +134,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="rect" title=" " alt="" coords="541,5,723,32"/>
 <area shape="rect" href="main_8cpp.html" title="Main program." alt="" coords="231,528,337,555"/>
 <area shape="rect" href="iminglinjectable_8h.html" title=" " alt="" coords="507,80,757,107"/>
-<area shape="rect" href="mingl_8cpp.html" title="version légèrement modifiée" alt="" coords="781,80,977,107"/>
+<area shape="rect" href="mingl_8cpp.html" title="Modified version of mingl to match our requirements \description modified the management of the keybo..." alt="" coords="781,80,977,107"/>
 <area shape="rect" href="basefig_8h.html" title=" " alt="" coords="543,155,721,181"/>
 <area shape="rect" href="triangle_8h.html" title=" " alt="" coords="1198,304,1378,331"/>
 <area shape="rect" href="figure_8h.html" title=" " alt="" coords="43,304,210,331"/>
@@ -160,16 +160,16 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmin_g_l.html">minGL</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="classmin_g_l.html" title="The minGL class sert de classe de base à tout le bordel.">minGL</a> class sert de classe de base à tout le bordel.  <a href="classmin_g_l.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classmin_g_l.html" title="minGL class: the entry point to draw thing on the screen">minGL</a> class: the entry point to draw thing on the screen  <a href="classmin_g_l.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:ab47ee0b728e0f5acc9ba19301a01798b"><td class="memItemLeft" align="right" valign="top">typedef std::pair&lt; int, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mingl_8h.html#ab47ee0b728e0f5acc9ba19301a01798b">keyType</a></td></tr>
-<tr class="memdesc:ab47ee0b728e0f5acc9ba19301a01798b"><td class="mdescLeft">&#160;</td><td class="mdescRight">keyType : type représentant une touche  <a href="mingl_8h.html#ab47ee0b728e0f5acc9ba19301a01798b">More...</a><br /></td></tr>
+<tr class="memdesc:ab47ee0b728e0f5acc9ba19301a01798b"><td class="mdescLeft">&#160;</td><td class="mdescRight">keyType : custom type representing a key of the keyboard  <a href="mingl_8h.html#ab47ee0b728e0f5acc9ba19301a01798b">More...</a><br /></td></tr>
 <tr class="separator:ab47ee0b728e0f5acc9ba19301a01798b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca1bdd5141a5d391c3014681540a1d0f"><td class="memItemLeft" align="right" valign="top">typedef std::map&lt; <a class="el" href="mingl_8h.html#ab47ee0b728e0f5acc9ba19301a01798b">keyType</a>, bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mingl_8h.html#aca1bdd5141a5d391c3014681540a1d0f">keyMap</a></td></tr>
-<tr class="memdesc:aca1bdd5141a5d391c3014681540a1d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">keyMap :&#160;map des touches pressées  <a href="mingl_8h.html#aca1bdd5141a5d391c3014681540a1d0f">More...</a><br /></td></tr>
+<tr class="memdesc:aca1bdd5141a5d391c3014681540a1d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">keyMap :&#160;map of the pressed keys  <a href="mingl_8h.html#aca1bdd5141a5d391c3014681540a1d0f">More...</a><br /></td></tr>
 <tr class="separator:aca1bdd5141a5d391c3014681540a1d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -185,10 +185,10 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>keyMap :&#160;map des touches pressées </p>
-<p>Map avec comme clef <a class="el" href="mingl_8h.html#ab47ee0b728e0f5acc9ba19301a01798b">keyType</a> </p>
+<p>keyMap :&#160;map of the pressed keys </p>
+<p>The keys are <a class="el" href="mingl_8h.html#ab47ee0b728e0f5acc9ba19301a01798b">keyType</a> and is linked to true if pressed and false if not pressed (or reset) </p>
 
-<p class="definition">Definition at line <a class="el" href="mingl_8h_source.html#l00031">31</a> of file <a class="el" href="mingl_8h_source.html">mingl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mingl_8h_source.html#l00033">33</a> of file <a class="el" href="mingl_8h_source.html">mingl.h</a>.</p>
 
 </div>
 </div>
@@ -204,10 +204,16 @@ Typedefs</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>keyType : type représentant une touche </p>
-<p>Paire de int (numéro de la touche) et de bool (spécial oui/non) </p>
+<p>keyType : custom type representing a key of the keyboard </p>
+<p>It's a pair of int and bool <br  />
+ </p><ul>
+<li>
+the int is for the keycode  </li>
+<li>
+the bool indicates if it's special or not (true -&gt; special, false-&gt; not special)</li>
+</ul>
 
-<p class="definition">Definition at line <a class="el" href="mingl_8h_source.html#l00024">24</a> of file <a class="el" href="mingl_8h_source.html">mingl.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mingl_8h_source.html#l00026">26</a> of file <a class="el" href="mingl_8h_source.html">mingl.h</a>.</p>
 
 </div>
 </div>

@@ -48,7 +48,7 @@ const keyType KEY_ENTER({13, false});
 const keyType KEY_RETURN({8, false});
 
 ///
-/// \brief Add invaders to the vector containing their pos until they fill their starting space
+/// \brief Adds invaders to the vector containing their pos until they fill their starting space
 /// \param SI : struct containing all useful variables (including the size of the invaders and a vector containing all invaders' positions)
 /// \param height : window's height
 /// \param width : window's width
@@ -70,7 +70,7 @@ void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigne
 }
 
 ///
-/// \brief initialize the variables contained in a SpaceInvaders struct
+/// \brief initializes the variables contained in a SpaceInvaders struct
 /// \param SI : the struct containing all the variables to initialize
 ///
 
@@ -108,7 +108,7 @@ void initSpaceInvaders(spaceInvaders &SI)
 }
 
 ///
-/// \brief display a figure at each position contained in a vector of positions
+/// \brief displays a figure at each position contained in a vector of positions
 /// \param window : window on which the pictures are printed
 /// \param positions : vector of positions where the picture must be displayed
 /// \param fig : figure to be displayed
@@ -121,7 +121,7 @@ void display(minGL &window, const vector<pos> &positions, const figure &fig)
 }
 
 ///
-/// \brief display a figure at each position contained in a vector of pairs containing positions and the type of the upgrade(only works for the upgrades)
+/// \brief displays a figure at each position contained in a vector of pairs containing positions and the type of the upgrade(only works for the upgrades)
 /// \param window : window on which the pictures are printed
 /// \param upgrades : vector pairs containing the positions where the picture must be displayed
 /// \param figures : vector of figures to be displayed
@@ -134,7 +134,7 @@ void display(minGL &window, const vector<pair<pos, short>> &upgrades, const vect
 }
 
 ///
-/// \brief display a figure at each position contained in a vector of pairs containing positions (only works for the invaders)
+/// \brief displays a figure at each position contained in a vector of pairs containing positions (only works for the invaders)
 /// \param window : window on which the pictures are printed
 /// \param positions : vector of pairs containig the positions where the picture must be displayed
 /// \param fig : figure to be displayed
@@ -147,7 +147,7 @@ void display(minGL &window, const vector<pair<pos, unsigned>> &positions, const 
 }
 
 ///
-/// \brief display the torpedos, the ennemies and the player on the screen
+/// \brief displays the torpedos, the ennemies and the player on the screen
 /// \param window : the window on which the pictures are printed
 /// \param SI : the struct containing all the useful variables (including the positions of the torpedoes, the ennemies and the player)
 ///
@@ -165,7 +165,7 @@ void displaySpace(minGL &window, const spaceInvaders &SI)
 }
 
 ///
-/// \brief display spaces which will be filled with text on the screen
+/// \brief displays spaces which will be filled with text on the screen
 /// \param window : window on which the HUD will be printed
 /// \param SI : struct containing all the useful variables (including the picture of the player, used to show the lifes remaining)
 ///
@@ -178,7 +178,7 @@ void displayHUD(minGL &window, const spaceInvaders &SI)
 }
 
 ///
-/// \brief display text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen
+/// \brief displays text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen
 /// \param window : window on which the texte will be printed
 /// \param SI : struct containing all the useful variables (including the wave number, the score, the lives remaining and the number of invaders alive)
 ///
@@ -198,14 +198,14 @@ void fillHUD(minGL &window, const spaceInvaders &SI)
 }
 
 ///
-/// \brief Test if two entities collide
+/// \brief Tests if two entities collide
 /// \param entity1 : the position of the first entity
 /// \param entity2 : the position of the second entity
 /// \param height1 : the height of the first entity
 /// \param height2 : the height of the second entity
 /// \param width1 : the width of the first entity
 /// \param width2 : the width of the second entity
-/// \return return true if the entities collide, else returns false
+/// \return returns true if the entities collide, else returns false
 ///
 
 bool collisions(pos &entity1,
@@ -514,7 +514,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
 }
 
 ///
-/// \brief Read the keyboard inputs and move the player accordingly
+/// \brief Reads the keyboard inputs and move the player accordingly
 /// \param window : contains the inputs and the size of the window
 /// \param SI : struct containing all the useful variables (including the cooldown between shoots and the vector containing the player's torpedo)
 /// \param pause : boolean which become true if the player press the escape button
@@ -541,7 +541,7 @@ void ReadKeyboard(minGL &window, spaceInvaders &SI, bool &pause)
 }
 
 ///
-/// \brief Display the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed
+/// \brief Displays the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed
 /// \param SI : struct containing all the useful variables (including the invader's picture and his score)
 /// \param window : window on which the menu screen will be printed
 /// \param frameDuration : time between each frame
@@ -659,6 +659,14 @@ void SIpause(const spaceInvaders &SI, minGL &window, const chrono::duration<doub
             this_thread::sleep_for(frameDuration - diff);
     }
 }
+
+///
+/// \brief Displays the screen in which the player can enter his name if he did a new highscore, and read the keyboard input to allow him to enter his name
+/// \param window : window on which the input screen will be displayed, and contain the informations about the keyboard inputs
+/// \param frameDuration : time between each frame
+/// \param nbCharMax : the maximum size of the name
+/// \return returns a string corresponding to the name input
+///
 
 string ReadName(minGL &window, const chrono::duration<double, milli> frameDuration, const unsigned &nbCharMax = 3)
 {
@@ -801,7 +809,7 @@ void mainSpaceInvaders(minGL &window)
 }
 
 ///
-/// \brief Initialize Glut and MinGl, creates a seed for randomness and launches the game.
+/// \brief Initializes Glut and MinGl, creates a seed for randomness and launches the game.
 /// \return
 ///
 

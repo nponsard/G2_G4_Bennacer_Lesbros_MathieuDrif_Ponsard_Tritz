@@ -102,11 +102,25 @@ $(document).ready(function(){initNavTree('scoresort_8cpp_source.html',''); initR
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    sort(scores.begin(), scores.end(), <a class="code" href="scoresort_8cpp.html#a9a321fef08f8312c5f75772f1d819176">compPairs</a>);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="scoresort_8cpp.html#af63d753caa01aaadb90287e45989c8bc">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="scoresort_8cpp.html#af63d753caa01aaadb90287e45989c8bc">insertScore</a>(vector&lt;pair&lt;string, unsigned&gt;&gt; &amp; scores, <span class="keyword">const</span> <span class="keywordtype">string</span> &amp;nom, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> &amp; score)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">unsigned</span> i(0);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">while</span>(i &lt; scores.size() &amp;&amp; scores[i].second &gt; score)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        ++i;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    scores.resize(scores.size() + 1);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> j(scores.size()); j-- &gt; i + 1; )</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        scores[j] = scores[j - 1];</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    scores[i] = make_pair(nom, score);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="ascoresort_8h_html"><div class="ttname"><a href="scoresort_8h.html">scoresort.h</a></div></div>
-<div class="ttc" id="ascoresort_8cpp_html_a9a321fef08f8312c5f75772f1d819176"><div class="ttname"><a href="scoresort_8cpp.html#a9a321fef08f8312c5f75772f1d819176">compPairs</a></div><div class="ttdeci">bool compPairs(const pair&lt; string, unsigned &gt; &amp;a, const pair&lt; string, unsigned &gt; &amp;b)</div><div class="ttdoc">premet de comparer les paires de score ( teste si a&gt;b ) \description renvoie true si a &gt; b utilisé pa...</div><div class="ttdef"><b>Definition:</b> <a href="scoresort_8cpp_source.html#l00019">scoresort.cpp:19</a></div></div>
-<div class="ttc" id="ascoresort_8cpp_html_aae114c09489147c07b30e5c9c617a659"><div class="ttname"><a href="scoresort_8cpp.html#aae114c09489147c07b30e5c9c617a659">scoreSort</a></div><div class="ttdeci">void scoreSort(vector&lt; pair&lt; string, unsigned &gt;&gt; &amp;scores)</div><div class="ttdoc">trie tous les scores</div><div class="ttdef"><b>Definition:</b> <a href="scoresort_8cpp_source.html#l00031">scoresort.cpp:31</a></div></div>
+<div class="ttc" id="ascoresort_8cpp_html_af63d753caa01aaadb90287e45989c8bc"><div class="ttname"><a href="scoresort_8cpp.html#af63d753caa01aaadb90287e45989c8bc">insertScore</a></div><div class="ttdeci">void insertScore(vector&lt; pair&lt; string, unsigned &gt;&gt; &amp;scores, const string &amp;nom, const unsigned &amp;score)</div><div class="ttdoc">Inserts a new pair of name - score in the right position in a vector.</div><div class="ttdef"><b>Definition:</b> <a href="scoresort_8cpp_source.html#l00043">scoresort.cpp:43</a></div></div>
+<div class="ttc" id="ascoresort_8cpp_html_a9a321fef08f8312c5f75772f1d819176"><div class="ttname"><a href="scoresort_8cpp.html#a9a321fef08f8312c5f75772f1d819176">compPairs</a></div><div class="ttdeci">bool compPairs(const pair&lt; string, unsigned &gt; &amp;a, const pair&lt; string, unsigned &gt; &amp;b)</div><div class="ttdoc">Compares scores contained in the pairs of name - score is used by the sort algorithm in the algorithm...</div><div class="ttdef"><b>Definition:</b> <a href="scoresort_8cpp_source.html#l00019">scoresort.cpp:19</a></div></div>
+<div class="ttc" id="ascoresort_8cpp_html_aae114c09489147c07b30e5c9c617a659"><div class="ttname"><a href="scoresort_8cpp.html#aae114c09489147c07b30e5c9c617a659">scoreSort</a></div><div class="ttdeci">void scoreSort(vector&lt; pair&lt; string, unsigned &gt;&gt; &amp;scores)</div><div class="ttdoc">Sorts all the scores contained in pairs of name - score.</div><div class="ttdef"><b>Definition:</b> <a href="scoresort_8cpp_source.html#l00031">scoresort.cpp:31</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

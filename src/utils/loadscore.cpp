@@ -7,10 +7,9 @@
 using namespace std;
 
 /*!
- *
- * \brief charge les scores depuis le fichier
- * 
- * 
+ * \brief loads the scores containing in a file in a vector of pairs linking the names and the scores
+ * \param fileName : name of the file in which the scores are contained
+ * \return returns a vector of pairs name - score
  */
 
 vector<pair<string, unsigned>> loadScores(const string &fileName)

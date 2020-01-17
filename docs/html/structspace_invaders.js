@@ -1,6 +1,5 @@
 var structspace_invaders =
 [
-    [ "bestScore", "structspace_invaders.html#aa0a18991c9083966aea6f9a454e5f5f1", null ],
     [ "bestScores", "structspace_invaders.html#a4a545e5c9fd1226deac5db769b5dcedd", null ],
     [ "bonusInvader", "structspace_invaders.html#a055eaff2d3227d400a8178aeddba9a6d", null ],
     [ "bonusInvaderPos", "structspace_invaders.html#a05c4f1a1c2f5d8a4e77e12540ddc0382", null ],

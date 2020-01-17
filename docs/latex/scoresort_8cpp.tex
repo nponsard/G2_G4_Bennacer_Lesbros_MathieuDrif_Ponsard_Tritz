@@ -13,9 +13,11 @@ Include dependency graph for scoresort.\+cpp\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{scoresort_8cpp_a9a321fef08f8312c5f75772f1d819176}{comp\+Pairs}} (const pair$<$ string, unsigned $>$ \&a, const pair$<$ string, unsigned $>$ \&b)
-\begin{DoxyCompactList}\small\item\em premet de comparer les paires de score ( teste si a$>$b ) \textbackslash{}description renvoie true si a $>$ b utilisé par l\textquotesingle{}algorithme sort de la bibliothèque algorithm \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Compares scores contained in the pairs of name -\/ score is used by the sort algorithm in the algorithm library. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{scoresort_8cpp_aae114c09489147c07b30e5c9c617a659}{score\+Sort}} (vector$<$ pair$<$ string, unsigned $>$$>$ \&scores)
-\begin{DoxyCompactList}\small\item\em trie tous les scores \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sorts all the scores contained in pairs of name -\/ score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{scoresort_8cpp_af63d753caa01aaadb90287e45989c8bc}{insert\+Score}} (vector$<$ pair$<$ string, unsigned $>$$>$ \&scores, const string \&nom, const unsigned \&score)
+\begin{DoxyCompactList}\small\item\em Inserts a new pair of name -\/ score in the right position in a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -27,32 +29,61 @@ void \mbox{\hyperlink{scoresort_8cpp_aae114c09489147c07b30e5c9c617a659}{score\+S
 
 
 
-premet de comparer les paires de score ( teste si a$>$b ) \textbackslash{}description renvoie true si a $>$ b utilisé par l\textquotesingle{}algorithme sort de la bibliothèque algorithm 
+Compares scores contained in the pairs of name -\/ score is used by the sort algorithm in the algorithm library. 
 
 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em a} & \+: premier score \\
+\begin{DoxyParams}{Parameters}
+{\em a} & \+: first pair containing the score \\
 \hline
-\mbox{\texttt{ in}}  & {\em b} & \+: deuxième score \\
+{\em b} & \+: second pair containing the score \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-
+returns \+: 
 \begin{DoxyItemize}
-\item vrai si a$>$b 
-\item faux is a$<$b 
+\item true if a$>$b 
+\item false if a$<$b 
 \end{DoxyItemize}
 \end{DoxyReturn}
 
 
 Definition at line 19 of file scoresort.\+cpp.
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{scoresort_8cpp_a9a321fef08f8312c5f75772f1d819176_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{scoresort_8cpp_af63d753caa01aaadb90287e45989c8bc}\label{scoresort_8cpp_af63d753caa01aaadb90287e45989c8bc}} 
+\index{scoresort.cpp@{scoresort.cpp}!insertScore@{insertScore}}
+\index{insertScore@{insertScore}!scoresort.cpp@{scoresort.cpp}}
+\doxysubsubsection{\texorpdfstring{insertScore()}{insertScore()}}
+{\footnotesize\ttfamily void insert\+Score (\begin{DoxyParamCaption}\item[{vector$<$ pair$<$ string, unsigned $>$$>$ \&}]{scores,  }\item[{const string \&}]{nom,  }\item[{const unsigned \&}]{score }\end{DoxyParamCaption})}
+
+
+
+Inserts a new pair of name -\/ score in the right position in a vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scores} & \+: vector containing pairs of name -\/ score, in which the new score will be added \\
+\hline
+{\em nom} & \+: the name corresponding to the score which will be added \\
+\hline
+{\em score} & \+: the score which will be added to the vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file scoresort.\+cpp.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{scoresort_8cpp_af63d753caa01aaadb90287e45989c8bc_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{scoresort_8cpp_aae114c09489147c07b30e5c9c617a659}\label{scoresort_8cpp_aae114c09489147c07b30e5c9c617a659}} 
@@ -63,11 +94,11 @@ Here is the caller graph for this function\+:
 
 
 
-trie tous les scores 
+Sorts all the scores contained in pairs of name -\/ score. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em scores} & \+: vector de paire pseudo -\/ score \\
+{\em scores} & \+: vector containing pairs of name -\/ score \\
 \hline
 \end{DoxyParams}
 
@@ -81,8 +112,7 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=245pt]{scoresort_8cpp_aae114c09489147c07b30e5c9c617a659_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

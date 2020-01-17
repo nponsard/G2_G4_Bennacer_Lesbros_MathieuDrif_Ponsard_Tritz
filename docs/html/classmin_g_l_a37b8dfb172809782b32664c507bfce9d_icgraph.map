@@ -1,7 +1,7 @@
 <map id="minGL::resetKey" name="minGL::resetKey">
-<area shape="rect" id="node1" title=" " alt="" coords="449,31,579,57"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#a63dc32cfb9fffe0479de85c623e159b6" title=" " alt="" coords="307,5,401,32"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a6f6eb5db37f7b274c9373c72a7d58d23" title="Displays the pause screen and check if the player press Enter to leave the pause." alt="" coords="317,56,391,83"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ad1883dd55c8b9fa49439a49a3e08cb24" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,31,259,57"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initialize Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node1" title="set the key passed in parameter to not pressed (used in menus)" alt="" coords="449,21,579,47"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#ad1883dd55c8b9fa49439a49a3e08cb24" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,21,259,47"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a63dc32cfb9fffe0479de85c623e159b6" title="Displays the screen in which the player can enter his name if he did a new highscore,..." alt="" coords="307,21,401,47"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a6f6eb5db37f7b274c9373c72a7d58d23" title="Displays the pause screen and check if the player press Enter to leave the pause." alt="" coords="317,71,391,98"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,21,60,47"/>
 </map>

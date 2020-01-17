@@ -1,7 +1,7 @@
 <map id="pos::getOrd" name="pos::getOrd">
 <area shape="rect" id="node1" title=" " alt="" coords="557,31,655,57"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#aebcced80e93e3dcb361a32cbc6b0a302" title="Test if two entities collide." alt="" coords="427,5,509,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#aebcced80e93e3dcb361a32cbc6b0a302" title="Tests if two entities collide." alt="" coords="427,5,509,32"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#a350e996a354865b6064bab50134646dc" title="Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets ..." alt="" coords="307,31,379,57"/>
 <area shape="rect" id="node4" href="$main_8cpp.html#ad1883dd55c8b9fa49439a49a3e08cb24" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,31,259,57"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initialize Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,31,60,57"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,31,60,57"/>
 </map>

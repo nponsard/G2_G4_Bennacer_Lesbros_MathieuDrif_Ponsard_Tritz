@@ -7,7 +7,7 @@
 
 /*!
  *
- * \brief les clefs reconnues par le jeu et leur type
+ * \brief names of the parameters which can be in the config file
  * 
  */
 

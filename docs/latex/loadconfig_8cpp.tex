@@ -16,9 +16,9 @@ Include dependency graph for loadconfig.\+cpp\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{loadconfig_8cpp_a64b9b051eb5b61b57950a500c7742ae0}{create\+Conf}} (const string \&file\+Name, map$<$ string, unsigned $>$ Map)
-\begin{DoxyCompactList}\small\item\em create the default config file \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Creates the default config file. \end{DoxyCompactList}\item 
 map$<$ string, string $>$ \mbox{\hyperlink{loadconfig_8cpp_a329d1172504e8296ecc66570a2a019da}{load\+Config}} (const string \&file\+Name)
-\begin{DoxyCompactList}\small\item\em load config file \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em loads the config file \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -30,13 +30,13 @@ map$<$ string, string $>$ \mbox{\hyperlink{loadconfig_8cpp_a329d1172504e8296ecc6
 
 
 
-create the default config file 
+Creates the default config file. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em name} & of the file to create \\
 \hline
-{\em map} & containing value to put in the file \\
+{\em map} & containing the values to put in the file \\
 \hline
 \end{DoxyParams}
 
@@ -58,16 +58,19 @@ Here is the caller graph for this function\+:\nopagebreak
 
 
 
-load config file 
+loads the config file 
 
 
 \begin{DoxyParams}{Parameters}
-{\em name} & of the config file \\
+{\em file\+Name} & \+: the name of the file to read \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns a map of strings -\/ strings \+: the first one is the name of the variable, the other is its value 
+\end{DoxyReturn}
 
 
-Definition at line 32 of file loadconfig.\+cpp.
+Definition at line 34 of file loadconfig.\+cpp.
 
 Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]

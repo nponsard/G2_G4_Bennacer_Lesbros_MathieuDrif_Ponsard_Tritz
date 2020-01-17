@@ -1,8 +1,8 @@
 <map id="KEY_ENTER" name="KEY_ENTER">
 <area shape="rect" id="node1" title=" " alt="" coords="508,56,605,83"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#a63dc32cfb9fffe0479de85c623e159b6" title=" " alt="" coords="336,5,431,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a63dc32cfb9fffe0479de85c623e159b6" title="Displays the screen in which the player can enter his name if he did a new highscore,..." alt="" coords="336,5,431,32"/>
 <area shape="rect" id="node5" href="$main_8cpp.html#a6f6eb5db37f7b274c9373c72a7d58d23" title="Displays the pause screen and check if the player press Enter to leave the pause." alt="" coords="347,56,420,83"/>
-<area shape="rect" id="node6" href="$main_8cpp.html#acb09fd5530dac6cdb8a763af79e1ebc4" title="Display the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed." alt="" coords="307,107,460,133"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#acb09fd5530dac6cdb8a763af79e1ebc4" title="Displays the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed." alt="" coords="307,107,460,133"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#ad1883dd55c8b9fa49439a49a3e08cb24" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,56,259,83"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initialize Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,56,60,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,56,60,83"/>
 </map>

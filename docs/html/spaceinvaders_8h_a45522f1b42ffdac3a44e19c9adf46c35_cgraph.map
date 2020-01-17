@@ -1,4 +1,4 @@
 <map id="initSpaceInvadersFigs" name="initSpaceInvadersFigs">
-<area shape="rect" id="node1" title="Initialize the figures for MinGl." alt="" coords="5,5,169,32"/>
+<area shape="rect" id="node1" title="Initializes the entities which contain the figures for MinGl." alt="" coords="5,5,169,32"/>
 <area shape="rect" id="node2" href="$classfigure.html#a491aa40310e29bc8863661302b6bf063" title=" " alt="" coords="217,5,309,32"/>
 </map>

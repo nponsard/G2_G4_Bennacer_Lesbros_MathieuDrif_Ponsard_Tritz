@@ -7,7 +7,7 @@
 #include "entity.h"
 
 /*!
- * \brief struct gérant toutes les variables du jeu et les paramètres
+ * \brief struct containing every useful variable and the parameters used in the game
  * 
  * 
  * 

@@ -4,9 +4,9 @@
 using namespace std;
 
 /*!
- * \brief enregistre les scores dans le fichier
- * \param[in] scores : les scores liés avec le nom
- * \param[in] filename : nom du fichier où écrire 
+ * \brief saves the scores in a file
+ * \param scores : vector containing all the pairs linking names and scores
+ * \param filename : name of the file in which write the scores
  * 
  */
 
