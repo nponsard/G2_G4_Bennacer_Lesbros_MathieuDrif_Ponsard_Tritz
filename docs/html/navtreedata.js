@@ -62,7 +62,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "__circle_8cpp.html",
-"main_8cpp_source.html"
+"load_scores_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

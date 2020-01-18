@@ -1,5 +1,11 @@
 <map id="src/utils/spaceinvaders.h" name="src/utils/spaceinvaders.h">
-<area shape="rect" id="node1" title=" " alt="" coords="55,5,237,32"/>
-<area shape="rect" id="node2" href="$main_8cpp.html" title="Main program." alt="" coords="5,80,111,107"/>
-<area shape="rect" id="node3" href="$spaceinvaders_8cpp.html" title=" " alt="" coords="135,80,333,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="281,5,464,32"/>
+<area shape="rect" id="node2" href="$main_space_invaders_8h.html" title=" " alt="" coords="5,80,191,107"/>
+<area shape="rect" id="node5" href="$display_8h.html" title=" " alt="" coords="215,80,349,107"/>
+<area shape="rect" id="node7" href="$keyboard_input_8h.html" title=" " alt="" coords="373,80,556,107"/>
+<area shape="rect" id="node9" href="$spaceinvaders_8cpp.html" title=" " alt="" coords="580,80,779,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="Main program." alt="" coords="37,155,143,181"/>
+<area shape="rect" id="node4" href="$main_space_invaders_8cpp.html" title=" " alt="" coords="166,155,366,181"/>
+<area shape="rect" id="node6" href="$display_8cpp.html" title=" " alt="" coords="390,155,539,181"/>
+<area shape="rect" id="node8" href="$keyboard_input_8cpp.html" title=" " alt="" coords="563,155,761,181"/>
 </map>

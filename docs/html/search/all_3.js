@@ -10,7 +10,7 @@ var searchData=
   ['circle_2ecpp_24',['circle.cpp',['../circle_8cpp.html',1,'']]],
   ['circle_2eh_25',['circle.h',['../circle_8h.html',1,'']]],
   ['clearscreen_26',['clearScreen',['../classmin_g_l.html#a0ce6824246059b2f9db17b27a7f8fd65',1,'minGL']]],
-  ['collisions_27',['collisions',['../main_8cpp.html#aebcced80e93e3dcb361a32cbc6b0a302',1,'main.cpp']]],
+  ['collisions_27',['collisions',['../spaceinvaders_8cpp.html#aebcced80e93e3dcb361a32cbc6b0a302',1,'collisions(pos &amp;entity1, pos &amp;entity2, const unsigned &amp;height1, const unsigned &amp;height2, const unsigned &amp;width1, const unsigned &amp;width2):&#160;spaceinvaders.cpp'],['../spaceinvaders_8h.html#aebcced80e93e3dcb361a32cbc6b0a302',1,'collisions(pos &amp;entity1, pos &amp;entity2, const unsigned &amp;height1, const unsigned &amp;height2, const unsigned &amp;width1, const unsigned &amp;width2):&#160;spaceinvaders.cpp']]],
   ['color_28',['color',['../classpixel.html#aa28e053fc4127883a7e1f77c85404365',1,'pixel']]],
   ['comppairs_29',['compPairs',['../scoresort_8cpp.html#a9a321fef08f8312c5f75772f1d819176',1,'scoresort.cpp']]],
   ['computeab_30',['computeab',['../tools_8cpp.html#a8ab288a9372d9c2ce257f6d8cc5161a4',1,'computeab(const pos &amp;pt1, const pos &amp;pt2):&#160;tools.cpp'],['../tools_8h.html#a8ab288a9372d9c2ce257f6d8cc5161a4',1,'computeab(const pos &amp;pt1, const pos &amp;pt2):&#160;tools.cpp']]],

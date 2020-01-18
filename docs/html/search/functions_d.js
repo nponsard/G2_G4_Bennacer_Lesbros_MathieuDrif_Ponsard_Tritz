@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['readkeyboard_368',['ReadKeyboard',['../main_8cpp.html#ada592260988cd1e3144c6b2f883b1c50',1,'main.cpp']]],
-  ['readname_369',['ReadName',['../main_8cpp.html#a63dc32cfb9fffe0479de85c623e159b6',1,'main.cpp']]],
-  ['rectangle_370',['rectangle',['../classrectangle.html#ac3e54db53b2cc218183190c0ce95a168',1,'rectangle::rectangle(const pos &amp;pos1, const pos &amp;pos2, const RGBcolor &amp;borderCol, const RGBcolor &amp;inCol=RGBcolor())'],['../classrectangle.html#a5792c53dec688eb24a5837264c454d63',1,'rectangle::rectangle(const pos &amp;pos, const unsigned &amp;width, const unsigned &amp;height, const RGBcolor &amp;borderCol, const RGBcolor &amp;inCol=RGBcolor())'],['../classrectangle.html#abcfe7c419c0dcea479b14564d3be955d',1,'rectangle::rectangle(const baseFig &amp;)']]],
-  ['resetkey_371',['resetKey',['../classmin_g_l.html#a37b8dfb172809782b32664c507bfce9d',1,'minGL']]],
-  ['rgbcolor_372',['RGBcolor',['../class_r_g_bcolor.html#a30eb6d536948b0a2b0d52f0ee01121c9',1,'RGBcolor']]]
+  ['readkeyboard_380',['ReadKeyboard',['../keyboard_input_8cpp.html#ada592260988cd1e3144c6b2f883b1c50',1,'ReadKeyboard(minGL &amp;window, spaceInvaders &amp;SI, bool &amp;pause):&#160;keyboardInput.cpp'],['../keyboard_input_8h.html#ada592260988cd1e3144c6b2f883b1c50',1,'ReadKeyboard(minGL &amp;window, spaceInvaders &amp;SI, bool &amp;pause):&#160;keyboardInput.cpp']]],
+  ['readname_381',['ReadName',['../display_8cpp.html#ac963f99f3e2189c174486cf56d856805',1,'ReadName(minGL &amp;window, const chrono::duration&lt; double, milli &gt; frameDuration, const unsigned &amp;nbCharMax):&#160;display.cpp'],['../display_8h.html#a43d285d79eacf7c555ccef4ac1cf0351',1,'ReadName(minGL &amp;window, const std::chrono::duration&lt; double, std::milli &gt; frameDuration, const unsigned &amp;nbCharMax=3):&#160;display.h']]],
+  ['rectangle_382',['rectangle',['../classrectangle.html#ac3e54db53b2cc218183190c0ce95a168',1,'rectangle::rectangle(const pos &amp;pos1, const pos &amp;pos2, const RGBcolor &amp;borderCol, const RGBcolor &amp;inCol=RGBcolor())'],['../classrectangle.html#a5792c53dec688eb24a5837264c454d63',1,'rectangle::rectangle(const pos &amp;pos, const unsigned &amp;width, const unsigned &amp;height, const RGBcolor &amp;borderCol, const RGBcolor &amp;inCol=RGBcolor())'],['../classrectangle.html#abcfe7c419c0dcea479b14564d3be955d',1,'rectangle::rectangle(const baseFig &amp;)']]],
+  ['resetkey_383',['resetKey',['../classmin_g_l.html#a37b8dfb172809782b32664c507bfce9d',1,'minGL']]],
+  ['rgbcolor_384',['RGBcolor',['../class_r_g_bcolor.html#a30eb6d536948b0a2b0d52f0ee01121c9',1,'RGBcolor']]]
 ];

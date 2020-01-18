@@ -11,11 +11,12 @@ Include dependency graph for spaceinvaders.\+h\+:\nopagebreak
 \includegraphics[width=350pt]{spaceinvaders_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=326pt]{spaceinvaders_8h__dep__incl}
+\includegraphics[width=350pt]{spaceinvaders_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsection*{Classes}
@@ -27,10 +28,99 @@ struct \mbox{\hyperlink{structspace_invaders}{space\+Invaders}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{spaceinvaders_8h_a45522f1b42ffdac3a44e19c9adf46c35}{init\+Space\+Invaders\+Figs}} (\mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
-\begin{DoxyCompactList}\small\item\em Initializes the entities which contain the figures for Min\+Gl. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initializes the entities which contain the figures for Min\+Gl. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spaceinvaders_8h_a2be98a767fac8753a8c75e926030f11c}{init\+Space\+Invaders}} (\mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
+\begin{DoxyCompactList}\small\item\em initializes the variables contained in a Space\+Invaders struct \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spaceinvaders_8h_a1dad421af4a8916521afa23c1ab85134}{invaders\+Generation}} (\mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, const unsigned \&height, const unsigned \&width)
+\begin{DoxyCompactList}\small\item\em Adds invaders to the vector containing their pos until they fill their starting space. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{spaceinvaders_8h_aebcced80e93e3dcb361a32cbc6b0a302}{collisions}} (\mbox{\hyperlink{structpos}{pos}} \&entity1, \mbox{\hyperlink{structpos}{pos}} \&entity2, const unsigned \&height1, const unsigned \&height2, const unsigned \&width1, const unsigned \&width2)
+\begin{DoxyCompactList}\small\item\em Tests if two entities collide. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{spaceinvaders_8h_aebcced80e93e3dcb361a32cbc6b0a302}\label{spaceinvaders_8h_aebcced80e93e3dcb361a32cbc6b0a302}} 
+\index{spaceinvaders.h@{spaceinvaders.h}!collisions@{collisions}}
+\index{collisions@{collisions}!spaceinvaders.h@{spaceinvaders.h}}
+\doxysubsubsection{\texorpdfstring{collisions()}{collisions()}}
+{\footnotesize\ttfamily bool collisions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structpos}{pos}} \&}]{entity1,  }\item[{\mbox{\hyperlink{structpos}{pos}} \&}]{entity2,  }\item[{const unsigned \&}]{height1,  }\item[{const unsigned \&}]{height2,  }\item[{const unsigned \&}]{width1,  }\item[{const unsigned \&}]{width2 }\end{DoxyParamCaption})}
+
+
+
+Tests if two entities collide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity1} & \+: the position of the first entity \\
+\hline
+{\em entity2} & \+: the position of the second entity \\
+\hline
+{\em height1} & \+: the height of the first entity \\
+\hline
+{\em height2} & \+: the height of the second entity \\
+\hline
+{\em width1} & \+: the width of the first entity \\
+\hline
+{\em width2} & \+: the width of the second entity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns true if the entities collide, else returns false 
+\end{DoxyReturn}
+
+
+Definition at line 177 of file spaceinvaders.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{spaceinvaders_8h_aebcced80e93e3dcb361a32cbc6b0a302_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spaceinvaders_8h_aebcced80e93e3dcb361a32cbc6b0a302_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{spaceinvaders_8h_a2be98a767fac8753a8c75e926030f11c}\label{spaceinvaders_8h_a2be98a767fac8753a8c75e926030f11c}} 
+\index{spaceinvaders.h@{spaceinvaders.h}!initSpaceInvaders@{initSpaceInvaders}}
+\index{initSpaceInvaders@{initSpaceInvaders}!spaceinvaders.h@{spaceinvaders.h}}
+\doxysubsubsection{\texorpdfstring{initSpaceInvaders()}{initSpaceInvaders()}}
+{\footnotesize\ttfamily void init\+Space\+Invaders (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI }\end{DoxyParamCaption})}
+
+
+
+initializes the variables contained in a Space\+Invaders struct 
+
+
+\begin{DoxyParams}{Parameters}
+{\em SI} & \+: the struct containing all the variables to initialize \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 111 of file spaceinvaders.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spaceinvaders_8h_a2be98a767fac8753a8c75e926030f11c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{spaceinvaders_8h_a2be98a767fac8753a8c75e926030f11c_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{spaceinvaders_8h_a45522f1b42ffdac3a44e19c9adf46c35}\label{spaceinvaders_8h_a45522f1b42ffdac3a44e19c9adf46c35}} 
 \index{spaceinvaders.h@{spaceinvaders.h}!initSpaceInvadersFigs@{initSpaceInvadersFigs}}
 \index{initSpaceInvadersFigs@{initSpaceInvadersFigs}!spaceinvaders.h@{spaceinvaders.h}}
@@ -57,10 +147,42 @@ Here is the call graph for this function\+:\nopagebreak
 \includegraphics[width=308pt]{spaceinvaders_8h_a45522f1b42ffdac3a44e19c9adf46c35_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{spaceinvaders_8h_a45522f1b42ffdac3a44e19c9adf46c35_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{spaceinvaders_8h_a1dad421af4a8916521afa23c1ab85134}\label{spaceinvaders_8h_a1dad421af4a8916521afa23c1ab85134}} 
+\index{spaceinvaders.h@{spaceinvaders.h}!invadersGeneration@{invadersGeneration}}
+\index{invadersGeneration@{invadersGeneration}!spaceinvaders.h@{spaceinvaders.h}}
+\doxysubsubsection{\texorpdfstring{invadersGeneration()}{invadersGeneration()}}
+{\footnotesize\ttfamily void invaders\+Generation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI,  }\item[{const unsigned \&}]{height,  }\item[{const unsigned \&}]{width }\end{DoxyParamCaption})}
+
+
+
+Adds invaders to the vector containing their pos until they fill their starting space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em SI} & \+: struct containing all useful variables (including the size of the invaders and a vector containing all invaders\textquotesingle{} positions) \\
+\hline
+{\em height} & \+: window\textquotesingle{}s height \\
+\hline
+{\em width} & \+: window\textquotesingle{}s width \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 151 of file spaceinvaders.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spaceinvaders_8h_a1dad421af4a8916521afa23c1ab85134_icgraph}
 \end{center}
 \end{figure}

@@ -1,9 +1,9 @@
 <map id="figure::Add" name="figure::Add">
-<area shape="rect" id="node1" title=" " alt="" coords="705,56,797,83"/>
-<area shape="rect" id="node2" href="$spaceinvaders_8h.html#a45522f1b42ffdac3a44e19c9adf46c35" title="Initializes the entities which contain the figures for MinGl." alt="" coords="493,5,657,32"/>
-<area shape="rect" id="node6" href="$classfigure.html#a293c165e85a1cbf300d2228e581a1b53" title=" " alt="" coords="511,56,640,83"/>
-<area shape="rect" id="node7" href="$classfigure.html#ae6bfe50cdd399f99235b9902b1aba57f" title=" " alt="" coords="509,107,642,133"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a2be98a767fac8753a8c75e926030f11c" title="initializes the variables contained in a SpaceInvaders struct" alt="" coords="307,5,445,32"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ad1883dd55c8b9fa49439a49a3e08cb24" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,5,259,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="621,56,713,83"/>
+<area shape="rect" id="node2" href="$spaceinvaders_8h.html#a45522f1b42ffdac3a44e19c9adf46c35" title="Initializes the entities which contain the figures for MinGl." alt="" coords="409,5,573,32"/>
+<area shape="rect" id="node6" href="$classfigure.html#a293c165e85a1cbf300d2228e581a1b53" title=" " alt="" coords="427,56,556,83"/>
+<area shape="rect" id="node7" href="$classfigure.html#ae6bfe50cdd399f99235b9902b1aba57f" title=" " alt="" coords="425,107,558,133"/>
+<area shape="rect" id="node3" href="$spaceinvaders_8h.html#a2be98a767fac8753a8c75e926030f11c" title="initializes the variables contained in a SpaceInvaders struct" alt="" coords="223,5,361,32"/>
+<area shape="rect" id="node4" href="$main_space_invaders_8h.html#a4fa2d58844efb7d9be2951633b85b060" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,5,175,32"/>
 <area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,5,60,32"/>
 </map>
