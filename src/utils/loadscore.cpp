@@ -2,7 +2,7 @@
 #include "scoresort.h"
 #include <fstream>
 #include <sstream>
-#include <algorithm>
+#include <cctype>
 
 using namespace std;
 

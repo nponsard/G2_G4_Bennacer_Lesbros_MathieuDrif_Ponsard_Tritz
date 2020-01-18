@@ -1,9 +1,9 @@
 #include "spaceinvaders.h"
-#include "entity.h"
-#include "minGL/figs/figure.h"
 #include "minGL/figs/rectangle.h"
 #include "minGL/figs/triangle.h"
-#include "minGL/figs/circle.h"
+
+#include "loadScores.h"
+#include "loadconfig.h"
 
 ///
 /// \brief Initializes the entities which contain the figures for MinGl
@@ -101,4 +101,89 @@ void initSpaceInvadersFigs(spaceInvaders &SI)
     SI.upgradeTypes.push_back(SI.lifeUpgrade.entityFig);
     SI.upgradeTypes.push_back(SI.shootSpeedUpgrade.entityFig);
     SI.upgradeTypes.push_back(SI.scoreUpgrade.entityFig);
+}
+
+///
+/// \brief initializes the variables contained in a SpaceInvaders struct
+/// \param SI : the struct containing all the variables to initialize
+///
+
+void initSpaceInvaders(spaceInvaders &SI)
+{
+    initSpaceInvadersFigs(SI);
+
+    std::map<std::string, std::string> conf(loadConfig("config.yaml"));
+    SI.bestScores = loadScores("scores.yaml");
+    SI.score = 0;
+
+    SI.invadersMaxVelocity = unsigned(stoul(conf["invadersMaxVelocity"]));
+    SI.invadersMinVelocity = unsigned(stoul(conf["invadersMinVelocity"]));
+    SI.invadersVelocity = SI.invadersMinVelocity;
+    SI.upgradeVelocity = unsigned(stoul(conf["upgradeVelocity"]));
+
+    SI.shot = std::chrono::duration<int, std::milli>(stoi(conf["shot"]));
+    SI.lastShot = std::chrono::steady_clock::now();
+
+    SI.invadersShot = std::chrono::duration<int, std::milli>(stoi(conf["invadersShot"]));
+    SI.invadersLastShot = std::chrono::steady_clock::now();
+
+    SI.bonusInvaders = std::chrono::duration<int, std::milli>(stoi(conf["bonusInvaders"]));
+    SI.bonusInvaderVelocityFactor = unsigned(stoul(conf["bonusInvaderVelocityFactor"]));
+    SI.LastBonusInvader = std::chrono::steady_clock::now();
+
+    SI.bonusInvaderPos = pos(unsigned(stoul(conf["bonusInvaderPosAbs"])), unsigned(stoul(conf["bonusInvaderPosOrd"])));
+    SI.playerPos = pos(unsigned(stoul(conf["playerPosAbs"])), unsigned(stoul(conf["playerPosOrd"]))); //placement intial joueur
+    SI.lives = unsigned(stoul(conf["lives"]));
+    SI.scoreForMissileDestruction = unsigned(stoul(conf["scoreForMissileDestruction"]));
+    SI.scoreStep = unsigned(stoul(conf["scoreStep"]));
+    SI.scoreStepBonusInvaders = unsigned(stoul(conf["scoreStepBonusInvaders"]));
+    SI.torpedoVelocity = unsigned(stoul(conf["torpedoVelocity"]));
+    SI.wave = unsigned(stoul(conf["wave"]));
+}
+
+///
+/// \brief Adds invaders to the vector containing their pos until they fill their starting space
+/// \param SI : struct containing all useful variables (including the size of the invaders and a vector containing all invaders' positions)
+/// \param height : window's height
+/// \param width : window's width
+///
+
+void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigned &width)
+{
+    SI.invadersPos.clear();
+    unsigned Xshift, Yshift(55);
+    for (unsigned i(0); i < (SI.wave - 1) % 4 + 1; ++i)
+    {
+        Xshift = 0;
+        while (Xshift + SI.invaders.entityWidth + (2 * SI.invaders.entityWidth) /*marge min*/ < width)
+        {
+            SI.invadersPos.push_back(std::make_pair(pos(Xshift, height - 200 - (Yshift * i)), (SI.wave - 1) / 4 + 1));
+            Xshift += 3 * SI.invaders.entityWidth; /*distance entre invaders*/
+        }
+    }
+}
+
+///
+/// \brief Tests if two entities collide
+/// \param entity1 : the position of the first entity
+/// \param entity2 : the position of the second entity
+/// \param height1 : the height of the first entity
+/// \param height2 : the height of the second entity
+/// \param width1 : the width of the first entity
+/// \param width2 : the width of the second entity
+/// \return returns true if the entities collide, else returns false
+///
+
+bool collisions(pos &entity1,
+                pos &entity2,
+                const unsigned &height1,
+                const unsigned &height2,
+                const unsigned &width1,
+                const unsigned &width2)
+{
+    if (entity1.getOrd() + height1 >= entity2.getOrd() && entity1.getOrd() <= entity2.getOrd() + height2)
+        if (entity1.getAbs() + width1 >= entity2.getAbs() && entity1.getAbs() <= entity2.getAbs() + width2)
+            return true;
+
+    return false;
 }

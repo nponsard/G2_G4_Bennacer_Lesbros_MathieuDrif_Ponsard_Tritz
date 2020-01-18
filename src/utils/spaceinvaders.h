@@ -8,9 +8,6 @@
 
 /*!
  * \brief struct containing every useful variable and the parameters used in the game
- * 
- * 
- * 
  */
 
 struct spaceInvaders
@@ -60,6 +57,10 @@ struct spaceInvaders
     std::vector<std::pair<pos, short>> UpgradePos;
     std::vector<figure> upgradeTypes;
 };
+
 void initSpaceInvadersFigs(spaceInvaders &SI);
+void initSpaceInvaders(spaceInvaders &SI);
+void invadersGeneration(spaceInvaders &SI, const unsigned &height, const unsigned &width);
+bool collisions(pos &entity1, pos &entity2, const unsigned &height1, const unsigned &height2, const unsigned &width1, const unsigned &width2);
 
 #endif // SPACEINVADERS_H
