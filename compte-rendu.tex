@@ -14,6 +14,7 @@ Hugo TRITZ \and BENNACER Chakib \and
 Raphaël LESBROS}
 \title{compte rendu projet cpp}
 \maketitle
+\paragraph{} Nous avons décidé de faire le jeu Space Invader en utilisant minGL pour le rendre plus agréable à jouer et pour qu'il ressemble plus au jeu original
 \section{Modifications de minGL}
 \paragraph{} Nous avons modifié le code source de minGL pour pouvoir faire un jeu interactif, ces modifications sont :
 \begin{itemize}
@@ -21,8 +22,8 @@ Raphaël LESBROS}
     \item Ajout de la fonction setBgColor permettant de changer la couleur d'arrière-plan .
     \item Modification de la gestion des touches pour savoir quelles touches sont pressées sans interompre l'éxécution du jeu.
     \item Modification de la gestion de l'affichage (updateGraphic et callDisplay) pour enlever un le clignotement du texte.
-    \item 
     \item Ajout de la ligne glutSetKeyRepeat(GLUT\_KEY\_REPEAT\_OFF) qui désactive la répétition de touches pour une meilleure navigation dans les menus.
+    \item Ajout de la fonction ResetKey() permettant de réinitialiser l'état de la touche à false (pas pressée)
 \end{itemize}
 
 
