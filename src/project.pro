@@ -4,6 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
+    mainSpaceInvaders.cpp \
     minGL/figs/basefig.cpp \
     minGL/figs/circle.cpp \
     minGL/figs/figure.cpp \
@@ -18,6 +19,8 @@ SOURCES += main.cpp \
     minGL/graph/iminglinjectable.cpp \
     minGL/tools/tools.cpp \
     minGL/tools/pixelexception.cpp \
+    utils/display.cpp \
+    utils/keyboardInput.cpp \
     utils/loadconfig.cpp \
     utils/loadscore.cpp \
     utils/savescores.cpp \
@@ -35,6 +38,7 @@ INCLUDEPATH += /usr/include/GL/
 QMAKE_CXXFLAGS += -Wall
 
 HEADERS += \
+    mainSpaceInvaders.h \
     minGL/figs/basefig.h \
     minGL/figs/circle.h \
     minGL/figs/figure.h \
@@ -51,9 +55,11 @@ HEADERS += \
     minGL/tools/CstCodErr.h \
     minGL/tools/IEditable.h \
     minGL/tools/IEditable.hxx \
+    utils/display.h \
     utils/entity.h \
     minGL/tools/myexception.h \
     minGL/tools/pixel.h \
+    utils/keyboardInput.h \
     utils/loadScores.h \
     utils/loadconfig.h \
     utils/savescores.h \

@@ -1,8 +1,8 @@
 <map id="pos::getAbs" name="pos::getAbs">
-<area shape="rect" id="node1" title=" " alt="" coords="601,56,700,83"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#aebcced80e93e3dcb361a32cbc6b0a302" title="Tests if two entities collide." alt="" coords="471,5,553,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a350e996a354865b6064bab50134646dc" title="Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets ..." alt="" coords="329,56,401,83"/>
-<area shape="rect" id="node6" href="$main_8cpp.html#ada592260988cd1e3144c6b2f883b1c50" title="Reads the keyboard inputs and move the player accordingly." alt="" coords="307,107,423,133"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ad1883dd55c8b9fa49439a49a3e08cb24" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,81,259,108"/>
+<area shape="rect" id="node1" title=" " alt="" coords="517,56,616,83"/>
+<area shape="rect" id="node2" href="$spaceinvaders_8h.html#aebcced80e93e3dcb361a32cbc6b0a302" title="Tests if two entities collide." alt="" coords="387,5,469,32"/>
+<area shape="rect" id="node3" href="$main_space_invaders_8h.html#a350e996a354865b6064bab50134646dc" title="Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets ..." alt="" coords="245,56,317,83"/>
+<area shape="rect" id="node6" href="$keyboard_input_8h.html#ada592260988cd1e3144c6b2f883b1c50" title="Reads the keyboard inputs and move the player accordingly." alt="" coords="223,107,339,133"/>
+<area shape="rect" id="node4" href="$main_space_invaders_8h.html#a4fa2d58844efb7d9be2951633b85b060" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,81,175,108"/>
 <area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,81,60,108"/>
 </map>

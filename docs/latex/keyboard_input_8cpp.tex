@@ -1,0 +1,58 @@
+\hypertarget{keyboard_input_8cpp}{}\doxysection{src/utils/keyboard\+Input.cpp File Reference}
+\label{keyboard_input_8cpp}\index{src/utils/keyboardInput.cpp@{src/utils/keyboardInput.cpp}}
+{\ttfamily \#include \char`\"{}utils/keyboard\+Input.\+h\char`\"{}}\newline
+Include dependency graph for keyboard\+Input.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_input_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{keyboard_input_8cpp_ada592260988cd1e3144c6b2f883b1c50}{Read\+Keyboard}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, bool \&pause)
+\begin{DoxyCompactList}\small\item\em Reads the keyboard inputs and move the player accordingly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{keyboard_input_8cpp_ada592260988cd1e3144c6b2f883b1c50}\label{keyboard_input_8cpp_ada592260988cd1e3144c6b2f883b1c50}} 
+\index{keyboardInput.cpp@{keyboardInput.cpp}!ReadKeyboard@{ReadKeyboard}}
+\index{ReadKeyboard@{ReadKeyboard}!keyboardInput.cpp@{keyboardInput.cpp}}
+\doxysubsubsection{\texorpdfstring{ReadKeyboard()}{ReadKeyboard()}}
+{\footnotesize\ttfamily void Read\+Keyboard (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{\mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI,  }\item[{bool \&}]{pause }\end{DoxyParamCaption})}
+
+
+
+Reads the keyboard inputs and move the player accordingly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: contains the inputs and the size of the window \\
+\hline
+{\em SI} & \+: struct containing all the useful variables (including the cooldown between shoots and the vector containing the player\textquotesingle{}s torpedo) \\
+\hline
+{\em pause} & \+: boolean which become true if the player press the escape button \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 12 of file keyboard\+Input.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{keyboard_input_8cpp_ada592260988cd1e3144c6b2f883b1c50_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{keyboard_input_8cpp_ada592260988cd1e3144c6b2f883b1c50_icgraph}
+\end{center}
+\end{figure}

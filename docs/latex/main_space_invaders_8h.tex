@@ -1,0 +1,108 @@
+\hypertarget{main_space_invaders_8h}{}\doxysection{src/main\+Space\+Invaders.h File Reference}
+\label{main_space_invaders_8h}\index{src/mainSpaceInvaders.h@{src/mainSpaceInvaders.h}}
+{\ttfamily \#include \char`\"{}min\+G\+L/graph/mingl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}utils/spaceinvaders.\+h\char`\"{}}\newline
+Include dependency graph for main\+Space\+Invaders.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_space_invaders_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{main_space_invaders_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_space_invaders_8h_a4fa2d58844efb7d9be2951633b85b060}{main\+SI}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window)
+\begin{DoxyCompactList}\small\item\em The main function of the game, which use the others to display the screen, get inputs ... and which manage the pause menu, the framerate, the success and defeat, the generation of the new waves, manage the highscore. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_space_invaders_8h_a350e996a354865b6064bab50134646dc}{process}} (\mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, const unsigned \&height, const unsigned \&width, bool \&i\+Loose, bool \&i\+Win)
+\begin{DoxyCompactList}\small\item\em Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets hit by a torpedo, kills the invaders touched by a player\textquotesingle{}s torpedo, removes the torpedoes if they leave the screen, moves the invaders (including the bonus invader) and make one of them choosen randomly shoot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_space_invaders_8h_a4fa2d58844efb7d9be2951633b85b060}\label{main_space_invaders_8h_a4fa2d58844efb7d9be2951633b85b060}} 
+\index{mainSpaceInvaders.h@{mainSpaceInvaders.h}!mainSI@{mainSI}}
+\index{mainSI@{mainSI}!mainSpaceInvaders.h@{mainSpaceInvaders.h}}
+\doxysubsubsection{\texorpdfstring{mainSI()}{mainSI()}}
+{\footnotesize\ttfamily void main\+SI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window }\end{DoxyParamCaption})}
+
+
+
+The main function of the game, which use the others to display the screen, get inputs ... and which manage the pause menu, the framerate, the success and defeat, the generation of the new waves, manage the highscore. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: the window on which everything will be displayed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 19 of file main\+Space\+Invaders.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_space_invaders_8h_a4fa2d58844efb7d9be2951633b85b060_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{main_space_invaders_8h_a4fa2d58844efb7d9be2951633b85b060_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_space_invaders_8h_a350e996a354865b6064bab50134646dc}\label{main_space_invaders_8h_a350e996a354865b6064bab50134646dc}} 
+\index{mainSpaceInvaders.h@{mainSpaceInvaders.h}!process@{process}}
+\index{process@{process}!mainSpaceInvaders.h@{mainSpaceInvaders.h}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily void process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI,  }\item[{const unsigned \&}]{height,  }\item[{const unsigned \&}]{width,  }\item[{bool \&}]{i\+Loose,  }\item[{bool \&}]{i\+Win }\end{DoxyParamCaption})}
+
+
+
+Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets hit by a torpedo, kills the invaders touched by a player\textquotesingle{}s torpedo, removes the torpedoes if they leave the screen, moves the invaders (including the bonus invader) and make one of them choosen randomly shoot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em SI} & \+: struct containing all the useful variables to be used and updated \\
+\hline
+{\em height} & \+: window\textquotesingle{}s height \\
+\hline
+{\em width} & \+: wind\+S\+I.\+invaders\+Pos.\+size()ow\textquotesingle{}s width \\
+\hline
+{\em i\+Loose} & \+: boolean which become true if the player lose its last life by being hit by an ennemy torpedo \\
+\hline
+{\em i\+Win} & \+: boolean which become true if there is no invader remaining in the wave \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 111 of file main\+Space\+Invaders.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{main_space_invaders_8h_a350e996a354865b6064bab50134646dc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{main_space_invaders_8h_a350e996a354865b6064bab50134646dc_icgraph}
+\end{center}
+\end{figure}

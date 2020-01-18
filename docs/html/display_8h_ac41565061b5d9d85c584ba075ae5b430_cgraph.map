@@ -1,0 +1,4 @@
+<map id="displaySpace" name="displaySpace">
+<area shape="rect" id="node1" title="displays the torpedos, the ennemies and the player on the screen" alt="" coords="5,5,113,32"/>
+<area shape="rect" id="node2" href="$display_8cpp.html#ad08634716e92a71688805904e5e4e4cb" title="displays a figure at each position contained in a vector of positions" alt="" coords="161,5,231,32"/>
+</map>

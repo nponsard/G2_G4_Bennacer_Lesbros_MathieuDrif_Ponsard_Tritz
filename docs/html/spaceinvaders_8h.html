@@ -133,9 +133,15 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="spaceinvaders_8h__dep__incl.png" border="0" usemap="#src_2utils_2spaceinvaders_8hdep" alt=""/></div>
 <map name="src_2utils_2spaceinvaders_8hdep" id="src_2utils_2spaceinvaders_8hdep">
-<area shape="rect" title=" " alt="" coords="55,5,237,32"/>
-<area shape="rect" href="main_8cpp.html" title="Main program." alt="" coords="5,80,111,107"/>
-<area shape="rect" href="spaceinvaders_8cpp.html" title=" " alt="" coords="135,80,333,107"/>
+<area shape="rect" title=" " alt="" coords="281,5,464,32"/>
+<area shape="rect" href="main_space_invaders_8h.html" title=" " alt="" coords="5,80,191,107"/>
+<area shape="rect" href="display_8h.html" title=" " alt="" coords="215,80,349,107"/>
+<area shape="rect" href="keyboard_input_8h.html" title=" " alt="" coords="373,80,556,107"/>
+<area shape="rect" href="spaceinvaders_8cpp.html" title=" " alt="" coords="580,80,779,107"/>
+<area shape="rect" href="main_8cpp.html" title="Main program." alt="" coords="37,155,143,181"/>
+<area shape="rect" href="main_space_invaders_8cpp.html" title=" " alt="" coords="166,155,366,181"/>
+<area shape="rect" href="display_8cpp.html" title=" " alt="" coords="390,155,539,181"/>
+<area shape="rect" href="keyboard_input_8cpp.html" title=" " alt="" coords="563,155,761,181"/>
 </map>
 </div>
 </div>
@@ -152,8 +158,159 @@ Functions</h2></td></tr>
 <tr class="memitem:a45522f1b42ffdac3a44e19c9adf46c35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spaceinvaders_8h.html#a45522f1b42ffdac3a44e19c9adf46c35">initSpaceInvadersFigs</a> (<a class="el" href="structspace_invaders.html">spaceInvaders</a> &amp;SI)</td></tr>
 <tr class="memdesc:a45522f1b42ffdac3a44e19c9adf46c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the entities which contain the figures for MinGl.  <a href="spaceinvaders_8h.html#a45522f1b42ffdac3a44e19c9adf46c35">More...</a><br /></td></tr>
 <tr class="separator:a45522f1b42ffdac3a44e19c9adf46c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2be98a767fac8753a8c75e926030f11c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spaceinvaders_8h.html#a2be98a767fac8753a8c75e926030f11c">initSpaceInvaders</a> (<a class="el" href="structspace_invaders.html">spaceInvaders</a> &amp;SI)</td></tr>
+<tr class="memdesc:a2be98a767fac8753a8c75e926030f11c"><td class="mdescLeft">&#160;</td><td class="mdescRight">initializes the variables contained in a SpaceInvaders struct  <a href="spaceinvaders_8h.html#a2be98a767fac8753a8c75e926030f11c">More...</a><br /></td></tr>
+<tr class="separator:a2be98a767fac8753a8c75e926030f11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dad421af4a8916521afa23c1ab85134"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spaceinvaders_8h.html#a1dad421af4a8916521afa23c1ab85134">invadersGeneration</a> (<a class="el" href="structspace_invaders.html">spaceInvaders</a> &amp;SI, const unsigned &amp;height, const unsigned &amp;width)</td></tr>
+<tr class="memdesc:a1dad421af4a8916521afa23c1ab85134"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds invaders to the vector containing their pos until they fill their starting space.  <a href="spaceinvaders_8h.html#a1dad421af4a8916521afa23c1ab85134">More...</a><br /></td></tr>
+<tr class="separator:a1dad421af4a8916521afa23c1ab85134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebcced80e93e3dcb361a32cbc6b0a302"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spaceinvaders_8h.html#aebcced80e93e3dcb361a32cbc6b0a302">collisions</a> (<a class="el" href="structpos.html">pos</a> &amp;entity1, <a class="el" href="structpos.html">pos</a> &amp;entity2, const unsigned &amp;height1, const unsigned &amp;height2, const unsigned &amp;width1, const unsigned &amp;width2)</td></tr>
+<tr class="memdesc:aebcced80e93e3dcb361a32cbc6b0a302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tests if two entities collide.  <a href="spaceinvaders_8h.html#aebcced80e93e3dcb361a32cbc6b0a302">More...</a><br /></td></tr>
+<tr class="separator:aebcced80e93e3dcb361a32cbc6b0a302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aebcced80e93e3dcb361a32cbc6b0a302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebcced80e93e3dcb361a32cbc6b0a302">&#9670;&nbsp;</a></span>collisions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool collisions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structpos.html">pos</a> &amp;&#160;</td>
+          <td class="paramname"><em>entity1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpos.html">pos</a> &amp;&#160;</td>
+          <td class="paramname"><em>entity2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
+          <td class="paramname"><em>height1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
+          <td class="paramname"><em>height2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
+          <td class="paramname"><em>width1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
+          <td class="paramname"><em>width2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tests if two entities collide. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">entity1</td><td>: the position of the first entity </td></tr>
+    <tr><td class="paramname">entity2</td><td>: the position of the second entity </td></tr>
+    <tr><td class="paramname">height1</td><td>: the height of the first entity </td></tr>
+    <tr><td class="paramname">height2</td><td>: the height of the second entity </td></tr>
+    <tr><td class="paramname">width1</td><td>: the width of the first entity </td></tr>
+    <tr><td class="paramname">width2</td><td>: the width of the second entity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns true if the entities collide, else returns false </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="spaceinvaders_8cpp_source.html#l00177">177</a> of file <a class="el" href="spaceinvaders_8cpp_source.html">spaceinvaders.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="spaceinvaders_8h_aebcced80e93e3dcb361a32cbc6b0a302_cgraph.png" border="0" usemap="#spaceinvaders_8h_aebcced80e93e3dcb361a32cbc6b0a302_cgraph" alt=""/></div>
+<map name="spaceinvaders_8h_aebcced80e93e3dcb361a32cbc6b0a302_cgraph" id="spaceinvaders_8h_aebcced80e93e3dcb361a32cbc6b0a302_cgraph">
+<area shape="rect" title="Tests if two entities collide." alt="" coords="5,31,88,57"/>
+<area shape="rect" href="structpos.html#aee6663c0d242807aa207918b050e9a2f" title=" " alt="" coords="136,5,235,32"/>
+<area shape="rect" href="structpos.html#ab910b01032e7fa33583352bdcf7685d8" title=" " alt="" coords="137,56,234,83"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="spaceinvaders_8h_aebcced80e93e3dcb361a32cbc6b0a302_icgraph.png" border="0" usemap="#spaceinvaders_8h_aebcced80e93e3dcb361a32cbc6b0a302_icgraph" alt=""/></div>
+<map name="spaceinvaders_8h_aebcced80e93e3dcb361a32cbc6b0a302_icgraph" id="spaceinvaders_8h_aebcced80e93e3dcb361a32cbc6b0a302_icgraph">
+<area shape="rect" title="Tests if two entities collide." alt="" coords="343,5,425,32"/>
+<area shape="rect" href="main_space_invaders_8h.html#a350e996a354865b6064bab50134646dc" title="Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets ..." alt="" coords="223,5,295,32"/>
+<area shape="rect" href="main_space_invaders_8h.html#a4fa2d58844efb7d9be2951633b85b060" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,5,175,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2be98a767fac8753a8c75e926030f11c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2be98a767fac8753a8c75e926030f11c">&#9670;&nbsp;</a></span>initSpaceInvaders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initSpaceInvaders </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structspace_invaders.html">spaceInvaders</a> &amp;&#160;</td>
+          <td class="paramname"><em>SI</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initializes the variables contained in a SpaceInvaders struct </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">SI</td><td>: the struct containing all the variables to initialize </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="spaceinvaders_8cpp_source.html#l00111">111</a> of file <a class="el" href="spaceinvaders_8cpp_source.html">spaceinvaders.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="spaceinvaders_8h_a2be98a767fac8753a8c75e926030f11c_cgraph.png" border="0" usemap="#spaceinvaders_8h_a2be98a767fac8753a8c75e926030f11c_cgraph" alt=""/></div>
+<map name="spaceinvaders_8h_a2be98a767fac8753a8c75e926030f11c_cgraph" id="spaceinvaders_8h_a2be98a767fac8753a8c75e926030f11c_cgraph">
+<area shape="rect" title="initializes the variables contained in a SpaceInvaders struct" alt="" coords="5,56,144,83"/>
+<area shape="rect" href="spaceinvaders_8cpp.html#a45522f1b42ffdac3a44e19c9adf46c35" title="Initializes the entities which contain the figures for MinGl." alt="" coords="192,5,356,32"/>
+<area shape="rect" href="loadconfig_8cpp.html#a329d1172504e8296ecc66570a2a019da" title="loads the config file" alt="" coords="229,56,319,83"/>
+<area shape="rect" href="loadscore_8cpp.html#ad975ce7fcccd7b848ad144b386e941c6" title="loads the scores containing in a file in a vector of pairs linking the names and the scores" alt="" coords="227,107,321,133"/>
+<area shape="rect" href="classfigure.html#a491aa40310e29bc8863661302b6bf063" title=" " alt="" coords="405,5,497,32"/>
+<area shape="rect" href="loadconfig_8cpp.html#a64b9b051eb5b61b57950a500c7742ae0" title="Creates the default config file." alt="" coords="404,56,497,83"/>
+<area shape="rect" href="scoresort_8cpp.html#aae114c09489147c07b30e5c9c617a659" title="Sorts all the scores contained in pairs of name &#45; score." alt="" coords="409,107,492,133"/>
+<area shape="rect" href="scoresort_8cpp.html#a9a321fef08f8312c5f75772f1d819176" title="Compares scores contained in the pairs of name &#45; score is used by the sort algorithm in the algorithm..." alt="" coords="545,107,635,133"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="spaceinvaders_8h_a2be98a767fac8753a8c75e926030f11c_icgraph.png" border="0" usemap="#spaceinvaders_8h_a2be98a767fac8753a8c75e926030f11c_icgraph" alt=""/></div>
+<map name="spaceinvaders_8h_a2be98a767fac8753a8c75e926030f11c_icgraph" id="spaceinvaders_8h_a2be98a767fac8753a8c75e926030f11c_icgraph">
+<area shape="rect" title="initializes the variables contained in a SpaceInvaders struct" alt="" coords="223,5,361,32"/>
+<area shape="rect" href="main_space_invaders_8h.html#a4fa2d58844efb7d9be2951633b85b060" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,5,175,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a45522f1b42ffdac3a44e19c9adf46c35"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a45522f1b42ffdac3a44e19c9adf46c35">&#9670;&nbsp;</a></span>initSpaceInvadersFigs()</h2>
 
@@ -193,9 +350,65 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="spaceinvaders_8h_a45522f1b42ffdac3a44e19c9adf46c35_icgraph.png" border="0" usemap="#spaceinvaders_8h_a45522f1b42ffdac3a44e19c9adf46c35_icgraph" alt=""/></div>
 <map name="spaceinvaders_8h_a45522f1b42ffdac3a44e19c9adf46c35_icgraph" id="spaceinvaders_8h_a45522f1b42ffdac3a44e19c9adf46c35_icgraph">
-<area shape="rect" title="Initializes the entities which contain the figures for MinGl." alt="" coords="493,5,657,32"/>
-<area shape="rect" href="main_8cpp.html#a2be98a767fac8753a8c75e926030f11c" title="initializes the variables contained in a SpaceInvaders struct" alt="" coords="307,5,445,32"/>
-<area shape="rect" href="main_8cpp.html#ad1883dd55c8b9fa49439a49a3e08cb24" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,5,259,32"/>
+<area shape="rect" title="Initializes the entities which contain the figures for MinGl." alt="" coords="409,5,573,32"/>
+<area shape="rect" href="spaceinvaders_8h.html#a2be98a767fac8753a8c75e926030f11c" title="initializes the variables contained in a SpaceInvaders struct" alt="" coords="223,5,361,32"/>
+<area shape="rect" href="main_space_invaders_8h.html#a4fa2d58844efb7d9be2951633b85b060" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,5,175,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1dad421af4a8916521afa23c1ab85134"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dad421af4a8916521afa23c1ab85134">&#9670;&nbsp;</a></span>invadersGeneration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void invadersGeneration </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structspace_invaders.html">spaceInvaders</a> &amp;&#160;</td>
+          <td class="paramname"><em>SI</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned &amp;&#160;</td>
+          <td class="paramname"><em>width</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds invaders to the vector containing their pos until they fill their starting space. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">SI</td><td>: struct containing all useful variables (including the size of the invaders and a vector containing all invaders' positions) </td></tr>
+    <tr><td class="paramname">height</td><td>: window's height </td></tr>
+    <tr><td class="paramname">width</td><td>: window's width </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="spaceinvaders_8cpp_source.html#l00151">151</a> of file <a class="el" href="spaceinvaders_8cpp_source.html">spaceinvaders.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="spaceinvaders_8h_a1dad421af4a8916521afa23c1ab85134_icgraph.png" border="0" usemap="#spaceinvaders_8h_a1dad421af4a8916521afa23c1ab85134_icgraph" alt=""/></div>
+<map name="spaceinvaders_8h_a1dad421af4a8916521afa23c1ab85134_icgraph" id="spaceinvaders_8h_a1dad421af4a8916521afa23c1ab85134_icgraph">
+<area shape="rect" title="Adds invaders to the vector containing their pos until they fill their starting space." alt="" coords="223,5,373,32"/>
+<area shape="rect" href="main_space_invaders_8h.html#a4fa2d58844efb7d9be2951633b85b060" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,5,175,32"/>
 <area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,5,60,32"/>
 </map>
 </div>

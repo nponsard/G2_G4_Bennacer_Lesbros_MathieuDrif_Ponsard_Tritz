@@ -1,0 +1,191 @@
+\hypertarget{display_8h}{}\doxysection{src/utils/display.h File Reference}
+\label{display_8h}\index{src/utils/display.h@{src/utils/display.h}}
+{\ttfamily \#include \char`\"{}min\+G\+L/graph/mingl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spaceinvaders.\+h\char`\"{}}\newline
+Include dependency graph for display.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{display_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{display_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{display_8h_a804db639e23e78ad8462273f02538703}{display}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const std\+::vector$<$ \mbox{\hyperlink{structpos}{pos}} $>$ \&positions, const \mbox{\hyperlink{classfigure}{figure}} \&fig)
+\item 
+void \mbox{\hyperlink{display_8h_a01a4aa93fd70168692d47ab3b3f03725}{display}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structpos}{pos}}, short $>$$>$ \&upgrades, const std\+::vector$<$ \mbox{\hyperlink{classfigure}{figure}} $>$ \&figures)
+\item 
+void \mbox{\hyperlink{display_8h_aa3b736c3b997999ced1a29e5676d7e95}{display}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structpos}{pos}}, unsigned $>$$>$ \&positions, const \mbox{\hyperlink{classfigure}{figure}} \&fig)
+\item 
+void \mbox{\hyperlink{display_8h_ac41565061b5d9d85c584ba075ae5b430}{display\+Space}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
+\begin{DoxyCompactList}\small\item\em displays the torpedos, the ennemies and the player on the screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_a7fcb65b94fa3f9bee7ac989396d834ae}{display\+H\+UD}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
+\begin{DoxyCompactList}\small\item\em displays spaces which will be filled with text on the screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8h_ad7204fff1f31826ccb9b3165f4be92aa}{fill\+H\+UD}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
+\begin{DoxyCompactList}\small\item\em displays text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen \end{DoxyCompactList}\item 
+\mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \mbox{\hyperlink{display_8h_adac3d533ac74b2fe0037ebf3bd7dccd2}{Space\+Invaders\+Menu}} (const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, \mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const std\+::chrono\+::duration$<$ double, std\+::milli $>$ frame\+Duration)
+\item 
+void \mbox{\hyperlink{display_8h_a11329b7ad7b79a54908b705880a6fc93}{S\+Ipause}} (const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, \mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const std\+::chrono\+::duration$<$ double, std\+::milli $>$ frame\+Duration, bool \&i\+Loose, bool \&playmusic)
+\item 
+std\+::string \mbox{\hyperlink{display_8h_a43d285d79eacf7c555ccef4ac1cf0351}{Read\+Name}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const std\+::chrono\+::duration$<$ double, std\+::milli $>$ frame\+Duration, const unsigned \&nb\+Char\+Max=3)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{display_8h_a804db639e23e78ad8462273f02538703}\label{display_8h_a804db639e23e78ad8462273f02538703}} 
+\index{display.h@{display.h}!display@{display}}
+\index{display@{display}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{structpos}{pos}} $>$ \&}]{positions,  }\item[{const \mbox{\hyperlink{classfigure}{figure}} \&}]{fig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{display_8h_a01a4aa93fd70168692d47ab3b3f03725}\label{display_8h_a01a4aa93fd70168692d47ab3b3f03725}} 
+\index{display.h@{display.h}!display@{display}}
+\index{display@{display}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structpos}{pos}}, short $>$$>$ \&}]{upgrades,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classfigure}{figure}} $>$ \&}]{figures }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{display_8h_aa3b736c3b997999ced1a29e5676d7e95}\label{display_8h_aa3b736c3b997999ced1a29e5676d7e95}} 
+\index{display.h@{display.h}!display@{display}}
+\index{display@{display}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structpos}{pos}}, unsigned $>$$>$ \&}]{positions,  }\item[{const \mbox{\hyperlink{classfigure}{figure}} \&}]{fig }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{display_8h_a7fcb65b94fa3f9bee7ac989396d834ae}\label{display_8h_a7fcb65b94fa3f9bee7ac989396d834ae}} 
+\index{display.h@{display.h}!displayHUD@{displayHUD}}
+\index{displayHUD@{displayHUD}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{displayHUD()}{displayHUD()}}
+{\footnotesize\ttfamily void display\+H\+UD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI }\end{DoxyParamCaption})}
+
+
+
+displays spaces which will be filled with text on the screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: window on which the H\+UD will be printed \\
+\hline
+{\em SI} & \+: struct containing all the useful variables (including the picture of the player, used to show the lifes remaining) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 77 of file display.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{display_8h_a7fcb65b94fa3f9bee7ac989396d834ae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{display_8h_a7fcb65b94fa3f9bee7ac989396d834ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{display_8h_ac41565061b5d9d85c584ba075ae5b430}\label{display_8h_ac41565061b5d9d85c584ba075ae5b430}} 
+\index{display.h@{display.h}!displaySpace@{displaySpace}}
+\index{displaySpace@{displaySpace}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{displaySpace()}{displaySpace()}}
+{\footnotesize\ttfamily void display\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI }\end{DoxyParamCaption})}
+
+
+
+displays the torpedos, the ennemies and the player on the screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: the window on which the pictures are printed \\
+\hline
+{\em SI} & \+: the struct containing all the useful variables (including the positions of the torpedoes, the ennemies and the player) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 59 of file display.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{display_8h_ac41565061b5d9d85c584ba075ae5b430_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{display_8h_ac41565061b5d9d85c584ba075ae5b430_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{display_8h_ad7204fff1f31826ccb9b3165f4be92aa}\label{display_8h_ad7204fff1f31826ccb9b3165f4be92aa}} 
+\index{display.h@{display.h}!fillHUD@{fillHUD}}
+\index{fillHUD@{fillHUD}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{fillHUD()}{fillHUD()}}
+{\footnotesize\ttfamily void fill\+H\+UD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI }\end{DoxyParamCaption})}
+
+
+
+displays text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: window on which the texte will be printed \\
+\hline
+{\em SI} & \+: struct containing all the useful variables (including the wave number, the score, the lives remaining and the number of invaders alive) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 90 of file display.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{display_8h_ad7204fff1f31826ccb9b3165f4be92aa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{display_8h_ad7204fff1f31826ccb9b3165f4be92aa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{display_8h_a43d285d79eacf7c555ccef4ac1cf0351}\label{display_8h_a43d285d79eacf7c555ccef4ac1cf0351}} 
+\index{display.h@{display.h}!ReadName@{ReadName}}
+\index{ReadName@{ReadName}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{ReadName()}{ReadName()}}
+{\footnotesize\ttfamily std\+::string Read\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const std\+::chrono\+::duration$<$ double, std\+::milli $>$}]{frame\+Duration,  }\item[{const unsigned \&}]{nb\+Char\+Max = {\ttfamily 3} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{display_8h_a11329b7ad7b79a54908b705880a6fc93}\label{display_8h_a11329b7ad7b79a54908b705880a6fc93}} 
+\index{display.h@{display.h}!SIpause@{SIpause}}
+\index{SIpause@{SIpause}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{SIpause()}{SIpause()}}
+{\footnotesize\ttfamily void S\+Ipause (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI,  }\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const std\+::chrono\+::duration$<$ double, std\+::milli $>$}]{frame\+Duration,  }\item[{bool \&}]{i\+Loose,  }\item[{bool \&}]{playmusic }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{display_8h_adac3d533ac74b2fe0037ebf3bd7dccd2}\label{display_8h_adac3d533ac74b2fe0037ebf3bd7dccd2}} 
+\index{display.h@{display.h}!SpaceInvadersMenu@{SpaceInvadersMenu}}
+\index{SpaceInvadersMenu@{SpaceInvadersMenu}!display.h@{display.h}}
+\doxysubsubsection{\texorpdfstring{SpaceInvadersMenu()}{SpaceInvadersMenu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} Space\+Invaders\+Menu (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI,  }\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const std\+::chrono\+::duration$<$ double, std\+::milli $>$}]{frame\+Duration }\end{DoxyParamCaption})}
+

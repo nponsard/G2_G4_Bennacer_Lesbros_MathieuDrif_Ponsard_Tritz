@@ -1,0 +1,4 @@
+<map id="mainSI" name="mainSI">
+<area shape="rect" id="node1" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,5,175,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,5,60,32"/>
+</map>

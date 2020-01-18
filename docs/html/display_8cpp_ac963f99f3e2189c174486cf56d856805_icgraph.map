@@ -1,0 +1,5 @@
+<map id="ReadName" name="ReadName">
+<area shape="rect" id="node1" title="Displays the screen in which the player can enter his name if he did a new highscore,..." alt="" coords="223,5,317,32"/>
+<area shape="rect" id="node2" href="$main_space_invaders_8h.html#a4fa2d58844efb7d9be2951633b85b060" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,5,175,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,5,60,32"/>
+</map>

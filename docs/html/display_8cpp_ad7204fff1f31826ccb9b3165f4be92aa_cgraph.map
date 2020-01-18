@@ -1,0 +1,6 @@
+<map id="fillHUD" name="fillHUD">
+<area shape="rect" id="node1" title="displays text to show the score, the lives remaining, the wave number and the number of invaders rema..." alt="" coords="5,56,73,83"/>
+<area shape="rect" id="node2" href="$classmin_g_l.html#a4fe4d62f6c9f623e83b3a9d173d55587" title="draw text to the screen" alt="" coords="142,5,289,32"/>
+<area shape="rect" id="node3" href="$classmin_g_l.html#a4825c324a765ab4e88f1251b56a632ba" title=" " alt="" coords="121,56,309,83"/>
+<area shape="rect" id="node4" href="$classmin_g_l.html#aeacac18399d4e02212d5632d889e8a10" title=" " alt="" coords="124,107,307,133"/>
+</map>

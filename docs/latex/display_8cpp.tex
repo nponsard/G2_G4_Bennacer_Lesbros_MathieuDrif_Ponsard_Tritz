@@ -1,0 +1,352 @@
+\hypertarget{display_8cpp}{}\doxysection{src/utils/display.cpp File Reference}
+\label{display_8cpp}\index{src/utils/display.cpp@{src/utils/display.cpp}}
+{\ttfamily \#include \char`\"{}display.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}min\+G\+L/graph/pos.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}min\+G\+L/figs/rectangle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}min\+G\+L/figs/figure.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}music.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}keyboard\+Input.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+Include dependency graph for display.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{display_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{display_8cpp_ad08634716e92a71688805904e5e4e4cb}{display}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const vector$<$ \mbox{\hyperlink{structpos}{pos}} $>$ \&positions, const \mbox{\hyperlink{classfigure}{figure}} \&fig)
+\begin{DoxyCompactList}\small\item\em displays a figure at each position contained in a vector of positions \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8cpp_ac109063b2e637b456f78e050c7f4ec75}{display}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const vector$<$ pair$<$ \mbox{\hyperlink{structpos}{pos}}, short $>$$>$ \&upgrades, const vector$<$ \mbox{\hyperlink{classfigure}{figure}} $>$ \&figures)
+\begin{DoxyCompactList}\small\item\em displays a figure at each position contained in a vector of pairs containing positions and the type of the upgrade(only works for the upgrades) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8cpp_a5c4956dfe5ed355504c40686530ab9c3}{display}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const vector$<$ pair$<$ \mbox{\hyperlink{structpos}{pos}}, unsigned $>$$>$ \&positions, const \mbox{\hyperlink{classfigure}{figure}} \&fig)
+\begin{DoxyCompactList}\small\item\em displays a figure at each position contained in a vector of pairs containing positions (only works for the invaders) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8cpp_ac41565061b5d9d85c584ba075ae5b430}{display\+Space}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
+\begin{DoxyCompactList}\small\item\em displays the torpedos, the ennemies and the player on the screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8cpp_a7fcb65b94fa3f9bee7ac989396d834ae}{display\+H\+UD}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
+\begin{DoxyCompactList}\small\item\em displays spaces which will be filled with text on the screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8cpp_ad7204fff1f31826ccb9b3165f4be92aa}{fill\+H\+UD}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI)
+\begin{DoxyCompactList}\small\item\em displays text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen \end{DoxyCompactList}\item 
+\mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \mbox{\hyperlink{display_8cpp_acb09fd5530dac6cdb8a763af79e1ebc4}{Space\+Invaders\+Menu}} (const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, \mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const chrono\+::duration$<$ double, milli $>$ frame\+Duration)
+\begin{DoxyCompactList}\small\item\em Displays the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{display_8cpp_a6f6eb5db37f7b274c9373c72a7d58d23}{S\+Ipause}} (const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&SI, \mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const chrono\+::duration$<$ double, milli $>$ frame\+Duration, bool \&i\+Loose, bool \&playmusic)
+\begin{DoxyCompactList}\small\item\em Displays the pause screen and check if the player press Enter to leave the pause. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{display_8cpp_ac963f99f3e2189c174486cf56d856805}{Read\+Name}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&window, const chrono\+::duration$<$ double, milli $>$ frame\+Duration, const unsigned \&nb\+Char\+Max)
+\begin{DoxyCompactList}\small\item\em Displays the screen in which the player can enter his name if he did a new highscore, and read the keyboard input to allow him to enter his name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{display_8cpp_ac109063b2e637b456f78e050c7f4ec75}\label{display_8cpp_ac109063b2e637b456f78e050c7f4ec75}} 
+\index{display.cpp@{display.cpp}!display@{display}}
+\index{display@{display}!display.cpp@{display.cpp}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const vector$<$ pair$<$ \mbox{\hyperlink{structpos}{pos}}, short $>$$>$ \&}]{upgrades,  }\item[{const vector$<$ \mbox{\hyperlink{classfigure}{figure}} $>$ \&}]{figures }\end{DoxyParamCaption})}
+
+
+
+displays a figure at each position contained in a vector of pairs containing positions and the type of the upgrade(only works for the upgrades) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: window on which the pictures are printed \\
+\hline
+{\em upgrades} & \+: vector pairs containing the positions where the picture must be displayed \\
+\hline
+{\em figures} & \+: vector of figures to be displayed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 34 of file display.\+cpp.
+
+\mbox{\Hypertarget{display_8cpp_a5c4956dfe5ed355504c40686530ab9c3}\label{display_8cpp_a5c4956dfe5ed355504c40686530ab9c3}} 
+\index{display.cpp@{display.cpp}!display@{display}}
+\index{display@{display}!display.cpp@{display.cpp}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const vector$<$ pair$<$ \mbox{\hyperlink{structpos}{pos}}, unsigned $>$$>$ \&}]{positions,  }\item[{const \mbox{\hyperlink{classfigure}{figure}} \&}]{fig }\end{DoxyParamCaption})}
+
+
+
+displays a figure at each position contained in a vector of pairs containing positions (only works for the invaders) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: window on which the pictures are printed \\
+\hline
+{\em positions} & \+: vector of pairs containig the positions where the picture must be displayed \\
+\hline
+{\em fig} & \+: figure to be displayed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file display.\+cpp.
+
+\mbox{\Hypertarget{display_8cpp_ad08634716e92a71688805904e5e4e4cb}\label{display_8cpp_ad08634716e92a71688805904e5e4e4cb}} 
+\index{display.cpp@{display.cpp}!display@{display}}
+\index{display@{display}!display.cpp@{display.cpp}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void display (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const vector$<$ \mbox{\hyperlink{structpos}{pos}} $>$ \&}]{positions,  }\item[{const \mbox{\hyperlink{classfigure}{figure}} \&}]{fig }\end{DoxyParamCaption})}
+
+
+
+displays a figure at each position contained in a vector of positions 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: window on which the pictures are printed \\
+\hline
+{\em positions} & \+: vector of positions where the picture must be displayed \\
+\hline
+{\em fig} & \+: figure to be displayed \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 21 of file display.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{display_8cpp_ad08634716e92a71688805904e5e4e4cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{display_8cpp_a7fcb65b94fa3f9bee7ac989396d834ae}\label{display_8cpp_a7fcb65b94fa3f9bee7ac989396d834ae}} 
+\index{display.cpp@{display.cpp}!displayHUD@{displayHUD}}
+\index{displayHUD@{displayHUD}!display.cpp@{display.cpp}}
+\doxysubsubsection{\texorpdfstring{displayHUD()}{displayHUD()}}
+{\footnotesize\ttfamily void display\+H\+UD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI }\end{DoxyParamCaption})}
+
+
+
+displays spaces which will be filled with text on the screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: window on which the H\+UD will be printed \\
+\hline
+{\em SI} & \+: struct containing all the useful variables (including the picture of the player, used to show the lifes remaining) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 77 of file display.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{display_8cpp_a7fcb65b94fa3f9bee7ac989396d834ae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{display_8cpp_a7fcb65b94fa3f9bee7ac989396d834ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{display_8cpp_ac41565061b5d9d85c584ba075ae5b430}\label{display_8cpp_ac41565061b5d9d85c584ba075ae5b430}} 
+\index{display.cpp@{display.cpp}!displaySpace@{displaySpace}}
+\index{displaySpace@{displaySpace}!display.cpp@{display.cpp}}
+\doxysubsubsection{\texorpdfstring{displaySpace()}{displaySpace()}}
+{\footnotesize\ttfamily void display\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI }\end{DoxyParamCaption})}
+
+
+
+displays the torpedos, the ennemies and the player on the screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: the window on which the pictures are printed \\
+\hline
+{\em SI} & \+: the struct containing all the useful variables (including the positions of the torpedoes, the ennemies and the player) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 59 of file display.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{display_8cpp_ac41565061b5d9d85c584ba075ae5b430_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{display_8cpp_ac41565061b5d9d85c584ba075ae5b430_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{display_8cpp_ad7204fff1f31826ccb9b3165f4be92aa}\label{display_8cpp_ad7204fff1f31826ccb9b3165f4be92aa}} 
+\index{display.cpp@{display.cpp}!fillHUD@{fillHUD}}
+\index{fillHUD@{fillHUD}!display.cpp@{display.cpp}}
+\doxysubsubsection{\texorpdfstring{fillHUD()}{fillHUD()}}
+{\footnotesize\ttfamily void fill\+H\+UD (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI }\end{DoxyParamCaption})}
+
+
+
+displays text to show the score, the lives remaining, the wave number and the number of invaders remaining on the screen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: window on which the texte will be printed \\
+\hline
+{\em SI} & \+: struct containing all the useful variables (including the wave number, the score, the lives remaining and the number of invaders alive) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 90 of file display.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{display_8cpp_ad7204fff1f31826ccb9b3165f4be92aa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{display_8cpp_ad7204fff1f31826ccb9b3165f4be92aa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{display_8cpp_ac963f99f3e2189c174486cf56d856805}\label{display_8cpp_ac963f99f3e2189c174486cf56d856805}} 
+\index{display.cpp@{display.cpp}!ReadName@{ReadName}}
+\index{ReadName@{ReadName}!display.cpp@{display.cpp}}
+\doxysubsubsection{\texorpdfstring{ReadName()}{ReadName()}}
+{\footnotesize\ttfamily string Read\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const chrono\+::duration$<$ double, milli $>$}]{frame\+Duration,  }\item[{const unsigned \&}]{nb\+Char\+Max }\end{DoxyParamCaption})}
+
+
+
+Displays the screen in which the player can enter his name if he did a new highscore, and read the keyboard input to allow him to enter his name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & \+: window on which the input screen will be displayed, and contain the informations about the keyboard inputs \\
+\hline
+{\em frame\+Duration} & \+: time between each frame \\
+\hline
+{\em nb\+Char\+Max} & \+: the maximum size of the name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns a string corresponding to the name input 
+\end{DoxyReturn}
+
+
+Definition at line 232 of file display.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{display_8cpp_ac963f99f3e2189c174486cf56d856805_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{display_8cpp_ac963f99f3e2189c174486cf56d856805_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{display_8cpp_a6f6eb5db37f7b274c9373c72a7d58d23}\label{display_8cpp_a6f6eb5db37f7b274c9373c72a7d58d23}} 
+\index{display.cpp@{display.cpp}!SIpause@{SIpause}}
+\index{SIpause@{SIpause}!display.cpp@{display.cpp}}
+\doxysubsubsection{\texorpdfstring{SIpause()}{SIpause()}}
+{\footnotesize\ttfamily void S\+Ipause (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI,  }\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const chrono\+::duration$<$ double, milli $>$}]{frame\+Duration,  }\item[{bool \&}]{i\+Loose,  }\item[{bool \&}]{playmusic }\end{DoxyParamCaption})}
+
+
+
+Displays the pause screen and check if the player press Enter to leave the pause. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em SI} & \+: the struct containing all the useful variables (including the player\textquotesingle{}s picture and his score) \\
+\hline
+{\em window} & \+: the window on which the pause screen will be printed \\
+\hline
+{\em frame\+Duration} & \+: the time between each frame \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 175 of file display.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{display_8cpp_a6f6eb5db37f7b274c9373c72a7d58d23_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{display_8cpp_a6f6eb5db37f7b274c9373c72a7d58d23_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{display_8cpp_acb09fd5530dac6cdb8a763af79e1ebc4}\label{display_8cpp_acb09fd5530dac6cdb8a763af79e1ebc4}} 
+\index{display.cpp@{display.cpp}!SpaceInvadersMenu@{SpaceInvadersMenu}}
+\index{SpaceInvadersMenu@{SpaceInvadersMenu}!display.cpp@{display.cpp}}
+\doxysubsubsection{\texorpdfstring{SpaceInvadersMenu()}{SpaceInvadersMenu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} Space\+Invaders\+Menu (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structspace_invaders}{space\+Invaders}} \&}]{SI,  }\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{window,  }\item[{const chrono\+::duration$<$ double, milli $>$}]{frame\+Duration }\end{DoxyParamCaption})}
+
+
+
+Displays the menu screen and get the keyboard inputs to leave the pause screen if enter is pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em SI} & \+: struct containing all the useful variables (including the invader\textquotesingle{}s picture and his score) \\
+\hline
+{\em window} & \+: window on which the menu screen will be printed \\
+\hline
+{\em frame\+Duration} & \+: time between each frame \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns the key pressed if it is Enter (which will begin the game) or Escape (which will leave the game) 
+\end{DoxyReturn}
+
+
+Definition at line 112 of file display.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{display_8cpp_acb09fd5530dac6cdb8a763af79e1ebc4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{display_8cpp_acb09fd5530dac6cdb8a763af79e1ebc4_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,7 @@
+<map id="KEY_SPACE" name="KEY_SPACE">
+<area shape="rect" id="node1" title=" " alt="" coords="387,31,481,57"/>
+<area shape="rect" id="node2" href="$keyboard_input_8h.html#ada592260988cd1e3144c6b2f883b1c50" title="Reads the keyboard inputs and move the player accordingly." alt="" coords="223,5,339,32"/>
+<area shape="rect" id="node5" href="$display_8cpp.html#a6f6eb5db37f7b274c9373c72a7d58d23" title="Displays the pause screen and check if the player press Enter to leave the pause." alt="" coords="244,56,317,83"/>
+<area shape="rect" id="node3" href="$main_space_invaders_8h.html#a4fa2d58844efb7d9be2951633b85b060" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,31,175,57"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,31,60,57"/>
+</map>

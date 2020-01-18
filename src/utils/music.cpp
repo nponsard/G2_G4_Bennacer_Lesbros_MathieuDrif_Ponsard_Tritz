@@ -1,5 +1,5 @@
-#include "stdlib.h"
 #include "utils/music.h"
+#include "cstdlib"
 
 ///
 /// \brief starts the music

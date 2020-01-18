@@ -1,0 +1,10 @@
+<map id="initSpaceInvaders" name="initSpaceInvaders">
+<area shape="rect" id="node1" title="initializes the variables contained in a SpaceInvaders struct" alt="" coords="5,56,144,83"/>
+<area shape="rect" id="node2" href="$spaceinvaders_8cpp.html#a45522f1b42ffdac3a44e19c9adf46c35" title="Initializes the entities which contain the figures for MinGl." alt="" coords="192,5,356,32"/>
+<area shape="rect" id="node4" href="$loadconfig_8cpp.html#a329d1172504e8296ecc66570a2a019da" title="loads the config file" alt="" coords="229,56,319,83"/>
+<area shape="rect" id="node6" href="$loadscore_8cpp.html#ad975ce7fcccd7b848ad144b386e941c6" title="loads the scores containing in a file in a vector of pairs linking the names and the scores" alt="" coords="227,107,321,133"/>
+<area shape="rect" id="node3" href="$classfigure.html#a491aa40310e29bc8863661302b6bf063" title=" " alt="" coords="405,5,497,32"/>
+<area shape="rect" id="node5" href="$loadconfig_8cpp.html#a64b9b051eb5b61b57950a500c7742ae0" title="Creates the default config file." alt="" coords="404,56,497,83"/>
+<area shape="rect" id="node7" href="$scoresort_8cpp.html#aae114c09489147c07b30e5c9c617a659" title="Sorts all the scores contained in pairs of name &#45; score." alt="" coords="409,107,492,133"/>
+<area shape="rect" id="node8" href="$scoresort_8cpp.html#a9a321fef08f8312c5f75772f1d819176" title="Compares scores contained in the pairs of name &#45; score is used by the sort algorithm in the algorithm..." alt="" coords="545,107,635,133"/>
+</map>
