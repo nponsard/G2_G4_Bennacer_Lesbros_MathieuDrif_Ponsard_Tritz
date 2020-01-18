@@ -1,5 +1,6 @@
 #include "freeglut.h"
 #include <ctime>
+#include <cstdlib>
 
 #include "utils/music.h"
 
