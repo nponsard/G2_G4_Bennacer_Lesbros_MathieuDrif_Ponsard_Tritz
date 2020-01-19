@@ -135,7 +135,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                             {
                                 std::pair<pos, short> upgrade;
                                 upgrade.first = itInvadersPos->first + pos(SI.invaders.entityWidth / 2, SI.invaders.entityHeight / 2) + pos(-15, -15);
-                                upgrade.second = rand() % SI.upgrades.entityFigs.size();
+                                upgrade.second = rand() % SI.upgradeTypes.size();
                                 SI.UpgradePos.push_back(upgrade);
                             }
                             SI.invadersPos.erase(itInvadersPos);
@@ -164,7 +164,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                         {
                             std::pair<pos, short> upgrade;
                             upgrade.first = SI.bonusInvaderPos + pos(SI.bonusInvader.entityWidth / 2, SI.bonusInvader.entityHeight / 2) + pos(-15, -15);
-                            upgrade.second = rand() % SI.upgrades.entityFigs.size();
+                            upgrade.second = rand() % SI.upgradeTypes.size();
                             SI.UpgradePos.push_back(upgrade);
                             SI.playerTorpedoPos.erase(it);
                             system("aplay -q '../ressources/bonusInvaderDeath.wav' &");
@@ -240,7 +240,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
             if (itupgrade->first.getOrd() > 1)
             {
                 itupgrade->first = pos(itupgrade->first.getAbs(), itupgrade->first.getOrd() - 1);                                                                               //déplacement
-                collision = collisions(itupgrade->first, SI.playerPos, SI.upgrades.entityHeight, SI.player.entityHeight, SI.upgrades.entityWidth, SI.player.entityWidth); //collision avec le joueur, on utilise lifeUpgrade pour la collision de base
+                collision = collisions(itupgrade->first, SI.playerPos, SI.lifeUpgrade.entityHeight, SI.player.entityHeight, SI.lifeUpgrade.entityWidth, SI.player.entityWidth); //collision avec le joueur, on utilise lifeUpgrade pour la collision de base
                 if (collision)
                 {
                     if (itupgrade->second == 0)
