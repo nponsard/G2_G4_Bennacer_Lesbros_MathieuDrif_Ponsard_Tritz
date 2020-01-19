@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "AuthorizedKey", "struct_authorized_key.html", null ],
+    [ "BonusEntity", "struct_bonus_entity.html", null ],
     [ "circle", "classcircle.html", null ],
     [ "entity", "structentity.html", null ],
     [ "exception", null, [

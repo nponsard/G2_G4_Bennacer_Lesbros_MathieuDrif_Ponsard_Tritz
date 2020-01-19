@@ -1,0 +1,7 @@
+<map id="Bwaaah.items.Consommable" name="Bwaaah.items.Consommable">
+<area shape="rect" id="node1" title=" " alt="" coords="178,80,391,107"/>
+<area shape="rect" id="node3" href="$class_bwaaah_1_1items_1_1_apple.html" title=" " alt="" coords="5,155,161,181"/>
+<area shape="rect" id="node4" href="$class_bwaaah_1_1items_1_1_half_coconut.html" title=" " alt="" coords="185,155,384,181"/>
+<area shape="rect" id="node5" href="$class_bwaaah_1_1items_1_1_pompot.html" title=" " alt="" coords="408,155,577,181"/>
+<area shape="rect" id="node2" href="$class_bwaaah_1_1items_1_1_item.html" title=" " alt="" coords="210,5,359,32"/>
+</map>

@@ -1,0 +1,283 @@
+\hypertarget{structu_w_s_1_1_http_response}{}\doxysection{u\+WS\+::Http\+Response Struct Reference}
+\label{structu_w_s_1_1_http_response}\index{uWS::HttpResponse@{uWS::HttpResponse}}
+
+
+{\ttfamily \#include $<$H\+T\+T\+P\+Socket.\+h$>$}
+
+
+
+Collaboration diagram for u\+WS\+::Http\+Response\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{structu_w_s_1_1_http_response__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_http_response_a54fd997d585c3375f8685c4cee6a9201}{Http\+Response}} (\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ true $>$ $\ast$\mbox{\hyperlink{structu_w_s_1_1_http_response_a2b646698754c897e317ce8224547f78b}{http\+Socket}})
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_http_response_abced9674518797380531fe48e43c6b3e}{free\+Response}} (\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ true $>$ $\ast$http\+Data)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_http_response_a779902867cf190accb33620647ac173b}{write}} (const char $\ast$message, size\+\_\+t length=0, void($\ast$callback)(void $\ast$\mbox{\hyperlink{structu_w_s_1_1_http_response_a2b646698754c897e317ce8224547f78b}{http\+Socket}}, void $\ast$data, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$reserved)=nullptr, void $\ast$callback\+Data=nullptr)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_http_response_a434d39052975ed297c873f8bb5917620}{end}} (const char $\ast$message=nullptr, size\+\_\+t length=0, void($\ast$callback)(void $\ast$http\+Response, void $\ast$data, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$reserved)=nullptr, void $\ast$callback\+Data=nullptr)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_http_response_ae63909578b423ce1ead51da1803ad314}{set\+User\+Data}} (void $\ast$\mbox{\hyperlink{structu_w_s_1_1_http_response_afb153a7132316c899f374ad8012ddb3d}{user\+Data}})
+\item 
+void $\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_response_aeced16ea15e520b212ee3ac3674d83d0}{get\+User\+Data}} ()
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ true $>$ $\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_response_a812283f288883e9f6e18f9e33c05e98e}{get\+Http\+Socket}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\static \mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_response_afac9750f1450066d348b74dcbc8eed91}{allocate\+Response}} (\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$\mbox{\hyperlink{structu_w_s_1_1_http_response_a2b646698754c897e317ce8224547f78b}{http\+Socket}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ true $>$ $\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_response_a2b646698754c897e317ce8224547f78b}{http\+Socket}}
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_response_aedadd7d2e3b85fc511a838e131865443}{next}} = nullptr
+\item 
+void $\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_response_afb153a7132316c899f374ad8012ddb3d}{user\+Data}} = nullptr
+\item 
+void $\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_response_a27a2d02f1995c46111cd66c229c4f658}{extra\+User\+Data}} = nullptr
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ true $>$\+::Queue\+::\+Message $\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_response_af6271060e1ef77c221f33373eccb48fe}{message\+Queue}} = nullptr
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_w_s_1_1_http_response_a87b3ad30cefe201519963322b320ffd5}{has\+Ended}} = false
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_w_s_1_1_http_response_a29dcc601a14f5f0e339e511fc276ddf7}{has\+Head}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 137 of file H\+T\+T\+P\+Socket.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_a54fd997d585c3375f8685c4cee6a9201}\label{structu_w_s_1_1_http_response_a54fd997d585c3375f8685c4cee6a9201}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!HttpResponse@{HttpResponse}}
+\index{HttpResponse@{HttpResponse}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{HttpResponse()}{HttpResponse()}}
+{\footnotesize\ttfamily u\+W\+S\+::\+Http\+Response\+::\+Http\+Response (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ true $>$ $\ast$}]{http\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 146 of file H\+T\+T\+P\+Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_http_response_a54fd997d585c3375f8685c4cee6a9201_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_afac9750f1450066d348b74dcbc8eed91}\label{structu_w_s_1_1_http_response_afac9750f1450066d348b74dcbc8eed91}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!allocateResponse@{allocateResponse}}
+\index{allocateResponse@{allocateResponse}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{allocateResponse()}{allocateResponse()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+static \mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}}$\ast$ u\+W\+S\+::\+Http\+Response\+::allocate\+Response (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$}]{http\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 151 of file H\+T\+T\+P\+Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_http_response_afac9750f1450066d348b74dcbc8eed91_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_a434d39052975ed297c873f8bb5917620}\label{structu_w_s_1_1_http_response_a434d39052975ed297c873f8bb5917620}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!end@{end}}
+\index{end@{end}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily void u\+W\+S\+::\+Http\+Response\+::end (\begin{DoxyParamCaption}\item[{const char $\ast$}]{message = {\ttfamily nullptr},  }\item[{size\+\_\+t}]{length = {\ttfamily 0},  }\item[{void($\ast$)(void $\ast$http\+Response, void $\ast$data, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$reserved)}]{callback = {\ttfamily nullptr},  }\item[{void $\ast$}]{callback\+Data = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 190 of file H\+T\+T\+P\+Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_http_response_a434d39052975ed297c873f8bb5917620_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_http_response_a434d39052975ed297c873f8bb5917620_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_abced9674518797380531fe48e43c6b3e}\label{structu_w_s_1_1_http_response_abced9674518797380531fe48e43c6b3e}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!freeResponse@{freeResponse}}
+\index{freeResponse@{freeResponse}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{freeResponse()}{freeResponse()}}
+{\footnotesize\ttfamily void u\+W\+S\+::\+Http\+Response\+::free\+Response (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ true $>$ $\ast$}]{http\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 162 of file H\+T\+T\+P\+Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_http_response_abced9674518797380531fe48e43c6b3e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_a812283f288883e9f6e18f9e33c05e98e}\label{structu_w_s_1_1_http_response_a812283f288883e9f6e18f9e33c05e98e}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!getHttpSocket@{getHttpSocket}}
+\index{getHttpSocket@{getHttpSocket}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{getHttpSocket()}{getHttpSocket()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$true$>$$\ast$ u\+W\+S\+::\+Http\+Response\+::get\+Http\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 278 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_aeced16ea15e520b212ee3ac3674d83d0}\label{structu_w_s_1_1_http_response_aeced16ea15e520b212ee3ac3674d83d0}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!getUserData@{getUserData}}
+\index{getUserData@{getUserData}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{getUserData()}{getUserData()}}
+{\footnotesize\ttfamily void$\ast$ u\+W\+S\+::\+Http\+Response\+::get\+User\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 274 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_ae63909578b423ce1ead51da1803ad314}\label{structu_w_s_1_1_http_response_ae63909578b423ce1ead51da1803ad314}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!setUserData@{setUserData}}
+\index{setUserData@{setUserData}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{setUserData()}{setUserData()}}
+{\footnotesize\ttfamily void u\+W\+S\+::\+Http\+Response\+::set\+User\+Data (\begin{DoxyParamCaption}\item[{void $\ast$}]{user\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 270 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_a779902867cf190accb33620647ac173b}\label{structu_w_s_1_1_http_response_a779902867cf190accb33620647ac173b}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!write@{write}}
+\index{write@{write}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void u\+W\+S\+::\+Http\+Response\+::write (\begin{DoxyParamCaption}\item[{const char $\ast$}]{message,  }\item[{size\+\_\+t}]{length = {\ttfamily 0},  }\item[{void($\ast$)(void $\ast$\mbox{\hyperlink{structu_w_s_1_1_http_response_a2b646698754c897e317ce8224547f78b}{http\+Socket}}, void $\ast$data, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$reserved)}]{callback = {\ttfamily nullptr},  }\item[{void $\ast$}]{callback\+Data = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 170 of file H\+T\+T\+P\+Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_http_response_a779902867cf190accb33620647ac173b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_http_response_a779902867cf190accb33620647ac173b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_a27a2d02f1995c46111cd66c229c4f658}\label{structu_w_s_1_1_http_response_a27a2d02f1995c46111cd66c229c4f658}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!extraUserData@{extraUserData}}
+\index{extraUserData@{extraUserData}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{extraUserData}{extraUserData}}
+{\footnotesize\ttfamily void$\ast$ u\+W\+S\+::\+Http\+Response\+::extra\+User\+Data = nullptr}
+
+
+
+Definition at line 141 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_a87b3ad30cefe201519963322b320ffd5}\label{structu_w_s_1_1_http_response_a87b3ad30cefe201519963322b320ffd5}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!hasEnded@{hasEnded}}
+\index{hasEnded@{hasEnded}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{hasEnded}{hasEnded}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+W\+S\+::\+Http\+Response\+::has\+Ended = false}
+
+
+
+Definition at line 143 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_a29dcc601a14f5f0e339e511fc276ddf7}\label{structu_w_s_1_1_http_response_a29dcc601a14f5f0e339e511fc276ddf7}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!hasHead@{hasHead}}
+\index{hasHead@{hasHead}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{hasHead}{hasHead}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+W\+S\+::\+Http\+Response\+::has\+Head = false}
+
+
+
+Definition at line 144 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_a2b646698754c897e317ce8224547f78b}\label{structu_w_s_1_1_http_response_a2b646698754c897e317ce8224547f78b}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!httpSocket@{httpSocket}}
+\index{httpSocket@{httpSocket}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{httpSocket}{httpSocket}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$true$>$$\ast$ u\+W\+S\+::\+Http\+Response\+::http\+Socket}
+
+
+
+Definition at line 138 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_af6271060e1ef77c221f33373eccb48fe}\label{structu_w_s_1_1_http_response_af6271060e1ef77c221f33373eccb48fe}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!messageQueue@{messageQueue}}
+\index{messageQueue@{messageQueue}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{messageQueue}{messageQueue}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$true$>$\+::Queue\+::\+Message$\ast$ u\+W\+S\+::\+Http\+Response\+::message\+Queue = nullptr}
+
+
+
+Definition at line 142 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_aedadd7d2e3b85fc511a838e131865443}\label{structu_w_s_1_1_http_response_aedadd7d2e3b85fc511a838e131865443}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!next@{next}}
+\index{next@{next}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}}$\ast$ u\+W\+S\+::\+Http\+Response\+::next = nullptr}
+
+
+
+Definition at line 139 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_response_afb153a7132316c899f374ad8012ddb3d}\label{structu_w_s_1_1_http_response_afb153a7132316c899f374ad8012ddb3d}} 
+\index{uWS::HttpResponse@{uWS::HttpResponse}!userData@{userData}}
+\index{userData@{userData}!uWS::HttpResponse@{uWS::HttpResponse}}
+\doxysubsubsection{\texorpdfstring{userData}{userData}}
+{\footnotesize\ttfamily void$\ast$ u\+W\+S\+::\+Http\+Response\+::user\+Data = nullptr}
+
+
+
+Definition at line 140 of file H\+T\+T\+P\+Socket.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_h_t_t_p_socket_8h}{H\+T\+T\+P\+Socket.\+h}}\end{DoxyCompactItemize}

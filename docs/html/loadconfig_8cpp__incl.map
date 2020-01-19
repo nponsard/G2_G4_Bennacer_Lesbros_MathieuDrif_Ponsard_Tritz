@@ -1,11 +1,11 @@
-<map id="src/utils/loadconfig.cpp" name="src/utils/loadconfig.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="240,5,411,32"/>
-<area shape="rect" id="node2" href="$loadconfig_8h.html" title=" " alt="" coords="59,80,160,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="185,80,258,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="283,80,368,107"/>
-<area shape="rect" id="node8" title=" " alt="" coords="392,80,467,107"/>
-<area shape="rect" id="node9" title=" " alt="" coords="491,80,571,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,155,56,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="80,155,139,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="163,155,226,181"/>
+<map id="nosFichiers/src/utils/loadconfig.cpp" name="nosFichiers/src/utils/loadconfig.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="250,5,401,47"/>
+<area shape="rect" id="node2" href="$loadconfig_8h.html" title=" " alt="" coords="59,95,160,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="185,95,258,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="283,95,368,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="392,95,467,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="491,95,571,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,169,56,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="80,169,139,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="163,169,226,196"/>
 </map>

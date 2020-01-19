@@ -1,0 +1,651 @@
+\hypertarget{minitests_206_801_82020_2src_2main_8cpp}{}\doxysection{/home/sautax/git/minitests/06.01.2020/src/main.cpp File Reference}
+\label{minitests_206_801_82020_2src_2main_8cpp}\index{/home/sautax/git/minitests/06.01.2020/src/main.cpp@{/home/sautax/git/minitests/06.01.2020/src/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minitests_206_801_82020_2src_2main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef map$<$ string, float $>$ \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a7820452c7bcd7195a00b2ed49014a05a}{map\+Prix}}
+\item 
+typedef map$<$ float, string $>$ \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a8f546ee9186d3b8d96c61454e7de4242}{prix\+Produit\+Map}}
+\item 
+typedef vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a5da28e033c16924f909f0b7694cdc55d}{photographie}}
+\item 
+typedef map$<$ string, \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a5da28e033c16924f909f0b7694cdc55d}{photographie}} $>$ \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a3ee2c72b37b5b4b51ddbf1f0c537e697}{photo\+Map}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_aa8fc3ccf9e13bcda38374cdcb9fa23c3}{f}} (const string \&str, const unsigned \&i)
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a47b21ea4c8b388b21712f003f4593386}{f}} (const string \&str)
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a8680b2d146ce32f2fe0706512de9d4bb}{f2}} (const string \&str)
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a2e1424aace90175176766aa9155bc584}{change\+Prix}} (const string \&produit, const float \&valeur)
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a41dbcc33c512103c22d509c45885026f}{exercice2}} ()
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a2c51cb0f13835109cf41a5abd32545e4}{g}} (const string \&str, const unsigned \&i)
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_ac5ba6c5f2512244f4ee0fc072d4131b0}{g2}} (const string \&str)
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a788a2231f77a2fab14d7366fa3863da6}{g}} (const string \&str)
+\item 
+unsigned \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a151bb568303712ef5a4985882ffcdc89}{h}} (const string \&str, const char \&c, const unsigned \&i)
+\item 
+unsigned \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a8ad31d4fbbe710c6b213db9c14575d58}{h}} (const string \&str, const char \&c)
+\item 
+unsigned \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a26bf07484395280ba9b4e4e8ec313b50}{h2}} (const string \&str, const char \&c)
+\item 
+unsigned \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_aad6f103d40dc63ff66289ac8ddd2d1e6}{sommeN}} (const unsigned \&n)
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a2e99ac8fe3f43af54f892d7a3c01b21f}{test\+SommeN}} ()
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a9d03da604df86ee73b65f4e9123a61ff}{somme\+Inverse}} (const vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&v)
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a054ab5e9686201d8fa4ad398d0a870f0}{somme\+Inverse}} (const vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&v, unsigned i)
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a092f105cb6ea3cf13bf5f701316b1110}{somme\+Inverse2}} (const vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&v)
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_accf28a236558f929368d6159ae076859}{init\+Prix\+Produit}} ()
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a06610e77825ebc4fe34e0663dfb459f3}{change\+Map\+Produit}} (const float \&clef, const string \&valeur)
+\item 
+unsigned \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a2da62b0f2b78528121a6ed1acaa98b77}{a}} (const string \&str, const char \&c)
+\item 
+unsigned \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a3081fabf1b17a6b38078f0205e27f59d}{a}} (const string \&str, const char \&c, unsigned i)
+\item 
+unsigned \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_ab35142976b62786d185d910bf62cf941}{a2}} (const string \&str, const char \&c)
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_ac73ca4a74c1d33b3e99dab2b498c87c1}{afficher}} (const \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a5da28e033c16924f909f0b7694cdc55d}{photographie}} \&photo)
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_ac1b46c76ad989a8b262dc0c6a27d8144}{affiche\+Photos}} (const \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a3ee2c72b37b5b4b51ddbf1f0c537e697}{photo\+Map}} \&photos)
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a05ee30a04eb80300f79baa347597aa99}{somme\+Vect}} (const vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&v, const unsigned \&i)
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a61d03c77023aa3d75140426230ac9bf8}{somme\+Vect}} (const vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&v)
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a69f15a05a1c616447e103239fd27aead}{somme\+Vect2}} (const vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&v)
+\item 
+void \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a49e4c2e22f6ca83d1f844ef69c89a8bb}{test\+Somme\+Vect2}} ()
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a7820452c7bcd7195a00b2ed49014a05a}{map\+Prix}} \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a38028dc8ef6065c6a67f0cf69df3056a}{prix}}
+\item 
+\mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a8f546ee9186d3b8d96c61454e7de4242}{prix\+Produit\+Map}} \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a02c9eebc4d8c05b649be294e15bc2a21}{map\+Produit}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a7820452c7bcd7195a00b2ed49014a05a}\label{minitests_206_801_82020_2src_2main_8cpp_a7820452c7bcd7195a00b2ed49014a05a}} 
+\index{main.cpp@{main.cpp}!mapPrix@{mapPrix}}
+\index{mapPrix@{mapPrix}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mapPrix}{mapPrix}}
+{\footnotesize\ttfamily typedef map$<$string, float$>$ \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a7820452c7bcd7195a00b2ed49014a05a}{map\+Prix}}}
+
+
+
+Definition at line 34 of file main.\+cpp.
+
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a5da28e033c16924f909f0b7694cdc55d}\label{minitests_206_801_82020_2src_2main_8cpp_a5da28e033c16924f909f0b7694cdc55d}} 
+\index{main.cpp@{main.cpp}!photographie@{photographie}}
+\index{photographie@{photographie}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{photographie}{photographie}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}$>$ \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a5da28e033c16924f909f0b7694cdc55d}{photographie}}}
+
+
+
+Definition at line 184 of file main.\+cpp.
+
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a3ee2c72b37b5b4b51ddbf1f0c537e697}\label{minitests_206_801_82020_2src_2main_8cpp_a3ee2c72b37b5b4b51ddbf1f0c537e697}} 
+\index{main.cpp@{main.cpp}!photoMap@{photoMap}}
+\index{photoMap@{photoMap}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{photoMap}{photoMap}}
+{\footnotesize\ttfamily typedef map$<$string, \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a5da28e033c16924f909f0b7694cdc55d}{photographie}}$>$ \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a3ee2c72b37b5b4b51ddbf1f0c537e697}{photo\+Map}}}
+
+
+
+Definition at line 189 of file main.\+cpp.
+
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a8f546ee9186d3b8d96c61454e7de4242}\label{minitests_206_801_82020_2src_2main_8cpp_a8f546ee9186d3b8d96c61454e7de4242}} 
+\index{main.cpp@{main.cpp}!prixProduitMap@{prixProduitMap}}
+\index{prixProduitMap@{prixProduitMap}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{prixProduitMap}{prixProduitMap}}
+{\footnotesize\ttfamily typedef map$<$float, string$>$ \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a8f546ee9186d3b8d96c61454e7de4242}{prix\+Produit\+Map}}}
+
+
+
+Definition at line 142 of file main.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a2da62b0f2b78528121a6ed1acaa98b77}\label{minitests_206_801_82020_2src_2main_8cpp_a2da62b0f2b78528121a6ed1acaa98b77}} 
+\index{main.cpp@{main.cpp}!a@{a}}
+\index{a@{a}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{a()}{a()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned a (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{const char \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 157 of file main.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minitests_206_801_82020_2src_2main_8cpp_a2da62b0f2b78528121a6ed1acaa98b77_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a3081fabf1b17a6b38078f0205e27f59d}\label{minitests_206_801_82020_2src_2main_8cpp_a3081fabf1b17a6b38078f0205e27f59d}} 
+\index{main.cpp@{main.cpp}!a@{a}}
+\index{a@{a}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{a()}{a()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned a (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{const char \&}]{c,  }\item[{unsigned}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 165 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{minitests_206_801_82020_2src_2main_8cpp_a3081fabf1b17a6b38078f0205e27f59d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_ab35142976b62786d185d910bf62cf941}\label{minitests_206_801_82020_2src_2main_8cpp_ab35142976b62786d185d910bf62cf941}} 
+\index{main.cpp@{main.cpp}!a2@{a2}}
+\index{a2@{a2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{a2()}{a2()}}
+{\footnotesize\ttfamily unsigned a2 (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{const char \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 178 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{minitests_206_801_82020_2src_2main_8cpp_ab35142976b62786d185d910bf62cf941_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{minitests_206_801_82020_2src_2main_8cpp_ab35142976b62786d185d910bf62cf941_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_ac1b46c76ad989a8b262dc0c6a27d8144}\label{minitests_206_801_82020_2src_2main_8cpp_ac1b46c76ad989a8b262dc0c6a27d8144}} 
+\index{main.cpp@{main.cpp}!affichePhotos@{affichePhotos}}
+\index{affichePhotos@{affichePhotos}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{affichePhotos()}{affichePhotos()}}
+{\footnotesize\ttfamily void affiche\+Photos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a3ee2c72b37b5b4b51ddbf1f0c537e697}{photo\+Map}} \&}]{photos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 190 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{minitests_206_801_82020_2src_2main_8cpp_ac1b46c76ad989a8b262dc0c6a27d8144_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{minitests_206_801_82020_2src_2main_8cpp_ac1b46c76ad989a8b262dc0c6a27d8144_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_ac73ca4a74c1d33b3e99dab2b498c87c1}\label{minitests_206_801_82020_2src_2main_8cpp_ac73ca4a74c1d33b3e99dab2b498c87c1}} 
+\index{main.cpp@{main.cpp}!afficher@{afficher}}
+\index{afficher@{afficher}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{afficher()}{afficher()}}
+{\footnotesize\ttfamily void afficher (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a5da28e033c16924f909f0b7694cdc55d}{photographie}} \&}]{photo }\end{DoxyParamCaption})}
+
+
+
+Definition at line 185 of file main.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{minitests_206_801_82020_2src_2main_8cpp_ac73ca4a74c1d33b3e99dab2b498c87c1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a06610e77825ebc4fe34e0663dfb459f3}\label{minitests_206_801_82020_2src_2main_8cpp_a06610e77825ebc4fe34e0663dfb459f3}} 
+\index{main.cpp@{main.cpp}!changeMapProduit@{changeMapProduit}}
+\index{changeMapProduit@{changeMapProduit}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{changeMapProduit()}{changeMapProduit()}}
+{\footnotesize\ttfamily void change\+Map\+Produit (\begin{DoxyParamCaption}\item[{const float \&}]{clef,  }\item[{const string \&}]{valeur }\end{DoxyParamCaption})}
+
+
+
+Definition at line 151 of file main.\+cpp.
+
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a2e1424aace90175176766aa9155bc584}\label{minitests_206_801_82020_2src_2main_8cpp_a2e1424aace90175176766aa9155bc584}} 
+\index{main.cpp@{main.cpp}!changePrix@{changePrix}}
+\index{changePrix@{changePrix}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{changePrix()}{changePrix()}}
+{\footnotesize\ttfamily void change\+Prix (\begin{DoxyParamCaption}\item[{const string \&}]{produit,  }\item[{const float \&}]{valeur }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file main.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{minitests_206_801_82020_2src_2main_8cpp_a2e1424aace90175176766aa9155bc584_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a41dbcc33c512103c22d509c45885026f}\label{minitests_206_801_82020_2src_2main_8cpp_a41dbcc33c512103c22d509c45885026f}} 
+\index{main.cpp@{main.cpp}!exercice2@{exercice2}}
+\index{exercice2@{exercice2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{exercice2()}{exercice2()}}
+{\footnotesize\ttfamily void exercice2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{minitests_206_801_82020_2src_2main_8cpp_a41dbcc33c512103c22d509c45885026f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a47b21ea4c8b388b21712f003f4593386}\label{minitests_206_801_82020_2src_2main_8cpp_a47b21ea4c8b388b21712f003f4593386}} 
+\index{main.cpp@{main.cpp}!f@{f}}
+\index{f@{f}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{f()}{f()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void f (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{minitests_206_801_82020_2src_2main_8cpp_a47b21ea4c8b388b21712f003f4593386_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_aa8fc3ccf9e13bcda38374cdcb9fa23c3}\label{minitests_206_801_82020_2src_2main_8cpp_aa8fc3ccf9e13bcda38374cdcb9fa23c3}} 
+\index{main.cpp@{main.cpp}!f@{f}}
+\index{f@{f}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{f()}{f()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void f (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{const unsigned \&}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 11 of file main.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minitests_206_801_82020_2src_2main_8cpp_aa8fc3ccf9e13bcda38374cdcb9fa23c3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a8680b2d146ce32f2fe0706512de9d4bb}\label{minitests_206_801_82020_2src_2main_8cpp_a8680b2d146ce32f2fe0706512de9d4bb}} 
+\index{main.cpp@{main.cpp}!f2@{f2}}
+\index{f2@{f2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{f2()}{f2()}}
+{\footnotesize\ttfamily void f2 (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file main.\+cpp.
+
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a788a2231f77a2fab14d7366fa3863da6}\label{minitests_206_801_82020_2src_2main_8cpp_a788a2231f77a2fab14d7366fa3863da6}} 
+\index{main.cpp@{main.cpp}!g@{g}}
+\index{g@{g}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{g()}{g()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void g (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 66 of file main.\+cpp.
+
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a2c51cb0f13835109cf41a5abd32545e4}\label{minitests_206_801_82020_2src_2main_8cpp_a2c51cb0f13835109cf41a5abd32545e4}} 
+\index{main.cpp@{main.cpp}!g@{g}}
+\index{g@{g}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{g()}{g()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void g (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{const unsigned \&}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file main.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{minitests_206_801_82020_2src_2main_8cpp_a2c51cb0f13835109cf41a5abd32545e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_ac5ba6c5f2512244f4ee0fc072d4131b0}\label{minitests_206_801_82020_2src_2main_8cpp_ac5ba6c5f2512244f4ee0fc072d4131b0}} 
+\index{main.cpp@{main.cpp}!g2@{g2}}
+\index{g2@{g2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{g2()}{g2()}}
+{\footnotesize\ttfamily void g2 (\begin{DoxyParamCaption}\item[{const string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Definition at line 60 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{minitests_206_801_82020_2src_2main_8cpp_ac5ba6c5f2512244f4ee0fc072d4131b0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a8ad31d4fbbe710c6b213db9c14575d58}\label{minitests_206_801_82020_2src_2main_8cpp_a8ad31d4fbbe710c6b213db9c14575d58}} 
+\index{main.cpp@{main.cpp}!h@{h}}
+\index{h@{h}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{h()}{h()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily unsigned h (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{const char \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 83 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{minitests_206_801_82020_2src_2main_8cpp_a8ad31d4fbbe710c6b213db9c14575d58_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a151bb568303712ef5a4985882ffcdc89}\label{minitests_206_801_82020_2src_2main_8cpp_a151bb568303712ef5a4985882ffcdc89}} 
+\index{main.cpp@{main.cpp}!h@{h}}
+\index{h@{h}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{h()}{h()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily unsigned h (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{const char \&}]{c,  }\item[{const unsigned \&}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 74 of file main.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=174pt]{minitests_206_801_82020_2src_2main_8cpp_a151bb568303712ef5a4985882ffcdc89_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a26bf07484395280ba9b4e4e8ec313b50}\label{minitests_206_801_82020_2src_2main_8cpp_a26bf07484395280ba9b4e4e8ec313b50}} 
+\index{main.cpp@{main.cpp}!h2@{h2}}
+\index{h2@{h2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{h2()}{h2()}}
+{\footnotesize\ttfamily unsigned h2 (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{const char \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Definition at line 88 of file main.\+cpp.
+
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_accf28a236558f929368d6159ae076859}\label{minitests_206_801_82020_2src_2main_8cpp_accf28a236558f929368d6159ae076859}} 
+\index{main.cpp@{main.cpp}!initPrixProduit@{initPrixProduit}}
+\index{initPrixProduit@{initPrixProduit}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{initPrixProduit()}{initPrixProduit()}}
+{\footnotesize\ttfamily void init\+Prix\+Produit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 144 of file main.\+cpp.
+
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{minitests_206_801_82020_2src_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 229 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minitests_206_801_82020_2src_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a9d03da604df86ee73b65f4e9123a61ff}\label{minitests_206_801_82020_2src_2main_8cpp_a9d03da604df86ee73b65f4e9123a61ff}} 
+\index{main.cpp@{main.cpp}!sommeInverse@{sommeInverse}}
+\index{sommeInverse@{sommeInverse}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{sommeInverse()}{sommeInverse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} somme\+Inverse (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Definition at line 122 of file main.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{minitests_206_801_82020_2src_2main_8cpp_a9d03da604df86ee73b65f4e9123a61ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a054ab5e9686201d8fa4ad398d0a870f0}\label{minitests_206_801_82020_2src_2main_8cpp_a054ab5e9686201d8fa4ad398d0a870f0}} 
+\index{main.cpp@{main.cpp}!sommeInverse@{sommeInverse}}
+\index{sommeInverse@{sommeInverse}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{sommeInverse()}{sommeInverse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} somme\+Inverse (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&}]{v,  }\item[{unsigned}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 129 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{minitests_206_801_82020_2src_2main_8cpp_a054ab5e9686201d8fa4ad398d0a870f0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a092f105cb6ea3cf13bf5f701316b1110}\label{minitests_206_801_82020_2src_2main_8cpp_a092f105cb6ea3cf13bf5f701316b1110}} 
+\index{main.cpp@{main.cpp}!sommeInverse2@{sommeInverse2}}
+\index{sommeInverse2@{sommeInverse2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{sommeInverse2()}{sommeInverse2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} somme\+Inverse2 (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Definition at line 136 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{minitests_206_801_82020_2src_2main_8cpp_a092f105cb6ea3cf13bf5f701316b1110_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_aad6f103d40dc63ff66289ac8ddd2d1e6}\label{minitests_206_801_82020_2src_2main_8cpp_aad6f103d40dc63ff66289ac8ddd2d1e6}} 
+\index{main.cpp@{main.cpp}!sommeN@{sommeN}}
+\index{sommeN@{sommeN}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{sommeN()}{sommeN()}}
+{\footnotesize\ttfamily unsigned sommeN (\begin{DoxyParamCaption}\item[{const unsigned \&}]{n }\end{DoxyParamCaption})}
+
+
+
+Definition at line 101 of file main.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{minitests_206_801_82020_2src_2main_8cpp_aad6f103d40dc63ff66289ac8ddd2d1e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a61d03c77023aa3d75140426230ac9bf8}\label{minitests_206_801_82020_2src_2main_8cpp_a61d03c77023aa3d75140426230ac9bf8}} 
+\index{main.cpp@{main.cpp}!sommeVect@{sommeVect}}
+\index{sommeVect@{sommeVect}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{sommeVect()}{sommeVect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} somme\+Vect (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Definition at line 211 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{minitests_206_801_82020_2src_2main_8cpp_a61d03c77023aa3d75140426230ac9bf8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a05ee30a04eb80300f79baa347597aa99}\label{minitests_206_801_82020_2src_2main_8cpp_a05ee30a04eb80300f79baa347597aa99}} 
+\index{main.cpp@{main.cpp}!sommeVect@{sommeVect}}
+\index{sommeVect@{sommeVect}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{sommeVect()}{sommeVect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} somme\+Vect (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&}]{v,  }\item[{const unsigned \&}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line 205 of file main.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{minitests_206_801_82020_2src_2main_8cpp_a05ee30a04eb80300f79baa347597aa99_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a69f15a05a1c616447e103239fd27aead}\label{minitests_206_801_82020_2src_2main_8cpp_a69f15a05a1c616447e103239fd27aead}} 
+\index{main.cpp@{main.cpp}!sommeVect2@{sommeVect2}}
+\index{sommeVect2@{sommeVect2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{sommeVect2()}{sommeVect2()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} somme\+Vect2 (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Definition at line 215 of file main.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{minitests_206_801_82020_2src_2main_8cpp_a69f15a05a1c616447e103239fd27aead_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a2e99ac8fe3f43af54f892d7a3c01b21f}\label{minitests_206_801_82020_2src_2main_8cpp_a2e99ac8fe3f43af54f892d7a3c01b21f}} 
+\index{main.cpp@{main.cpp}!testSommeN@{testSommeN}}
+\index{testSommeN@{testSommeN}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{testSommeN()}{testSommeN()}}
+{\footnotesize\ttfamily void test\+SommeN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 108 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{minitests_206_801_82020_2src_2main_8cpp_a2e99ac8fe3f43af54f892d7a3c01b21f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a49e4c2e22f6ca83d1f844ef69c89a8bb}\label{minitests_206_801_82020_2src_2main_8cpp_a49e4c2e22f6ca83d1f844ef69c89a8bb}} 
+\index{main.cpp@{main.cpp}!testSommeVect2@{testSommeVect2}}
+\index{testSommeVect2@{testSommeVect2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{testSommeVect2()}{testSommeVect2()}}
+{\footnotesize\ttfamily void test\+Somme\+Vect2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 222 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{minitests_206_801_82020_2src_2main_8cpp_a49e4c2e22f6ca83d1f844ef69c89a8bb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{minitests_206_801_82020_2src_2main_8cpp_a49e4c2e22f6ca83d1f844ef69c89a8bb_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a02c9eebc4d8c05b649be294e15bc2a21}\label{minitests_206_801_82020_2src_2main_8cpp_a02c9eebc4d8c05b649be294e15bc2a21}} 
+\index{main.cpp@{main.cpp}!mapProduit@{mapProduit}}
+\index{mapProduit@{mapProduit}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mapProduit}{mapProduit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a8f546ee9186d3b8d96c61454e7de4242}{prix\+Produit\+Map}} map\+Produit}
+
+
+
+Definition at line 143 of file main.\+cpp.
+
+\mbox{\Hypertarget{minitests_206_801_82020_2src_2main_8cpp_a38028dc8ef6065c6a67f0cf69df3056a}\label{minitests_206_801_82020_2src_2main_8cpp_a38028dc8ef6065c6a67f0cf69df3056a}} 
+\index{main.cpp@{main.cpp}!prix@{prix}}
+\index{prix@{prix}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{prix}{prix}}
+{\footnotesize\ttfamily \mbox{\hyperlink{minitests_206_801_82020_2src_2main_8cpp_a7820452c7bcd7195a00b2ed49014a05a}{map\+Prix}} prix}
+
+
+
+Definition at line 35 of file main.\+cpp.
+

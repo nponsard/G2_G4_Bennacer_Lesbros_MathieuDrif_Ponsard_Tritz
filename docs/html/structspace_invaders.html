@@ -27,7 +27,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Space invader
    </div>
-   <div id="projectbrief">Un Space invader en C++</div>
+   <div id="projectbrief">a Space invader created in C++</div>
   </td>
  </tr>
  </tbody>
@@ -99,14 +99,15 @@ Collaboration diagram for spaceInvaders:</div>
 <div class="dyncontent">
 <div class="center"><img src="structspace_invaders__coll__graph.png" border="0" usemap="#space_invaders_coll__map" alt="Collaboration graph"/></div>
 <map name="space_invaders_coll__map" id="space_invaders_coll__map">
-<area shape="rect" title="struct containing every useful variable and the parameters used in the game" alt="" coords="115,543,231,569"/>
+<area shape="rect" title="struct containing every useful variable and the parameters used in the game" alt="" coords="172,499,288,525"/>
 <area shape="rect" href="structentity.html" title="structure containing a figure and its corresponding height and width" alt="" coords="61,351,121,377"/>
 <area shape="rect" href="classfigure.html" title=" " alt="" coords="62,261,121,288"/>
 <area shape="rect" href="classbase_fig.html" title=" " alt="" coords="55,185,127,212"/>
 <area shape="rect" href="class_imin_gl_injectable.html" title=" " alt="" coords="5,81,135,108"/>
 <area shape="rect" href="class_r_g_bcolor.html" title=" " alt="" coords="159,81,242,108"/>
 <area shape="rect" href="classns_util_1_1_i_editable.html" title=" " alt="" coords="138,5,263,32"/>
-<area shape="rect" href="structpos.html" title=" " alt="" coords="231,351,277,377"/>
+<area shape="rect" href="structpos.html" title=" " alt="" coords="207,351,253,377"/>
+<area shape="rect" href="struct_bonus_entity.html" title=" " alt="" coords="323,351,423,377"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -162,12 +163,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:aa6145c66e1b35522032429ec19c1df51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a055eaff2d3227d400a8178aeddba9a6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structentity.html">entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspace_invaders.html#a055eaff2d3227d400a8178aeddba9a6d">bonusInvader</a></td></tr>
 <tr class="separator:a055eaff2d3227d400a8178aeddba9a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec2c5b387516650a852c4b4ec1270482"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structentity.html">entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspace_invaders.html#aec2c5b387516650a852c4b4ec1270482">lifeUpgrade</a></td></tr>
-<tr class="separator:aec2c5b387516650a852c4b4ec1270482"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeea0b19f8842bf19a47b22fbf7c99f42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structentity.html">entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspace_invaders.html#aeea0b19f8842bf19a47b22fbf7c99f42">shootSpeedUpgrade</a></td></tr>
-<tr class="separator:aeea0b19f8842bf19a47b22fbf7c99f42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a0725017ea68ed77aaa38ebac4c7b30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structentity.html">entity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspace_invaders.html#a1a0725017ea68ed77aaa38ebac4c7b30">scoreUpgrade</a></td></tr>
-<tr class="separator:a1a0725017ea68ed77aaa38ebac4c7b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0449388cbda96955fd754c091adae87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bonus_entity.html">BonusEntity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspace_invaders.html#ad0449388cbda96955fd754c091adae87">upgrades</a></td></tr>
+<tr class="separator:ad0449388cbda96955fd754c091adae87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ccf192ffdc4b31e918c55cae6b67027"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpos.html">pos</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspace_invaders.html#a1ccf192ffdc4b31e918c55cae6b67027">playerPos</a></td></tr>
 <tr class="separator:a1ccf192ffdc4b31e918c55cae6b67027"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05c4f1a1c2f5d8a4e77e12540ddc0382"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpos.html">pos</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspace_invaders.html#a05c4f1a1c2f5d8a4e77e12540ddc0382">bonusInvaderPos</a></td></tr>
@@ -180,8 +177,6 @@ Public Attributes</h2></td></tr>
 <tr class="separator:ab4019fc92f1859ea0636cec703a4ac35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addce84a931902a6f9bbd4e5b26ae1616"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; <a class="el" href="structpos.html">pos</a>, short &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspace_invaders.html#addce84a931902a6f9bbd4e5b26ae1616">UpgradePos</a></td></tr>
 <tr class="separator:addce84a931902a6f9bbd4e5b26ae1616"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af03b5260f0258d0864a63da8c1934eef"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classfigure.html">figure</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structspace_invaders.html#af03b5260f0258d0864a63da8c1934eef">upgradeTypes</a></td></tr>
-<tr class="separator:af03b5260f0258d0864a63da8c1934eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>struct containing every useful variable and the parameters used in the game </p>
@@ -232,7 +227,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00052">52</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00050">50</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
 
 </div>
 </div>
@@ -344,7 +339,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00053">53</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00051">51</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
 
 </div>
 </div>
@@ -408,7 +403,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00055">55</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00053">53</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
 
 </div>
 </div>
@@ -460,22 +455,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aec2c5b387516650a852c4b4ec1270482"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec2c5b387516650a852c4b4ec1270482">&#9670;&nbsp;</a></span>lifeUpgrade</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structentity.html">entity</a> spaceInvaders::lifeUpgrade</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00047">47</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
-
-</div>
-</div>
 <a id="a2d38e0e741291959dde8948164a361cb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d38e0e741291959dde8948164a361cb">&#9670;&nbsp;</a></span>lives</h2>
 
@@ -520,7 +499,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00051">51</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00049">49</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
 
 </div>
 </div>
@@ -552,7 +531,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00054">54</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00052">52</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
 
 </div>
 </div>
@@ -620,38 +599,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a1a0725017ea68ed77aaa38ebac4c7b30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a0725017ea68ed77aaa38ebac4c7b30">&#9670;&nbsp;</a></span>scoreUpgrade</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structentity.html">entity</a> spaceInvaders::scoreUpgrade</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00049">49</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
-
-</div>
-</div>
-<a id="aeea0b19f8842bf19a47b22fbf7c99f42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeea0b19f8842bf19a47b22fbf7c99f42">&#9670;&nbsp;</a></span>shootSpeedUpgrade</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structentity.html">entity</a> spaceInvaders::shootSpeedUpgrade</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00048">48</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
-
-</div>
-</div>
 <a id="a075fb34e6fe170e4a4a5229f4fada1ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a075fb34e6fe170e4a4a5229f4fada1ec">&#9670;&nbsp;</a></span>shot</h2>
 
@@ -696,23 +643,23 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00057">57</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00055">55</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
 
 </div>
 </div>
-<a id="af03b5260f0258d0864a63da8c1934eef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af03b5260f0258d0864a63da8c1934eef">&#9670;&nbsp;</a></span>upgradeTypes</h2>
+<a id="ad0449388cbda96955fd754c091adae87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0449388cbda96955fd754c091adae87">&#9670;&nbsp;</a></span>upgrades</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classfigure.html">figure</a>&gt; spaceInvaders::upgradeTypes</td>
+          <td class="memname"><a class="el" href="struct_bonus_entity.html">BonusEntity</a> spaceInvaders::upgrades</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00058">58</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="spaceinvaders_8h_source.html#l00047">47</a> of file <a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a>.</p>
 
 </div>
 </div>
@@ -749,7 +696,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/utils/<a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a></li>
+<li>nosFichiers/src/utils/<a class="el" href="spaceinvaders_8h_source.html">spaceinvaders.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

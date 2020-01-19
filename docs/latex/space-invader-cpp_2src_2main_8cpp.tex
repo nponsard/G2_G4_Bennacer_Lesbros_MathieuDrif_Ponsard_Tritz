@@ -1,0 +1,289 @@
+\hypertarget{space-invader-cpp_2src_2main_8cpp}{}\doxysection{/home/sautax/git/space-\/invader-\/cpp/src/main.cpp File Reference}
+\label{space-invader-cpp_2src_2main_8cpp}\index{/home/sautax/git/space-\/invader-\/cpp/src/main.cpp@{/home/sautax/git/space-\/invader-\/cpp/src/main.cpp}}
+{\ttfamily \#include \char`\"{}graph/rgbcolor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graph/mingl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graph/pos.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{space-invader-cpp_2src_2main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structposition}{position}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a241aeeb764887ae5e3de58b98f04b16d}{W\+I\+D\+TH}}~800
+\item 
+\#define \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_aed89bd71aee8be823e8a20ec4e093c1e}{H\+E\+I\+G\+HT}}~600
+\item 
+\#define \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_ab2a255e4af7c4248bff2a54e87e3c26a}{P\+I\+X\+E\+L\+S\+I\+ZE}}~20
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a6ac17b7966877be512071a7bf798fc31}{pixel\+Array}}
+\item 
+typedef vector$<$ \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a6ac17b7966877be512071a7bf798fc31}{pixel\+Array}} $>$ \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a2e2c3649f811d8dd73f1b6202b0a5ae4}{pixel\+Matrix}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a2d682e2518311aeea35a5c525154c144}{UP}} (\{101, true\})
+\item 
+const \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a86cfe922935c38728fdbed48ccf57d4a}{D\+O\+WN}} (\{103, true\})
+\item 
+const \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a1b148700457fe6b4045a19ee37656e94}{L\+E\+FT}} (\{100, true\})
+\item 
+const \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a24cfc8ca0fee576e9079c2c526bc3f46}{R\+I\+G\+HT}} (\{102, true\})
+\item 
+const \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a0d2e6b1006c24e4280ebdea691c4d7ef}{E\+S\+C\+A\+PE}} (\{27, false\})
+\item 
+const unsigned \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a5775b07b786ccba73eeb79bc5bbe19c9}{frame\+Rate}} (60)
+\item 
+const unsigned \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a31a35258da26ceac8276ae2a99905c03}{frame\+Time}} (1000/\mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a5775b07b786ccba73eeb79bc5bbe19c9}{frame\+Rate}})
+\item 
+void \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a8642ed1a279f772c68788fad2a7a526d}{draw\+Rect\+Clipping}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&Window, \mbox{\hyperlink{structposition}{position}} pos\+Start, \mbox{\hyperlink{structposition}{position}} pos\+End, const \mbox{\hyperlink{class_r_g_bcolor}{R\+G\+Bcolor}} col)
+\item 
+void \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a1a32b1244da509de11dc3fcc13e58acd}{draw\+Player}} (\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&Window, \mbox{\hyperlink{structposition}{position}} \mbox{\hyperlink{structpos}{pos}})
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a2e2c3649f811d8dd73f1b6202b0a5ae4}{pixel\+Matrix}} \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_aa5f307ad6733cfa313bd021dd65aef53}{player\+Pixels}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_aed89bd71aee8be823e8a20ec4e093c1e}\label{space-invader-cpp_2src_2main_8cpp_aed89bd71aee8be823e8a20ec4e093c1e}} 
+\index{main.cpp@{main.cpp}!HEIGHT@{HEIGHT}}
+\index{HEIGHT@{HEIGHT}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{HEIGHT}{HEIGHT}}
+{\footnotesize\ttfamily \#define H\+E\+I\+G\+HT~600}
+
+
+
+Definition at line 18 of file main.\+cpp.
+
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_ab2a255e4af7c4248bff2a54e87e3c26a}\label{space-invader-cpp_2src_2main_8cpp_ab2a255e4af7c4248bff2a54e87e3c26a}} 
+\index{main.cpp@{main.cpp}!PIXELSIZE@{PIXELSIZE}}
+\index{PIXELSIZE@{PIXELSIZE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{PIXELSIZE}{PIXELSIZE}}
+{\footnotesize\ttfamily \#define P\+I\+X\+E\+L\+S\+I\+ZE~20}
+
+
+
+Definition at line 19 of file main.\+cpp.
+
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_a241aeeb764887ae5e3de58b98f04b16d}\label{space-invader-cpp_2src_2main_8cpp_a241aeeb764887ae5e3de58b98f04b16d}} 
+\index{main.cpp@{main.cpp}!WIDTH@{WIDTH}}
+\index{WIDTH@{WIDTH}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WIDTH}{WIDTH}}
+{\footnotesize\ttfamily \#define W\+I\+D\+TH~800}
+
+
+
+Definition at line 17 of file main.\+cpp.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_a6ac17b7966877be512071a7bf798fc31}\label{space-invader-cpp_2src_2main_8cpp_a6ac17b7966877be512071a7bf798fc31}} 
+\index{main.cpp@{main.cpp}!pixelArray@{pixelArray}}
+\index{pixelArray@{pixelArray}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{pixelArray}{pixelArray}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}$>$ \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a6ac17b7966877be512071a7bf798fc31}{pixel\+Array}}}
+
+
+
+Definition at line 32 of file main.\+cpp.
+
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_a2e2c3649f811d8dd73f1b6202b0a5ae4}\label{space-invader-cpp_2src_2main_8cpp_a2e2c3649f811d8dd73f1b6202b0a5ae4}} 
+\index{main.cpp@{main.cpp}!pixelMatrix@{pixelMatrix}}
+\index{pixelMatrix@{pixelMatrix}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{pixelMatrix}{pixelMatrix}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a6ac17b7966877be512071a7bf798fc31}{pixel\+Array}}$>$ \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a2e2c3649f811d8dd73f1b6202b0a5ae4}{pixel\+Matrix}}}
+
+
+
+Definition at line 33 of file main.\+cpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_a86cfe922935c38728fdbed48ccf57d4a}\label{space-invader-cpp_2src_2main_8cpp_a86cfe922935c38728fdbed48ccf57d4a}} 
+\index{main.cpp@{main.cpp}!DOWN@{DOWN}}
+\index{DOWN@{DOWN}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{DOWN()}{DOWN()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} D\+O\+WN (\begin{DoxyParamCaption}\item[{\{103, true\}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_a1a32b1244da509de11dc3fcc13e58acd}\label{space-invader-cpp_2src_2main_8cpp_a1a32b1244da509de11dc3fcc13e58acd}} 
+\index{main.cpp@{main.cpp}!drawPlayer@{drawPlayer}}
+\index{drawPlayer@{drawPlayer}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{drawPlayer()}{drawPlayer()}}
+{\footnotesize\ttfamily void draw\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{Window,  }\item[{\mbox{\hyperlink{structposition}{position}}}]{pos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 73 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{space-invader-cpp_2src_2main_8cpp_a1a32b1244da509de11dc3fcc13e58acd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{space-invader-cpp_2src_2main_8cpp_a1a32b1244da509de11dc3fcc13e58acd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_a8642ed1a279f772c68788fad2a7a526d}\label{space-invader-cpp_2src_2main_8cpp_a8642ed1a279f772c68788fad2a7a526d}} 
+\index{main.cpp@{main.cpp}!drawRectClipping@{drawRectClipping}}
+\index{drawRectClipping@{drawRectClipping}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{drawRectClipping()}{drawRectClipping()}}
+{\footnotesize\ttfamily void draw\+Rect\+Clipping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmin_g_l}{min\+GL}} \&}]{Window,  }\item[{\mbox{\hyperlink{structposition}{position}}}]{pos\+Start,  }\item[{\mbox{\hyperlink{structposition}{position}}}]{pos\+End,  }\item[{const \mbox{\hyperlink{class_r_g_bcolor}{R\+G\+Bcolor}}}]{col }\end{DoxyParamCaption})}
+
+
+
+Definition at line 47 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{space-invader-cpp_2src_2main_8cpp_a8642ed1a279f772c68788fad2a7a526d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{space-invader-cpp_2src_2main_8cpp_a8642ed1a279f772c68788fad2a7a526d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_a0d2e6b1006c24e4280ebdea691c4d7ef}\label{space-invader-cpp_2src_2main_8cpp_a0d2e6b1006c24e4280ebdea691c4d7ef}} 
+\index{main.cpp@{main.cpp}!ESCAPE@{ESCAPE}}
+\index{ESCAPE@{ESCAPE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ESCAPE()}{ESCAPE()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} E\+S\+C\+A\+PE (\begin{DoxyParamCaption}\item[{\{27, false\}}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{space-invader-cpp_2src_2main_8cpp_a0d2e6b1006c24e4280ebdea691c4d7ef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_a5775b07b786ccba73eeb79bc5bbe19c9}\label{space-invader-cpp_2src_2main_8cpp_a5775b07b786ccba73eeb79bc5bbe19c9}} 
+\index{main.cpp@{main.cpp}!frameRate@{frameRate}}
+\index{frameRate@{frameRate}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{frameRate()}{frameRate()}}
+{\footnotesize\ttfamily const unsigned frame\+Rate (\begin{DoxyParamCaption}\item[{60}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_a31a35258da26ceac8276ae2a99905c03}\label{space-invader-cpp_2src_2main_8cpp_a31a35258da26ceac8276ae2a99905c03}} 
+\index{main.cpp@{main.cpp}!frameTime@{frameTime}}
+\index{frameTime@{frameTime}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{frameTime()}{frameTime()}}
+{\footnotesize\ttfamily const unsigned frame\+Time (\begin{DoxyParamCaption}\item[{1000/}]{frame\+Rate }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{space-invader-cpp_2src_2main_8cpp_a31a35258da26ceac8276ae2a99905c03_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_a1b148700457fe6b4045a19ee37656e94}\label{space-invader-cpp_2src_2main_8cpp_a1b148700457fe6b4045a19ee37656e94}} 
+\index{main.cpp@{main.cpp}!LEFT@{LEFT}}
+\index{LEFT@{LEFT}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{LEFT()}{LEFT()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} L\+E\+FT (\begin{DoxyParamCaption}\item[{\{100, true\}}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{space-invader-cpp_2src_2main_8cpp_a1b148700457fe6b4045a19ee37656e94_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{space-invader-cpp_2src_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file main.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{space-invader-cpp_2src_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_a24cfc8ca0fee576e9079c2c526bc3f46}\label{space-invader-cpp_2src_2main_8cpp_a24cfc8ca0fee576e9079c2c526bc3f46}} 
+\index{main.cpp@{main.cpp}!RIGHT@{RIGHT}}
+\index{RIGHT@{RIGHT}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{RIGHT()}{RIGHT()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} R\+I\+G\+HT (\begin{DoxyParamCaption}\item[{\{102, true\}}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{space-invader-cpp_2src_2main_8cpp_a24cfc8ca0fee576e9079c2c526bc3f46_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_a2d682e2518311aeea35a5c525154c144}\label{space-invader-cpp_2src_2main_8cpp_a2d682e2518311aeea35a5c525154c144}} 
+\index{main.cpp@{main.cpp}!UP@{UP}}
+\index{UP@{UP}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{UP()}{UP()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} UP (\begin{DoxyParamCaption}\item[{\{101, true\}}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{space-invader-cpp_2src_2main_8cpp_aa5f307ad6733cfa313bd021dd65aef53}\label{space-invader-cpp_2src_2main_8cpp_aa5f307ad6733cfa313bd021dd65aef53}} 
+\index{main.cpp@{main.cpp}!playerPixels@{playerPixels}}
+\index{playerPixels@{playerPixels}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{playerPixels}{playerPixels}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{space-invader-cpp_2src_2main_8cpp_a2e2c3649f811d8dd73f1b6202b0a5ae4}{pixel\+Matrix}} player\+Pixels}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{0, 0, 1, 0, 0\},}
+\DoxyCodeLine{    \{1, 1, 1, 1, 1\},}
+\DoxyCodeLine{    \{1, 1, 1, 1, 1\}\}}
+
+\end{DoxyCode}
+
+
+Definition at line 35 of file main.\+cpp.
+

@@ -3,6 +3,7 @@ var annotated_dup =
     [ "nsUtil", "namespacens_util.html", "namespacens_util" ],
     [ "AuthorizedKey", "struct_authorized_key.html", "struct_authorized_key" ],
     [ "baseFig", "classbase_fig.html", "classbase_fig" ],
+    [ "BonusEntity", "struct_bonus_entity.html", "struct_bonus_entity" ],
     [ "circle", "classcircle.html", "classcircle" ],
     [ "entity", "structentity.html", "structentity" ],
     [ "figure", "classfigure.html", "classfigure" ],

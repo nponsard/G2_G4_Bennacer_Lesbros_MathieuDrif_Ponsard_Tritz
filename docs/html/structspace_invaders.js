@@ -17,7 +17,6 @@ var structspace_invaders =
     [ "invadersVelocity", "structspace_invaders.html#a258a3070ef6da0c4ebc718427f8205e5", null ],
     [ "LastBonusInvader", "structspace_invaders.html#ab1439cba4e8cc366d272c82b54b65546", null ],
     [ "lastShot", "structspace_invaders.html#a51c2f659fb9969641b1e3a30d5d5c178", null ],
-    [ "lifeUpgrade", "structspace_invaders.html#aec2c5b387516650a852c4b4ec1270482", null ],
     [ "lives", "structspace_invaders.html#a2d38e0e741291959dde8948164a361cb", null ],
     [ "player", "structspace_invaders.html#a0e0bdabe584ce519215b10d476f6e9c7", null ],
     [ "playerPos", "structspace_invaders.html#a1ccf192ffdc4b31e918c55cae6b67027", null ],
@@ -27,12 +26,10 @@ var structspace_invaders =
     [ "scoreForMissileDestruction", "structspace_invaders.html#af88e16d3c95d76e1289840cf44f299c0", null ],
     [ "scoreStep", "structspace_invaders.html#a2301d2509bc3cf60683a9ce6d92924fb", null ],
     [ "scoreStepBonusInvaders", "structspace_invaders.html#a64aa0dda5b2e2881237a4fb11554b202", null ],
-    [ "scoreUpgrade", "structspace_invaders.html#a1a0725017ea68ed77aaa38ebac4c7b30", null ],
-    [ "shootSpeedUpgrade", "structspace_invaders.html#aeea0b19f8842bf19a47b22fbf7c99f42", null ],
     [ "shot", "structspace_invaders.html#a075fb34e6fe170e4a4a5229f4fada1ec", null ],
     [ "torpedoVelocity", "structspace_invaders.html#aad8310c6da0d32b5f6fbc42fbf77f5f8", null ],
     [ "UpgradePos", "structspace_invaders.html#addce84a931902a6f9bbd4e5b26ae1616", null ],
-    [ "upgradeTypes", "structspace_invaders.html#af03b5260f0258d0864a63da8c1934eef", null ],
+    [ "upgrades", "structspace_invaders.html#ad0449388cbda96955fd754c091adae87", null ],
     [ "upgradeVelocity", "structspace_invaders.html#afdd9b1f77a191db6441689fa983b7124", null ],
     [ "wave", "structspace_invaders.html#a17916aa42c7222aae16f537619d44d9f", null ]
 ];

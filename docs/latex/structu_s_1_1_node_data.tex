@@ -1,0 +1,345 @@
+\hypertarget{structu_s_1_1_node_data}{}\doxysection{uS\+::Node\+Data Struct Reference}
+\label{structu_s_1_1_node_data}\index{uS::NodeData@{uS::NodeData}}
+
+
+{\ttfamily \#include $<$Networking.\+h$>$}
+
+
+
+Inheritance diagram for uS\+::Node\+Data\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_node_data__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for uS\+::Node\+Data\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{structu_s_1_1_node_data__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{structu_s_1_1_node_data_a4392ca8c27b8f58e86721377da1dec49}{get\+Small\+Memory\+Block}} (\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} index)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_node_data_a7314b340328f78687bb3c5d86c500d95}{free\+Small\+Memory\+Block}} (char $\ast$memory, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} index)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_node_data_a1b8f1e1522c3c32318bbd57addc4c4ea}{add\+Async}} ()
+\item 
+void \mbox{\hyperlink{structu_s_1_1_node_data_a0bca6b87451878a9d12bff04b6852eb5}{clear\+Pending\+Poll\+Changes}} (\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$p)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structu_s_1_1_node_data_a50ff099d8c7568657a50a54f73876be2}{async\+Callback}} (\mbox{\hyperlink{structu_s_1_1_async}{Async}} $\ast$\mbox{\hyperlink{structu_s_1_1_node_data_a85e8e0e12215ee250a8f230c2ee383e8}{async}})
+\item 
+static \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_s_1_1_node_data_a445a0a4183a8a06dd302bc9d8c5582f4}{get\+Memory\+Block\+Index}} (size\+\_\+t length)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{structu_s_1_1_node_data_a42f19adf217f324ceadddcca58b26786}{recv\+Buffer\+Memory\+Block}}
+\item 
+char $\ast$ \mbox{\hyperlink{structu_s_1_1_node_data_a8c5219c155234ca3ec7635a5d34bb10d}{recv\+Buffer}}
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_s_1_1_node_data_af1a37184845a5848af5a1281b93f02ad}{recv\+Length}}
+\item 
+\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$ \mbox{\hyperlink{structu_s_1_1_node_data_a023bddf948a9016e8d84190fe55ecb69}{loop}}
+\item 
+\mbox{\hyperlink{structu_s_1_1_context}{u\+S\+::\+Context}} $\ast$ \mbox{\hyperlink{structu_s_1_1_node_data_aa817a2ac768f5dacc48d013e77eb3b65}{net\+Context}}
+\item 
+void $\ast$ \mbox{\hyperlink{structu_s_1_1_node_data_ae50717e7e80ec0a1ab5f76633d8f7206}{user}} = nullptr
+\item 
+char $\ast$$\ast$ \mbox{\hyperlink{structu_s_1_1_node_data_a79ff04caf65b1eeaa12631fcea195841}{pre\+Alloc}}
+\item 
+S\+S\+L\+\_\+\+C\+TX $\ast$ \mbox{\hyperlink{structu_s_1_1_node_data_af98a51f708a740ab7e3a301e12b42f56}{client\+Context}}
+\item 
+\mbox{\hyperlink{structu_s_1_1_async}{Async}} $\ast$ \mbox{\hyperlink{structu_s_1_1_node_data_a85e8e0e12215ee250a8f230c2ee383e8}{async}} = nullptr
+\item 
+pthread\+\_\+t \mbox{\hyperlink{structu_s_1_1_node_data_a6a2a06208b4d64a5a8ef75a4bd3e34bd}{tid}}
+\item 
+std\+::recursive\+\_\+mutex $\ast$ \mbox{\hyperlink{structu_s_1_1_node_data_a6e9f900bf9309cf3e77d12bbdf6ad09c}{async\+Mutex}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$ $>$ \mbox{\hyperlink{structu_s_1_1_node_data_adb09878d7e90a0811755660277e1dd77}{transfer\+Queue}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$ $>$ \mbox{\hyperlink{structu_s_1_1_node_data_ad727b0db74cd9a912f3931d147837801}{change\+Poll\+Queue}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_s_1_1_node_data_a535bc12e015b9d46c5da7a8bc57b2b5c}{pre\+Alloc\+Max\+Size}} = 1024
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 199 of file Networking.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structu_s_1_1_node_data_a1b8f1e1522c3c32318bbd57addc4c4ea}\label{structu_s_1_1_node_data_a1b8f1e1522c3c32318bbd57addc4c4ea}} 
+\index{uS::NodeData@{uS::NodeData}!addAsync@{addAsync}}
+\index{addAsync@{addAsync}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{addAsync()}{addAsync()}}
+{\footnotesize\ttfamily void u\+S\+::\+Node\+Data\+::add\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 241 of file Networking.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_node_data_a1b8f1e1522c3c32318bbd57addc4c4ea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_node_data_a50ff099d8c7568657a50a54f73876be2}\label{structu_s_1_1_node_data_a50ff099d8c7568657a50a54f73876be2}} 
+\index{uS::NodeData@{uS::NodeData}!asyncCallback@{asyncCallback}}
+\index{asyncCallback@{asyncCallback}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{asyncCallback()}{asyncCallback()}}
+{\footnotesize\ttfamily void u\+S\+::\+Node\+Data\+::async\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_async}{Async}} $\ast$}]{async }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 6 of file Node.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_node_data_a50ff099d8c7568657a50a54f73876be2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_node_data_a50ff099d8c7568657a50a54f73876be2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_node_data_a0bca6b87451878a9d12bff04b6852eb5}\label{structu_s_1_1_node_data_a0bca6b87451878a9d12bff04b6852eb5}} 
+\index{uS::NodeData@{uS::NodeData}!clearPendingPollChanges@{clearPendingPollChanges}}
+\index{clearPendingPollChanges@{clearPendingPollChanges}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{clearPendingPollChanges()}{clearPendingPollChanges()}}
+{\footnotesize\ttfamily void u\+S\+::\+Node\+Data\+::clear\+Pending\+Poll\+Changes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 247 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_a7314b340328f78687bb3c5d86c500d95}\label{structu_s_1_1_node_data_a7314b340328f78687bb3c5d86c500d95}} 
+\index{uS::NodeData@{uS::NodeData}!freeSmallMemoryBlock@{freeSmallMemoryBlock}}
+\index{freeSmallMemoryBlock@{freeSmallMemoryBlock}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{freeSmallMemoryBlock()}{freeSmallMemoryBlock()}}
+{\footnotesize\ttfamily void u\+S\+::\+Node\+Data\+::free\+Small\+Memory\+Block (\begin{DoxyParamCaption}\item[{char $\ast$}]{memory,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 232 of file Networking.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_node_data_a7314b340328f78687bb3c5d86c500d95_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_node_data_a445a0a4183a8a06dd302bc9d8c5582f4}\label{structu_s_1_1_node_data_a445a0a4183a8a06dd302bc9d8c5582f4}} 
+\index{uS::NodeData@{uS::NodeData}!getMemoryBlockIndex@{getMemoryBlockIndex}}
+\index{getMemoryBlockIndex@{getMemoryBlockIndex}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{getMemoryBlockIndex()}{getMemoryBlockIndex()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} u\+S\+::\+Node\+Data\+::get\+Memory\+Block\+Index (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 218 of file Networking.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_node_data_a445a0a4183a8a06dd302bc9d8c5582f4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_node_data_a4392ca8c27b8f58e86721377da1dec49}\label{structu_s_1_1_node_data_a4392ca8c27b8f58e86721377da1dec49}} 
+\index{uS::NodeData@{uS::NodeData}!getSmallMemoryBlock@{getSmallMemoryBlock}}
+\index{getSmallMemoryBlock@{getSmallMemoryBlock}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{getSmallMemoryBlock()}{getSmallMemoryBlock()}}
+{\footnotesize\ttfamily char$\ast$ u\+S\+::\+Node\+Data\+::get\+Small\+Memory\+Block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 222 of file Networking.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_node_data_a4392ca8c27b8f58e86721377da1dec49_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structu_s_1_1_node_data_a85e8e0e12215ee250a8f230c2ee383e8}\label{structu_s_1_1_node_data_a85e8e0e12215ee250a8f230c2ee383e8}} 
+\index{uS::NodeData@{uS::NodeData}!async@{async}}
+\index{async@{async}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{async}{async}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_async}{Async}}$\ast$ u\+S\+::\+Node\+Data\+::async = nullptr}
+
+
+
+Definition at line 210 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_a6e9f900bf9309cf3e77d12bbdf6ad09c}\label{structu_s_1_1_node_data_a6e9f900bf9309cf3e77d12bbdf6ad09c}} 
+\index{uS::NodeData@{uS::NodeData}!asyncMutex@{asyncMutex}}
+\index{asyncMutex@{asyncMutex}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{asyncMutex}{asyncMutex}}
+{\footnotesize\ttfamily std\+::recursive\+\_\+mutex$\ast$ u\+S\+::\+Node\+Data\+::async\+Mutex}
+
+
+
+Definition at line 213 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_ad727b0db74cd9a912f3931d147837801}\label{structu_s_1_1_node_data_ad727b0db74cd9a912f3931d147837801}} 
+\index{uS::NodeData@{uS::NodeData}!changePollQueue@{changePollQueue}}
+\index{changePollQueue@{changePollQueue}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{changePollQueue}{changePollQueue}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$$>$ u\+S\+::\+Node\+Data\+::change\+Poll\+Queue}
+
+
+
+Definition at line 215 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_af98a51f708a740ab7e3a301e12b42f56}\label{structu_s_1_1_node_data_af98a51f708a740ab7e3a301e12b42f56}} 
+\index{uS::NodeData@{uS::NodeData}!clientContext@{clientContext}}
+\index{clientContext@{clientContext}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{clientContext}{clientContext}}
+{\footnotesize\ttfamily S\+S\+L\+\_\+\+C\+TX$\ast$ u\+S\+::\+Node\+Data\+::client\+Context}
+
+
+
+Definition at line 208 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_a023bddf948a9016e8d84190fe55ecb69}\label{structu_s_1_1_node_data_a023bddf948a9016e8d84190fe55ecb69}} 
+\index{uS::NodeData@{uS::NodeData}!loop@{loop}}
+\index{loop@{loop}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{loop}{loop}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_loop}{Loop}}$\ast$ u\+S\+::\+Node\+Data\+::loop}
+
+
+
+Definition at line 203 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_aa817a2ac768f5dacc48d013e77eb3b65}\label{structu_s_1_1_node_data_aa817a2ac768f5dacc48d013e77eb3b65}} 
+\index{uS::NodeData@{uS::NodeData}!netContext@{netContext}}
+\index{netContext@{netContext}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{netContext}{netContext}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_context}{u\+S\+::\+Context}}$\ast$ u\+S\+::\+Node\+Data\+::net\+Context}
+
+
+
+Definition at line 204 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_a79ff04caf65b1eeaa12631fcea195841}\label{structu_s_1_1_node_data_a79ff04caf65b1eeaa12631fcea195841}} 
+\index{uS::NodeData@{uS::NodeData}!preAlloc@{preAlloc}}
+\index{preAlloc@{preAlloc}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{preAlloc}{preAlloc}}
+{\footnotesize\ttfamily char$\ast$$\ast$ u\+S\+::\+Node\+Data\+::pre\+Alloc}
+
+
+
+Definition at line 207 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_a535bc12e015b9d46c5da7a8bc57b2b5c}\label{structu_s_1_1_node_data_a535bc12e015b9d46c5da7a8bc57b2b5c}} 
+\index{uS::NodeData@{uS::NodeData}!preAllocMaxSize@{preAllocMaxSize}}
+\index{preAllocMaxSize@{preAllocMaxSize}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{preAllocMaxSize}{preAllocMaxSize}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} u\+S\+::\+Node\+Data\+::pre\+Alloc\+Max\+Size = 1024\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 206 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_a8c5219c155234ca3ec7635a5d34bb10d}\label{structu_s_1_1_node_data_a8c5219c155234ca3ec7635a5d34bb10d}} 
+\index{uS::NodeData@{uS::NodeData}!recvBuffer@{recvBuffer}}
+\index{recvBuffer@{recvBuffer}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{recvBuffer}{recvBuffer}}
+{\footnotesize\ttfamily char$\ast$ u\+S\+::\+Node\+Data\+::recv\+Buffer}
+
+
+
+Definition at line 201 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_a42f19adf217f324ceadddcca58b26786}\label{structu_s_1_1_node_data_a42f19adf217f324ceadddcca58b26786}} 
+\index{uS::NodeData@{uS::NodeData}!recvBufferMemoryBlock@{recvBufferMemoryBlock}}
+\index{recvBufferMemoryBlock@{recvBufferMemoryBlock}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{recvBufferMemoryBlock}{recvBufferMemoryBlock}}
+{\footnotesize\ttfamily char$\ast$ u\+S\+::\+Node\+Data\+::recv\+Buffer\+Memory\+Block}
+
+
+
+Definition at line 200 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_af1a37184845a5848af5a1281b93f02ad}\label{structu_s_1_1_node_data_af1a37184845a5848af5a1281b93f02ad}} 
+\index{uS::NodeData@{uS::NodeData}!recvLength@{recvLength}}
+\index{recvLength@{recvLength}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{recvLength}{recvLength}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} u\+S\+::\+Node\+Data\+::recv\+Length}
+
+
+
+Definition at line 202 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_a6a2a06208b4d64a5a8ef75a4bd3e34bd}\label{structu_s_1_1_node_data_a6a2a06208b4d64a5a8ef75a4bd3e34bd}} 
+\index{uS::NodeData@{uS::NodeData}!tid@{tid}}
+\index{tid@{tid}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{tid}{tid}}
+{\footnotesize\ttfamily pthread\+\_\+t u\+S\+::\+Node\+Data\+::tid}
+
+
+
+Definition at line 211 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_adb09878d7e90a0811755660277e1dd77}\label{structu_s_1_1_node_data_adb09878d7e90a0811755660277e1dd77}} 
+\index{uS::NodeData@{uS::NodeData}!transferQueue@{transferQueue}}
+\index{transferQueue@{transferQueue}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{transferQueue}{transferQueue}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$$>$ u\+S\+::\+Node\+Data\+::transfer\+Queue}
+
+
+
+Definition at line 214 of file Networking.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_node_data_ae50717e7e80ec0a1ab5f76633d8f7206}\label{structu_s_1_1_node_data_ae50717e7e80ec0a1ab5f76633d8f7206}} 
+\index{uS::NodeData@{uS::NodeData}!user@{user}}
+\index{user@{user}!uS::NodeData@{uS::NodeData}}
+\doxysubsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily void$\ast$ u\+S\+::\+Node\+Data\+::user = nullptr}
+
+
+
+Definition at line 205 of file Networking.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_networking_8h}{Networking.\+h}}\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_node_8cpp}{Node.\+cpp}}\end{DoxyCompactItemize}

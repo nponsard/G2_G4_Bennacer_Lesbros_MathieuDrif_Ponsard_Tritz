@@ -1,0 +1,314 @@
+\hypertarget{namespaceu_w_s}{}\doxysection{u\+WS Namespace Reference}
+\label{namespaceu_w_s}\index{uWS@{uWS}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classu_w_s_1_1_extensions_negotiator}{Extensions\+Negotiator}}
+\item 
+class \mbox{\hyperlink{classu_w_s_1_1_extensions_parser}{Extensions\+Parser}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_group}{Group}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_header}{Header}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_http_request}{Http\+Request}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_hub}{Hub}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}
+\item 
+class \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{Web\+Socket\+Protocol}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{Web\+Socket\+State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64}{Extension\+Tokens}} \{ \newline
+\mbox{\hyperlink{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64af346bea09973af4dfc6e8a796d967142}{T\+O\+K\+\_\+\+P\+E\+R\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+E\+F\+L\+A\+TE}} = 1838, 
+\mbox{\hyperlink{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64adc4ce81d6eacfed16caa7acabc4e5ade}{T\+O\+K\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+N\+O\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+T\+A\+K\+E\+O\+V\+ER}} = 2807, 
+\mbox{\hyperlink{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64ac65ab5b5dac8cf2b387caefbad6aa43d}{T\+O\+K\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+N\+O\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+T\+A\+K\+E\+O\+V\+ER}} = 2783, 
+\mbox{\hyperlink{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64ac426aab3d387023f8e9e37225383a650}{T\+O\+K\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+A\+X\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+I\+TS}} = 2372, 
+\newline
+\mbox{\hyperlink{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64ac7ba4709d80eefeb1dbe21a6eb84cbac}{T\+O\+K\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+A\+X\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+I\+TS}} = 2348
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6}{Options}} \+: unsigned int \{ \newline
+\mbox{\hyperlink{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6a77336534a078f474bc509339e202cb5f}{N\+O\+\_\+\+O\+P\+T\+I\+O\+NS}} = 0, 
+\mbox{\hyperlink{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6ade6c666a205f4da0caa31089a252dc2f}{P\+E\+R\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+E\+F\+L\+A\+TE}} = 1, 
+\mbox{\hyperlink{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6a19d01ab4876940e28e0f59f78d72cb32}{S\+E\+R\+V\+E\+R\+\_\+\+N\+O\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+T\+A\+K\+E\+O\+V\+ER}} = 2, 
+\mbox{\hyperlink{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6a56c7d07f5a06d8883ebf52f8ae7f2c90}{C\+L\+I\+E\+N\+T\+\_\+\+N\+O\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+T\+A\+K\+E\+O\+V\+ER}} = 4, 
+\newline
+\mbox{\hyperlink{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6a96c8f0dfcded195cbeb8967fc9dc17dc}{N\+O\+\_\+\+D\+E\+L\+AY}} = 8
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceu_w_s_a95a937a744b932b85c5783aa5d8fa93b}{Listen\+Options}} \{ \mbox{\hyperlink{namespaceu_w_s_a95a937a744b932b85c5783aa5d8fa93ba9252b484ef38c333e8effe4e9e0ac0bf}{T\+R\+A\+N\+S\+F\+E\+RS}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92}{Http\+Method}} \{ \newline
+\mbox{\hyperlink{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a22e5e84a70e0eaeb60e12e25b8017db1}{M\+E\+T\+H\+O\+D\+\_\+\+G\+ET}}, 
+\mbox{\hyperlink{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92af34c2b515ce39ac7a90e0fa59a89f52c}{M\+E\+T\+H\+O\+D\+\_\+\+P\+O\+ST}}, 
+\mbox{\hyperlink{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a6d9ea1e08c2ed245716273744edf0f88}{M\+E\+T\+H\+O\+D\+\_\+\+P\+UT}}, 
+\mbox{\hyperlink{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a5af487e90ffb015a8e3d75aecb81be09}{M\+E\+T\+H\+O\+D\+\_\+\+D\+E\+L\+E\+TE}}, 
+\newline
+\mbox{\hyperlink{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a5d4006b32b2be7b1e1916c1d31c21ce8}{M\+E\+T\+H\+O\+D\+\_\+\+P\+A\+T\+CH}}, 
+\mbox{\hyperlink{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92ab8f175ef63b1143b667a5a26e14c6e73}{M\+E\+T\+H\+O\+D\+\_\+\+O\+P\+T\+I\+O\+NS}}, 
+\mbox{\hyperlink{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92ab641b922585e94f252bcc1a96576ba96}{M\+E\+T\+H\+O\+D\+\_\+\+H\+E\+AD}}, 
+\mbox{\hyperlink{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92af566b0ddf65576882d18166114c05e1c}{M\+E\+T\+H\+O\+D\+\_\+\+T\+R\+A\+CE}}, 
+\newline
+\mbox{\hyperlink{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a25b42e035873d1781421edb59bb00098}{M\+E\+T\+H\+O\+D\+\_\+\+C\+O\+N\+N\+E\+CT}}, 
+\mbox{\hyperlink{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92af49b42f0bb885ab3896a7fb07ddeb88f}{M\+E\+T\+H\+O\+D\+\_\+\+I\+N\+V\+A\+L\+ID}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}} \+: unsigned char \{ \newline
+\mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aae55db5ed75691a210fe297a7200c8137}{T\+E\+XT}} = 1, 
+\mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aa846430dbaa0ee3c104207e5a5eba5b85}{B\+I\+N\+A\+RY}} = 2, 
+\mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aa18dbb016f0e7ad10921e2f72e35568ba}{C\+L\+O\+SE}} = 8, 
+\mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aaf19e0035b542a61c26c752b25292c146}{P\+I\+NG}} = 9, 
+\newline
+\mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aa3051e593e743c0b81444d84839bb39ce}{P\+O\+NG}} = 10
+ \}
+\item 
+enum \{ \mbox{\hyperlink{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faecb27a935e86a7b650364ed427dd1c9d}{C\+L\+I\+E\+NT}}, 
+\mbox{\hyperlink{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faa24ab1bf18514c7e8812d471e8f2698d}{S\+E\+R\+V\+ER}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{namespaceu_w_s_a36fdfd73858460dcd28a9b7841e0d382}{get\+Headers}} (char $\ast$buffer, char $\ast$end, \mbox{\hyperlink{structu_w_s_1_1_header}{Header}} $\ast$headers, size\+\_\+t max\+Headers)
+\item 
+\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$ \mbox{\hyperlink{namespaceu_w_s_a99a15f8c7684c97e778a9d362e95dcb7}{allocate\+Http\+Socket}} (\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$s)
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{namespaceu_w_s_aeba9885eed760b162a41218bb77c296b}{parse\+U\+RI}} (std\+::string \&uri, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \&secure, std\+::string \&hostname, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \&port, std\+::string \&path)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66f}\label{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66f}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLIENT@{CLIENT}!uWS@{uWS}}\index{uWS@{uWS}!CLIENT@{CLIENT}}}\mbox{\Hypertarget{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faecb27a935e86a7b650364ed427dd1c9d}\label{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faecb27a935e86a7b650364ed427dd1c9d}} 
+C\+L\+I\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SERVER@{SERVER}!uWS@{uWS}}\index{uWS@{uWS}!SERVER@{SERVER}}}\mbox{\Hypertarget{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faa24ab1bf18514c7e8812d471e8f2698d}\label{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faa24ab1bf18514c7e8812d471e8f2698d}} 
+S\+E\+R\+V\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 20 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64}\label{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64}} 
+\index{uWS@{uWS}!ExtensionTokens@{ExtensionTokens}}
+\index{ExtensionTokens@{ExtensionTokens}!uWS@{uWS}}
+\doxysubsubsection{\texorpdfstring{ExtensionTokens}{ExtensionTokens}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64}{u\+W\+S\+::\+Extension\+Tokens}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_PERMESSAGE\_DEFLATE@{TOK\_PERMESSAGE\_DEFLATE}!uWS@{uWS}}\index{uWS@{uWS}!TOK\_PERMESSAGE\_DEFLATE@{TOK\_PERMESSAGE\_DEFLATE}}}\mbox{\Hypertarget{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64af346bea09973af4dfc6e8a796d967142}\label{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64af346bea09973af4dfc6e8a796d967142}} 
+T\+O\+K\+\_\+\+P\+E\+R\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+E\+F\+L\+A\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_SERVER\_NO\_CONTEXT\_TAKEOVER@{TOK\_SERVER\_NO\_CONTEXT\_TAKEOVER}!uWS@{uWS}}\index{uWS@{uWS}!TOK\_SERVER\_NO\_CONTEXT\_TAKEOVER@{TOK\_SERVER\_NO\_CONTEXT\_TAKEOVER}}}\mbox{\Hypertarget{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64adc4ce81d6eacfed16caa7acabc4e5ade}\label{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64adc4ce81d6eacfed16caa7acabc4e5ade}} 
+T\+O\+K\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+N\+O\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+T\+A\+K\+E\+O\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_CLIENT\_NO\_CONTEXT\_TAKEOVER@{TOK\_CLIENT\_NO\_CONTEXT\_TAKEOVER}!uWS@{uWS}}\index{uWS@{uWS}!TOK\_CLIENT\_NO\_CONTEXT\_TAKEOVER@{TOK\_CLIENT\_NO\_CONTEXT\_TAKEOVER}}}\mbox{\Hypertarget{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64ac65ab5b5dac8cf2b387caefbad6aa43d}\label{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64ac65ab5b5dac8cf2b387caefbad6aa43d}} 
+T\+O\+K\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+N\+O\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+T\+A\+K\+E\+O\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_SERVER\_MAX\_WINDOW\_BITS@{TOK\_SERVER\_MAX\_WINDOW\_BITS}!uWS@{uWS}}\index{uWS@{uWS}!TOK\_SERVER\_MAX\_WINDOW\_BITS@{TOK\_SERVER\_MAX\_WINDOW\_BITS}}}\mbox{\Hypertarget{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64ac426aab3d387023f8e9e37225383a650}\label{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64ac426aab3d387023f8e9e37225383a650}} 
+T\+O\+K\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+M\+A\+X\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+I\+TS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOK\_CLIENT\_MAX\_WINDOW\_BITS@{TOK\_CLIENT\_MAX\_WINDOW\_BITS}!uWS@{uWS}}\index{uWS@{uWS}!TOK\_CLIENT\_MAX\_WINDOW\_BITS@{TOK\_CLIENT\_MAX\_WINDOW\_BITS}}}\mbox{\Hypertarget{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64ac7ba4709d80eefeb1dbe21a6eb84cbac}\label{namespaceu_w_s_a10833543be43d320e8daf1cab42a1e64ac7ba4709d80eefeb1dbe21a6eb84cbac}} 
+T\+O\+K\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+M\+A\+X\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+B\+I\+TS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 5 of file Extensions.\+cpp.
+
+\mbox{\Hypertarget{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92}\label{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92}} 
+\index{uWS@{uWS}!HttpMethod@{HttpMethod}}
+\index{HttpMethod@{HttpMethod}!uWS@{uWS}}
+\doxysubsubsection{\texorpdfstring{HttpMethod}{HttpMethod}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92}{u\+W\+S\+::\+Http\+Method}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METHOD\_GET@{METHOD\_GET}!uWS@{uWS}}\index{uWS@{uWS}!METHOD\_GET@{METHOD\_GET}}}\mbox{\Hypertarget{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a22e5e84a70e0eaeb60e12e25b8017db1}\label{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a22e5e84a70e0eaeb60e12e25b8017db1}} 
+M\+E\+T\+H\+O\+D\+\_\+\+G\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METHOD\_POST@{METHOD\_POST}!uWS@{uWS}}\index{uWS@{uWS}!METHOD\_POST@{METHOD\_POST}}}\mbox{\Hypertarget{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92af34c2b515ce39ac7a90e0fa59a89f52c}\label{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92af34c2b515ce39ac7a90e0fa59a89f52c}} 
+M\+E\+T\+H\+O\+D\+\_\+\+P\+O\+ST&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METHOD\_PUT@{METHOD\_PUT}!uWS@{uWS}}\index{uWS@{uWS}!METHOD\_PUT@{METHOD\_PUT}}}\mbox{\Hypertarget{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a6d9ea1e08c2ed245716273744edf0f88}\label{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a6d9ea1e08c2ed245716273744edf0f88}} 
+M\+E\+T\+H\+O\+D\+\_\+\+P\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METHOD\_DELETE@{METHOD\_DELETE}!uWS@{uWS}}\index{uWS@{uWS}!METHOD\_DELETE@{METHOD\_DELETE}}}\mbox{\Hypertarget{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a5af487e90ffb015a8e3d75aecb81be09}\label{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a5af487e90ffb015a8e3d75aecb81be09}} 
+M\+E\+T\+H\+O\+D\+\_\+\+D\+E\+L\+E\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METHOD\_PATCH@{METHOD\_PATCH}!uWS@{uWS}}\index{uWS@{uWS}!METHOD\_PATCH@{METHOD\_PATCH}}}\mbox{\Hypertarget{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a5d4006b32b2be7b1e1916c1d31c21ce8}\label{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a5d4006b32b2be7b1e1916c1d31c21ce8}} 
+M\+E\+T\+H\+O\+D\+\_\+\+P\+A\+T\+CH&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METHOD\_OPTIONS@{METHOD\_OPTIONS}!uWS@{uWS}}\index{uWS@{uWS}!METHOD\_OPTIONS@{METHOD\_OPTIONS}}}\mbox{\Hypertarget{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92ab8f175ef63b1143b667a5a26e14c6e73}\label{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92ab8f175ef63b1143b667a5a26e14c6e73}} 
+M\+E\+T\+H\+O\+D\+\_\+\+O\+P\+T\+I\+O\+NS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METHOD\_HEAD@{METHOD\_HEAD}!uWS@{uWS}}\index{uWS@{uWS}!METHOD\_HEAD@{METHOD\_HEAD}}}\mbox{\Hypertarget{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92ab641b922585e94f252bcc1a96576ba96}\label{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92ab641b922585e94f252bcc1a96576ba96}} 
+M\+E\+T\+H\+O\+D\+\_\+\+H\+E\+AD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METHOD\_TRACE@{METHOD\_TRACE}!uWS@{uWS}}\index{uWS@{uWS}!METHOD\_TRACE@{METHOD\_TRACE}}}\mbox{\Hypertarget{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92af566b0ddf65576882d18166114c05e1c}\label{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92af566b0ddf65576882d18166114c05e1c}} 
+M\+E\+T\+H\+O\+D\+\_\+\+T\+R\+A\+CE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METHOD\_CONNECT@{METHOD\_CONNECT}!uWS@{uWS}}\index{uWS@{uWS}!METHOD\_CONNECT@{METHOD\_CONNECT}}}\mbox{\Hypertarget{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a25b42e035873d1781421edb59bb00098}\label{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92a25b42e035873d1781421edb59bb00098}} 
+M\+E\+T\+H\+O\+D\+\_\+\+C\+O\+N\+N\+E\+CT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{METHOD\_INVALID@{METHOD\_INVALID}!uWS@{uWS}}\index{uWS@{uWS}!METHOD\_INVALID@{METHOD\_INVALID}}}\mbox{\Hypertarget{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92af49b42f0bb885ab3896a7fb07ddeb88f}\label{namespaceu_w_s_a165e76e3ef6acac58acf3ec4d4af3c92af49b42f0bb885ab3896a7fb07ddeb88f}} 
+M\+E\+T\+H\+O\+D\+\_\+\+I\+N\+V\+A\+L\+ID&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 24 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{namespaceu_w_s_a95a937a744b932b85c5783aa5d8fa93b}\label{namespaceu_w_s_a95a937a744b932b85c5783aa5d8fa93b}} 
+\index{uWS@{uWS}!ListenOptions@{ListenOptions}}
+\index{ListenOptions@{ListenOptions}!uWS@{uWS}}
+\doxysubsubsection{\texorpdfstring{ListenOptions}{ListenOptions}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceu_w_s_a95a937a744b932b85c5783aa5d8fa93b}{u\+W\+S\+::\+Listen\+Options}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSFERS@{TRANSFERS}!uWS@{uWS}}\index{uWS@{uWS}!TRANSFERS@{TRANSFERS}}}\mbox{\Hypertarget{namespaceu_w_s_a95a937a744b932b85c5783aa5d8fa93ba9252b484ef38c333e8effe4e9e0ac0bf}\label{namespaceu_w_s_a95a937a744b932b85c5783aa5d8fa93ba9252b484ef38c333e8effe4e9e0ac0bf}} 
+T\+R\+A\+N\+S\+F\+E\+RS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 12 of file Group.\+h.
+
+\mbox{\Hypertarget{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}\label{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}} 
+\index{uWS@{uWS}!OpCode@{OpCode}}
+\index{OpCode@{OpCode}!uWS@{uWS}}
+\doxysubsubsection{\texorpdfstring{OpCode}{OpCode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{u\+W\+S\+::\+Op\+Code}} \+: unsigned char}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TEXT@{TEXT}!uWS@{uWS}}\index{uWS@{uWS}!TEXT@{TEXT}}}\mbox{\Hypertarget{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aae55db5ed75691a210fe297a7200c8137}\label{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aae55db5ed75691a210fe297a7200c8137}} 
+T\+E\+XT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BINARY@{BINARY}!uWS@{uWS}}\index{uWS@{uWS}!BINARY@{BINARY}}}\mbox{\Hypertarget{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aa846430dbaa0ee3c104207e5a5eba5b85}\label{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aa846430dbaa0ee3c104207e5a5eba5b85}} 
+B\+I\+N\+A\+RY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLOSE@{CLOSE}!uWS@{uWS}}\index{uWS@{uWS}!CLOSE@{CLOSE}}}\mbox{\Hypertarget{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aa18dbb016f0e7ad10921e2f72e35568ba}\label{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aa18dbb016f0e7ad10921e2f72e35568ba}} 
+C\+L\+O\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PING@{PING}!uWS@{uWS}}\index{uWS@{uWS}!PING@{PING}}}\mbox{\Hypertarget{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aaf19e0035b542a61c26c752b25292c146}\label{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aaf19e0035b542a61c26c752b25292c146}} 
+P\+I\+NG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PONG@{PONG}!uWS@{uWS}}\index{uWS@{uWS}!PONG@{PONG}}}\mbox{\Hypertarget{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aa3051e593e743c0b81444d84839bb39ce}\label{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1aa3051e593e743c0b81444d84839bb39ce}} 
+P\+O\+NG&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 12 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6}\label{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6}} 
+\index{uWS@{uWS}!Options@{Options}}
+\index{Options@{Options}!uWS@{uWS}}
+\doxysubsubsection{\texorpdfstring{Options}{Options}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6}{u\+W\+S\+::\+Options}} \+: unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_OPTIONS@{NO\_OPTIONS}!uWS@{uWS}}\index{uWS@{uWS}!NO\_OPTIONS@{NO\_OPTIONS}}}\mbox{\Hypertarget{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6a77336534a078f474bc509339e202cb5f}\label{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6a77336534a078f474bc509339e202cb5f}} 
+N\+O\+\_\+\+O\+P\+T\+I\+O\+NS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PERMESSAGE\_DEFLATE@{PERMESSAGE\_DEFLATE}!uWS@{uWS}}\index{uWS@{uWS}!PERMESSAGE\_DEFLATE@{PERMESSAGE\_DEFLATE}}}\mbox{\Hypertarget{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6ade6c666a205f4da0caa31089a252dc2f}\label{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6ade6c666a205f4da0caa31089a252dc2f}} 
+P\+E\+R\+M\+E\+S\+S\+A\+G\+E\+\_\+\+D\+E\+F\+L\+A\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SERVER\_NO\_CONTEXT\_TAKEOVER@{SERVER\_NO\_CONTEXT\_TAKEOVER}!uWS@{uWS}}\index{uWS@{uWS}!SERVER\_NO\_CONTEXT\_TAKEOVER@{SERVER\_NO\_CONTEXT\_TAKEOVER}}}\mbox{\Hypertarget{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6a19d01ab4876940e28e0f59f78d72cb32}\label{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6a19d01ab4876940e28e0f59f78d72cb32}} 
+S\+E\+R\+V\+E\+R\+\_\+\+N\+O\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+T\+A\+K\+E\+O\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLIENT\_NO\_CONTEXT\_TAKEOVER@{CLIENT\_NO\_CONTEXT\_TAKEOVER}!uWS@{uWS}}\index{uWS@{uWS}!CLIENT\_NO\_CONTEXT\_TAKEOVER@{CLIENT\_NO\_CONTEXT\_TAKEOVER}}}\mbox{\Hypertarget{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6a56c7d07f5a06d8883ebf52f8ae7f2c90}\label{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6a56c7d07f5a06d8883ebf52f8ae7f2c90}} 
+C\+L\+I\+E\+N\+T\+\_\+\+N\+O\+\_\+\+C\+O\+N\+T\+E\+X\+T\+\_\+\+T\+A\+K\+E\+O\+V\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_DELAY@{NO\_DELAY}!uWS@{uWS}}\index{uWS@{uWS}!NO\_DELAY@{NO\_DELAY}}}\mbox{\Hypertarget{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6a96c8f0dfcded195cbeb8967fc9dc17dc}\label{namespaceu_w_s_aaa5bf75f5ce4c8f66a39eaed28ba24e6a96c8f0dfcded195cbeb8967fc9dc17dc}} 
+N\+O\+\_\+\+D\+E\+L\+AY&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 8 of file Extensions.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespaceu_w_s_a99a15f8c7684c97e778a9d362e95dcb7}\label{namespaceu_w_s_a99a15f8c7684c97e778a9d362e95dcb7}} 
+\index{uWS@{uWS}!allocateHttpSocket@{allocateHttpSocket}}
+\index{allocateHttpSocket@{allocateHttpSocket}!uWS@{uWS}}
+\doxysubsubsection{\texorpdfstring{allocateHttpSocket()}{allocateHttpSocket()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}}$\ast$ u\+W\+S\+::allocate\+Http\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Definition at line 83 of file Hub.\+cpp.
+
+\mbox{\Hypertarget{namespaceu_w_s_a36fdfd73858460dcd28a9b7841e0d382}\label{namespaceu_w_s_a36fdfd73858460dcd28a9b7841e0d382}} 
+\index{uWS@{uWS}!getHeaders@{getHeaders}}
+\index{getHeaders@{getHeaders}!uWS@{uWS}}
+\doxysubsubsection{\texorpdfstring{getHeaders()}{getHeaders()}}
+{\footnotesize\ttfamily char$\ast$ u\+W\+S\+::get\+Headers (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{char $\ast$}]{end,  }\item[{\mbox{\hyperlink{structu_w_s_1_1_header}{Header}} $\ast$}]{headers,  }\item[{size\+\_\+t}]{max\+Headers }\end{DoxyParamCaption})}
+
+= end
+
+Definition at line 13 of file H\+T\+T\+P\+Socket.\+cpp.
+
+\mbox{\Hypertarget{namespaceu_w_s_aeba9885eed760b162a41218bb77c296b}\label{namespaceu_w_s_aeba9885eed760b162a41218bb77c296b}} 
+\index{uWS@{uWS}!parseURI@{parseURI}}
+\index{parseURI@{parseURI}!uWS@{uWS}}
+\doxysubsubsection{\texorpdfstring{parseURI()}{parseURI()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+W\+S\+::parse\+U\+RI (\begin{DoxyParamCaption}\item[{std\+::string \&}]{uri,  }\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \&}]{secure,  }\item[{std\+::string \&}]{hostname,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \&}]{port,  }\item[{std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Definition at line 87 of file Hub.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceu_w_s_aeba9885eed760b162a41218bb77c296b_icgraph}
+\end{center}
+\end{figure}

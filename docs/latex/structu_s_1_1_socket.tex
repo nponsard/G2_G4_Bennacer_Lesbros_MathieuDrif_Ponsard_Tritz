@@ -1,0 +1,736 @@
+\hypertarget{structu_s_1_1_socket}{}\doxysection{uS\+::Socket Struct Reference}
+\label{structu_s_1_1_socket}\index{uS::Socket@{uS::Socket}}
+
+
+{\ttfamily \#include $<$Socket.\+h$>$}
+
+
+
+Inheritance diagram for uS\+::Socket\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for uS\+::Socket\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_socket_1_1_address}{Address}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_socket_1_1_queue}{Queue}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structu_s_1_1_socket_af0382e650ead4694c8114c4b0b56743b}{Socket}} (\mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}} $\ast$\mbox{\hyperlink{structu_s_1_1_socket_a2f4fc81e5838284b4bf8b36eeff2b501}{node\+Data}}, \mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}} \mbox{\hyperlink{structu_s_1_1_poll_a1b751c2ba3c30e39e48736d308e8ca9a}{fd}}, S\+SL $\ast$\mbox{\hyperlink{structu_s_1_1_socket_a08a28a30f98242ff37fa1918e158218e}{ssl}})
+\item 
+\mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}} $\ast$ \mbox{\hyperlink{structu_s_1_1_socket_ae41d00dd8888a37bf235d6e4c4dd3bef}{get\+Node\+Data}} ()
+\item 
+void $\ast$ \mbox{\hyperlink{structu_s_1_1_socket_ab86ba43740c50f1a969917ee1105e55f}{get\+User\+Data}} ()
+\item 
+void \mbox{\hyperlink{structu_s_1_1_socket_a81edd7ed05f455899a09711e37fb2f42}{set\+User\+Data}} (void $\ast$\mbox{\hyperlink{structu_s_1_1_socket_a3d59d676b6334ab2a1e0e35a1221db5f}{user}})
+\item 
+\mbox{\hyperlink{structu_s_1_1_socket_1_1_address}{Address}} \mbox{\hyperlink{structu_s_1_1_socket_af9f06bec0b50372e5df561ca47f7d6bf}{get\+Address}} ()
+\item 
+void \mbox{\hyperlink{structu_s_1_1_socket_a0d1b35a546a5afe214adf71a74b6abbf}{set\+No\+Delay}} (\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} enable)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_socket_ab23d8de6bd87bdba787c2663390f1602}{cork}} (\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} enable)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_socket_aa377349b17a65d9968f20b076db65858}{shutdown}} ()
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{structu_s_1_1_socket_a241d2ac2268d3a9fa3084cca32d218de}{close\+Socket}} ()
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_s_1_1_socket_a9cbd30c06deb03c91fdbbe434d761875}{is\+Shutting\+Down}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$ \mbox{\hyperlink{structu_s_1_1_socket_aece79bbb7913c1ebb7a5fad75b35a315}{next}} = nullptr
+\item 
+\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$ \mbox{\hyperlink{structu_s_1_1_socket_a954aacb6f92fd2d0eb7ad78c3e0dc913}{prev}} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_s_1_1_socket_a555982b4927aa4fe93e34dc8708445ef}{get\+Poll}} ()
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_s_1_1_socket_ab11380927901b057825537ab0f153d20}{set\+Poll}} (\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_s_1_1_socket_a4906052563459d6978e12b796574e25c}{poll}})
+\item 
+void \mbox{\hyperlink{structu_s_1_1_socket_acd05df2e4a97e47934a356213aefb792}{set\+Shutting\+Down}} (\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_s_1_1_socket_a2f943ac89c8d7578845de330781b72b4}{shutting\+Down}})
+\item 
+void \mbox{\hyperlink{structu_s_1_1_socket_a7c87c8a0af2f52e3efd6b4cbca88bf61}{transfer}} (\mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}} $\ast$\mbox{\hyperlink{structu_s_1_1_socket_a2f4fc81e5838284b4bf8b36eeff2b501}{node\+Data}}, void($\ast$\mbox{\hyperlink{structu_s_1_1_poll_a9c94b5022375b43a4c1ae9da0f052fb7}{cb}})(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$))
+\item 
+void \mbox{\hyperlink{structu_s_1_1_socket_a0a6a0e4adbbd115c8e88a1a00be198e3}{change\+Poll}} (\mbox{\hyperlink{structu_s_1_1_socket}{Socket}} $\ast$\mbox{\hyperlink{structu_s_1_1_poll_a89b3505f44473b874dd43b484dfd648f}{socket}})
+\item 
+{\footnotesize template$<$void  on\+Timeout$>$ }\\void \mbox{\hyperlink{structu_s_1_1_socket_a97f8c1006871b3b39d66d85c7effa4d5}{start\+Timeout}} (\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} timeout\+Ms=15000)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_socket_a4ce1bf5d0098ad1346a99bd71530b7de}{cancel\+Timeout}} ()
+\item 
+{\footnotesize template$<$class S\+T\+A\+TE $>$ }\\void \mbox{\hyperlink{structu_s_1_1_socket_a8a172747528e58a85c682abf483ed59a}{set\+State}} ()
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_s_1_1_socket_a4a6647b9d962984c23ecf89a3d5b6efd}{has\+Empty\+Queue}} ()
+\item 
+void \mbox{\hyperlink{structu_s_1_1_socket_a4d1bf51315b6dd297047b29a5a8db8fe}{enqueue}} (\mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message}{Queue\+::\+Message}} $\ast$message)
+\item 
+\mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message}{Queue\+::\+Message}} $\ast$ \mbox{\hyperlink{structu_s_1_1_socket_af3cccd4b155509ecbfdb6ebd5ad67f55}{alloc\+Message}} (size\+\_\+t length, const char $\ast$data=0)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_socket_a5e3d88792f59e861f61081eced2a77d3}{free\+Message}} (\mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message}{Queue\+::\+Message}} $\ast$message)
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_s_1_1_socket_ad5ef4e37198b1356fe1ad5deb5d66f1f}{write}} (\mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message}{Queue\+::\+Message}} $\ast$message, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \&was\+Transferred)
+\item 
+{\footnotesize template$<$class T , class D $>$ }\\void \mbox{\hyperlink{structu_s_1_1_socket_ab000a9d579baac719182074100133c21}{send\+Transformed}} (const char $\ast$message, size\+\_\+t length, void($\ast$callback)(void $\ast$\mbox{\hyperlink{structu_s_1_1_poll_a89b3505f44473b874dd43b484dfd648f}{socket}}, void $\ast$data, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$reserved), void $\ast$callback\+Data, D transform\+Data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class S\+T\+A\+TE $>$ }\\static void \mbox{\hyperlink{structu_s_1_1_socket_aef1048dff6be13161695c1752e7a04b6}{ssl\+Io\+Handler}} (\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$p, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} status, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+{\footnotesize template$<$class S\+T\+A\+TE $>$ }\\static void \mbox{\hyperlink{structu_s_1_1_socket_a72efcc8bb407e6f313b6a14e7beaee62}{io\+Handler}} (\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$p, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} status, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_s_1_1_socket_a4906052563459d6978e12b796574e25c}{poll}}: 4\\
+\>\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_s_1_1_socket_a2f943ac89c8d7578845de330781b72b4}{shuttingDown}}: 4\\
+\} \mbox{\hyperlink{structu_s_1_1_socket_a6864c35ea98b57a30ab3918c532e2c79}{state}} = \{0, false\}\\
+
+\end{tabbing}\item 
+S\+SL $\ast$ \mbox{\hyperlink{structu_s_1_1_socket_a08a28a30f98242ff37fa1918e158218e}{ssl}}
+\item 
+void $\ast$ \mbox{\hyperlink{structu_s_1_1_socket_a3d59d676b6334ab2a1e0e35a1221db5f}{user}} = nullptr
+\item 
+\mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}} $\ast$ \mbox{\hyperlink{structu_s_1_1_socket_a2f4fc81e5838284b4bf8b36eeff2b501}{node\+Data}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_socket_1_1_queue}{u\+S\+::\+Socket\+::\+Queue}} \mbox{\hyperlink{structu_s_1_1_socket_a568f99f3e39c8e5e8ecc62d50ea78474}{message\+Queue}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structu_s_1_1_socket_a6db9d28bd448a131448276ee03de1e6d}{Node}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_socket_ae39d0b60fda531523b009a9c5e234400}{Node\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 26 of file Socket.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structu_s_1_1_socket_af0382e650ead4694c8114c4b0b56743b}\label{structu_s_1_1_socket_af0382e650ead4694c8114c4b0b56743b}} 
+\index{uS::Socket@{uS::Socket}!Socket@{Socket}}
+\index{Socket@{Socket}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{Socket()}{Socket()}}
+{\footnotesize\ttfamily u\+S\+::\+Socket\+::\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}} $\ast$}]{node\+Data,  }\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}}}]{fd,  }\item[{S\+SL $\ast$}]{ssl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 414 of file Socket.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structu_s_1_1_socket_af3cccd4b155509ecbfdb6ebd5ad67f55}\label{structu_s_1_1_socket_af3cccd4b155509ecbfdb6ebd5ad67f55}} 
+\index{uS::Socket@{uS::Socket}!allocMessage@{allocMessage}}
+\index{allocMessage@{allocMessage}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{allocMessage()}{allocMessage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message}{Queue\+::\+Message}}$\ast$ u\+S\+::\+Socket\+::alloc\+Message (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{length,  }\item[{const char $\ast$}]{data = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 287 of file Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_af3cccd4b155509ecbfdb6ebd5ad67f55_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_a4ce1bf5d0098ad1346a99bd71530b7de}\label{structu_s_1_1_socket_a4ce1bf5d0098ad1346a99bd71530b7de}} 
+\index{uS::Socket@{uS::Socket}!cancelTimeout@{cancelTimeout}}
+\index{cancelTimeout@{cancelTimeout}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{cancelTimeout()}{cancelTimeout()}}
+{\footnotesize\ttfamily void u\+S\+::\+Socket\+::cancel\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 135 of file Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a4ce1bf5d0098ad1346a99bd71530b7de_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a4ce1bf5d0098ad1346a99bd71530b7de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_a0a6a0e4adbbd115c8e88a1a00be198e3}\label{structu_s_1_1_socket_a0a6a0e4adbbd115c8e88a1a00be198e3}} 
+\index{uS::Socket@{uS::Socket}!changePoll@{changePoll}}
+\index{changePoll@{changePoll}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{changePoll()}{changePoll()}}
+{\footnotesize\ttfamily void u\+S\+::\+Socket\+::change\+Poll (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_socket}{Socket}} $\ast$}]{socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 108 of file Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{structu_s_1_1_socket_a0a6a0e4adbbd115c8e88a1a00be198e3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_a241d2ac2268d3a9fa3084cca32d218de}\label{structu_s_1_1_socket_a241d2ac2268d3a9fa3084cca32d218de}} 
+\index{uS::Socket@{uS::Socket}!closeSocket@{closeSocket}}
+\index{closeSocket@{closeSocket}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{closeSocket()}{closeSocket()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void u\+S\+::\+Socket\+::close\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 472 of file Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a241d2ac2268d3a9fa3084cca32d218de_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a241d2ac2268d3a9fa3084cca32d218de_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_ab23d8de6bd87bdba787c2663390f1602}\label{structu_s_1_1_socket_ab23d8de6bd87bdba787c2663390f1602}} 
+\index{uS::Socket@{uS::Socket}!cork@{cork}}
+\index{cork@{cork}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{cork()}{cork()}}
+{\footnotesize\ttfamily void u\+S\+::\+Socket\+::cork (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 448 of file Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_ab23d8de6bd87bdba787c2663390f1602_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{structu_s_1_1_socket_ab23d8de6bd87bdba787c2663390f1602_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_a4d1bf51315b6dd297047b29a5a8db8fe}\label{structu_s_1_1_socket_a4d1bf51315b6dd297047b29a5a8db8fe}} 
+\index{uS::Socket@{uS::Socket}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily void u\+S\+::\+Socket\+::enqueue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message}{Queue\+::\+Message}} $\ast$}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 283 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_a5e3d88792f59e861f61081eced2a77d3}\label{structu_s_1_1_socket_a5e3d88792f59e861f61081eced2a77d3}} 
+\index{uS::Socket@{uS::Socket}!freeMessage@{freeMessage}}
+\index{freeMessage@{freeMessage}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{freeMessage()}{freeMessage()}}
+{\footnotesize\ttfamily void u\+S\+::\+Socket\+::free\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message}{Queue\+::\+Message}} $\ast$}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 300 of file Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a5e3d88792f59e861f61081eced2a77d3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_af9f06bec0b50372e5df561ca47f7d6bf}\label{structu_s_1_1_socket_af9f06bec0b50372e5df561ca47f7d6bf}} 
+\index{uS::Socket@{uS::Socket}!getAddress@{getAddress}}
+\index{getAddress@{getAddress}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{getAddress()}{getAddress()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_socket_1_1_address}{Socket\+::\+Address}} u\+S\+::\+Socket\+::get\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file Socket.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{structu_s_1_1_socket_af9f06bec0b50372e5df561ca47f7d6bf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_ae41d00dd8888a37bf235d6e4c4dd3bef}\label{structu_s_1_1_socket_ae41d00dd8888a37bf235d6e4c4dd3bef}} 
+\index{uS::Socket@{uS::Socket}!getNodeData@{getNodeData}}
+\index{getNodeData@{getNodeData}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{getNodeData()}{getNodeData()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}}$\ast$ u\+S\+::\+Socket\+::get\+Node\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 422 of file Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_ae41d00dd8888a37bf235d6e4c4dd3bef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_a555982b4927aa4fe93e34dc8708445ef}\label{structu_s_1_1_socket_a555982b4927aa4fe93e34dc8708445ef}} 
+\index{uS::Socket@{uS::Socket}!getPoll@{getPoll}}
+\index{getPoll@{getPoll}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{getPoll()}{getPoll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} u\+S\+::\+Socket\+::get\+Poll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 76 of file Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a555982b4927aa4fe93e34dc8708445ef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_ab86ba43740c50f1a969917ee1105e55f}\label{structu_s_1_1_socket_ab86ba43740c50f1a969917ee1105e55f}} 
+\index{uS::Socket@{uS::Socket}!getUserData@{getUserData}}
+\index{getUserData@{getUserData}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{getUserData()}{getUserData()}}
+{\footnotesize\ttfamily void$\ast$ u\+S\+::\+Socket\+::get\+User\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 428 of file Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_ab86ba43740c50f1a969917ee1105e55f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_a4a6647b9d962984c23ecf89a3d5b6efd}\label{structu_s_1_1_socket_a4a6647b9d962984c23ecf89a3d5b6efd}} 
+\index{uS::Socket@{uS::Socket}!hasEmptyQueue@{hasEmptyQueue}}
+\index{hasEmptyQueue@{hasEmptyQueue}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{hasEmptyQueue()}{hasEmptyQueue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+S\+::\+Socket\+::has\+Empty\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 279 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_a72efcc8bb407e6f313b6a14e7beaee62}\label{structu_s_1_1_socket_a72efcc8bb407e6f313b6a14e7beaee62}} 
+\index{uS::Socket@{uS::Socket}!ioHandler@{ioHandler}}
+\index{ioHandler@{ioHandler}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{ioHandler()}{ioHandler()}}
+{\footnotesize\ttfamily template$<$class S\+T\+A\+TE $>$ \\
+static void u\+S\+::\+Socket\+::io\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{status,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 217 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_a9cbd30c06deb03c91fdbbe434d761875}\label{structu_s_1_1_socket_a9cbd30c06deb03c91fdbbe434d761875}} 
+\index{uS::Socket@{uS::Socket}!isShuttingDown@{isShuttingDown}}
+\index{isShuttingDown@{isShuttingDown}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{isShuttingDown()}{isShuttingDown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+S\+::\+Socket\+::is\+Shutting\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 487 of file Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a9cbd30c06deb03c91fdbbe434d761875_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_ab000a9d579baac719182074100133c21}\label{structu_s_1_1_socket_ab000a9d579baac719182074100133c21}} 
+\index{uS::Socket@{uS::Socket}!sendTransformed@{sendTransformed}}
+\index{sendTransformed@{sendTransformed}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{sendTransformed()}{sendTransformed()}}
+{\footnotesize\ttfamily template$<$class T , class D $>$ \\
+void u\+S\+::\+Socket\+::send\+Transformed (\begin{DoxyParamCaption}\item[{const char $\ast$}]{message,  }\item[{size\+\_\+t}]{length,  }\item[{void($\ast$)(void $\ast$\mbox{\hyperlink{structu_s_1_1_poll_a89b3505f44473b874dd43b484dfd648f}{socket}}, void $\ast$data, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$reserved)}]{callback,  }\item[{void $\ast$}]{callback\+Data,  }\item[{D}]{transform\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 353 of file Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_ab000a9d579baac719182074100133c21_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_ab000a9d579baac719182074100133c21_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_a0d1b35a546a5afe214adf71a74b6abbf}\label{structu_s_1_1_socket_a0d1b35a546a5afe214adf71a74b6abbf}} 
+\index{uS::Socket@{uS::Socket}!setNoDelay@{setNoDelay}}
+\index{setNoDelay@{setNoDelay}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{setNoDelay()}{setNoDelay()}}
+{\footnotesize\ttfamily void u\+S\+::\+Socket\+::set\+No\+Delay (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 444 of file Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a0d1b35a546a5afe214adf71a74b6abbf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_ab11380927901b057825537ab0f153d20}\label{structu_s_1_1_socket_ab11380927901b057825537ab0f153d20}} 
+\index{uS::Socket@{uS::Socket}!setPoll@{setPoll}}
+\index{setPoll@{setPoll}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{setPoll()}{setPoll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} u\+S\+::\+Socket\+::set\+Poll (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{poll }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 80 of file Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_ab11380927901b057825537ab0f153d20_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_acd05df2e4a97e47934a356213aefb792}\label{structu_s_1_1_socket_acd05df2e4a97e47934a356213aefb792}} 
+\index{uS::Socket@{uS::Socket}!setShuttingDown@{setShuttingDown}}
+\index{setShuttingDown@{setShuttingDown}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{setShuttingDown()}{setShuttingDown()}}
+{\footnotesize\ttfamily void u\+S\+::\+Socket\+::set\+Shutting\+Down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}}}]{shutting\+Down }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 85 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_a8a172747528e58a85c682abf483ed59a}\label{structu_s_1_1_socket_a8a172747528e58a85c682abf483ed59a}} 
+\index{uS::Socket@{uS::Socket}!setState@{setState}}
+\index{setState@{setState}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily template$<$class S\+T\+A\+TE $>$ \\
+void u\+S\+::\+Socket\+::set\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 271 of file Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a8a172747528e58a85c682abf483ed59a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_a81edd7ed05f455899a09711e37fb2f42}\label{structu_s_1_1_socket_a81edd7ed05f455899a09711e37fb2f42}} 
+\index{uS::Socket@{uS::Socket}!setUserData@{setUserData}}
+\index{setUserData@{setUserData}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{setUserData()}{setUserData()}}
+{\footnotesize\ttfamily void u\+S\+::\+Socket\+::set\+User\+Data (\begin{DoxyParamCaption}\item[{void $\ast$}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 432 of file Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a81edd7ed05f455899a09711e37fb2f42_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_aa377349b17a65d9968f20b076db65858}\label{structu_s_1_1_socket_aa377349b17a65d9968f20b076db65858}} 
+\index{uS::Socket@{uS::Socket}!shutdown@{shutdown}}
+\index{shutdown@{shutdown}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{shutdown()}{shutdown()}}
+{\footnotesize\ttfamily void u\+S\+::\+Socket\+::shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 462 of file Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_aa377349b17a65d9968f20b076db65858_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_aef1048dff6be13161695c1752e7a04b6}\label{structu_s_1_1_socket_aef1048dff6be13161695c1752e7a04b6}} 
+\index{uS::Socket@{uS::Socket}!sslIoHandler@{sslIoHandler}}
+\index{sslIoHandler@{sslIoHandler}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{sslIoHandler()}{sslIoHandler()}}
+{\footnotesize\ttfamily template$<$class S\+T\+A\+TE $>$ \\
+static void u\+S\+::\+Socket\+::ssl\+Io\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{status,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 145 of file Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_aef1048dff6be13161695c1752e7a04b6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_a97f8c1006871b3b39d66d85c7effa4d5}\label{structu_s_1_1_socket_a97f8c1006871b3b39d66d85c7effa4d5}} 
+\index{uS::Socket@{uS::Socket}!startTimeout@{startTimeout}}
+\index{startTimeout@{startTimeout}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{startTimeout()}{startTimeout()}}
+{\footnotesize\ttfamily template$<$void  on\+Timeout$>$ \\
+void u\+S\+::\+Socket\+::start\+Timeout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{timeout\+Ms = {\ttfamily 15000} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 123 of file Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a97f8c1006871b3b39d66d85c7effa4d5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a97f8c1006871b3b39d66d85c7effa4d5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_a7c87c8a0af2f52e3efd6b4cbca88bf61}\label{structu_s_1_1_socket_a7c87c8a0af2f52e3efd6b4cbca88bf61}} 
+\index{uS::Socket@{uS::Socket}!transfer@{transfer}}
+\index{transfer@{transfer}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{transfer()}{transfer()}}
+{\footnotesize\ttfamily void u\+S\+::\+Socket\+::transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}} $\ast$}]{node\+Data,  }\item[{void($\ast$)(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$)}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 89 of file Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a7c87c8a0af2f52e3efd6b4cbca88bf61_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_a7c87c8a0af2f52e3efd6b4cbca88bf61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_socket_ad5ef4e37198b1356fe1ad5deb5d66f1f}\label{structu_s_1_1_socket_ad5ef4e37198b1356fe1ad5deb5d66f1f}} 
+\index{uS::Socket@{uS::Socket}!write@{write}}
+\index{write@{write}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+S\+::\+Socket\+::write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message}{Queue\+::\+Message}} $\ast$}]{message,  }\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \&}]{was\+Transferred }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 304 of file Socket.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_socket_ad5ef4e37198b1356fe1ad5deb5d66f1f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structu_s_1_1_socket_a6db9d28bd448a131448276ee03de1e6d}\label{structu_s_1_1_socket_a6db9d28bd448a131448276ee03de1e6d}} 
+\index{uS::Socket@{uS::Socket}!Node@{Node}}
+\index{Node@{Node}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{Node}{Node}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classu_s_1_1_node}{Node}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 491 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_ae39d0b60fda531523b009a9c5e234400}\label{structu_s_1_1_socket_ae39d0b60fda531523b009a9c5e234400}} 
+\index{uS::Socket@{uS::Socket}!NodeData@{NodeData}}
+\index{NodeData@{NodeData}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{NodeData}{NodeData}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 492 of file Socket.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structu_s_1_1_socket_a568f99f3e39c8e5e8ecc62d50ea78474}\label{structu_s_1_1_socket_a568f99f3e39c8e5e8ecc62d50ea78474}} 
+\index{uS::Socket@{uS::Socket}!messageQueue@{messageQueue}}
+\index{messageQueue@{messageQueue}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{messageQueue}{messageQueue}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structu_s_1_1_socket_1_1_queue}{u\+S\+::\+Socket\+::\+Queue}} u\+S\+::\+Socket\+::message\+Queue\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structu_s_1_1_socket_aece79bbb7913c1ebb7a5fad75b35a315}\label{structu_s_1_1_socket_aece79bbb7913c1ebb7a5fad75b35a315}} 
+\index{uS::Socket@{uS::Socket}!next@{next}}
+\index{next@{next}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_poll}{Poll}}$\ast$ u\+S\+::\+Socket\+::next = nullptr}
+
+
+
+Definition at line 426 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_a2f4fc81e5838284b4bf8b36eeff2b501}\label{structu_s_1_1_socket_a2f4fc81e5838284b4bf8b36eeff2b501}} 
+\index{uS::Socket@{uS::Socket}!nodeData@{nodeData}}
+\index{nodeData@{nodeData}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{nodeData}{nodeData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}}$\ast$ u\+S\+::\+Socket\+::node\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 35 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_a4906052563459d6978e12b796574e25c}\label{structu_s_1_1_socket_a4906052563459d6978e12b796574e25c}} 
+\index{uS::Socket@{uS::Socket}!poll@{poll}}
+\index{poll@{poll}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{poll}{poll}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} u\+S\+::\+Socket\+::poll}
+
+
+
+Definition at line 29 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_a954aacb6f92fd2d0eb7ad78c3e0dc913}\label{structu_s_1_1_socket_a954aacb6f92fd2d0eb7ad78c3e0dc913}} 
+\index{uS::Socket@{uS::Socket}!prev@{prev}}
+\index{prev@{prev}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$ u\+S\+::\+Socket\+::prev = nullptr}
+
+
+
+Definition at line 426 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_a2f943ac89c8d7578845de330781b72b4}\label{structu_s_1_1_socket_a2f943ac89c8d7578845de330781b72b4}} 
+\index{uS::Socket@{uS::Socket}!shuttingDown@{shuttingDown}}
+\index{shuttingDown@{shuttingDown}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{shuttingDown}{shuttingDown}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} u\+S\+::\+Socket\+::shutting\+Down}
+
+
+
+Definition at line 30 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_a08a28a30f98242ff37fa1918e158218e}\label{structu_s_1_1_socket_a08a28a30f98242ff37fa1918e158218e}} 
+\index{uS::Socket@{uS::Socket}!ssl@{ssl}}
+\index{ssl@{ssl}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{ssl}{ssl}}
+{\footnotesize\ttfamily S\+SL$\ast$ u\+S\+::\+Socket\+::ssl\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 33 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_a6864c35ea98b57a30ab3918c532e2c79}\label{structu_s_1_1_socket_a6864c35ea98b57a30ab3918c532e2c79}} 
+\index{uS::Socket@{uS::Socket}!state@{state}}
+\index{state@{state}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily struct \{ ... \}  u\+S\+::\+Socket\+::state\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structu_s_1_1_socket_a3d59d676b6334ab2a1e0e35a1221db5f}\label{structu_s_1_1_socket_a3d59d676b6334ab2a1e0e35a1221db5f}} 
+\index{uS::Socket@{uS::Socket}!user@{user}}
+\index{user@{user}!uS::Socket@{uS::Socket}}
+\doxysubsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily void$\ast$ u\+S\+::\+Socket\+::user = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 34 of file Socket.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_socket_8h}{Socket.\+h}}\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_socket_8cpp}{Socket.\+cpp}}\end{DoxyCompactItemize}

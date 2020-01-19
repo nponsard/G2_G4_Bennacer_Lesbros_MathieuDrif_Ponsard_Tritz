@@ -1,5 +1,5 @@
-\hypertarget{scoresort_8cpp}{}\doxysection{src/utils/scoresort.cpp File Reference}
-\label{scoresort_8cpp}\index{src/utils/scoresort.cpp@{src/utils/scoresort.cpp}}
+\hypertarget{scoresort_8cpp}{}\doxysection{nos\+Fichiers/src/utils/scoresort.cpp File Reference}
+\label{scoresort_8cpp}\index{nosFichiers/src/utils/scoresort.cpp@{nosFichiers/src/utils/scoresort.cpp}}
 {\ttfamily \#include \char`\"{}scoresort.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$algorithm$>$}\newline
 Include dependency graph for scoresort.\+cpp\+:\nopagebreak
@@ -16,7 +16,7 @@ bool \mbox{\hyperlink{scoresort_8cpp_a9a321fef08f8312c5f75772f1d819176}{comp\+Pa
 \begin{DoxyCompactList}\small\item\em Compares scores contained in the pairs of name -\/ score is used by the sort algorithm in the algorithm library. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{scoresort_8cpp_aae114c09489147c07b30e5c9c617a659}{score\+Sort}} (vector$<$ pair$<$ string, unsigned $>$$>$ \&scores)
 \begin{DoxyCompactList}\small\item\em Sorts all the scores contained in pairs of name -\/ score. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{scoresort_8cpp_af63d753caa01aaadb90287e45989c8bc}{insert\+Score}} (vector$<$ pair$<$ string, unsigned $>$$>$ \&scores, const string \&nom, const unsigned \&score)
+void \mbox{\hyperlink{scoresort_8cpp_a9dcae2a9be0cb1a3b88d0fd8a62a83fa}{insert\+Score}} (vector$<$ pair$<$ string, unsigned $>$$>$ \&scores, const string \&nom, const unsigned \&score, const bool \&pop\+Back)
 \begin{DoxyCompactList}\small\item\em Inserts a new pair of name -\/ score in the right position in a vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -49,18 +49,19 @@ returns \+:
 
 Definition at line 19 of file scoresort.\+cpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{scoresort_8cpp_a9a321fef08f8312c5f75772f1d819176_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{scoresort_8cpp_af63d753caa01aaadb90287e45989c8bc}\label{scoresort_8cpp_af63d753caa01aaadb90287e45989c8bc}} 
+\mbox{\Hypertarget{scoresort_8cpp_a9dcae2a9be0cb1a3b88d0fd8a62a83fa}\label{scoresort_8cpp_a9dcae2a9be0cb1a3b88d0fd8a62a83fa}} 
 \index{scoresort.cpp@{scoresort.cpp}!insertScore@{insertScore}}
 \index{insertScore@{insertScore}!scoresort.cpp@{scoresort.cpp}}
 \doxysubsubsection{\texorpdfstring{insertScore()}{insertScore()}}
-{\footnotesize\ttfamily void insert\+Score (\begin{DoxyParamCaption}\item[{vector$<$ pair$<$ string, unsigned $>$$>$ \&}]{scores,  }\item[{const string \&}]{nom,  }\item[{const unsigned \&}]{score }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void insert\+Score (\begin{DoxyParamCaption}\item[{vector$<$ pair$<$ string, unsigned $>$$>$ \&}]{scores,  }\item[{const string \&}]{nom,  }\item[{const unsigned \&}]{score,  }\item[{const bool \&}]{pop\+Back }\end{DoxyParamCaption})}
 
 
 
@@ -74,16 +75,19 @@ Inserts a new pair of name -\/ score in the right position in a vector.
 \hline
 {\em score} & \+: the score which will be added to the vector \\
 \hline
+{\em pop\+Back} & \+: if true, removes the last elements after insertion \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line 43 of file scoresort.\+cpp.
+Definition at line 44 of file scoresort.\+cpp.
 
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=314pt]{scoresort_8cpp_af63d753caa01aaadb90287e45989c8bc_icgraph}
+\includegraphics[width=314pt]{scoresort_8cpp_a9dcae2a9be0cb1a3b88d0fd8a62a83fa_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{scoresort_8cpp_aae114c09489147c07b30e5c9c617a659}\label{scoresort_8cpp_aae114c09489147c07b30e5c9c617a659}} 
@@ -105,14 +109,16 @@ Sorts all the scores contained in pairs of name -\/ score.
 
 Definition at line 31 of file scoresort.\+cpp.
 
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=245pt]{scoresort_8cpp_aae114c09489147c07b30e5c9c617a659_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

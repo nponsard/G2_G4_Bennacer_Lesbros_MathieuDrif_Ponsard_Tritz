@@ -1,0 +1,179 @@
+\hypertarget{class_bwaaah_1_1entities_1_1_entity}{}\doxysection{Bwaaah.\+entities.\+Entity Class Reference}
+\label{class_bwaaah_1_1entities_1_1_entity}\index{Bwaaah.entities.Entity@{Bwaaah.entities.Entity}}
+
+
+Inheritance diagram for Bwaaah.\+entities.\+Entity\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bwaaah_1_1entities_1_1_entity__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_entity_a9c8910334b281d6696be14da2899ff80}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, x, y, \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_entity_a25b70882b33db5b2ad2ed79608f5295b}{texture}}, \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_entity_afe8ab92e33590cb296f975d6e7d10d60}{life}}=0)
+\item 
+def \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_entity_a1ada1cc37a71099ff18b4ad917f6faa4}{render}} (self, surface)
+\item 
+def \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_entity_a3db4f364f5600b5ed732de636e9f22f5}{take\+Damage}} (self, damage)
+\item 
+def \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_entity_a28bb9c8a96366c5a9a749137bc3f3236}{take\+Magic\+Damage}} (self, magic\+Damage, m\+Damage\+Type)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1entities_1_1_entity_a25b70882b33db5b2ad2ed79608f5295b}{texture}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1entities_1_1_entity_afda254bec8b1ce0d7f8397c242278be4}{rect}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1entities_1_1_entity_ad0c2c089684452d8655e96f6cbf1d738}{life}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1entities_1_1_entity_a18971d78be590e29baa702a538911e8c}{maxlife}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_entity_afe8ab92e33590cb296f975d6e7d10d60}{life}} = 0
+\item 
+list \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_entity_a46fa55a827d45dd49f15de04687ba2cc}{effects}} = \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Système d'entités pouvant être sauvegardé\end{DoxyVerb}
+ 
+
+Definition at line 12 of file entities.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bwaaah_1_1entities_1_1_entity_a9c8910334b281d6696be14da2899ff80}\label{class_bwaaah_1_1entities_1_1_entity_a9c8910334b281d6696be14da2899ff80}} 
+\index{Bwaaah.entities.Entity@{Bwaaah.entities.Entity}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Bwaaah.entities.Entity@{Bwaaah.entities.Entity}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Bwaaah.\+entities.\+Entity.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{x,  }\item[{}]{y,  }\item[{}]{texture,  }\item[{}]{life = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}création de l'entitée
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_rock_a1ef945cf82cc0eef909ca15a676af0f1}{Bwaaah.\+entities.\+Rock}}, \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_palm_tree_a4bb62d16f1261f32592e83faed78e2b8}{Bwaaah.\+entities.\+Palm\+Tree}}, \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_tree_ab78cc4cc2bcbc3ae4f1478b2015c6906}{Bwaaah.\+entities.\+Tree}}, \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_fir_a64171248d56802c52cc1d6bcd9ead52b}{Bwaaah.\+entities.\+Fir}}, and \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_apple_tree_a3f1896201402af726e96ffbcd91de03b}{Bwaaah.\+entities.\+Apple\+Tree}}.
+
+
+
+Definition at line 21 of file entities.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bwaaah_1_1entities_1_1_entity_a1ada1cc37a71099ff18b4ad917f6faa4}\label{class_bwaaah_1_1entities_1_1_entity_a1ada1cc37a71099ff18b4ad917f6faa4}} 
+\index{Bwaaah.entities.Entity@{Bwaaah.entities.Entity}!render@{render}}
+\index{render@{render}!Bwaaah.entities.Entity@{Bwaaah.entities.Entity}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily def Bwaaah.\+entities.\+Entity.\+render (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{surface }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}affichage de l'entitée avec la texture sur screen
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_player_ac51a68dde58a81a01cb5093faf4f3ee9}{Bwaaah.\+entities.\+Player}}.
+
+
+
+Definition at line 31 of file entities.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1entities_1_1_entity_a3db4f364f5600b5ed732de636e9f22f5}\label{class_bwaaah_1_1entities_1_1_entity_a3db4f364f5600b5ed732de636e9f22f5}} 
+\index{Bwaaah.entities.Entity@{Bwaaah.entities.Entity}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Bwaaah.entities.Entity@{Bwaaah.entities.Entity}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily def Bwaaah.\+entities.\+Entity.\+take\+Damage (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{damage }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_bwaaah_1_1entities_1_1_collectable_a7a5d5af057347a85fcf4dcfe1cb49922}{Bwaaah.\+entities.\+Collectable}}.
+
+
+
+Definition at line 37 of file entities.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1entities_1_1_entity_a28bb9c8a96366c5a9a749137bc3f3236}\label{class_bwaaah_1_1entities_1_1_entity_a28bb9c8a96366c5a9a749137bc3f3236}} 
+\index{Bwaaah.entities.Entity@{Bwaaah.entities.Entity}!takeMagicDamage@{takeMagicDamage}}
+\index{takeMagicDamage@{takeMagicDamage}!Bwaaah.entities.Entity@{Bwaaah.entities.Entity}}
+\doxysubsubsection{\texorpdfstring{takeMagicDamage()}{takeMagicDamage()}}
+{\footnotesize\ttfamily def Bwaaah.\+entities.\+Entity.\+take\+Magic\+Damage (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{magic\+Damage,  }\item[{}]{m\+Damage\+Type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file entities.\+py.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_bwaaah_1_1entities_1_1_entity_a46fa55a827d45dd49f15de04687ba2cc}\label{class_bwaaah_1_1entities_1_1_entity_a46fa55a827d45dd49f15de04687ba2cc}} 
+\index{Bwaaah.entities.Entity@{Bwaaah.entities.Entity}!effects@{effects}}
+\index{effects@{effects}!Bwaaah.entities.Entity@{Bwaaah.entities.Entity}}
+\doxysubsubsection{\texorpdfstring{effects}{effects}}
+{\footnotesize\ttfamily list Bwaaah.\+entities.\+Entity.\+effects = \mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 19 of file entities.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1entities_1_1_entity_afe8ab92e33590cb296f975d6e7d10d60}\label{class_bwaaah_1_1entities_1_1_entity_afe8ab92e33590cb296f975d6e7d10d60}} 
+\index{Bwaaah.entities.Entity@{Bwaaah.entities.Entity}!life@{life}}
+\index{life@{life}!Bwaaah.entities.Entity@{Bwaaah.entities.Entity}}
+\doxysubsubsection{\texorpdfstring{life}{life}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} Bwaaah.\+entities.\+Entity.\+life = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 18 of file entities.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1entities_1_1_entity_ad0c2c089684452d8655e96f6cbf1d738}\label{class_bwaaah_1_1entities_1_1_entity_ad0c2c089684452d8655e96f6cbf1d738}} 
+\index{Bwaaah.entities.Entity@{Bwaaah.entities.Entity}!life@{life}}
+\index{life@{life}!Bwaaah.entities.Entity@{Bwaaah.entities.Entity}}
+\doxysubsubsection{\texorpdfstring{life}{life}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bwaaah.\+entities.\+Entity.\+life}
+
+
+
+Definition at line 28 of file entities.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1entities_1_1_entity_a18971d78be590e29baa702a538911e8c}\label{class_bwaaah_1_1entities_1_1_entity_a18971d78be590e29baa702a538911e8c}} 
+\index{Bwaaah.entities.Entity@{Bwaaah.entities.Entity}!maxlife@{maxlife}}
+\index{maxlife@{maxlife}!Bwaaah.entities.Entity@{Bwaaah.entities.Entity}}
+\doxysubsubsection{\texorpdfstring{maxlife}{maxlife}}
+{\footnotesize\ttfamily Bwaaah.\+entities.\+Entity.\+maxlife}
+
+
+
+Definition at line 29 of file entities.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1entities_1_1_entity_afda254bec8b1ce0d7f8397c242278be4}\label{class_bwaaah_1_1entities_1_1_entity_afda254bec8b1ce0d7f8397c242278be4}} 
+\index{Bwaaah.entities.Entity@{Bwaaah.entities.Entity}!rect@{rect}}
+\index{rect@{rect}!Bwaaah.entities.Entity@{Bwaaah.entities.Entity}}
+\doxysubsubsection{\texorpdfstring{rect}{rect}}
+{\footnotesize\ttfamily Bwaaah.\+entities.\+Entity.\+rect}
+
+
+
+Definition at line 26 of file entities.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1entities_1_1_entity_a25b70882b33db5b2ad2ed79608f5295b}\label{class_bwaaah_1_1entities_1_1_entity_a25b70882b33db5b2ad2ed79608f5295b}} 
+\index{Bwaaah.entities.Entity@{Bwaaah.entities.Entity}!texture@{texture}}
+\index{texture@{texture}!Bwaaah.entities.Entity@{Bwaaah.entities.Entity}}
+\doxysubsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily Bwaaah.\+entities.\+Entity.\+texture}
+
+
+
+Definition at line 25 of file entities.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Bwaaah/\mbox{\hyperlink{entities_8py}{entities.\+py}}\end{DoxyCompactItemize}

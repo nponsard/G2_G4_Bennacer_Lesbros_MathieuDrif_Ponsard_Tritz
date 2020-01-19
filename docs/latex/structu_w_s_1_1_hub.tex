@@ -1,0 +1,345 @@
+\hypertarget{structu_w_s_1_1_hub}{}\doxysection{u\+WS\+::Hub Struct Reference}
+\label{structu_w_s_1_1_hub}\index{uWS::Hub@{uWS::Hub}}
+
+
+{\ttfamily \#include $<$Hub.\+h$>$}
+
+
+
+Inheritance diagram for u\+WS\+::Hub\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_hub__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for u\+WS\+::Hub\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_hub__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_hub_1_1_connection_data}{Connection\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\\mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ is\+Server $>$ $\ast$ \mbox{\hyperlink{structu_w_s_1_1_hub_a1f98feae6a7a2f9247198a7358aa46e8}{create\+Group}} (\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_group_ae52736f5273cb5be178888f756077caa}{extension\+Options}}=0, unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_group_a5dcef3abf644403b9c1dc3a0453e2d83}{max\+Payload}}=16777216)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\\mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ is\+Server $>$ \& \mbox{\hyperlink{structu_w_s_1_1_hub_a49767f65b297dda718828d7c51bf783a}{get\+Default\+Group}} ()
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_w_s_1_1_hub_a2066421be36412df352a2f8d19a40f2a}{listen}} (\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} port, \mbox{\hyperlink{classu_s_1_1_t_l_s_1_1_context}{u\+S\+::\+T\+L\+S\+::\+Context}} ssl\+Context=nullptr, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} options=0, \mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ \mbox{\hyperlink{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faa24ab1bf18514c7e8812d471e8f2698d}{S\+E\+R\+V\+ER}} $>$ $\ast$eh=nullptr)
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_w_s_1_1_hub_afeabd683111877401446176ed6fa2168}{listen}} (const char $\ast$host, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} port, \mbox{\hyperlink{classu_s_1_1_t_l_s_1_1_context}{u\+S\+::\+T\+L\+S\+::\+Context}} ssl\+Context=nullptr, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} options=0, \mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ \mbox{\hyperlink{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faa24ab1bf18514c7e8812d471e8f2698d}{S\+E\+R\+V\+ER}} $>$ $\ast$eh=nullptr)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_hub_a15390dc9da51c0c00d3d05585b541be0}{connect}} (std\+::string uri, void $\ast$\mbox{\hyperlink{structu_s_1_1_node_data_ae50717e7e80ec0a1ab5f76633d8f7206}{user}}=nullptr, std\+::map$<$ std\+::string, std\+::string $>$ extra\+Headers=\{\}, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} timeout\+Ms=5000, \mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ \mbox{\hyperlink{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faecb27a935e86a7b650364ed427dd1c9d}{C\+L\+I\+E\+NT}} $>$ $\ast$eh=nullptr)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_hub_a423b9cf066ba3a8becf1cc1ec2c34108}{upgrade}} (\mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}} fd, const char $\ast$sec\+Key, S\+SL $\ast$ssl, const char $\ast$extensions, size\+\_\+t extensions\+Length, const char $\ast$subprotocol, size\+\_\+t subprotocol\+Length, \mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ \mbox{\hyperlink{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faa24ab1bf18514c7e8812d471e8f2698d}{S\+E\+R\+V\+ER}} $>$ $\ast$server\+Group=nullptr)
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_hub_a1ccbc2d39524e675affd22c851dffd4a}{Hub}} (\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_group_ae52736f5273cb5be178888f756077caa}{extension\+Options}}=0, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} use\+Default\+Loop=false, unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_group_a5dcef3abf644403b9c1dc3a0453e2d83}{max\+Payload}}=16777216)
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_hub_a9d11117b5fc92057b9cb06cf7ea0c982}{$\sim$\+Hub}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{structu_w_s_1_1_hub_a7b622380cf7b4f9d03d41848dbaab0d9}{inflate}} (char $\ast$data, size\+\_\+t \&length, size\+\_\+t \mbox{\hyperlink{structu_w_s_1_1_group_a5dcef3abf644403b9c1dc3a0453e2d83}{max\+Payload}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structu_w_s_1_1_hub_a994681f1492339cb94f7ba9c69724821}{on\+Server\+Accept}} (\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$s)
+\item 
+static void \mbox{\hyperlink{structu_w_s_1_1_hub_a6f082fdce9ac8593c78c81ef5a9ac2b8}{on\+Client\+Connection}} (\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$s, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} error)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+z\+\_\+stream \mbox{\hyperlink{structu_w_s_1_1_hub_abb90e7137aac2432cc1f1ba860e4850b}{inflation\+Stream}} = \{\}
+\item 
+char $\ast$ \mbox{\hyperlink{structu_w_s_1_1_hub_a90554f551d9a0491fa1f961892cb2ad1}{inflation\+Buffer}}
+\item 
+std\+::string \mbox{\hyperlink{structu_w_s_1_1_hub_a852d46f8481baccb0c596a3869fb6058}{dynamic\+Inflation\+Buffer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_hub_abee117e7a2c7937edb2ef0f8eecade58}{L\+A\+R\+G\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}} = 300 $\ast$ 1024
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_hub_a59a072ca504bc988c166406901bdfacd}{Web\+Socket$<$ S\+E\+R\+V\+E\+R $>$}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_hub_a6242a8d2f1a91f1c79adfda569fb7fc1}{Web\+Socket$<$ C\+L\+I\+E\+N\+T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 13 of file Hub.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a1ccbc2d39524e675affd22c851dffd4a}\label{structu_w_s_1_1_hub_a1ccbc2d39524e675affd22c851dffd4a}} 
+\index{uWS::Hub@{uWS::Hub}!Hub@{Hub}}
+\index{Hub@{Hub}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{Hub()}{Hub()}}
+{\footnotesize\ttfamily u\+W\+S\+::\+Hub\+::\+Hub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{extension\+Options = {\ttfamily 0},  }\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}}}]{use\+Default\+Loop = {\ttfamily false},  }\item[{unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{max\+Payload = {\ttfamily 16777216} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 46 of file Hub.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a9d11117b5fc92057b9cb06cf7ea0c982}\label{structu_w_s_1_1_hub_a9d11117b5fc92057b9cb06cf7ea0c982}} 
+\index{uWS::Hub@{uWS::Hub}!````~Hub@{$\sim$Hub}}
+\index{````~Hub@{$\sim$Hub}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{$\sim$Hub()}{~Hub()}}
+{\footnotesize\ttfamily u\+W\+S\+::\+Hub\+::$\sim$\+Hub (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 64 of file Hub.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a15390dc9da51c0c00d3d05585b541be0}\label{structu_w_s_1_1_hub_a15390dc9da51c0c00d3d05585b541be0}} 
+\index{uWS::Hub@{uWS::Hub}!connect@{connect}}
+\index{connect@{connect}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void u\+W\+S\+::\+Hub\+::connect (\begin{DoxyParamCaption}\item[{std\+::string}]{uri,  }\item[{void $\ast$}]{user = {\ttfamily nullptr},  }\item[{std\+::map$<$ std\+::string, std\+::string $>$}]{extra\+Headers = {\ttfamily \{\}},  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{timeout\+Ms = {\ttfamily 5000},  }\item[{\mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ \mbox{\hyperlink{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faecb27a935e86a7b650364ed427dd1c9d}{C\+L\+I\+E\+NT}} $>$ $\ast$}]{eh = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 149 of file Hub.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_hub_a15390dc9da51c0c00d3d05585b541be0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_hub_a15390dc9da51c0c00d3d05585b541be0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a1f98feae6a7a2f9247198a7358aa46e8}\label{structu_w_s_1_1_hub_a1f98feae6a7a2f9247198a7358aa46e8}} 
+\index{uWS::Hub@{uWS::Hub}!createGroup@{createGroup}}
+\index{createGroup@{createGroup}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{createGroup()}{createGroup()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$is\+Server$>$$\ast$ u\+W\+S\+::\+Hub\+::create\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{extension\+Options = {\ttfamily 0},  }\item[{unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{max\+Payload = {\ttfamily 16777216} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 32 of file Hub.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_hub_a1f98feae6a7a2f9247198a7358aa46e8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a49767f65b297dda718828d7c51bf783a}\label{structu_w_s_1_1_hub_a49767f65b297dda718828d7c51bf783a}} 
+\index{uWS::Hub@{uWS::Hub}!getDefaultGroup@{getDefaultGroup}}
+\index{getDefaultGroup@{getDefaultGroup}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{getDefaultGroup()}{getDefaultGroup()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$is\+Server$>$\& u\+W\+S\+::\+Hub\+::get\+Default\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 37 of file Hub.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a7b622380cf7b4f9d03d41848dbaab0d9}\label{structu_w_s_1_1_hub_a7b622380cf7b4f9d03d41848dbaab0d9}} 
+\index{uWS::Hub@{uWS::Hub}!inflate@{inflate}}
+\index{inflate@{inflate}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{inflate()}{inflate()}}
+{\footnotesize\ttfamily char $\ast$ u\+W\+S\+::\+Hub\+::inflate (\begin{DoxyParamCaption}\item[{char $\ast$}]{data,  }\item[{size\+\_\+t \&}]{length,  }\item[{size\+\_\+t}]{max\+Payload }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 7 of file Hub.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_hub_afeabd683111877401446176ed6fa2168}\label{structu_w_s_1_1_hub_afeabd683111877401446176ed6fa2168}} 
+\index{uWS::Hub@{uWS::Hub}!listen@{listen}}
+\index{listen@{listen}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{listen()}{listen()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+W\+S\+::\+Hub\+::listen (\begin{DoxyParamCaption}\item[{const char $\ast$}]{host,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{port,  }\item[{\mbox{\hyperlink{classu_s_1_1_t_l_s_1_1_context}{u\+S\+::\+T\+L\+S\+::\+Context}}}]{ssl\+Context = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{options = {\ttfamily 0},  }\item[{\mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ \mbox{\hyperlink{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faa24ab1bf18514c7e8812d471e8f2698d}{S\+E\+R\+V\+ER}} $>$ $\ast$}]{eh = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file Hub.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a2066421be36412df352a2f8d19a40f2a}\label{structu_w_s_1_1_hub_a2066421be36412df352a2f8d19a40f2a}} 
+\index{uWS::Hub@{uWS::Hub}!listen@{listen}}
+\index{listen@{listen}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{listen()}{listen()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+W\+S\+::\+Hub\+::listen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{port,  }\item[{\mbox{\hyperlink{classu_s_1_1_t_l_s_1_1_context}{u\+S\+::\+T\+L\+S\+::\+Context}}}]{ssl\+Context = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{options = {\ttfamily 0},  }\item[{\mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ \mbox{\hyperlink{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faa24ab1bf18514c7e8812d471e8f2698d}{S\+E\+R\+V\+ER}} $>$ $\ast$}]{eh = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 79 of file Hub.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_hub_a2066421be36412df352a2f8d19a40f2a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a6f082fdce9ac8593c78c81ef5a9ac2b8}\label{structu_w_s_1_1_hub_a6f082fdce9ac8593c78c81ef5a9ac2b8}} 
+\index{uWS::Hub@{uWS::Hub}!onClientConnection@{onClientConnection}}
+\index{onClientConnection@{onClientConnection}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{onClientConnection()}{onClientConnection()}}
+{\footnotesize\ttfamily void u\+W\+S\+::\+Hub\+::on\+Client\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}}}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 54 of file Hub.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_hub_a6f082fdce9ac8593c78c81ef5a9ac2b8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a994681f1492339cb94f7ba9c69724821}\label{structu_w_s_1_1_hub_a994681f1492339cb94f7ba9c69724821}} 
+\index{uWS::Hub@{uWS::Hub}!onServerAccept@{onServerAccept}}
+\index{onServerAccept@{onServerAccept}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{onServerAccept()}{onServerAccept()}}
+{\footnotesize\ttfamily void u\+W\+S\+::\+Hub\+::on\+Server\+Accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 43 of file Hub.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_hub_a994681f1492339cb94f7ba9c69724821_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a423b9cf066ba3a8becf1cc1ec2c34108}\label{structu_w_s_1_1_hub_a423b9cf066ba3a8becf1cc1ec2c34108}} 
+\index{uWS::Hub@{uWS::Hub}!upgrade@{upgrade}}
+\index{upgrade@{upgrade}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{upgrade()}{upgrade()}}
+{\footnotesize\ttfamily void u\+W\+S\+::\+Hub\+::upgrade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}}}]{fd,  }\item[{const char $\ast$}]{sec\+Key,  }\item[{S\+SL $\ast$}]{ssl,  }\item[{const char $\ast$}]{extensions,  }\item[{size\+\_\+t}]{extensions\+Length,  }\item[{const char $\ast$}]{subprotocol,  }\item[{size\+\_\+t}]{subprotocol\+Length,  }\item[{\mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ \mbox{\hyperlink{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faa24ab1bf18514c7e8812d471e8f2698d}{S\+E\+R\+V\+ER}} $>$ $\ast$}]{server\+Group = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 190 of file Hub.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_hub_a423b9cf066ba3a8becf1cc1ec2c34108_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_hub_a423b9cf066ba3a8becf1cc1ec2c34108_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a6242a8d2f1a91f1c79adfda569fb7fc1}\label{structu_w_s_1_1_hub_a6242a8d2f1a91f1c79adfda569fb7fc1}} 
+\index{uWS::Hub@{uWS::Hub}!WebSocket$<$ CLIENT $>$@{WebSocket$<$ CLIENT $>$}}
+\index{WebSocket$<$ CLIENT $>$@{WebSocket$<$ CLIENT $>$}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{WebSocket$<$ CLIENT $>$}{WebSocket< CLIENT >}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ \mbox{\hyperlink{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faecb27a935e86a7b650364ed427dd1c9d}{C\+L\+I\+E\+NT}} $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 93 of file Hub.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a59a072ca504bc988c166406901bdfacd}\label{structu_w_s_1_1_hub_a59a072ca504bc988c166406901bdfacd}} 
+\index{uWS::Hub@{uWS::Hub}!WebSocket$<$ SERVER $>$@{WebSocket$<$ SERVER $>$}}
+\index{WebSocket$<$ SERVER $>$@{WebSocket$<$ SERVER $>$}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{WebSocket$<$ SERVER $>$}{WebSocket< SERVER >}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ \mbox{\hyperlink{namespaceu_w_s_adaf33bd7e32d5ae71ef415fe2119e66faa24ab1bf18514c7e8812d471e8f2698d}{S\+E\+R\+V\+ER}} $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 92 of file Hub.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a852d46f8481baccb0c596a3869fb6058}\label{structu_w_s_1_1_hub_a852d46f8481baccb0c596a3869fb6058}} 
+\index{uWS::Hub@{uWS::Hub}!dynamicInflationBuffer@{dynamicInflationBuffer}}
+\index{dynamicInflationBuffer@{dynamicInflationBuffer}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{dynamicInflationBuffer}{dynamicInflationBuffer}}
+{\footnotesize\ttfamily std\+::string u\+W\+S\+::\+Hub\+::dynamic\+Inflation\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file Hub.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_hub_a90554f551d9a0491fa1f961892cb2ad1}\label{structu_w_s_1_1_hub_a90554f551d9a0491fa1f961892cb2ad1}} 
+\index{uWS::Hub@{uWS::Hub}!inflationBuffer@{inflationBuffer}}
+\index{inflationBuffer@{inflationBuffer}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{inflationBuffer}{inflationBuffer}}
+{\footnotesize\ttfamily char$\ast$ u\+W\+S\+::\+Hub\+::inflation\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 22 of file Hub.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_hub_abb90e7137aac2432cc1f1ba860e4850b}\label{structu_w_s_1_1_hub_abb90e7137aac2432cc1f1ba860e4850b}} 
+\index{uWS::Hub@{uWS::Hub}!inflationStream@{inflationStream}}
+\index{inflationStream@{inflationStream}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{inflationStream}{inflationStream}}
+{\footnotesize\ttfamily z\+\_\+stream u\+W\+S\+::\+Hub\+::inflation\+Stream = \{\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 21 of file Hub.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_hub_abee117e7a2c7937edb2ef0f8eecade58}\label{structu_w_s_1_1_hub_abee117e7a2c7937edb2ef0f8eecade58}} 
+\index{uWS::Hub@{uWS::Hub}!LARGE\_BUFFER\_SIZE@{LARGE\_BUFFER\_SIZE}}
+\index{LARGE\_BUFFER\_SIZE@{LARGE\_BUFFER\_SIZE}!uWS::Hub@{uWS::Hub}}
+\doxysubsubsection{\texorpdfstring{LARGE\_BUFFER\_SIZE}{LARGE\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} u\+W\+S\+::\+Hub\+::\+L\+A\+R\+G\+E\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE = 300 $\ast$ 1024\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Hub.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_hub_8h}{Hub.\+h}}\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_hub_8cpp}{Hub.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,204 @@
+\hypertarget{classu_s_1_1_node}{}\doxysection{uS\+::Node Class Reference}
+\label{classu_s_1_1_node}\index{uS::Node@{uS::Node}}
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+
+
+Inheritance diagram for uS\+::Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classu_s_1_1_node__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for uS\+::Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classu_s_1_1_node__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classu_s_1_1_node_a974a8ae656b79e60e49c6f5e4a8da30f}{Node}} (\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} recv\+Length=1024, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} pre\+Padding=0, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} post\+Padding=0, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} use\+Default\+Loop=false)
+\item 
+\mbox{\hyperlink{classu_s_1_1_node_add78ef3dd0eb7960752ab55a3d93e403}{$\sim$\+Node}} ()
+\item 
+void \mbox{\hyperlink{classu_s_1_1_node_a06830f1b69a628f897d34b1455768c67}{run}} ()
+\item 
+\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$ \mbox{\hyperlink{classu_s_1_1_node_a7d4bf86bb320e3e9d04ca8bc88934387}{get\+Loop}} ()
+\item 
+{\footnotesize template$<$u\+S\+::\+Socket $\ast$ I, void  C$>$ }\\\mbox{\hyperlink{structu_s_1_1_socket}{Socket}} $\ast$ \mbox{\hyperlink{classu_s_1_1_node_a45614cbc70d9121b48738728f559cf4e}{connect}} (const char $\ast$hostname, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} port, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} secure, \mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}} $\ast$\mbox{\hyperlink{classu_s_1_1_node_a9a460187fa7f25b65f21d16eeea8e7da}{node\+Data}})
+\item 
+{\footnotesize template$<$void  A$>$ }\\\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{classu_s_1_1_node_a34fd54fc00bf444b9732265a0cf16651}{listen}} (const char $\ast$host, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} port, \mbox{\hyperlink{classu_s_1_1_t_l_s_1_1_context}{u\+S\+::\+T\+L\+S\+::\+Context}} ssl\+Context, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} options, \mbox{\hyperlink{structu_s_1_1_node_data}{u\+S\+::\+Node\+Data}} $\ast$\mbox{\hyperlink{classu_s_1_1_node_a9a460187fa7f25b65f21d16eeea8e7da}{node\+Data}}, void $\ast$user)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$ \mbox{\hyperlink{classu_s_1_1_node_a6ed3621e46f3d9906f547379acb6869d}{loop}}
+\item 
+\mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}} $\ast$ \mbox{\hyperlink{classu_s_1_1_node_a9a460187fa7f25b65f21d16eeea8e7da}{node\+Data}}
+\item 
+std\+::recursive\+\_\+mutex \mbox{\hyperlink{classu_s_1_1_node_a952e66eabb6bc34299cc7804646ee019}{async\+Mutex}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 15 of file Node.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classu_s_1_1_node_a974a8ae656b79e60e49c6f5e4a8da30f}\label{classu_s_1_1_node_a974a8ae656b79e60e49c6f5e4a8da30f}} 
+\index{uS::Node@{uS::Node}!Node@{Node}}
+\index{Node@{Node}!uS::Node@{uS::Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily u\+S\+::\+Node\+::\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{recv\+Length = {\ttfamily 1024},  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{pre\+Padding = {\ttfamily 0},  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{post\+Padding = {\ttfamily 0},  }\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}}}]{use\+Default\+Loop = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file Node.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classu_s_1_1_node_a974a8ae656b79e60e49c6f5e4a8da30f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classu_s_1_1_node_add78ef3dd0eb7960752ab55a3d93e403}\label{classu_s_1_1_node_add78ef3dd0eb7960752ab55a3d93e403}} 
+\index{uS::Node@{uS::Node}!````~Node@{$\sim$Node}}
+\index{````~Node@{$\sim$Node}!uS::Node@{uS::Node}}
+\doxysubsubsection{\texorpdfstring{$\sim$Node()}{~Node()}}
+{\footnotesize\ttfamily u\+S\+::\+Node\+::$\sim$\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 67 of file Node.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classu_s_1_1_node_add78ef3dd0eb7960752ab55a3d93e403_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classu_s_1_1_node_a45614cbc70d9121b48738728f559cf4e}\label{classu_s_1_1_node_a45614cbc70d9121b48738728f559cf4e}} 
+\index{uS::Node@{uS::Node}!connect@{connect}}
+\index{connect@{connect}!uS::Node@{uS::Node}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily template$<$u\+S\+::\+Socket $\ast$ I, void  C$>$ \\
+\mbox{\hyperlink{structu_s_1_1_socket}{Socket}}$\ast$ u\+S\+::\+Node\+::connect (\begin{DoxyParamCaption}\item[{const char $\ast$}]{hostname,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{port,  }\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}}}]{secure,  }\item[{\mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}} $\ast$}]{node\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 89 of file Node.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classu_s_1_1_node_a45614cbc70d9121b48738728f559cf4e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classu_s_1_1_node_a7d4bf86bb320e3e9d04ca8bc88934387}\label{classu_s_1_1_node_a7d4bf86bb320e3e9d04ca8bc88934387}} 
+\index{uS::Node@{uS::Node}!getLoop@{getLoop}}
+\index{getLoop@{getLoop}!uS::Node@{uS::Node}}
+\doxysubsubsection{\texorpdfstring{getLoop()}{getLoop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_loop}{Loop}}$\ast$ u\+S\+::\+Node\+::get\+Loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 84 of file Node.\+h.
+
+\mbox{\Hypertarget{classu_s_1_1_node_a34fd54fc00bf444b9732265a0cf16651}\label{classu_s_1_1_node_a34fd54fc00bf444b9732265a0cf16651}} 
+\index{uS::Node@{uS::Node}!listen@{listen}}
+\index{listen@{listen}!uS::Node@{uS::Node}}
+\doxysubsubsection{\texorpdfstring{listen()}{listen()}}
+{\footnotesize\ttfamily template$<$void  A$>$ \\
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+S\+::\+Node\+::listen (\begin{DoxyParamCaption}\item[{const char $\ast$}]{host,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{port,  }\item[{\mbox{\hyperlink{classu_s_1_1_t_l_s_1_1_context}{u\+S\+::\+T\+L\+S\+::\+Context}}}]{ssl\+Context,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{options,  }\item[{\mbox{\hyperlink{structu_s_1_1_node_data}{u\+S\+::\+Node\+Data}} $\ast$}]{node\+Data,  }\item[{void $\ast$}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 126 of file Node.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classu_s_1_1_node_a34fd54fc00bf444b9732265a0cf16651_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classu_s_1_1_node_a06830f1b69a628f897d34b1455768c67}\label{classu_s_1_1_node_a06830f1b69a628f897d34b1455768c67}} 
+\index{uS::Node@{uS::Node}!run@{run}}
+\index{run@{run}!uS::Node@{uS::Node}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void u\+S\+::\+Node\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file Node.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classu_s_1_1_node_a06830f1b69a628f897d34b1455768c67_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classu_s_1_1_node_a952e66eabb6bc34299cc7804646ee019}\label{classu_s_1_1_node_a952e66eabb6bc34299cc7804646ee019}} 
+\index{uS::Node@{uS::Node}!asyncMutex@{asyncMutex}}
+\index{asyncMutex@{asyncMutex}!uS::Node@{uS::Node}}
+\doxysubsubsection{\texorpdfstring{asyncMutex}{asyncMutex}}
+{\footnotesize\ttfamily std\+::recursive\+\_\+mutex u\+S\+::\+Node\+::async\+Mutex\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 77 of file Node.\+h.
+
+\mbox{\Hypertarget{classu_s_1_1_node_a6ed3621e46f3d9906f547379acb6869d}\label{classu_s_1_1_node_a6ed3621e46f3d9906f547379acb6869d}} 
+\index{uS::Node@{uS::Node}!loop@{loop}}
+\index{loop@{loop}!uS::Node@{uS::Node}}
+\doxysubsubsection{\texorpdfstring{loop}{loop}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_loop}{Loop}}$\ast$ u\+S\+::\+Node\+::loop\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 75 of file Node.\+h.
+
+\mbox{\Hypertarget{classu_s_1_1_node_a9a460187fa7f25b65f21d16eeea8e7da}\label{classu_s_1_1_node_a9a460187fa7f25b65f21d16eeea8e7da}} 
+\index{uS::Node@{uS::Node}!nodeData@{nodeData}}
+\index{nodeData@{nodeData}!uS::Node@{uS::Node}}
+\doxysubsubsection{\texorpdfstring{nodeData}{nodeData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}}$\ast$ u\+S\+::\+Node\+::node\+Data\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 76 of file Node.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_node_8h}{Node.\+h}}\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_node_8cpp}{Node.\+cpp}}\end{DoxyCompactItemize}

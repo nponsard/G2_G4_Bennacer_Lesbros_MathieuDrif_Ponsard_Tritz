@@ -1,0 +1,106 @@
+\hypertarget{structu_s_1_1_socket_1_1_queue_1_1_message}{}\doxysection{uS\+::Socket\+::Queue\+::Message Struct Reference}
+\label{structu_s_1_1_socket_1_1_queue_1_1_message}\index{uS::Socket::Queue::Message@{uS::Socket::Queue::Message}}
+
+
+{\ttfamily \#include $<$Socket.\+h$>$}
+
+
+
+Collaboration diagram for uS\+::Socket\+::Queue\+::Message\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{structu_s_1_1_socket_1_1_queue_1_1_message__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message_ab8dc3d46b7c06a9635073a49c33c73b6}{data}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message_a45854495707f03110dc310f6f125f0ea}{length}}
+\item 
+\mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message}{Message}} $\ast$ \mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message_adabb8bd785037a59a91f78b0ad387273}{next\+Message}} = nullptr
+\item 
+void($\ast$ \mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message_ae81d8fbd6fd7f87ff601006d30e977ef}{callback}} )(void $\ast$\mbox{\hyperlink{structu_s_1_1_poll_a89b3505f44473b874dd43b484dfd648f}{socket}}, void $\ast$\mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message_ab8dc3d46b7c06a9635073a49c33c73b6}{data}}, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$\mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message_a0588478aa3eb1f5f507df549baf9424d}{reserved}}) = nullptr
+\item 
+void $\ast$ \mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message_a537dbb8c4724309e1d8917286aa983d1}{callback\+Data}} = nullptr
+\item 
+void $\ast$ \mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message_a0588478aa3eb1f5f507df549baf9424d}{reserved}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 39 of file Socket.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structu_s_1_1_socket_1_1_queue_1_1_message_ae81d8fbd6fd7f87ff601006d30e977ef}\label{structu_s_1_1_socket_1_1_queue_1_1_message_ae81d8fbd6fd7f87ff601006d30e977ef}} 
+\index{uS::Socket::Queue::Message@{uS::Socket::Queue::Message}!callback@{callback}}
+\index{callback@{callback}!uS::Socket::Queue::Message@{uS::Socket::Queue::Message}}
+\doxysubsubsection{\texorpdfstring{callback}{callback}}
+{\footnotesize\ttfamily void($\ast$ u\+S\+::\+Socket\+::\+Queue\+::\+Message\+::callback) (void $\ast$\mbox{\hyperlink{structu_s_1_1_poll_a89b3505f44473b874dd43b484dfd648f}{socket}}, void $\ast$\mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message_ab8dc3d46b7c06a9635073a49c33c73b6}{data}}, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$\mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message_a0588478aa3eb1f5f507df549baf9424d}{reserved}}) = nullptr}
+
+
+
+Definition at line 43 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_1_1_queue_1_1_message_a537dbb8c4724309e1d8917286aa983d1}\label{structu_s_1_1_socket_1_1_queue_1_1_message_a537dbb8c4724309e1d8917286aa983d1}} 
+\index{uS::Socket::Queue::Message@{uS::Socket::Queue::Message}!callbackData@{callbackData}}
+\index{callbackData@{callbackData}!uS::Socket::Queue::Message@{uS::Socket::Queue::Message}}
+\doxysubsubsection{\texorpdfstring{callbackData}{callbackData}}
+{\footnotesize\ttfamily void$\ast$ u\+S\+::\+Socket\+::\+Queue\+::\+Message\+::callback\+Data = nullptr}
+
+
+
+Definition at line 44 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_1_1_queue_1_1_message_ab8dc3d46b7c06a9635073a49c33c73b6}\label{structu_s_1_1_socket_1_1_queue_1_1_message_ab8dc3d46b7c06a9635073a49c33c73b6}} 
+\index{uS::Socket::Queue::Message@{uS::Socket::Queue::Message}!data@{data}}
+\index{data@{data}!uS::Socket::Queue::Message@{uS::Socket::Queue::Message}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily const char$\ast$ u\+S\+::\+Socket\+::\+Queue\+::\+Message\+::data}
+
+
+
+Definition at line 40 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_1_1_queue_1_1_message_a45854495707f03110dc310f6f125f0ea}\label{structu_s_1_1_socket_1_1_queue_1_1_message_a45854495707f03110dc310f6f125f0ea}} 
+\index{uS::Socket::Queue::Message@{uS::Socket::Queue::Message}!length@{length}}
+\index{length@{length}!uS::Socket::Queue::Message@{uS::Socket::Queue::Message}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily size\+\_\+t u\+S\+::\+Socket\+::\+Queue\+::\+Message\+::length}
+
+
+
+Definition at line 41 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_1_1_queue_1_1_message_adabb8bd785037a59a91f78b0ad387273}\label{structu_s_1_1_socket_1_1_queue_1_1_message_adabb8bd785037a59a91f78b0ad387273}} 
+\index{uS::Socket::Queue::Message@{uS::Socket::Queue::Message}!nextMessage@{nextMessage}}
+\index{nextMessage@{nextMessage}!uS::Socket::Queue::Message@{uS::Socket::Queue::Message}}
+\doxysubsubsection{\texorpdfstring{nextMessage}{nextMessage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_s_1_1_socket_1_1_queue_1_1_message}{Message}}$\ast$ u\+S\+::\+Socket\+::\+Queue\+::\+Message\+::next\+Message = nullptr}
+
+
+
+Definition at line 42 of file Socket.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_socket_1_1_queue_1_1_message_a0588478aa3eb1f5f507df549baf9424d}\label{structu_s_1_1_socket_1_1_queue_1_1_message_a0588478aa3eb1f5f507df549baf9424d}} 
+\index{uS::Socket::Queue::Message@{uS::Socket::Queue::Message}!reserved@{reserved}}
+\index{reserved@{reserved}!uS::Socket::Queue::Message@{uS::Socket::Queue::Message}}
+\doxysubsubsection{\texorpdfstring{reserved}{reserved}}
+{\footnotesize\ttfamily void $\ast$ u\+S\+::\+Socket\+::\+Queue\+::\+Message\+::reserved = nullptr}
+
+
+
+Definition at line 44 of file Socket.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_socket_8h}{Socket.\+h}}\end{DoxyCompactItemize}

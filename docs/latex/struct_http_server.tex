@@ -1,0 +1,203 @@
+\hypertarget{struct_http_server}{}\doxysection{Http\+Server Struct Reference}
+\label{struct_http_server}\index{HttpServer@{HttpServer}}
+
+
+{\ttfamily \#include $<$http.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_http_server_1_1_request}{Request}}
+\item 
+struct \mbox{\hyperlink{struct_http_server_1_1_response}{Response}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{struct_http_server_a927f9c92f3ff03982575dfb1c281b30c}{create\+Server}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+static void \mbox{\hyperlink{struct_http_server_aeab7995eed7de4412c7079ad988a0cb7}{on}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+static void \mbox{\hyperlink{struct_http_server_a5ee2e1be1ebb6b5d3fef21cf1f42e8f1}{listen}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+static void \mbox{\hyperlink{struct_http_server_acb4c7029df7d3e76f8e551a27d8a8e24}{get\+Express\+App}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+static void \mbox{\hyperlink{struct_http_server_ac9f11f5841cad53f324ca58e089f8f5b}{get\+Response\+Prototype}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+static void \mbox{\hyperlink{struct_http_server_aa091caac82ac38806afac37437078e1d}{get\+Request\+Prototype}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+static Local$<$ Function $>$ \mbox{\hyperlink{struct_http_server_ac64ae15a916ca8342b2dd50e5a6f8fac}{get\+Http\+Server}} (Isolate $\ast$isolate)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 8 of file http.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_http_server_a927f9c92f3ff03982575dfb1c281b30c}\label{struct_http_server_a927f9c92f3ff03982575dfb1c281b30c}} 
+\index{HttpServer@{HttpServer}!createServer@{createServer}}
+\index{createServer@{createServer}!HttpServer@{HttpServer}}
+\doxysubsubsection{\texorpdfstring{createServer()}{createServer()}}
+{\footnotesize\ttfamily static void Http\+Server\+::create\+Server (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 201 of file http.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_http_server_a927f9c92f3ff03982575dfb1c281b30c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_http_server_a927f9c92f3ff03982575dfb1c281b30c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_http_server_acb4c7029df7d3e76f8e551a27d8a8e24}\label{struct_http_server_acb4c7029df7d3e76f8e551a27d8a8e24}} 
+\index{HttpServer@{HttpServer}!getExpressApp@{getExpressApp}}
+\index{getExpressApp@{getExpressApp}!HttpServer@{HttpServer}}
+\doxysubsubsection{\texorpdfstring{getExpressApp()}{getExpressApp()}}
+{\footnotesize\ttfamily static void Http\+Server\+::get\+Express\+App (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 316 of file http.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_http_server_acb4c7029df7d3e76f8e551a27d8a8e24_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_http_server_ac64ae15a916ca8342b2dd50e5a6f8fac}\label{struct_http_server_ac64ae15a916ca8342b2dd50e5a6f8fac}} 
+\index{HttpServer@{HttpServer}!getHttpServer@{getHttpServer}}
+\index{getHttpServer@{getHttpServer}!HttpServer@{HttpServer}}
+\doxysubsubsection{\texorpdfstring{getHttpServer()}{getHttpServer()}}
+{\footnotesize\ttfamily static Local$<$Function$>$ Http\+Server\+::get\+Http\+Server (\begin{DoxyParamCaption}\item[{Isolate $\ast$}]{isolate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 339 of file http.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_http_server_ac64ae15a916ca8342b2dd50e5a6f8fac_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{struct_http_server_ac64ae15a916ca8342b2dd50e5a6f8fac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_http_server_aa091caac82ac38806afac37437078e1d}\label{struct_http_server_aa091caac82ac38806afac37437078e1d}} 
+\index{HttpServer@{HttpServer}!getRequestPrototype@{getRequestPrototype}}
+\index{getRequestPrototype@{getRequestPrototype}!HttpServer@{HttpServer}}
+\doxysubsubsection{\texorpdfstring{getRequestPrototype()}{getRequestPrototype()}}
+{\footnotesize\ttfamily static void Http\+Server\+::get\+Request\+Prototype (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 335 of file http.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_http_server_aa091caac82ac38806afac37437078e1d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_http_server_ac9f11f5841cad53f324ca58e089f8f5b}\label{struct_http_server_ac9f11f5841cad53f324ca58e089f8f5b}} 
+\index{HttpServer@{HttpServer}!getResponsePrototype@{getResponsePrototype}}
+\index{getResponsePrototype@{getResponsePrototype}!HttpServer@{HttpServer}}
+\doxysubsubsection{\texorpdfstring{getResponsePrototype()}{getResponsePrototype()}}
+{\footnotesize\ttfamily static void Http\+Server\+::get\+Response\+Prototype (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 331 of file http.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_http_server_ac9f11f5841cad53f324ca58e089f8f5b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_http_server_a5ee2e1be1ebb6b5d3fef21cf1f42e8f1}\label{struct_http_server_a5ee2e1be1ebb6b5d3fef21cf1f42e8f1}} 
+\index{HttpServer@{HttpServer}!listen@{listen}}
+\index{listen@{listen}!HttpServer@{HttpServer}}
+\doxysubsubsection{\texorpdfstring{listen()}{listen()}}
+{\footnotesize\ttfamily static void Http\+Server\+::listen (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 306 of file http.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{struct_http_server_a5ee2e1be1ebb6b5d3fef21cf1f42e8f1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_http_server_a5ee2e1be1ebb6b5d3fef21cf1f42e8f1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{struct_http_server_aeab7995eed7de4412c7079ad988a0cb7}\label{struct_http_server_aeab7995eed7de4412c7079ad988a0cb7}} 
+\index{HttpServer@{HttpServer}!on@{on}}
+\index{on@{on}!HttpServer@{HttpServer}}
+\doxysubsubsection{\texorpdfstring{on()}{on()}}
+{\footnotesize\ttfamily static void Http\+Server\+::on (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 301 of file http.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{struct_http_server_aeab7995eed7de4412c7079ad988a0cb7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_http_server_aeab7995eed7de4412c7079ad988a0cb7_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{http_8h}{http.\+h}}\end{DoxyCompactItemize}

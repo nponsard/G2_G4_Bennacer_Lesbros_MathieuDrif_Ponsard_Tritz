@@ -1,0 +1,209 @@
+\hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element}{}\doxysection{Bwaaah.\+engine.\+G\+U\+I\+Element Class Reference}
+\label{class_bwaaah_1_1engine_1_1_g_u_i_element}\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+
+
+Inheritance diagram for Bwaaah.\+engine.\+G\+U\+I\+Element\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{class_bwaaah_1_1engine_1_1_g_u_i_element__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_a9c8c66eb500be3b3eb6a252dc1801794}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{structposition}{position}}, \mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_abf4d0998fba7ba712fa02a7314168dfd}{size}}, \mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_a81dbfe4502f0f71b79a701bee3c8357f}{text}}, \mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_a87b52db5e8cad489ecc3e46913d6ff46}{background}}=(0, 0, 0, 0), \mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_a268d670c3c8be56da6edf31e31c63949}{focused\+Background}}=(100, 100, 100, 50), \mbox{\hyperlink{structfont}{font}}=None, font\+Size=10, \mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_af305f6df4149b0fb22e1c76e4f3c9250}{font\+Color}}=(255, 255, 255, 255))
+\item 
+def \mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_a4fe5877dfff5ac806c1e721375bebbeb}{update}} (self, events)
+\item 
+def \mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_a321f5b3c33f7b4ac1dd968abc3ba7ddf}{render}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_abf4d0998fba7ba712fa02a7314168dfd}{size}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_aeb1cf157c4f67a6d97a3a6f29742dd0d}{focused}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_a74b9e8634931526ff692178d48d62588}{position}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_a81dbfe4502f0f71b79a701bee3c8357f}{text}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_a87b52db5e8cad489ecc3e46913d6ff46}{background}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_a268d670c3c8be56da6edf31e31c63949}{focused\+Background}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_ad204180167f578baae37cc7ca78e16a3}{surface}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_a2b5c9d4571f34f09b18ba29831e3f8d0}{font}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_af305f6df4149b0fb22e1c76e4f3c9250}{font\+Color}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1engine_1_1_g_u_i_element_a06c0a5e0eac7c8db01562fdeab118169}{rect}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}classe de base pour les éléments interactifs (boutons et compagnie)
+\end{DoxyVerb}
+ 
+
+Definition at line 171 of file engine.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element_a9c8c66eb500be3b3eb6a252dc1801794}\label{class_bwaaah_1_1engine_1_1_g_u_i_element_a9c8c66eb500be3b3eb6a252dc1801794}} 
+\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Bwaaah.\+engine.\+G\+U\+I\+Element.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{position,  }\item[{}]{size,  }\item[{}]{text,  }\item[{}]{background = {\ttfamily (0,~0,~0,~0)},  }\item[{}]{focused\+Background = {\ttfamily (100,~100,~100,~50)},  }\item[{}]{font = {\ttfamily None},  }\item[{}]{font\+Size = {\ttfamily 10},  }\item[{}]{font\+Color = {\ttfamily (255,~255,~255,~255)} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 175 of file engine.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element_a321f5b3c33f7b4ac1dd968abc3ba7ddf}\label{class_bwaaah_1_1engine_1_1_g_u_i_element_a321f5b3c33f7b4ac1dd968abc3ba7ddf}} 
+\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}!render@{render}}
+\index{render@{render}!Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily def Bwaaah.\+engine.\+G\+U\+I\+Element.\+render (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Definition at line 199 of file engine.\+py.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bwaaah_1_1engine_1_1_g_u_i_element_a321f5b3c33f7b4ac1dd968abc3ba7ddf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element_a4fe5877dfff5ac806c1e721375bebbeb}\label{class_bwaaah_1_1engine_1_1_g_u_i_element_a4fe5877dfff5ac806c1e721375bebbeb}} 
+\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}!update@{update}}
+\index{update@{update}!Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily def Bwaaah.\+engine.\+G\+U\+I\+Element.\+update (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{events }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_bwaaah_1_1engine_1_1_key_customizer_button_a23209788af2217af0498e2a788496464}{Bwaaah.\+engine.\+Key\+Customizer\+Button}}, and \mbox{\hyperlink{class_bwaaah_1_1engine_1_1_button_a5ee6c89a0bf6051544d1be4fe243e9d6}{Bwaaah.\+engine.\+Button}}.
+
+
+
+Definition at line 189 of file engine.\+py.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element_a87b52db5e8cad489ecc3e46913d6ff46}\label{class_bwaaah_1_1engine_1_1_g_u_i_element_a87b52db5e8cad489ecc3e46913d6ff46}} 
+\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}!background@{background}}
+\index{background@{background}!Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+\doxysubsubsection{\texorpdfstring{background}{background}}
+{\footnotesize\ttfamily Bwaaah.\+engine.\+G\+U\+I\+Element.\+background}
+
+
+
+Definition at line 180 of file engine.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element_aeb1cf157c4f67a6d97a3a6f29742dd0d}\label{class_bwaaah_1_1engine_1_1_g_u_i_element_aeb1cf157c4f67a6d97a3a6f29742dd0d}} 
+\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}!focused@{focused}}
+\index{focused@{focused}!Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+\doxysubsubsection{\texorpdfstring{focused}{focused}}
+{\footnotesize\ttfamily Bwaaah.\+engine.\+G\+U\+I\+Element.\+focused}
+
+
+
+Definition at line 177 of file engine.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element_a268d670c3c8be56da6edf31e31c63949}\label{class_bwaaah_1_1engine_1_1_g_u_i_element_a268d670c3c8be56da6edf31e31c63949}} 
+\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}!focusedBackground@{focusedBackground}}
+\index{focusedBackground@{focusedBackground}!Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+\doxysubsubsection{\texorpdfstring{focusedBackground}{focusedBackground}}
+{\footnotesize\ttfamily Bwaaah.\+engine.\+G\+U\+I\+Element.\+focused\+Background}
+
+
+
+Definition at line 181 of file engine.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element_a2b5c9d4571f34f09b18ba29831e3f8d0}\label{class_bwaaah_1_1engine_1_1_g_u_i_element_a2b5c9d4571f34f09b18ba29831e3f8d0}} 
+\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}!font@{font}}
+\index{font@{font}!Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily Bwaaah.\+engine.\+G\+U\+I\+Element.\+font}
+
+
+
+Definition at line 185 of file engine.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element_af305f6df4149b0fb22e1c76e4f3c9250}\label{class_bwaaah_1_1engine_1_1_g_u_i_element_af305f6df4149b0fb22e1c76e4f3c9250}} 
+\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}!fontColor@{fontColor}}
+\index{fontColor@{fontColor}!Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+\doxysubsubsection{\texorpdfstring{fontColor}{fontColor}}
+{\footnotesize\ttfamily Bwaaah.\+engine.\+G\+U\+I\+Element.\+font\+Color}
+
+
+
+Definition at line 186 of file engine.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element_a74b9e8634931526ff692178d48d62588}\label{class_bwaaah_1_1engine_1_1_g_u_i_element_a74b9e8634931526ff692178d48d62588}} 
+\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}!position@{position}}
+\index{position@{position}!Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily Bwaaah.\+engine.\+G\+U\+I\+Element.\+position}
+
+
+
+Definition at line 178 of file engine.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element_a06c0a5e0eac7c8db01562fdeab118169}\label{class_bwaaah_1_1engine_1_1_g_u_i_element_a06c0a5e0eac7c8db01562fdeab118169}} 
+\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}!rect@{rect}}
+\index{rect@{rect}!Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+\doxysubsubsection{\texorpdfstring{rect}{rect}}
+{\footnotesize\ttfamily Bwaaah.\+engine.\+G\+U\+I\+Element.\+rect}
+
+
+
+Definition at line 187 of file engine.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element_abf4d0998fba7ba712fa02a7314168dfd}\label{class_bwaaah_1_1engine_1_1_g_u_i_element_abf4d0998fba7ba712fa02a7314168dfd}} 
+\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}!size@{size}}
+\index{size@{size}!Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily Bwaaah.\+engine.\+G\+U\+I\+Element.\+size}
+
+
+
+Definition at line 176 of file engine.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element_ad204180167f578baae37cc7ca78e16a3}\label{class_bwaaah_1_1engine_1_1_g_u_i_element_ad204180167f578baae37cc7ca78e16a3}} 
+\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}!surface@{surface}}
+\index{surface@{surface}!Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+\doxysubsubsection{\texorpdfstring{surface}{surface}}
+{\footnotesize\ttfamily Bwaaah.\+engine.\+G\+U\+I\+Element.\+surface}
+
+
+
+Definition at line 183 of file engine.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1engine_1_1_g_u_i_element_a81dbfe4502f0f71b79a701bee3c8357f}\label{class_bwaaah_1_1engine_1_1_g_u_i_element_a81dbfe4502f0f71b79a701bee3c8357f}} 
+\index{Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}!text@{text}}
+\index{text@{text}!Bwaaah.engine.GUIElement@{Bwaaah.engine.GUIElement}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily Bwaaah.\+engine.\+G\+U\+I\+Element.\+text}
+
+
+
+Definition at line 179 of file engine.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Bwaaah/\mbox{\hyperlink{engine_8py}{engine.\+py}}\end{DoxyCompactItemize}

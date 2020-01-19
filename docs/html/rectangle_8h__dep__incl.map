@@ -1,7 +1,7 @@
-<map id="src/minGL/figs/rectangle.h" name="src/minGL/figs/rectangle.h">
-<area shape="rect" id="node1" title=" " alt="" coords="321,5,512,32"/>
-<area shape="rect" id="node2" href="$figure_8cpp.html" title=" " alt="" coords="5,80,188,107"/>
-<area shape="rect" id="node3" href="$rectangle_8cpp.html" title=" " alt="" coords="212,80,419,107"/>
-<area shape="rect" id="node4" href="$display_8cpp.html" title=" " alt="" coords="443,80,593,107"/>
-<area shape="rect" id="node5" href="$spaceinvaders_8cpp.html" title=" " alt="" coords="617,80,816,107"/>
+<map id="nosFichiers/src/minGL/figs/rectangle.h" name="nosFichiers/src/minGL/figs/rectangle.h">
+<area shape="rect" id="node1" title=" " alt="" coords="284,5,448,47"/>
+<area shape="rect" id="node2" href="$figure_8cpp.html" title=" " alt="" coords="5,95,169,136"/>
+<area shape="rect" id="node3" href="$rectangle_8cpp.html" title=" " alt="" coords="193,95,357,136"/>
+<area shape="rect" id="node4" href="$display_8cpp.html" title=" " alt="" coords="381,95,532,136"/>
+<area shape="rect" id="node5" href="$spaceinvaders_8cpp.html" title=" " alt="" coords="556,95,707,136"/>
 </map>

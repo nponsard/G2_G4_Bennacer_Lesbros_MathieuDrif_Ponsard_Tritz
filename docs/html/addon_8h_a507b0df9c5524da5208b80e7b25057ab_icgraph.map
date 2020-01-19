@@ -1,0 +1,19 @@
+<map id="hub" name="hub">
+<area shape="rect" id="node1" title=" " alt="" coords="692,198,739,225"/>
+<area shape="rect" id="node2" href="$structu_w_s_1_1_group.html#a8be2b7124e204b7aab906f752314ed24" title=" " alt="" coords="473,5,632,47"/>
+<area shape="rect" id="node3" href="$addon_8h.html#ac0b0144d245d04ea2b6c18d291cd2e48" title=" " alt="" coords="516,71,589,98"/>
+<area shape="rect" id="node6" href="$addon_8h.html#a8ae68527205a6fc3154170fbf22c3829" title=" " alt="" coords="501,122,604,149"/>
+<area shape="rect" id="node7" href="$struct_http_server.html#a927f9c92f3ff03982575dfb1c281b30c" title=" " alt="" coords="461,173,644,199"/>
+<area shape="rect" id="node9" href="$struct_http_server.html#a5ee2e1be1ebb6b5d3fef21cf1f42e8f1" title=" " alt="" coords="485,223,621,250"/>
+<area shape="rect" id="node10" href="$addon_8h.html#a73fab7debef95d612673475c700a1855" title=" " alt="" coords="523,274,582,301"/>
+<area shape="rect" id="node13" href="$addon_8h.html#a37cd2a29c88db1763ce52b604f6b64ae" title=" " alt="" coords="262,325,374,351"/>
+<area shape="rect" id="node14" href="$addon_8h.html#a19fab02bfef45a4928d1e6523236cc06" title=" " alt="" coords="515,375,590,402"/>
+<area shape="rect" id="node4" href="$classu_s_1_1_node.html#a45614cbc70d9121b48738728f559cf4e" title=" " alt="" coords="249,71,387,98"/>
+<area shape="rect" id="node5" href="$addon_8cpp.html#a91b20a76285854fb609ca61c93b6a652" title=" " alt="" coords="114,249,169,275"/>
+<area shape="rect" id="node8" href="$struct_http_server.html#ac64ae15a916ca8342b2dd50e5a6f8fac" title=" " alt="" coords="223,173,413,199"/>
+<area shape="rect" id="node11" href="$classu_s_1_1_node.html#a34fd54fc00bf444b9732265a0cf16651" title=" " alt="" coords="256,223,380,250"/>
+<area shape="rect" id="node12" href="$struct_namespace.html#a3a87eeb08de243fed46d8ff5e271a282" title=" " alt="" coords="226,274,410,301"/>
+<area shape="rect" id="node15" href="$main_space_invaders_8h.html#a350e996a354865b6064bab50134646dc" title="Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets ..." alt="" coords="282,426,354,453"/>
+<area shape="rect" id="node16" href="$main_space_invaders_8h.html#a4fa2d58844efb7d9be2951633b85b060" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,426,175,453"/>
+<area shape="rect" id="node17" href="$projet_space_invaders_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,426,60,453"/>
+</map>

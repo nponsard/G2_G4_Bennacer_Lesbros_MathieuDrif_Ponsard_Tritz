@@ -1,0 +1,195 @@
+\hypertarget{classu_w_s_1_1_web_socket_protocol}{}\doxysection{u\+WS\+::Web\+Socket\+Protocol$<$ is\+Server, Impl $>$ Class Template Reference}
+\label{classu_w_s_1_1_web_socket_protocol}\index{uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}}
+
+
+{\ttfamily \#include $<$Web\+Socket\+Protocol.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_web_socket_protocol_1_1_close_frame}{Close\+Frame}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol_a9843913d64f5c59a1c3479351df9356c}{Web\+Socket\+Protocol}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol_abf8aa08ec0de37968aaf2f3eb330f110}{is\+Valid\+Utf8}} (unsigned char $\ast$s, size\+\_\+t length)
+\item 
+static \mbox{\hyperlink{structu_w_s_1_1_web_socket_protocol_1_1_close_frame}{Close\+Frame}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol_a46b8ca9b46dae8d7a412ebe555cff5ea}{parse\+Close\+Payload}} (char $\ast$src, size\+\_\+t length)
+\item 
+static size\+\_\+t \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol_aa1cf9f0be083546c8e127c47d9f2b01c}{format\+Close\+Payload}} (char $\ast$dst, uint16\+\_\+t code, const char $\ast$message, size\+\_\+t length)
+\item 
+static size\+\_\+t \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol_af72deddb4854c043e9a1441b5de317b9}{format\+Message}} (char $\ast$dst, const char $\ast$src, size\+\_\+t length, \mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}} op\+Code, size\+\_\+t reported\+Length, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} compressed)
+\item 
+static void \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol_a5efcc4356e0f4c87daab552c4f6b137c}{consume}} (char $\ast$src, unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} length, \mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{Web\+Socket\+State}}$<$ is\+Server $>$ $\ast$w\+State)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol_a1328256200e755c4b15530601fd3c006}{S\+H\+O\+R\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER}} = is\+Server ? 6 \+: 2
+\item 
+static const unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol_ab07d1e59ca08f662b9d6d5a7ee75b2f3}{M\+E\+D\+I\+U\+M\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER}} = is\+Server ? 8 \+: 4
+\item 
+static const unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol_a1926228cac4dbda73d2f45133c90a9bd}{L\+O\+N\+G\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER}} = is\+Server ? 14 \+: 10
+\item 
+static const \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol_aa3474c509de3db9b61c90f36d8b3fbf8}{C\+O\+N\+S\+U\+M\+E\+\_\+\+P\+O\+S\+T\+\_\+\+P\+A\+D\+D\+I\+NG}} = 4
+\item 
+static const \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol_a832e0833581ff3d41fba8fbb3326d8c3}{C\+O\+N\+S\+U\+M\+E\+\_\+\+P\+R\+E\+\_\+\+P\+A\+D\+D\+I\+NG}} = \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol_a1926228cac4dbda73d2f45133c90a9bd}{L\+O\+N\+G\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER}} -\/ 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$const bool is\+Server, class Impl$>$\newline
+class u\+W\+S\+::\+Web\+Socket\+Protocol$<$ is\+Server, Impl $>$}
+
+
+
+Definition at line 59 of file Web\+Socket\+Protocol.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classu_w_s_1_1_web_socket_protocol_a9843913d64f5c59a1c3479351df9356c}\label{classu_w_s_1_1_web_socket_protocol_a9843913d64f5c59a1c3479351df9356c}} 
+\index{uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}!WebSocketProtocol@{WebSocketProtocol}}
+\index{WebSocketProtocol@{WebSocketProtocol}!uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}}
+\doxysubsubsection{\texorpdfstring{WebSocketProtocol()}{WebSocketProtocol()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server, class Impl $>$ \\
+\mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{u\+W\+S\+::\+Web\+Socket\+Protocol}}$<$ is\+Server, Impl $>$\+::\mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{Web\+Socket\+Protocol}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 205 of file Web\+Socket\+Protocol.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classu_w_s_1_1_web_socket_protocol_a5efcc4356e0f4c87daab552c4f6b137c}\label{classu_w_s_1_1_web_socket_protocol_a5efcc4356e0f4c87daab552c4f6b137c}} 
+\index{uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}!consume@{consume}}
+\index{consume@{consume}!uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}}
+\doxysubsubsection{\texorpdfstring{consume()}{consume()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server, class Impl $>$ \\
+static void \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{u\+W\+S\+::\+Web\+Socket\+Protocol}}$<$ is\+Server, Impl $>$\+::consume (\begin{DoxyParamCaption}\item[{char $\ast$}]{src,  }\item[{unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{length,  }\item[{\mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{Web\+Socket\+State}}$<$ is\+Server $>$ $\ast$}]{w\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 329 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{classu_w_s_1_1_web_socket_protocol_aa1cf9f0be083546c8e127c47d9f2b01c}\label{classu_w_s_1_1_web_socket_protocol_aa1cf9f0be083546c8e127c47d9f2b01c}} 
+\index{uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}!formatClosePayload@{formatClosePayload}}
+\index{formatClosePayload@{formatClosePayload}!uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}}
+\doxysubsubsection{\texorpdfstring{formatClosePayload()}{formatClosePayload()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server, class Impl $>$ \\
+static size\+\_\+t \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{u\+W\+S\+::\+Web\+Socket\+Protocol}}$<$ is\+Server, Impl $>$\+::format\+Close\+Payload (\begin{DoxyParamCaption}\item[{char $\ast$}]{dst,  }\item[{uint16\+\_\+t}]{code,  }\item[{const char $\ast$}]{message,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 269 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{classu_w_s_1_1_web_socket_protocol_af72deddb4854c043e9a1441b5de317b9}\label{classu_w_s_1_1_web_socket_protocol_af72deddb4854c043e9a1441b5de317b9}} 
+\index{uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}!formatMessage@{formatMessage}}
+\index{formatMessage@{formatMessage}!uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}}
+\doxysubsubsection{\texorpdfstring{formatMessage()}{formatMessage()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server, class Impl $>$ \\
+static size\+\_\+t \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{u\+W\+S\+::\+Web\+Socket\+Protocol}}$<$ is\+Server, Impl $>$\+::format\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{dst,  }\item[{const char $\ast$}]{src,  }\item[{size\+\_\+t}]{length,  }\item[{\mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}}}]{op\+Code,  }\item[{size\+\_\+t}]{reported\+Length,  }\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}}}]{compressed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 279 of file Web\+Socket\+Protocol.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classu_w_s_1_1_web_socket_protocol_af72deddb4854c043e9a1441b5de317b9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classu_w_s_1_1_web_socket_protocol_abf8aa08ec0de37968aaf2f3eb330f110}\label{classu_w_s_1_1_web_socket_protocol_abf8aa08ec0de37968aaf2f3eb330f110}} 
+\index{uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}!isValidUtf8@{isValidUtf8}}
+\index{isValidUtf8@{isValidUtf8}!uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}}
+\doxysubsubsection{\texorpdfstring{isValidUtf8()}{isValidUtf8()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server, class Impl $>$ \\
+static \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{u\+W\+S\+::\+Web\+Socket\+Protocol}}$<$ is\+Server, Impl $>$\+::is\+Valid\+Utf8 (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{s,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 213 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{classu_w_s_1_1_web_socket_protocol_a46b8ca9b46dae8d7a412ebe555cff5ea}\label{classu_w_s_1_1_web_socket_protocol_a46b8ca9b46dae8d7a412ebe555cff5ea}} 
+\index{uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}!parseClosePayload@{parseClosePayload}}
+\index{parseClosePayload@{parseClosePayload}!uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}}
+\doxysubsubsection{\texorpdfstring{parseClosePayload()}{parseClosePayload()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server, class Impl $>$ \\
+static \mbox{\hyperlink{structu_w_s_1_1_web_socket_protocol_1_1_close_frame}{Close\+Frame}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{u\+W\+S\+::\+Web\+Socket\+Protocol}}$<$ is\+Server, Impl $>$\+::parse\+Close\+Payload (\begin{DoxyParamCaption}\item[{char $\ast$}]{src,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 256 of file Web\+Socket\+Protocol.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classu_w_s_1_1_web_socket_protocol_aa3474c509de3db9b61c90f36d8b3fbf8}\label{classu_w_s_1_1_web_socket_protocol_aa3474c509de3db9b61c90f36d8b3fbf8}} 
+\index{uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}!CONSUME\_POST\_PADDING@{CONSUME\_POST\_PADDING}}
+\index{CONSUME\_POST\_PADDING@{CONSUME\_POST\_PADDING}!uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}}
+\doxysubsubsection{\texorpdfstring{CONSUME\_POST\_PADDING}{CONSUME\_POST\_PADDING}}
+{\footnotesize\ttfamily template$<$const bool is\+Server, class Impl $>$ \\
+const \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{u\+W\+S\+::\+Web\+Socket\+Protocol}}$<$ is\+Server, Impl $>$\+::C\+O\+N\+S\+U\+M\+E\+\_\+\+P\+O\+S\+T\+\_\+\+P\+A\+D\+D\+I\+NG = 4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 371 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{classu_w_s_1_1_web_socket_protocol_a832e0833581ff3d41fba8fbb3326d8c3}\label{classu_w_s_1_1_web_socket_protocol_a832e0833581ff3d41fba8fbb3326d8c3}} 
+\index{uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}!CONSUME\_PRE\_PADDING@{CONSUME\_PRE\_PADDING}}
+\index{CONSUME\_PRE\_PADDING@{CONSUME\_PRE\_PADDING}!uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}}
+\doxysubsubsection{\texorpdfstring{CONSUME\_PRE\_PADDING}{CONSUME\_PRE\_PADDING}}
+{\footnotesize\ttfamily template$<$const bool is\+Server, class Impl $>$ \\
+const \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{u\+W\+S\+::\+Web\+Socket\+Protocol}}$<$ is\+Server, Impl $>$\+::C\+O\+N\+S\+U\+M\+E\+\_\+\+P\+R\+E\+\_\+\+P\+A\+D\+D\+I\+NG = \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol_a1926228cac4dbda73d2f45133c90a9bd}{L\+O\+N\+G\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER}} -\/ 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 372 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{classu_w_s_1_1_web_socket_protocol_a1926228cac4dbda73d2f45133c90a9bd}\label{classu_w_s_1_1_web_socket_protocol_a1926228cac4dbda73d2f45133c90a9bd}} 
+\index{uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}!LONG\_MESSAGE\_HEADER@{LONG\_MESSAGE\_HEADER}}
+\index{LONG\_MESSAGE\_HEADER@{LONG\_MESSAGE\_HEADER}!uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}}
+\doxysubsubsection{\texorpdfstring{LONG\_MESSAGE\_HEADER}{LONG\_MESSAGE\_HEADER}}
+{\footnotesize\ttfamily template$<$const bool is\+Server, class Impl $>$ \\
+const unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{u\+W\+S\+::\+Web\+Socket\+Protocol}}$<$ is\+Server, Impl $>$\+::L\+O\+N\+G\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER = is\+Server ? 14 \+: 10\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 63 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{classu_w_s_1_1_web_socket_protocol_ab07d1e59ca08f662b9d6d5a7ee75b2f3}\label{classu_w_s_1_1_web_socket_protocol_ab07d1e59ca08f662b9d6d5a7ee75b2f3}} 
+\index{uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}!MEDIUM\_MESSAGE\_HEADER@{MEDIUM\_MESSAGE\_HEADER}}
+\index{MEDIUM\_MESSAGE\_HEADER@{MEDIUM\_MESSAGE\_HEADER}!uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}}
+\doxysubsubsection{\texorpdfstring{MEDIUM\_MESSAGE\_HEADER}{MEDIUM\_MESSAGE\_HEADER}}
+{\footnotesize\ttfamily template$<$const bool is\+Server, class Impl $>$ \\
+const unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{u\+W\+S\+::\+Web\+Socket\+Protocol}}$<$ is\+Server, Impl $>$\+::M\+E\+D\+I\+U\+M\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER = is\+Server ? 8 \+: 4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 62 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{classu_w_s_1_1_web_socket_protocol_a1328256200e755c4b15530601fd3c006}\label{classu_w_s_1_1_web_socket_protocol_a1328256200e755c4b15530601fd3c006}} 
+\index{uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}!SHORT\_MESSAGE\_HEADER@{SHORT\_MESSAGE\_HEADER}}
+\index{SHORT\_MESSAGE\_HEADER@{SHORT\_MESSAGE\_HEADER}!uWS::WebSocketProtocol$<$ isServer, Impl $>$@{uWS::WebSocketProtocol$<$ isServer, Impl $>$}}
+\doxysubsubsection{\texorpdfstring{SHORT\_MESSAGE\_HEADER}{SHORT\_MESSAGE\_HEADER}}
+{\footnotesize\ttfamily template$<$const bool is\+Server, class Impl $>$ \\
+const unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{u\+W\+S\+::\+Web\+Socket\+Protocol}}$<$ is\+Server, Impl $>$\+::S\+H\+O\+R\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER = is\+Server ? 6 \+: 2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 61 of file Web\+Socket\+Protocol.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_web_socket_protocol_8h}{Web\+Socket\+Protocol.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,8 @@
+<map id="uS::Socket" name="uS::Socket">
+<area shape="rect" id="node1" title=" " alt="" coords="124,81,213,108"/>
+<area shape="rect" id="node3" href="$structu_w_s_1_1_http_socket.html" title=" " alt="" coords="275,5,461,32"/>
+<area shape="rect" id="node4" href="$structu_s_1_1_listen_socket.html" title=" " alt="" coords="304,56,432,83"/>
+<area shape="rect" id="node5" href="$structu_w_s_1_1_http_socket.html" title=" " alt="" coords="261,107,475,133"/>
+<area shape="rect" id="node6" href="$structu_w_s_1_1_web_socket.html" title=" " alt="" coords="261,157,475,184"/>
+<area shape="rect" id="node2" href="$structu_s_1_1_poll.html" title=" " alt="" coords="5,81,76,108"/>
+</map>

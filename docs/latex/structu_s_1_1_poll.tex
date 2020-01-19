@@ -1,0 +1,685 @@
+\hypertarget{structu_s_1_1_poll}{}\doxysection{uS\+::Poll Struct Reference}
+\label{structu_s_1_1_poll}\index{uS::Poll@{uS::Poll}}
+
+
+{\ttfamily \#include $<$Asio.\+h$>$}
+
+
+
+Inheritance diagram for uS\+::Poll\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_poll__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for uS\+::Poll\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{structu_s_1_1_poll__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structu_s_1_1_poll_acb43aa541a3f4ff783c9ccb8ca761536}{Poll}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}} \mbox{\hyperlink{structu_s_1_1_poll_a1b751c2ba3c30e39e48736d308e8ca9a}{fd}})
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_s_1_1_poll_af8085e20853c641510aeb5040c0d186f}{is\+Closed}} ()
+\item 
+boost\+::asio\+::ip\+::tcp\+::socket\+::native\+\_\+type \mbox{\hyperlink{structu_s_1_1_poll_ab2dcc90867bd8d857be1865dda0e9e10}{get\+Fd}} ()
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_a348c4355eac02e30b15fd5dbaa7dd691}{set\+Cb}} (void($\ast$\mbox{\hyperlink{structu_s_1_1_poll_a9c94b5022375b43a4c1ae9da0f052fb7}{cb}})(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$p, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} status, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events))
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_a82de0acec537929663831a0bcc82e86a}{re\+Init}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}} \mbox{\hyperlink{structu_s_1_1_poll_a1b751c2ba3c30e39e48736d308e8ca9a}{fd}})
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_a5d435f2d313faeba0ed264cbcb695645}{start}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$, \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$self, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_abe257e4e4a428a8a1ef1b4d3ed564a0d}{change}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$, \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$self, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_s_1_1_poll_ae0906a13050ab74a2f4fa632738885e9}{fast\+Transfer}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$new\+Loop, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_s_1_1_poll_af0c341ce7a1379ae11c2448e500e8bae}{thread\+Safe\+Change}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$self, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_acabd3b28183588874345d3765bc33f23}{stop}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_a40ff55c845855ab9a387c5d2e7c09a45}{close}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, void($\ast$\mbox{\hyperlink{structu_s_1_1_poll_a9c94b5022375b43a4c1ae9da0f052fb7}{cb}})(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$))
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_s_1_1_poll_af8085e20853c641510aeb5040c0d186f}{is\+Closed}} ()
+\item 
+\mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}} \mbox{\hyperlink{structu_s_1_1_poll_abd4557c73147f3ecf92967a06fb8f484}{get\+Fd}} ()
+\item 
+\mbox{\hyperlink{structu_s_1_1_poll_acb43aa541a3f4ff783c9ccb8ca761536}{Poll}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}} \mbox{\hyperlink{structu_s_1_1_poll_a1b751c2ba3c30e39e48736d308e8ca9a}{fd}})
+\item 
+\mbox{\hyperlink{structu_s_1_1_poll_a12f5fdcca69467c2f7b25f84af028b20}{Poll}} (\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} \&\&other)
+\item 
+\mbox{\hyperlink{structu_s_1_1_poll_aff466ee5a1d0050c43ab007d36a9f812}{Poll}} (const \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} \&other)=delete
+\item 
+\mbox{\hyperlink{structu_s_1_1_poll_aa61a57e82b7b0a6ad74e31b0967850da}{$\sim$\+Poll}} ()
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_s_1_1_poll_af8085e20853c641510aeb5040c0d186f}{is\+Closed}} ()
+\item 
+\mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}} \mbox{\hyperlink{structu_s_1_1_poll_abd4557c73147f3ecf92967a06fb8f484}{get\+Fd}} ()
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_a348c4355eac02e30b15fd5dbaa7dd691}{set\+Cb}} (void($\ast$\mbox{\hyperlink{structu_s_1_1_poll_a9c94b5022375b43a4c1ae9da0f052fb7}{cb}})(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$p, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} status, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events))
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_a82de0acec537929663831a0bcc82e86a}{re\+Init}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}} \mbox{\hyperlink{structu_s_1_1_poll_a1b751c2ba3c30e39e48736d308e8ca9a}{fd}})
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_a5d435f2d313faeba0ed264cbcb695645}{start}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$, \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$self, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_abe257e4e4a428a8a1ef1b4d3ed564a0d}{change}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$, \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$self, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_abf8d05684e4d69c5ff77e1006b4d4c3e}{stop}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop)
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_s_1_1_poll_ae0906a13050ab74a2f4fa632738885e9}{fast\+Transfer}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$new\+Loop, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_s_1_1_poll_ab25024fd049d4954e3a7cfb0ab4fe8b9}{thread\+Safe\+Change}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$, \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$self, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_a40ff55c845855ab9a387c5d2e7c09a45}{close}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, void($\ast$\mbox{\hyperlink{structu_s_1_1_poll_a9c94b5022375b43a4c1ae9da0f052fb7}{cb}})(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$))
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::asio\+::posix\+::stream\+\_\+descriptor $\ast$ \mbox{\hyperlink{structu_s_1_1_poll_a89b3505f44473b874dd43b484dfd648f}{socket}}
+\item 
+void($\ast$ \mbox{\hyperlink{structu_s_1_1_poll_a9c94b5022375b43a4c1ae9da0f052fb7}{cb}} )(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$p, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} status, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+void($\ast$)(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}) \mbox{\hyperlink{structu_s_1_1_poll_a8793141a9b9d141beaa9e7074f266351}{get\+Cb}} ()
+\item 
+uv\+\_\+poll\+\_\+t $\ast$ \mbox{\hyperlink{structu_s_1_1_poll_a633a043c8e5c7a97bfc8cc6847937a88}{uv\+\_\+poll}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structu_s_1_1_poll_acb43aa541a3f4ff783c9ccb8ca761536}{Poll}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}} \mbox{\hyperlink{structu_s_1_1_poll_a1b751c2ba3c30e39e48736d308e8ca9a}{fd}})
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_a348c4355eac02e30b15fd5dbaa7dd691}{set\+Cb}} (void($\ast$\mbox{\hyperlink{structu_s_1_1_poll_a9c94b5022375b43a4c1ae9da0f052fb7}{cb}})(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$p, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} status, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events))
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_a82de0acec537929663831a0bcc82e86a}{re\+Init}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}} \mbox{\hyperlink{structu_s_1_1_poll_a1b751c2ba3c30e39e48736d308e8ca9a}{fd}})
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_a3de6f448f39eeb91d1be9a123fed18aa}{start}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$self, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_a38e1a494a42d87cb0c3222965b8388e4}{change}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$self, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_abf8d05684e4d69c5ff77e1006b4d4c3e}{stop}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop)
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_s_1_1_poll_ae0906a13050ab74a2f4fa632738885e9}{fast\+Transfer}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$new\+Loop, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_s_1_1_poll_af0c341ce7a1379ae11c2448e500e8bae}{thread\+Safe\+Change}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$self, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)
+\item 
+void \mbox{\hyperlink{structu_s_1_1_poll_a40ff55c845855ab9a387c5d2e7c09a45}{close}} (\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$loop, void($\ast$\mbox{\hyperlink{structu_s_1_1_poll_a9c94b5022375b43a4c1ae9da0f052fb7}{cb}})(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$))
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_s_1_1_poll_a1b751c2ba3c30e39e48736d308e8ca9a}{fd}}: 28\\
+\>unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_s_1_1_poll_aa8f64b9a2deb18c82cce08e672df87d2}{cbIndex}}: 4\\
+\} \mbox{\hyperlink{structu_s_1_1_poll_a55fbbe98e931ff917a89e453ae3e79f3}{state}} = \{-\/1, 0\}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_poll_acf1b6f7eea81ff820e64b77581772ed6}{Loop}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 104 of file Asio.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structu_s_1_1_poll_acb43aa541a3f4ff783c9ccb8ca761536}\label{structu_s_1_1_poll_acb43aa541a3f4ff783c9ccb8ca761536}} 
+\index{uS::Poll@{uS::Poll}!Poll@{Poll}}
+\index{Poll@{Poll}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{Poll()}{Poll()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily u\+S\+::\+Poll\+::\+Poll (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}}}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 108 of file Asio.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_acb43aa541a3f4ff783c9ccb8ca761536}\label{structu_s_1_1_poll_acb43aa541a3f4ff783c9ccb8ca761536}} 
+\index{uS::Poll@{uS::Poll}!Poll@{Poll}}
+\index{Poll@{Poll}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{Poll()}{Poll()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily u\+S\+::\+Poll\+::\+Poll (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}}}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 133 of file Epoll.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_acb43aa541a3f4ff783c9ccb8ca761536}\label{structu_s_1_1_poll_acb43aa541a3f4ff783c9ccb8ca761536}} 
+\index{uS::Poll@{uS::Poll}!Poll@{Poll}}
+\index{Poll@{Poll}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{Poll()}{Poll()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily u\+S\+::\+Poll\+::\+Poll (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}}}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 98 of file Libuv.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a12f5fdcca69467c2f7b25f84af028b20}\label{structu_s_1_1_poll_a12f5fdcca69467c2f7b25f84af028b20}} 
+\index{uS::Poll@{uS::Poll}!Poll@{Poll}}
+\index{Poll@{Poll}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{Poll()}{Poll()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily u\+S\+::\+Poll\+::\+Poll (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 103 of file Libuv.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_aff466ee5a1d0050c43ab007d36a9f812}\label{structu_s_1_1_poll_aff466ee5a1d0050c43ab007d36a9f812}} 
+\index{uS::Poll@{uS::Poll}!Poll@{Poll}}
+\index{Poll@{Poll}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{Poll()}{Poll()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily u\+S\+::\+Poll\+::\+Poll (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structu_s_1_1_poll}{Poll}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{structu_s_1_1_poll_aa61a57e82b7b0a6ad74e31b0967850da}\label{structu_s_1_1_poll_aa61a57e82b7b0a6ad74e31b0967850da}} 
+\index{uS::Poll@{uS::Poll}!````~Poll@{$\sim$Poll}}
+\index{````~Poll@{$\sim$Poll}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{$\sim$Poll()}{~Poll()}}
+{\footnotesize\ttfamily u\+S\+::\+Poll\+::$\sim$\+Poll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 111 of file Libuv.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structu_s_1_1_poll_abe257e4e4a428a8a1ef1b4d3ed564a0d}\label{structu_s_1_1_poll_abe257e4e4a428a8a1ef1b4d3ed564a0d}} 
+\index{uS::Poll@{uS::Poll}!change@{change}}
+\index{change@{change}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{change()}{change()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{,  }\item[{\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$}]{self,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 151 of file Libuv.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{structu_s_1_1_poll_abe257e4e4a428a8a1ef1b4d3ed564a0d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_poll_abe257e4e4a428a8a1ef1b4d3ed564a0d}\label{structu_s_1_1_poll_abe257e4e4a428a8a1ef1b4d3ed564a0d}} 
+\index{uS::Poll@{uS::Poll}!change@{change}}
+\index{change@{change}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{change()}{change()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{,  }\item[{\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$}]{self,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 155 of file Asio.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{structu_s_1_1_poll_abe257e4e4a428a8a1ef1b4d3ed564a0d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_poll_abe257e4e4a428a8a1ef1b4d3ed564a0d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_poll_a38e1a494a42d87cb0c3222965b8388e4}\label{structu_s_1_1_poll_a38e1a494a42d87cb0c3222965b8388e4}} 
+\index{uS::Poll@{uS::Poll}!change@{change}}
+\index{change@{change}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{change()}{change()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$}]{self,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 171 of file Epoll.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a40ff55c845855ab9a387c5d2e7c09a45}\label{structu_s_1_1_poll_a40ff55c845855ab9a387c5d2e7c09a45}} 
+\index{uS::Poll@{uS::Poll}!close@{close}}
+\index{close@{close}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{void($\ast$)(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$)}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 167 of file Libuv.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a40ff55c845855ab9a387c5d2e7c09a45}\label{structu_s_1_1_poll_a40ff55c845855ab9a387c5d2e7c09a45}} 
+\index{uS::Poll@{uS::Poll}!close@{close}}
+\index{close@{close}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{void($\ast$)(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$)}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 176 of file Asio.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_poll_a40ff55c845855ab9a387c5d2e7c09a45_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_poll_a40ff55c845855ab9a387c5d2e7c09a45}\label{structu_s_1_1_poll_a40ff55c845855ab9a387c5d2e7c09a45}} 
+\index{uS::Poll@{uS::Poll}!close@{close}}
+\index{close@{close}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{void($\ast$)(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$)}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 197 of file Epoll.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_ae0906a13050ab74a2f4fa632738885e9}\label{structu_s_1_1_poll_ae0906a13050ab74a2f4fa632738885e9}} 
+\index{uS::Poll@{uS::Poll}!fastTransfer@{fastTransfer}}
+\index{fastTransfer@{fastTransfer}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{fastTransfer()}{fastTransfer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+S\+::\+Poll\+::fast\+Transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{new\+Loop,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 159 of file Libuv.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_ae0906a13050ab74a2f4fa632738885e9}\label{structu_s_1_1_poll_ae0906a13050ab74a2f4fa632738885e9}} 
+\index{uS::Poll@{uS::Poll}!fastTransfer@{fastTransfer}}
+\index{fastTransfer@{fastTransfer}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{fastTransfer()}{fastTransfer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+S\+::\+Poll\+::fast\+Transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{new\+Loop,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 160 of file Asio.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_ae0906a13050ab74a2f4fa632738885e9}\label{structu_s_1_1_poll_ae0906a13050ab74a2f4fa632738885e9}} 
+\index{uS::Poll@{uS::Poll}!fastTransfer@{fastTransfer}}
+\index{fastTransfer@{fastTransfer}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{fastTransfer()}{fastTransfer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+S\+::\+Poll\+::fast\+Transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{new\+Loop,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 183 of file Epoll.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{structu_s_1_1_poll_ae0906a13050ab74a2f4fa632738885e9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_poll_ab2dcc90867bd8d857be1865dda0e9e10}\label{structu_s_1_1_poll_ab2dcc90867bd8d857be1865dda0e9e10}} 
+\index{uS::Poll@{uS::Poll}!getFd@{getFd}}
+\index{getFd@{getFd}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{getFd()}{getFd()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::tcp\+::socket\+::native\+\_\+type u\+S\+::\+Poll\+::get\+Fd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 117 of file Asio.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{structu_s_1_1_poll_ab2dcc90867bd8d857be1865dda0e9e10_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_poll_abd4557c73147f3ecf92967a06fb8f484}\label{structu_s_1_1_poll_abd4557c73147f3ecf92967a06fb8f484}} 
+\index{uS::Poll@{uS::Poll}!getFd@{getFd}}
+\index{getFd@{getFd}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{getFd()}{getFd()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}} u\+S\+::\+Poll\+::get\+Fd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 119 of file Libuv.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_abd4557c73147f3ecf92967a06fb8f484}\label{structu_s_1_1_poll_abd4557c73147f3ecf92967a06fb8f484}} 
+\index{uS::Poll@{uS::Poll}!getFd@{getFd}}
+\index{getFd@{getFd}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{getFd()}{getFd()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}} u\+S\+::\+Poll\+::get\+Fd (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 207 of file Epoll.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_af8085e20853c641510aeb5040c0d186f}\label{structu_s_1_1_poll_af8085e20853c641510aeb5040c0d186f}} 
+\index{uS::Poll@{uS::Poll}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+S\+::\+Poll\+::is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 113 of file Asio.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_poll_af8085e20853c641510aeb5040c0d186f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_poll_af8085e20853c641510aeb5040c0d186f}\label{structu_s_1_1_poll_af8085e20853c641510aeb5040c0d186f}} 
+\index{uS::Poll@{uS::Poll}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+S\+::\+Poll\+::is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 115 of file Libuv.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_af8085e20853c641510aeb5040c0d186f}\label{structu_s_1_1_poll_af8085e20853c641510aeb5040c0d186f}} 
+\index{uS::Poll@{uS::Poll}!isClosed@{isClosed}}
+\index{isClosed@{isClosed}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{isClosed()}{isClosed()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+S\+::\+Poll\+::is\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 203 of file Epoll.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a82de0acec537929663831a0bcc82e86a}\label{structu_s_1_1_poll_a82de0acec537929663831a0bcc82e86a}} 
+\index{uS::Poll@{uS::Poll}!reInit@{reInit}}
+\index{reInit@{reInit}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{reInit()}{reInit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::re\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}}}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 129 of file Asio.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_poll_a82de0acec537929663831a0bcc82e86a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_poll_a82de0acec537929663831a0bcc82e86a}\label{structu_s_1_1_poll_a82de0acec537929663831a0bcc82e86a}} 
+\index{uS::Poll@{uS::Poll}!reInit@{reInit}}
+\index{reInit@{reInit}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{reInit()}{reInit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::re\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}}}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 137 of file Libuv.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a82de0acec537929663831a0bcc82e86a}\label{structu_s_1_1_poll_a82de0acec537929663831a0bcc82e86a}} 
+\index{uS::Poll@{uS::Poll}!reInit@{reInit}}
+\index{reInit@{reInit}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{reInit()}{reInit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::re\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}}}]{fd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 159 of file Epoll.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a348c4355eac02e30b15fd5dbaa7dd691}\label{structu_s_1_1_poll_a348c4355eac02e30b15fd5dbaa7dd691}} 
+\index{uS::Poll@{uS::Poll}!setCb@{setCb}}
+\index{setCb@{setCb}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{setCb()}{setCb()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::set\+Cb (\begin{DoxyParamCaption}\item[{void($\ast$)(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$p, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} status, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 121 of file Asio.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_poll_a348c4355eac02e30b15fd5dbaa7dd691_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_poll_a348c4355eac02e30b15fd5dbaa7dd691}\label{structu_s_1_1_poll_a348c4355eac02e30b15fd5dbaa7dd691}} 
+\index{uS::Poll@{uS::Poll}!setCb@{setCb}}
+\index{setCb@{setCb}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{setCb()}{setCb()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::set\+Cb (\begin{DoxyParamCaption}\item[{void($\ast$)(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$p, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} status, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 129 of file Libuv.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a348c4355eac02e30b15fd5dbaa7dd691}\label{structu_s_1_1_poll_a348c4355eac02e30b15fd5dbaa7dd691}} 
+\index{uS::Poll@{uS::Poll}!setCb@{setCb}}
+\index{setCb@{setCb}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{setCb()}{setCb()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::set\+Cb (\begin{DoxyParamCaption}\item[{void($\ast$)(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$p, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} status, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 140 of file Epoll.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a5d435f2d313faeba0ed264cbcb695645}\label{structu_s_1_1_poll_a5d435f2d313faeba0ed264cbcb695645}} 
+\index{uS::Poll@{uS::Poll}!start@{start}}
+\index{start@{start}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{,  }\item[{\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$}]{self,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 135 of file Asio.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_poll_a5d435f2d313faeba0ed264cbcb695645_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_poll_a5d435f2d313faeba0ed264cbcb695645}\label{structu_s_1_1_poll_a5d435f2d313faeba0ed264cbcb695645}} 
+\index{uS::Poll@{uS::Poll}!start@{start}}
+\index{start@{start}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{,  }\item[{\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$}]{self,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 143 of file Libuv.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a3de6f448f39eeb91d1be9a123fed18aa}\label{structu_s_1_1_poll_a3de6f448f39eeb91d1be9a123fed18aa}} 
+\index{uS::Poll@{uS::Poll}!start@{start}}
+\index{start@{start}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$}]{self,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 164 of file Epoll.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_acabd3b28183588874345d3765bc33f23}\label{structu_s_1_1_poll_acabd3b28183588874345d3765bc33f23}} 
+\index{uS::Poll@{uS::Poll}!stop@{stop}}
+\index{stop@{stop}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 169 of file Asio.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{structu_s_1_1_poll_acabd3b28183588874345d3765bc33f23_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_s_1_1_poll_abf8d05684e4d69c5ff77e1006b4d4c3e}\label{structu_s_1_1_poll_abf8d05684e4d69c5ff77e1006b4d4c3e}} 
+\index{uS::Poll@{uS::Poll}!stop@{stop}}
+\index{stop@{stop}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 155 of file Libuv.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_abf8d05684e4d69c5ff77e1006b4d4c3e}\label{structu_s_1_1_poll_abf8d05684e4d69c5ff77e1006b4d4c3e}} 
+\index{uS::Poll@{uS::Poll}!stop@{stop}}
+\index{stop@{stop}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void u\+S\+::\+Poll\+::stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 178 of file Epoll.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_ab25024fd049d4954e3a7cfb0ab4fe8b9}\label{structu_s_1_1_poll_ab25024fd049d4954e3a7cfb0ab4fe8b9}} 
+\index{uS::Poll@{uS::Poll}!threadSafeChange@{threadSafeChange}}
+\index{threadSafeChange@{threadSafeChange}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{threadSafeChange()}{threadSafeChange()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+S\+::\+Poll\+::thread\+Safe\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{,  }\item[{\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$}]{self,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 163 of file Libuv.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_af0c341ce7a1379ae11c2448e500e8bae}\label{structu_s_1_1_poll_af0c341ce7a1379ae11c2448e500e8bae}} 
+\index{uS::Poll@{uS::Poll}!threadSafeChange@{threadSafeChange}}
+\index{threadSafeChange@{threadSafeChange}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{threadSafeChange()}{threadSafeChange()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+S\+::\+Poll\+::thread\+Safe\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$}]{self,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 165 of file Asio.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_af0c341ce7a1379ae11c2448e500e8bae}\label{structu_s_1_1_poll_af0c341ce7a1379ae11c2448e500e8bae}} 
+\index{uS::Poll@{uS::Poll}!threadSafeChange@{threadSafeChange}}
+\index{threadSafeChange@{threadSafeChange}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{threadSafeChange()}{threadSafeChange()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} u\+S\+::\+Poll\+::thread\+Safe\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_loop}{Loop}} $\ast$}]{loop,  }\item[{\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$}]{self,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{events }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 192 of file Epoll.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_s_1_1_poll_af0c341ce7a1379ae11c2448e500e8bae_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structu_s_1_1_poll_acf1b6f7eea81ff820e64b77581772ed6}\label{structu_s_1_1_poll_acf1b6f7eea81ff820e64b77581772ed6}} 
+\index{uS::Poll@{uS::Poll}!Loop@{Loop}}
+\index{Loop@{Loop}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{Loop}{Loop}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{structu_s_1_1_loop}{Loop}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 211 of file Epoll.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structu_s_1_1_poll_a9c94b5022375b43a4c1ae9da0f052fb7}\label{structu_s_1_1_poll_a9c94b5022375b43a4c1ae9da0f052fb7}} 
+\index{uS::Poll@{uS::Poll}!cb@{cb}}
+\index{cb@{cb}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{cb}{cb}}
+{\footnotesize\ttfamily void($\ast$ u\+S\+::\+Poll\+::cb)(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$p, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} status, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} events)}
+
+
+
+Definition at line 106 of file Asio.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_aa8f64b9a2deb18c82cce08e672df87d2}\label{structu_s_1_1_poll_aa8f64b9a2deb18c82cce08e672df87d2}} 
+\index{uS::Poll@{uS::Poll}!cbIndex@{cbIndex}}
+\index{cbIndex@{cbIndex}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{cbIndex}{cbIndex}}
+{\footnotesize\ttfamily unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} u\+S\+::\+Poll\+::cb\+Index}
+
+
+
+Definition at line 130 of file Epoll.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a1b751c2ba3c30e39e48736d308e8ca9a}\label{structu_s_1_1_poll_a1b751c2ba3c30e39e48736d308e8ca9a}} 
+\index{uS::Poll@{uS::Poll}!fd@{fd}}
+\index{fd@{fd}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{fd}{fd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} u\+S\+::\+Poll\+::fd}
+
+
+
+Definition at line 129 of file Epoll.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a8793141a9b9d141beaa9e7074f266351}\label{structu_s_1_1_poll_a8793141a9b9d141beaa9e7074f266351}} 
+\index{uS::Poll@{uS::Poll}!getCb@{getCb}}
+\index{getCb@{getCb}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{getCb}{getCb}}
+{\footnotesize\ttfamily void($\ast$)(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}) u\+S\+::\+Poll\+::get\+Cb()\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 125 of file Asio.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a89b3505f44473b874dd43b484dfd648f}\label{structu_s_1_1_poll_a89b3505f44473b874dd43b484dfd648f}} 
+\index{uS::Poll@{uS::Poll}!socket@{socket}}
+\index{socket@{socket}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{socket}{socket}}
+{\footnotesize\ttfamily boost\+::asio\+::posix\+::stream\+\_\+descriptor$\ast$ u\+S\+::\+Poll\+::socket}
+
+
+
+Definition at line 105 of file Asio.\+h.
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a55fbbe98e931ff917a89e453ae3e79f3}\label{structu_s_1_1_poll_a55fbbe98e931ff917a89e453ae3e79f3}} 
+\index{uS::Poll@{uS::Poll}!state@{state}}
+\index{state@{state}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily struct \{ ... \}  u\+S\+::\+Poll\+::state\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structu_s_1_1_poll_a633a043c8e5c7a97bfc8cc6847937a88}\label{structu_s_1_1_poll_a633a043c8e5c7a97bfc8cc6847937a88}} 
+\index{uS::Poll@{uS::Poll}!uv\_poll@{uv\_poll}}
+\index{uv\_poll@{uv\_poll}!uS::Poll@{uS::Poll}}
+\doxysubsubsection{\texorpdfstring{uv\_poll}{uv\_poll}}
+{\footnotesize\ttfamily uv\+\_\+poll\+\_\+t$\ast$ u\+S\+::\+Poll\+::uv\+\_\+poll}
+
+
+
+Definition at line 95 of file Libuv.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_asio_8h}{Asio.\+h}}\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_epoll_8h}{Epoll.\+h}}\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_libuv_8h}{Libuv.\+h}}\end{DoxyCompactItemize}

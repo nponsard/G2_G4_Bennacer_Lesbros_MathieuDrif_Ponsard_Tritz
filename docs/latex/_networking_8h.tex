@@ -1,0 +1,133 @@
+\hypertarget{_networking_8h}{}\doxysection{/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\+Networking.h File Reference}
+\label{_networking_8h}\index{/home/sautax/git/Battlegroud-\/BR-\/master/node\_modules/uws/src/Networking.h@{/home/sautax/git/Battlegroud-\/BR-\/master/node\_modules/uws/src/Networking.h}}
+{\ttfamily \#include $<$openssl/opensslv.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/tcp.\+h$>$}\newline
+{\ttfamily \#include $<$netdb.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}Backend.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$openssl/ssl.\+h$>$}\newline
+{\ttfamily \#include $<$csignal$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+Include dependency graph for Networking.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_networking_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_networking_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_context}{u\+S\+::\+Context}}
+\item 
+class \mbox{\hyperlink{classu_s_1_1_t_l_s_1_1_context}{u\+S\+::\+T\+L\+S\+::\+Context}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_node_data}{u\+S\+::\+Node\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceu_s}{uS}}
+\item 
+ \mbox{\hyperlink{namespaceu_s_1_1_t_l_s}{u\+S\+::\+T\+LS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_networking_8h_a5908c58bb0556621972c1353400e5c3f}{S\+S\+L\+\_\+\+C\+T\+X\+\_\+up\+\_\+ref}}(x)~x-\/$>$references++
+\item 
+\#define \mbox{\hyperlink{_networking_8h_a7663492ab32e242f740248612e55db20}{S\+S\+L\+\_\+up\+\_\+ref}}(x)~x-\/$>$references++
+\item 
+\#define \mbox{\hyperlink{_networking_8h_a9f55d0e90dc8cc6b2287312435cdde48}{M\+S\+G\+\_\+\+N\+O\+S\+I\+G\+N\+AL}}~0
+\item 
+\#define \mbox{\hyperlink{_networking_8h_a633b0396ff93d336a088412a190a5072}{S\+O\+C\+K\+E\+T\+\_\+\+E\+R\+R\+OR}}~-\/1
+\item 
+\#define \mbox{\hyperlink{_networking_8h_a26769957ec1a2beaf223f33b66ee64ab}{I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+O\+C\+K\+ET}}~-\/1
+\item 
+\#define \mbox{\hyperlink{_networking_8h_aa9d94c071c7778c2f0cc1fd1a78baca6}{W\+I\+N32\+\_\+\+E\+X\+P\+O\+RT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Context \mbox{\hyperlink{namespaceu_s_1_1_t_l_s_a7b40f5359ea30afb75a8dbe9dc7eaf2d}{u\+S\+::\+T\+L\+S\+::create\+Context}} (std\+::string cert\+Chain\+File\+Name, std\+::string key\+File\+Name, std\+::string key\+File\+Password)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_networking_8h_a26769957ec1a2beaf223f33b66ee64ab}\label{_networking_8h_a26769957ec1a2beaf223f33b66ee64ab}} 
+\index{Networking.h@{Networking.h}!INVALID\_SOCKET@{INVALID\_SOCKET}}
+\index{INVALID\_SOCKET@{INVALID\_SOCKET}!Networking.h@{Networking.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_SOCKET}{INVALID\_SOCKET}}
+{\footnotesize\ttfamily \#define I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+O\+C\+K\+ET~-\/1}
+
+
+
+Definition at line 65 of file Networking.\+h.
+
+\mbox{\Hypertarget{_networking_8h_a9f55d0e90dc8cc6b2287312435cdde48}\label{_networking_8h_a9f55d0e90dc8cc6b2287312435cdde48}} 
+\index{Networking.h@{Networking.h}!MSG\_NOSIGNAL@{MSG\_NOSIGNAL}}
+\index{MSG\_NOSIGNAL@{MSG\_NOSIGNAL}!Networking.h@{Networking.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_NOSIGNAL}{MSG\_NOSIGNAL}}
+{\footnotesize\ttfamily \#define M\+S\+G\+\_\+\+N\+O\+S\+I\+G\+N\+AL~0}
+
+
+
+Definition at line 14 of file Networking.\+h.
+
+\mbox{\Hypertarget{_networking_8h_a633b0396ff93d336a088412a190a5072}\label{_networking_8h_a633b0396ff93d336a088412a190a5072}} 
+\index{Networking.h@{Networking.h}!SOCKET\_ERROR@{SOCKET\_ERROR}}
+\index{SOCKET\_ERROR@{SOCKET\_ERROR}!Networking.h@{Networking.h}}
+\doxysubsubsection{\texorpdfstring{SOCKET\_ERROR}{SOCKET\_ERROR}}
+{\footnotesize\ttfamily \#define S\+O\+C\+K\+E\+T\+\_\+\+E\+R\+R\+OR~-\/1}
+
+
+
+Definition at line 64 of file Networking.\+h.
+
+\mbox{\Hypertarget{_networking_8h_a5908c58bb0556621972c1353400e5c3f}\label{_networking_8h_a5908c58bb0556621972c1353400e5c3f}} 
+\index{Networking.h@{Networking.h}!SSL\_CTX\_up\_ref@{SSL\_CTX\_up\_ref}}
+\index{SSL\_CTX\_up\_ref@{SSL\_CTX\_up\_ref}!Networking.h@{Networking.h}}
+\doxysubsubsection{\texorpdfstring{SSL\_CTX\_up\_ref}{SSL\_CTX\_up\_ref}}
+{\footnotesize\ttfamily \#define S\+S\+L\+\_\+\+C\+T\+X\+\_\+up\+\_\+ref(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x-\/$>$references++}
+
+
+
+Definition at line 9 of file Networking.\+h.
+
+\mbox{\Hypertarget{_networking_8h_a7663492ab32e242f740248612e55db20}\label{_networking_8h_a7663492ab32e242f740248612e55db20}} 
+\index{Networking.h@{Networking.h}!SSL\_up\_ref@{SSL\_up\_ref}}
+\index{SSL\_up\_ref@{SSL\_up\_ref}!Networking.h@{Networking.h}}
+\doxysubsubsection{\texorpdfstring{SSL\_up\_ref}{SSL\_up\_ref}}
+{\footnotesize\ttfamily \#define S\+S\+L\+\_\+up\+\_\+ref(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~x-\/$>$references++}
+
+
+
+Definition at line 10 of file Networking.\+h.
+
+\mbox{\Hypertarget{_networking_8h_aa9d94c071c7778c2f0cc1fd1a78baca6}\label{_networking_8h_aa9d94c071c7778c2f0cc1fd1a78baca6}} 
+\index{Networking.h@{Networking.h}!WIN32\_EXPORT@{WIN32\_EXPORT}}
+\index{WIN32\_EXPORT@{WIN32\_EXPORT}!Networking.h@{Networking.h}}
+\doxysubsubsection{\texorpdfstring{WIN32\_EXPORT}{WIN32\_EXPORT}}
+{\footnotesize\ttfamily \#define W\+I\+N32\+\_\+\+E\+X\+P\+O\+RT}
+
+
+
+Definition at line 66 of file Networking.\+h.
+

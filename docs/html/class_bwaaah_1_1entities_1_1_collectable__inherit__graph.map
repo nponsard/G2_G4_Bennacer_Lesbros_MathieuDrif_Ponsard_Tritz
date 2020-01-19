@@ -1,0 +1,9 @@
+<map id="Bwaaah.entities.Collectable" name="Bwaaah.entities.Collectable">
+<area shape="rect" id="node1" title=" " alt="" coords="223,107,427,133"/>
+<area shape="rect" id="node3" href="$class_bwaaah_1_1entities_1_1_apple_tree.html" title=" " alt="" coords="475,5,669,32"/>
+<area shape="rect" id="node4" href="$class_bwaaah_1_1entities_1_1_fir.html" title=" " alt="" coords="499,56,645,83"/>
+<area shape="rect" id="node5" href="$class_bwaaah_1_1entities_1_1_palm_tree.html" title=" " alt="" coords="477,107,667,133"/>
+<area shape="rect" id="node6" href="$class_bwaaah_1_1entities_1_1_rock.html" title=" " alt="" coords="491,157,653,184"/>
+<area shape="rect" id="node7" href="$class_bwaaah_1_1entities_1_1_tree.html" title=" " alt="" coords="493,208,651,235"/>
+<area shape="rect" id="node2" href="$class_bwaaah_1_1entities_1_1_entity.html" title=" " alt="" coords="5,107,175,133"/>
+</map>

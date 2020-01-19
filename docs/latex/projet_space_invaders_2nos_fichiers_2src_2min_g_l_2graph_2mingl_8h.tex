@@ -1,0 +1,76 @@
+\hypertarget{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h}{}\doxysection{nos\+Fichiers/src/min\+G\+L/graph/mingl.h File Reference}
+\label{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h}\index{nosFichiers/src/minGL/graph/mingl.h@{nosFichiers/src/minGL/graph/mingl.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \char`\"{}freeglut.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}libgraphique\+\_\+fonts.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rgbcolor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../tools/myexception.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../figs/pos.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../tools/pixelexception.\+h\char`\"{}}\newline
+Include dependency graph for mingl.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmin_g_l}{min\+GL}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classmin_g_l}{min\+GL}} class\+: the entry point to draw thing on the screen \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::pair$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} $>$ \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}}
+\begin{DoxyCompactList}\small\item\em key\+Type \+: custom type representing a key of the keyboard \end{DoxyCompactList}\item 
+typedef std\+::map$<$ \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}}, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} $>$ \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_aca1bdd5141a5d391c3014681540a1d0f}{key\+Map}}
+\begin{DoxyCompactList}\small\item\em key\+Map \+:~map of the pressed keys \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_aca1bdd5141a5d391c3014681540a1d0f}\label{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_aca1bdd5141a5d391c3014681540a1d0f}} 
+\index{mingl.h@{mingl.h}!keyMap@{keyMap}}
+\index{keyMap@{keyMap}!mingl.h@{mingl.h}}
+\doxysubsubsection{\texorpdfstring{keyMap}{keyMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$\mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}}, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}}$>$ \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_aca1bdd5141a5d391c3014681540a1d0f}{key\+Map}}}
+
+
+
+key\+Map \+:~map of the pressed keys 
+
+The keys are \mbox{\hyperlink{space-invader-cpp_2src_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}} and is linked to true if pressed and false if not pressed (or reset) 
+
+Definition at line 33 of file mingl.\+h.
+
+\mbox{\Hypertarget{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}\label{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}} 
+\index{mingl.h@{mingl.h}!keyType@{keyType}}
+\index{keyType@{keyType}!mingl.h@{mingl.h}}
+\doxysubsubsection{\texorpdfstring{keyType}{keyType}}
+{\footnotesize\ttfamily typedef std\+::pair$<$\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}}$>$ \mbox{\hyperlink{projet_space_invaders_2nos_fichiers_2src_2min_g_l_2graph_2mingl_8h_ab47ee0b728e0f5acc9ba19301a01798b}{key\+Type}}}
+
+
+
+key\+Type \+: custom type representing a key of the keyboard 
+
+It\textquotesingle{}s a pair of int and bool ~\newline
+ 
+\begin{DoxyItemize}
+\item the int is for the keycode  
+\item the bool indicates if it\textquotesingle{}s special or not (true -\/$>$ special, false-\/$>$ not special)
+\end{DoxyItemize}
+
+Definition at line 26 of file mingl.\+h.
+

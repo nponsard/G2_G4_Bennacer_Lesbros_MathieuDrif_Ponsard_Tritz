@@ -71,11 +71,7 @@ bool \mbox{\hyperlink{structspace_invaders_a8e1ad16c71a98bf2c099c42fbf88414f}{In
 \item 
 \mbox{\hyperlink{structentity}{entity}} \mbox{\hyperlink{structspace_invaders_a055eaff2d3227d400a8178aeddba9a6d}{bonus\+Invader}}
 \item 
-\mbox{\hyperlink{structentity}{entity}} \mbox{\hyperlink{structspace_invaders_aec2c5b387516650a852c4b4ec1270482}{life\+Upgrade}}
-\item 
-\mbox{\hyperlink{structentity}{entity}} \mbox{\hyperlink{structspace_invaders_aeea0b19f8842bf19a47b22fbf7c99f42}{shoot\+Speed\+Upgrade}}
-\item 
-\mbox{\hyperlink{structentity}{entity}} \mbox{\hyperlink{structspace_invaders_a1a0725017ea68ed77aaa38ebac4c7b30}{score\+Upgrade}}
+\mbox{\hyperlink{struct_bonus_entity}{Bonus\+Entity}} \mbox{\hyperlink{structspace_invaders_ad0449388cbda96955fd754c091adae87}{upgrades}}
 \item 
 \mbox{\hyperlink{structpos}{pos}} \mbox{\hyperlink{structspace_invaders_a1ccf192ffdc4b31e918c55cae6b67027}{player\+Pos}}
 \item 
@@ -88,8 +84,6 @@ std\+::vector$<$ \mbox{\hyperlink{structpos}{pos}} $>$ \mbox{\hyperlink{structsp
 std\+::vector$<$ \mbox{\hyperlink{structpos}{pos}} $>$ \mbox{\hyperlink{structspace_invaders_ab4019fc92f1859ea0636cec703a4ac35}{invaders\+Torpedo\+Pos}}
 \item 
 std\+::vector$<$ std\+::pair$<$ \mbox{\hyperlink{structpos}{pos}}, short $>$ $>$ \mbox{\hyperlink{structspace_invaders_addce84a931902a6f9bbd4e5b26ae1616}{Upgrade\+Pos}}
-\item 
-std\+::vector$<$ \mbox{\hyperlink{classfigure}{figure}} $>$ \mbox{\hyperlink{structspace_invaders_af03b5260f0258d0864a63da8c1934eef}{upgrade\+Types}}
 \end{DoxyCompactItemize}
 
 
@@ -129,7 +123,7 @@ Definition at line 45 of file spaceinvaders.\+h.
 
 
 
-Definition at line 52 of file spaceinvaders.\+h.
+Definition at line 50 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a7ba35db78f60a792fed662f406694d34}\label{structspace_invaders_a7ba35db78f60a792fed662f406694d34}} 
 \index{spaceInvaders@{spaceInvaders}!bonusInvaders@{bonusInvaders}}
@@ -199,7 +193,7 @@ Definition at line 32 of file spaceinvaders.\+h.
 
 
 
-Definition at line 53 of file spaceinvaders.\+h.
+Definition at line 51 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a8e1ad16c71a98bf2c099c42fbf88414f}\label{structspace_invaders_a8e1ad16c71a98bf2c099c42fbf88414f}} 
 \index{spaceInvaders@{spaceInvaders}!InvadersRight@{InvadersRight}}
@@ -239,7 +233,7 @@ Definition at line 44 of file spaceinvaders.\+h.
 
 
 
-Definition at line 55 of file spaceinvaders.\+h.
+Definition at line 53 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_a258a3070ef6da0c4ebc718427f8205e5}\label{structspace_invaders_a258a3070ef6da0c4ebc718427f8205e5}} 
 \index{spaceInvaders@{spaceInvaders}!invadersVelocity@{invadersVelocity}}
@@ -271,16 +265,6 @@ Definition at line 22 of file spaceinvaders.\+h.
 
 Definition at line 16 of file spaceinvaders.\+h.
 
-\mbox{\Hypertarget{structspace_invaders_aec2c5b387516650a852c4b4ec1270482}\label{structspace_invaders_aec2c5b387516650a852c4b4ec1270482}} 
-\index{spaceInvaders@{spaceInvaders}!lifeUpgrade@{lifeUpgrade}}
-\index{lifeUpgrade@{lifeUpgrade}!spaceInvaders@{spaceInvaders}}
-\doxysubsubsection{\texorpdfstring{lifeUpgrade}{lifeUpgrade}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structentity}{entity}} space\+Invaders\+::life\+Upgrade}
-
-
-
-Definition at line 47 of file spaceinvaders.\+h.
-
 \mbox{\Hypertarget{structspace_invaders_a2d38e0e741291959dde8948164a361cb}\label{structspace_invaders_a2d38e0e741291959dde8948164a361cb}} 
 \index{spaceInvaders@{spaceInvaders}!lives@{lives}}
 \index{lives@{lives}!spaceInvaders@{spaceInvaders}}
@@ -309,7 +293,7 @@ Definition at line 42 of file spaceinvaders.\+h.
 
 
 
-Definition at line 51 of file spaceinvaders.\+h.
+Definition at line 49 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_af29b482318f1c648a1ad57d6e92582f5}\label{structspace_invaders_af29b482318f1c648a1ad57d6e92582f5}} 
 \index{spaceInvaders@{spaceInvaders}!playerTorpedo@{playerTorpedo}}
@@ -329,7 +313,7 @@ Definition at line 43 of file spaceinvaders.\+h.
 
 
 
-Definition at line 54 of file spaceinvaders.\+h.
+Definition at line 52 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_aababf1699ccf35e4101d5797e299e598}\label{structspace_invaders_aababf1699ccf35e4101d5797e299e598}} 
 \index{spaceInvaders@{spaceInvaders}!score@{score}}
@@ -371,26 +355,6 @@ Definition at line 26 of file spaceinvaders.\+h.
 
 Definition at line 27 of file spaceinvaders.\+h.
 
-\mbox{\Hypertarget{structspace_invaders_a1a0725017ea68ed77aaa38ebac4c7b30}\label{structspace_invaders_a1a0725017ea68ed77aaa38ebac4c7b30}} 
-\index{spaceInvaders@{spaceInvaders}!scoreUpgrade@{scoreUpgrade}}
-\index{scoreUpgrade@{scoreUpgrade}!spaceInvaders@{spaceInvaders}}
-\doxysubsubsection{\texorpdfstring{scoreUpgrade}{scoreUpgrade}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structentity}{entity}} space\+Invaders\+::score\+Upgrade}
-
-
-
-Definition at line 49 of file spaceinvaders.\+h.
-
-\mbox{\Hypertarget{structspace_invaders_aeea0b19f8842bf19a47b22fbf7c99f42}\label{structspace_invaders_aeea0b19f8842bf19a47b22fbf7c99f42}} 
-\index{spaceInvaders@{spaceInvaders}!shootSpeedUpgrade@{shootSpeedUpgrade}}
-\index{shootSpeedUpgrade@{shootSpeedUpgrade}!spaceInvaders@{spaceInvaders}}
-\doxysubsubsection{\texorpdfstring{shootSpeedUpgrade}{shootSpeedUpgrade}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structentity}{entity}} space\+Invaders\+::shoot\+Speed\+Upgrade}
-
-
-
-Definition at line 48 of file spaceinvaders.\+h.
-
 \mbox{\Hypertarget{structspace_invaders_a075fb34e6fe170e4a4a5229f4fada1ec}\label{structspace_invaders_a075fb34e6fe170e4a4a5229f4fada1ec}} 
 \index{spaceInvaders@{spaceInvaders}!shot@{shot}}
 \index{shot@{shot}!spaceInvaders@{spaceInvaders}}
@@ -419,17 +383,17 @@ Definition at line 29 of file spaceinvaders.\+h.
 
 
 
-Definition at line 57 of file spaceinvaders.\+h.
+Definition at line 55 of file spaceinvaders.\+h.
 
-\mbox{\Hypertarget{structspace_invaders_af03b5260f0258d0864a63da8c1934eef}\label{structspace_invaders_af03b5260f0258d0864a63da8c1934eef}} 
-\index{spaceInvaders@{spaceInvaders}!upgradeTypes@{upgradeTypes}}
-\index{upgradeTypes@{upgradeTypes}!spaceInvaders@{spaceInvaders}}
-\doxysubsubsection{\texorpdfstring{upgradeTypes}{upgradeTypes}}
-{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classfigure}{figure}}$>$ space\+Invaders\+::upgrade\+Types}
+\mbox{\Hypertarget{structspace_invaders_ad0449388cbda96955fd754c091adae87}\label{structspace_invaders_ad0449388cbda96955fd754c091adae87}} 
+\index{spaceInvaders@{spaceInvaders}!upgrades@{upgrades}}
+\index{upgrades@{upgrades}!spaceInvaders@{spaceInvaders}}
+\doxysubsubsection{\texorpdfstring{upgrades}{upgrades}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_bonus_entity}{Bonus\+Entity}} space\+Invaders\+::upgrades}
 
 
 
-Definition at line 58 of file spaceinvaders.\+h.
+Definition at line 47 of file spaceinvaders.\+h.
 
 \mbox{\Hypertarget{structspace_invaders_afdd9b1f77a191db6441689fa983b7124}\label{structspace_invaders_afdd9b1f77a191db6441689fa983b7124}} 
 \index{spaceInvaders@{spaceInvaders}!upgradeVelocity@{upgradeVelocity}}
@@ -455,4 +419,4 @@ Definition at line 33 of file spaceinvaders.\+h.
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/utils/\mbox{\hyperlink{spaceinvaders_8h}{spaceinvaders.\+h}}\end{DoxyCompactItemize}
+nos\+Fichiers/src/utils/\mbox{\hyperlink{spaceinvaders_8h}{spaceinvaders.\+h}}\end{DoxyCompactItemize}

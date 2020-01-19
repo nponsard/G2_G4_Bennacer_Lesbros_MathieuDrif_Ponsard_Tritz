@@ -1,0 +1,4 @@
+<map id="collisions" name="collisions">
+<area shape="rect" id="node1" title="Tests if two entities collide." alt="" coords="156,5,239,32"/>
+<area shape="rect" id="node2" href="$test_collision_8cpp.html#a089385a67e513879b40f6d0d622cd2bf" title=" " alt="" coords="5,5,108,32"/>
+</map>

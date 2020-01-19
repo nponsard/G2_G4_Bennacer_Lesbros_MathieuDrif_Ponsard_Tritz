@@ -1,0 +1,34 @@
+<map id="NativeString::getData" name="NativeString::getData">
+<area shape="rect" id="node1" title=" " alt="" coords="875,383,1037,409"/>
+<area shape="rect" id="node2" href="$addon_8h.html#a30eeb776f32d830f2d15529f5b8a648e" title=" " alt="" coords="686,5,773,32"/>
+<area shape="rect" id="node3" href="$addon_8h.html#abc85bc6d343b373c035cb850e15bb9f7" title=" " alt="" coords="682,56,777,83"/>
+<area shape="rect" id="node4" href="$addon_8h.html#ac04dd961a768150dadf9e67025a42cd9" title=" " alt="" coords="680,107,779,133"/>
+<area shape="rect" id="node5" href="$addon_8h.html#ac0b0144d245d04ea2b6c18d291cd2e48" title=" " alt="" coords="693,157,766,184"/>
+<area shape="rect" id="node8" href="$struct_http_server_1_1_response.html#a62321cd3b50063ee2f188b1ecd71c6f3" title=" " alt="" coords="632,208,827,235"/>
+<area shape="rect" id="node11" href="$struct_http_server_1_1_request.html#a75636bf157488f025c21726b34d98511" title=" " alt="" coords="653,441,806,482"/>
+<area shape="rect" id="node13" href="$struct_http_server_1_1_request.html#aa83a65fe430fa271f279fe634746ec9d" title=" " alt="" coords="641,507,818,533"/>
+<area shape="rect" id="node14" href="$struct_http_server_1_1_response.html#a387115d4e28cb7df77a59d9a44c0962f" title=" " alt="" coords="636,259,823,285"/>
+<area shape="rect" id="node15" href="$struct_http_server.html#aeab7995eed7de4412c7079ad988a0cb7" title=" " alt="" coords="434,491,550,517"/>
+<area shape="rect" id="node16" href="$addon_8h.html#a4ebb2988d63f5136d4233d04c25114eb" title=" " alt="" coords="664,608,795,635"/>
+<area shape="rect" id="node18" href="$addon_8h.html#ad4f09777cea808648dcd309b06af2911" title=" " alt="" coords="703,659,756,685"/>
+<area shape="rect" id="node25" href="$addon_8h.html#a3891fe98ac8d4113d07e68a41a2fd7c4" title=" " alt="" coords="674,735,785,761"/>
+<area shape="rect" id="node27" href="$addon_8h.html#a19fab02bfef45a4928d1e6523236cc06" title=" " alt="" coords="692,811,767,837"/>
+<area shape="rect" id="node31" href="$struct_http_server_1_1_response.html#a7b37aee62de193d1885c593d808fc26b" title=" " alt="" coords="648,310,811,351"/>
+<area shape="rect" id="node32" href="$struct_http_server_1_1_response.html#ada485678cc6674d76474067d307e2537" title=" " alt="" coords="648,375,811,417"/>
+<area shape="rect" id="node6" href="$classu_s_1_1_node.html#a45614cbc70d9121b48738728f559cf4e" title=" " alt="" coords="423,157,561,184"/>
+<area shape="rect" id="node7" href="$addon_8cpp.html#a91b20a76285854fb609ca61c93b6a652" title=" " alt="" coords="5,432,60,459"/>
+<area shape="rect" id="node9" href="$struct_http_server_1_1_response.html#af503e60aef5e998c6186ba661f67b3fd" title=" " alt="" coords="411,310,573,351"/>
+<area shape="rect" id="node10" href="$struct_http_server.html#ac64ae15a916ca8342b2dd50e5a6f8fac" title=" " alt="" coords="135,432,325,459"/>
+<area shape="rect" id="node12" href="$struct_http_server_1_1_request.html#a8f2069e4a7a02ee9d2bbd67467d48992" title=" " alt="" coords="415,425,569,466"/>
+<area shape="rect" id="node17" href="$structu_w_s_1_1_group.html#a9cfa7523adc38b20020f2a04e909e3fc" title=" " alt="" coords="413,542,571,583"/>
+<area shape="rect" id="node19" href="$structu_w_s_1_1_web_socket.html#aadbc54e4cbf356b2f5108a04aac59565" title=" " alt="" coords="406,608,578,635"/>
+<area shape="rect" id="node22" href="$structu_s_1_1_socket.html#ab23d8de6bd87bdba787c2663390f1602" title=" " alt="" coords="429,659,555,685"/>
+<area shape="rect" id="node24" href="$structu_w_s_1_1_web_socket.html#a12879c4cd8fcff77d902f051f4cbbcab" title=" " alt="" coords="409,709,575,736"/>
+<area shape="rect" id="node20" href="$structu_w_s_1_1_group.html#a6a89a4f459f007ddf7f1653fa3ec621d" title=" " alt="" coords="151,542,309,583"/>
+<area shape="rect" id="node21" href="$structu_w_s_1_1_web_socket.html#ac010910abc21d49391ca890b0eba18c4" title=" " alt="" coords="108,608,352,635"/>
+<area shape="rect" id="node23" href="$structu_w_s_1_1_web_socket.html#a255a3ee0ad980aa7b367e638d7884abe" title=" " alt="" coords="137,659,323,685"/>
+<area shape="rect" id="node26" href="$struct_namespace.html#a3a87eeb08de243fed46d8ff5e271a282" title=" " alt="" coords="400,760,584,787"/>
+<area shape="rect" id="node28" href="$main_space_invaders_8h.html#a350e996a354865b6064bab50134646dc" title="Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets ..." alt="" coords="456,861,528,888"/>
+<area shape="rect" id="node29" href="$main_space_invaders_8h.html#a4fa2d58844efb7d9be2951633b85b060" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="197,861,263,888"/>
+<area shape="rect" id="node30" href="$projet_space_invaders_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,861,60,888"/>
+</map>

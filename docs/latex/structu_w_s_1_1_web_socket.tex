@@ -1,0 +1,576 @@
+\hypertarget{structu_w_s_1_1_web_socket}{}\doxysection{u\+WS\+::Web\+Socket$<$ is\+Server $>$ Struct Template Reference}
+\label{structu_w_s_1_1_web_socket}\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+
+
+{\ttfamily \#include $<$Web\+Socket.\+h$>$}
+
+
+
+Inheritance diagram for u\+WS\+::Web\+Socket$<$ is\+Server $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{structu_w_s_1_1_web_socket__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for u\+WS\+::Web\+Socket$<$ is\+Server $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_web_socket_1_1_prepared_message}{Prepared\+Message}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket_a4fa18c2eb79a51f5059156d4671addb4}{send\+Prepared}} (\mbox{\hyperlink{structu_w_s_1_1_web_socket_1_1_prepared_message}{Prepared\+Message}} $\ast$prepared\+Message, void $\ast$callback\+Data=nullptr)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket_aadbc54e4cbf356b2f5108a04aac59565}{close}} (\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} code=1000, const char $\ast$message=nullptr, size\+\_\+t length=0)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket_ae0b13c1510caf30553aa5acb91642ec0}{transfer}} (\mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ is\+Server $>$ $\ast$group)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket_aaac83d1bb89b4b88adc38405b7cd2235}{terminate}} ()
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket_a12879c4cd8fcff77d902f051f4cbbcab}{ping}} (const char $\ast$message)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket_aa39139f5c8fcdc1f5cd31261060e4a16}{send}} (const char $\ast$message, \mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}} op\+Code=Op\+Code\+::\+T\+E\+XT)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket_a5d647cc961468a19e03f5402bc8fe292}{send}} (const char $\ast$message, size\+\_\+t length, \mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}} op\+Code, void($\ast$callback)(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$web\+Socket, void $\ast$data, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$reserved)=nullptr, void $\ast$callback\+Data=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structu_w_s_1_1_web_socket_a92209f53234a84b326f3e58cdd029a7a}{finalize\+Message}} (\mbox{\hyperlink{structu_w_s_1_1_web_socket_1_1_prepared_message}{Prepared\+Message}} $\ast$prepared\+Message)
+\item 
+static \mbox{\hyperlink{structu_w_s_1_1_web_socket_1_1_prepared_message}{Prepared\+Message}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_web_socket_af57c28b7a655f112eed1d295ebe718d9}{prepare\+Message}} (char $\ast$data, size\+\_\+t length, \mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}} op\+Code, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} compressed, void($\ast$callback)(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$web\+Socket, void $\ast$data, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$reserved)=nullptr)
+\item 
+static \mbox{\hyperlink{structu_w_s_1_1_web_socket_1_1_prepared_message}{Prepared\+Message}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_web_socket_a7ed175a5270b2b213b4be76be291e71e}{prepare\+Message\+Batch}} (std\+::vector$<$ std\+::string $>$ \&messages, std\+::vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&excluded\+Messages, \mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}} op\+Code, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} compressed, void($\ast$callback)(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$web\+Socket, void $\ast$data, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$reserved)=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41}{Compression\+Status}} \+: char \{ \mbox{\hyperlink{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41ac8aa3cd56c7f093de869e1cd78368352}{D\+I\+S\+A\+B\+L\+ED}}, 
+\mbox{\hyperlink{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41aa1a23225fd74a591075d6078e0b27104}{E\+N\+A\+B\+L\+ED}}, 
+\mbox{\hyperlink{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41aafb9f4ee16366eb8987defffe19ac92a}{C\+O\+M\+P\+R\+E\+S\+S\+E\+D\+\_\+\+F\+R\+A\+ME}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_web_socket_a37d2d26365abc721fd28a328410de016}{Web\+Socket}} (\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} per\+Message\+Deflate, \mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$\mbox{\hyperlink{structu_s_1_1_poll_a89b3505f44473b874dd43b484dfd648f}{socket}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_web_socket_a255a3ee0ad980aa7b367e638d7884abe}{on\+Data}} (\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$s, char $\ast$data, size\+\_\+t length)
+\item 
+static void \mbox{\hyperlink{structu_w_s_1_1_web_socket_aa29241e250a9897464814d09d58a22cc}{on\+End}} (\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$s)
+\item 
+static \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_a011523be4a9dd4f5e2d7c0fec62accad}{refuse\+Payload\+Length}} (uint64\+\_\+t length, \mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{Web\+Socket\+State}}$<$ is\+Server $>$ $\ast$web\+Socket\+State)
+\item 
+static \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_adbfe05565fb3d6d345b003bab8c1b1b0}{set\+Compressed}} (\mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{Web\+Socket\+State}}$<$ is\+Server $>$ $\ast$web\+Socket\+State)
+\item 
+static void \mbox{\hyperlink{structu_w_s_1_1_web_socket_af8f1b59dac62f4a3a8ce6f4c5ebbf5e4}{force\+Close}} (\mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{Web\+Socket\+State}}$<$ is\+Server $>$ $\ast$web\+Socket\+State)
+\item 
+static \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_ac010910abc21d49391ca890b0eba18c4}{handle\+Fragment}} (char $\ast$data, size\+\_\+t length, unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_state_a58b9608c83ac459aa7031fb299f78a55}{remaining\+Bytes}}, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} op\+Code, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} fin, \mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{Web\+Socket\+State}}$<$ is\+Server $>$ $\ast$web\+Socket\+State)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structu_w_s_1_1_web_socket_afff2c1e107c502cd56e4c6ebc91e6cd2}{fragment\+Buffer}}
+\item 
+enum \mbox{\hyperlink{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41}{u\+W\+S\+::\+Web\+Socket\+::\+Compression\+Status}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_a02d23b835e55fa1bf7b1583d308e301a}{compression\+Status}}
+\item 
+unsigned char \mbox{\hyperlink{structu_w_s_1_1_web_socket_a4bca0616dbb70137c6af4b624a1dd1b7}{control\+Tip\+Length}} = 0
+\item 
+unsigned char \mbox{\hyperlink{structu_w_s_1_1_web_socket_aa5ef47d960be42371c55730c8e02c0bd}{has\+Outstanding\+Pong}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_web_socket_af20bcb1dd4e741f2423d470bb4cd994d}{Hub}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_web_socket_affca6387c623de2a14b35a1906d4c67e}{Group$<$ is\+Server $>$}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_web_socket_adfdd169bc01521a773f206faec86954e}{Http\+Socket$<$ is\+Server $>$}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_web_socket_aa3516c90697652732deaa6ba9bfb375b}{u\+S\+::\+Socket}}
+\item 
+class \mbox{\hyperlink{structu_w_s_1_1_web_socket_a66b6fc0432352dbcdd08ff562d68b81b}{Web\+Socket\+Protocol$<$ is\+Server, Web\+Socket$<$ is\+Server $>$ $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$const bool is\+Server$>$\newline
+struct u\+W\+S\+::\+Web\+Socket$<$ is\+Server $>$}
+
+
+
+Definition at line 16 of file Web\+Socket.\+h.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41}\label{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!CompressionStatus@{CompressionStatus}}
+\index{CompressionStatus@{CompressionStatus}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{CompressionStatus}{CompressionStatus}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+enum \mbox{\hyperlink{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41}{u\+W\+S\+::\+Web\+Socket\+::\+Compression\+Status}} \+: char\hspace{0.3cm}{\ttfamily [protected]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DISABLED@{DISABLED}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!DISABLED@{DISABLED}}}\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41ac8aa3cd56c7f093de869e1cd78368352}\label{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41ac8aa3cd56c7f093de869e1cd78368352}} 
+D\+I\+S\+A\+B\+L\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENABLED@{ENABLED}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!ENABLED@{ENABLED}}}\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41aa1a23225fd74a591075d6078e0b27104}\label{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41aa1a23225fd74a591075d6078e0b27104}} 
+E\+N\+A\+B\+L\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COMPRESSED\_FRAME@{COMPRESSED\_FRAME}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!COMPRESSED\_FRAME@{COMPRESSED\_FRAME}}}\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41aafb9f4ee16366eb8987defffe19ac92a}\label{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41aafb9f4ee16366eb8987defffe19ac92a}} 
+C\+O\+M\+P\+R\+E\+S\+S\+E\+D\+\_\+\+F\+R\+A\+ME&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 19 of file Web\+Socket.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a37d2d26365abc721fd28a328410de016}\label{structu_w_s_1_1_web_socket_a37d2d26365abc721fd28a328410de016}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!WebSocket@{WebSocket}}
+\index{WebSocket@{WebSocket}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{WebSocket()}{WebSocket()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}}}]{per\+Message\+Deflate,  }\item[{\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$}]{socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Web\+Socket.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_aadbc54e4cbf356b2f5108a04aac59565}\label{structu_w_s_1_1_web_socket_aadbc54e4cbf356b2f5108a04aac59565}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!close@{close}}
+\index{close@{close}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{code = {\ttfamily 1000},  }\item[{const char $\ast$}]{message = {\ttfamily nullptr},  }\item[{size\+\_\+t}]{length = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 248 of file Web\+Socket.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_aadbc54e4cbf356b2f5108a04aac59565_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_aadbc54e4cbf356b2f5108a04aac59565_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a92209f53234a84b326f3e58cdd029a7a}\label{structu_w_s_1_1_web_socket_a92209f53234a84b326f3e58cdd029a7a}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!finalizeMessage@{finalizeMessage}}
+\index{finalizeMessage@{finalizeMessage}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{finalizeMessage()}{finalizeMessage()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::finalize\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_web_socket_1_1_prepared_message}{Prepared\+Message}} $\ast$}]{prepared\+Message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 166 of file Web\+Socket.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_a92209f53234a84b326f3e58cdd029a7a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_af8f1b59dac62f4a3a8ce6f4c5ebbf5e4}\label{structu_w_s_1_1_web_socket_af8f1b59dac62f4a3a8ce6f4c5ebbf5e4}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!forceClose@{forceClose}}
+\index{forceClose@{forceClose}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{forceClose()}{forceClose()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+static void \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::force\+Close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{Web\+Socket\+State}}$<$ is\+Server $>$ $\ast$}]{web\+Socket\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 50 of file Web\+Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_af8f1b59dac62f4a3a8ce6f4c5ebbf5e4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_ac010910abc21d49391ca890b0eba18c4}\label{structu_w_s_1_1_web_socket_ac010910abc21d49391ca890b0eba18c4}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!handleFragment@{handleFragment}}
+\index{handleFragment@{handleFragment}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{handleFragment()}{handleFragment()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::handle\+Fragment (\begin{DoxyParamCaption}\item[{char $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{remaining\+Bytes,  }\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{op\+Code,  }\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}}}]{fin,  }\item[{\mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{Web\+Socket\+State}}$<$ is\+Server $>$ $\ast$}]{web\+Socket\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 296 of file Web\+Socket.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_ac010910abc21d49391ca890b0eba18c4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a255a3ee0ad980aa7b367e638d7884abe}\label{structu_w_s_1_1_web_socket_a255a3ee0ad980aa7b367e638d7884abe}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!onData@{onData}}
+\index{onData@{onData}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onData()}{onData()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::on\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$}]{s,  }\item[{char $\ast$}]{data,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 174 of file Web\+Socket.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_a255a3ee0ad980aa7b367e638d7884abe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_aa29241e250a9897464814d09d58a22cc}\label{structu_w_s_1_1_web_socket_aa29241e250a9897464814d09d58a22cc}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!onEnd@{onEnd}}
+\index{onEnd@{onEnd}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onEnd()}{onEnd()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::on\+End (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 272 of file Web\+Socket.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_aa29241e250a9897464814d09d58a22cc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_aa29241e250a9897464814d09d58a22cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a12879c4cd8fcff77d902f051f4cbbcab}\label{structu_w_s_1_1_web_socket_a12879c4cd8fcff77d902f051f4cbbcab}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!ping@{ping}}
+\index{ping@{ping}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{ping()}{ping()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::ping (\begin{DoxyParamCaption}\item[{const char $\ast$}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 73 of file Web\+Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_a12879c4cd8fcff77d902f051f4cbbcab_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_af57c28b7a655f112eed1d295ebe718d9}\label{structu_w_s_1_1_web_socket_af57c28b7a655f112eed1d295ebe718d9}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!prepareMessage@{prepareMessage}}
+\index{prepareMessage@{prepareMessage}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{prepareMessage()}{prepareMessage()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$\+::\mbox{\hyperlink{structu_w_s_1_1_web_socket_1_1_prepared_message}{Prepared\+Message}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::prepare\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{data,  }\item[{size\+\_\+t}]{length,  }\item[{\mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}}}]{op\+Code,  }\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}}}]{compressed,  }\item[{void($\ast$)(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$web\+Socket, void $\ast$data, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$reserved)}]{callback = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 58 of file Web\+Socket.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a7ed175a5270b2b213b4be76be291e71e}\label{structu_w_s_1_1_web_socket_a7ed175a5270b2b213b4be76be291e71e}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!prepareMessageBatch@{prepareMessageBatch}}
+\index{prepareMessageBatch@{prepareMessageBatch}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{prepareMessageBatch()}{prepareMessageBatch()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$\+::\mbox{\hyperlink{structu_w_s_1_1_web_socket_1_1_prepared_message}{Prepared\+Message}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::prepare\+Message\+Batch (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$ \&}]{messages,  }\item[{std\+::vector$<$ \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} $>$ \&}]{excluded\+Messages,  }\item[{\mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}}}]{op\+Code,  }\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}}}]{compressed,  }\item[{void($\ast$)(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$web\+Socket, void $\ast$data, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$reserved)}]{callback = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 77 of file Web\+Socket.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a011523be4a9dd4f5e2d7c0fec62accad}\label{structu_w_s_1_1_web_socket_a011523be4a9dd4f5e2d7c0fec62accad}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!refusePayloadLength@{refusePayloadLength}}
+\index{refusePayloadLength@{refusePayloadLength}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{refusePayloadLength()}{refusePayloadLength()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+static \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::refuse\+Payload\+Length (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{length,  }\item[{\mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{Web\+Socket\+State}}$<$ is\+Server $>$ $\ast$}]{web\+Socket\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 34 of file Web\+Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_a011523be4a9dd4f5e2d7c0fec62accad_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_aa39139f5c8fcdc1f5cd31261060e4a16}\label{structu_w_s_1_1_web_socket_aa39139f5c8fcdc1f5cd31261060e4a16}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!send@{send}}
+\index{send@{send}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::send (\begin{DoxyParamCaption}\item[{const char $\ast$}]{message,  }\item[{\mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}}}]{op\+Code = {\ttfamily OpCode\+:\+:TEXT} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 74 of file Web\+Socket.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{structu_w_s_1_1_web_socket_aa39139f5c8fcdc1f5cd31261060e4a16_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_aa39139f5c8fcdc1f5cd31261060e4a16_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a5d647cc961468a19e03f5402bc8fe292}\label{structu_w_s_1_1_web_socket_a5d647cc961468a19e03f5402bc8fe292}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!send@{send}}
+\index{send@{send}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::send (\begin{DoxyParamCaption}\item[{const char $\ast$}]{message,  }\item[{size\+\_\+t}]{length,  }\item[{\mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}}}]{op\+Code,  }\item[{void($\ast$)(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$web\+Socket, void $\ast$data, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$reserved)}]{callback = {\ttfamily nullptr},  }\item[{void $\ast$}]{callback\+Data = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 17 of file Web\+Socket.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a4fa18c2eb79a51f5059156d4671addb4}\label{structu_w_s_1_1_web_socket_a4fa18c2eb79a51f5059156d4671addb4}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!sendPrepared@{sendPrepared}}
+\index{sendPrepared@{sendPrepared}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{sendPrepared()}{sendPrepared()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::send\+Prepared (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_web_socket_1_1_prepared_message}{Prepared\+Message}} $\ast$}]{prepared\+Message,  }\item[{void $\ast$}]{callback\+Data = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 111 of file Web\+Socket.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_a4fa18c2eb79a51f5059156d4671addb4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_adbfe05565fb3d6d345b003bab8c1b1b0}\label{structu_w_s_1_1_web_socket_adbfe05565fb3d6d345b003bab8c1b1b0}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!setCompressed@{setCompressed}}
+\index{setCompressed@{setCompressed}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{setCompressed()}{setCompressed()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+static \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::set\+Compressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{Web\+Socket\+State}}$<$ is\+Server $>$ $\ast$}]{web\+Socket\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 39 of file Web\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_aaac83d1bb89b4b88adc38405b7cd2235}\label{structu_w_s_1_1_web_socket_aaac83d1bb89b4b88adc38405b7cd2235}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!terminate@{terminate}}
+\index{terminate@{terminate}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::terminate}
+
+
+
+Definition at line 196 of file Web\+Socket.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_aaac83d1bb89b4b88adc38405b7cd2235_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_aaac83d1bb89b4b88adc38405b7cd2235_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_ae0b13c1510caf30553aa5acb91642ec0}\label{structu_w_s_1_1_web_socket_ae0b13c1510caf30553aa5acb91642ec0}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!transfer@{transfer}}
+\index{transfer@{transfer}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{transfer()}{transfer()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::transfer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ is\+Server $>$ $\ast$}]{group }\end{DoxyParamCaption})}
+
+
+
+Definition at line 222 of file Web\+Socket.\+cpp.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_web_socket_ae0b13c1510caf30553aa5acb91642ec0_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_affca6387c623de2a14b35a1906d4c67e}\label{structu_w_s_1_1_web_socket_affca6387c623de2a14b35a1906d4c67e}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!Group$<$ isServer $>$@{Group$<$ isServer $>$}}
+\index{Group$<$ isServer $>$@{Group$<$ isServer $>$}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{Group$<$ isServer $>$}{Group< isServer >}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+friend struct \mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ is\+Server $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 81 of file Web\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_adfdd169bc01521a773f206faec86954e}\label{structu_w_s_1_1_web_socket_adfdd169bc01521a773f206faec86954e}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!HttpSocket$<$ isServer $>$@{HttpSocket$<$ isServer $>$}}
+\index{HttpSocket$<$ isServer $>$@{HttpSocket$<$ isServer $>$}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{HttpSocket$<$ isServer $>$}{HttpSocket< isServer >}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+friend struct \mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 82 of file Web\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_af20bcb1dd4e741f2423d470bb4cd994d}\label{structu_w_s_1_1_web_socket_af20bcb1dd4e741f2423d470bb4cd994d}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!Hub@{Hub}}
+\index{Hub@{Hub}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{Hub}{Hub}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+friend struct \mbox{\hyperlink{structu_w_s_1_1_hub}{Hub}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 80 of file Web\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_aa3516c90697652732deaa6ba9bfb375b}\label{structu_w_s_1_1_web_socket_aa3516c90697652732deaa6ba9bfb375b}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!uS::Socket@{uS::Socket}}
+\index{uS::Socket@{uS::Socket}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{uS::Socket}{uS::Socket}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+friend struct \mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 83 of file Web\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a66b6fc0432352dbcdd08ff562d68b81b}\label{structu_w_s_1_1_web_socket_a66b6fc0432352dbcdd08ff562d68b81b}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!WebSocketProtocol$<$ isServer, WebSocket$<$ isServer $>$ $>$@{WebSocketProtocol$<$ isServer, WebSocket$<$ isServer $>$ $>$}}
+\index{WebSocketProtocol$<$ isServer, WebSocket$<$ isServer $>$ $>$@{WebSocketProtocol$<$ isServer, WebSocket$<$ isServer $>$ $>$}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{WebSocketProtocol$<$ isServer, WebSocket$<$ isServer $>$ $>$}{WebSocketProtocol< isServer, WebSocket< isServer > >}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+friend class \mbox{\hyperlink{classu_w_s_1_1_web_socket_protocol}{Web\+Socket\+Protocol}}$<$ is\+Server, \mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 84 of file Web\+Socket.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a02d23b835e55fa1bf7b1583d308e301a}\label{structu_w_s_1_1_web_socket_a02d23b835e55fa1bf7b1583d308e301a}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!compressionStatus@{compressionStatus}}
+\index{compressionStatus@{compressionStatus}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{compressionStatus}{compressionStatus}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+enum \mbox{\hyperlink{structu_w_s_1_1_web_socket_a48b8c02c020918efad93ae4ae2d79c41}{u\+W\+S\+::\+Web\+Socket\+::\+Compression\+Status}} \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::compression\+Status\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_a4bca0616dbb70137c6af4b624a1dd1b7}\label{structu_w_s_1_1_web_socket_a4bca0616dbb70137c6af4b624a1dd1b7}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!controlTipLength@{controlTipLength}}
+\index{controlTipLength@{controlTipLength}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{controlTipLength}{controlTipLength}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+unsigned char \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::control\+Tip\+Length = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file Web\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_afff2c1e107c502cd56e4c6ebc91e6cd2}\label{structu_w_s_1_1_web_socket_afff2c1e107c502cd56e4c6ebc91e6cd2}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!fragmentBuffer@{fragmentBuffer}}
+\index{fragmentBuffer@{fragmentBuffer}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{fragmentBuffer}{fragmentBuffer}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+std\+::string \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::fragment\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 18 of file Web\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_aa5ef47d960be42371c55730c8e02c0bd}\label{structu_w_s_1_1_web_socket_aa5ef47d960be42371c55730c8e02c0bd}} 
+\index{uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}!hasOutstandingPong@{hasOutstandingPong}}
+\index{hasOutstandingPong@{hasOutstandingPong}!uWS::WebSocket$<$ isServer $>$@{uWS::WebSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{hasOutstandingPong}{hasOutstandingPong}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+unsigned char \mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$\+::has\+Outstanding\+Pong = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file Web\+Socket.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_web_socket_8h}{Web\+Socket.\+h}}\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_web_socket_8cpp}{Web\+Socket.\+cpp}}\end{DoxyCompactItemize}

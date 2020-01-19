@@ -1,0 +1,129 @@
+\hypertarget{structu_w_s_1_1_web_socket_state}{}\doxysection{u\+WS\+::Web\+Socket\+State$<$ is\+Server $>$ Struct Template Reference}
+\label{structu_w_s_1_1_web_socket_state}\index{uWS::WebSocketState$<$ isServer $>$@{uWS::WebSocketState$<$ isServer $>$}}
+
+
+{\ttfamily \#include $<$Web\+Socket\+Protocol.\+h$>$}
+
+
+
+Inheritance diagram for u\+WS\+::Web\+Socket\+State$<$ is\+Server $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{structu_w_s_1_1_web_socket_state__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for u\+WS\+::Web\+Socket\+State$<$ is\+Server $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{structu_w_s_1_1_web_socket_state__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_web_socket_state_1_1_state}{State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_web_socket_state_1_1_state}{u\+W\+S\+::\+Web\+Socket\+State\+::\+State}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_state_a6faccdef5ae26704f6e8ffc2ea0b0e4d}{state}}
+\item 
+unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_state_a58b9608c83ac459aa7031fb299f78a55}{remaining\+Bytes}} = 0
+\item 
+char \mbox{\hyperlink{structu_w_s_1_1_web_socket_state_a789b3283f24f39af8be7991c23d178cf}{mask}} \mbox{[}is\+Server ? 4 \+:1\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_state_a6d64ddfef5e73b07986cdee9e9d50aff}{S\+H\+O\+R\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER}} = is\+Server ? 6 \+: 2
+\item 
+static const unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_state_a8c30ea01c2f85d835ad68f1c031ec647}{M\+E\+D\+I\+U\+M\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER}} = is\+Server ? 8 \+: 4
+\item 
+static const unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_state_a71fcc0f7a372635edbe91866ae0f10b4}{L\+O\+N\+G\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER}} = is\+Server ? 14 \+: 10
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$bool is\+Server$>$\newline
+struct u\+W\+S\+::\+Web\+Socket\+State$<$ is\+Server $>$}
+
+
+
+Definition at line 27 of file Web\+Socket\+Protocol.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_state_a71fcc0f7a372635edbe91866ae0f10b4}\label{structu_w_s_1_1_web_socket_state_a71fcc0f7a372635edbe91866ae0f10b4}} 
+\index{uWS::WebSocketState$<$ isServer $>$@{uWS::WebSocketState$<$ isServer $>$}!LONG\_MESSAGE\_HEADER@{LONG\_MESSAGE\_HEADER}}
+\index{LONG\_MESSAGE\_HEADER@{LONG\_MESSAGE\_HEADER}!uWS::WebSocketState$<$ isServer $>$@{uWS::WebSocketState$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{LONG\_MESSAGE\_HEADER}{LONG\_MESSAGE\_HEADER}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+const unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{u\+W\+S\+::\+Web\+Socket\+State}}$<$ is\+Server $>$\+::L\+O\+N\+G\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER = is\+Server ? 14 \+: 10\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 31 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_state_a789b3283f24f39af8be7991c23d178cf}\label{structu_w_s_1_1_web_socket_state_a789b3283f24f39af8be7991c23d178cf}} 
+\index{uWS::WebSocketState$<$ isServer $>$@{uWS::WebSocketState$<$ isServer $>$}!mask@{mask}}
+\index{mask@{mask}!uWS::WebSocketState$<$ isServer $>$@{uWS::WebSocketState$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{mask}{mask}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+char \mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{u\+W\+S\+::\+Web\+Socket\+State}}$<$ is\+Server $>$\+::mask\mbox{[}is\+Server ? 4 \+:1\mbox{]}}
+
+
+
+Definition at line 55 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_state_a8c30ea01c2f85d835ad68f1c031ec647}\label{structu_w_s_1_1_web_socket_state_a8c30ea01c2f85d835ad68f1c031ec647}} 
+\index{uWS::WebSocketState$<$ isServer $>$@{uWS::WebSocketState$<$ isServer $>$}!MEDIUM\_MESSAGE\_HEADER@{MEDIUM\_MESSAGE\_HEADER}}
+\index{MEDIUM\_MESSAGE\_HEADER@{MEDIUM\_MESSAGE\_HEADER}!uWS::WebSocketState$<$ isServer $>$@{uWS::WebSocketState$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{MEDIUM\_MESSAGE\_HEADER}{MEDIUM\_MESSAGE\_HEADER}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+const unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{u\+W\+S\+::\+Web\+Socket\+State}}$<$ is\+Server $>$\+::M\+E\+D\+I\+U\+M\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER = is\+Server ? 8 \+: 4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 30 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_state_a58b9608c83ac459aa7031fb299f78a55}\label{structu_w_s_1_1_web_socket_state_a58b9608c83ac459aa7031fb299f78a55}} 
+\index{uWS::WebSocketState$<$ isServer $>$@{uWS::WebSocketState$<$ isServer $>$}!remainingBytes@{remainingBytes}}
+\index{remainingBytes@{remainingBytes}!uWS::WebSocketState$<$ isServer $>$@{uWS::WebSocketState$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{remainingBytes}{remainingBytes}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{u\+W\+S\+::\+Web\+Socket\+State}}$<$ is\+Server $>$\+::remaining\+Bytes = 0}
+
+
+
+Definition at line 54 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_state_a6d64ddfef5e73b07986cdee9e9d50aff}\label{structu_w_s_1_1_web_socket_state_a6d64ddfef5e73b07986cdee9e9d50aff}} 
+\index{uWS::WebSocketState$<$ isServer $>$@{uWS::WebSocketState$<$ isServer $>$}!SHORT\_MESSAGE\_HEADER@{SHORT\_MESSAGE\_HEADER}}
+\index{SHORT\_MESSAGE\_HEADER@{SHORT\_MESSAGE\_HEADER}!uWS::WebSocketState$<$ isServer $>$@{uWS::WebSocketState$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{SHORT\_MESSAGE\_HEADER}{SHORT\_MESSAGE\_HEADER}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+const unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{u\+W\+S\+::\+Web\+Socket\+State}}$<$ is\+Server $>$\+::S\+H\+O\+R\+T\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+H\+E\+A\+D\+ER = is\+Server ? 6 \+: 2\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 29 of file Web\+Socket\+Protocol.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_web_socket_state_a6faccdef5ae26704f6e8ffc2ea0b0e4d}\label{structu_w_s_1_1_web_socket_state_a6faccdef5ae26704f6e8ffc2ea0b0e4d}} 
+\index{uWS::WebSocketState$<$ isServer $>$@{uWS::WebSocketState$<$ isServer $>$}!state@{state}}
+\index{state@{state}!uWS::WebSocketState$<$ isServer $>$@{uWS::WebSocketState$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+struct \mbox{\hyperlink{structu_w_s_1_1_web_socket_state_1_1_state}{u\+W\+S\+::\+Web\+Socket\+State\+::\+State}} \mbox{\hyperlink{structu_w_s_1_1_web_socket_state}{u\+W\+S\+::\+Web\+Socket\+State}}$<$ is\+Server $>$\+::state}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_web_socket_protocol_8h}{Web\+Socket\+Protocol.\+h}}\end{DoxyCompactItemize}

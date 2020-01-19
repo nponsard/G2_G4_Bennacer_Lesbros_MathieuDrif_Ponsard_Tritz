@@ -1,0 +1,913 @@
+\hypertarget{addon_8h}{}\doxysection{/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/addon.h File Reference}
+\label{addon_8h}\index{/home/sautax/git/Battlegroud-\/BR-\/master/node\_modules/uws/src/addon.h@{/home/sautax/git/Battlegroud-\/BR-\/master/node\_modules/uws/src/addon.h}}
+{\ttfamily \#include $<$node.\+h$>$}\newline
+{\ttfamily \#include $<$node\+\_\+buffer.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$openssl/ssl.\+h$>$}\newline
+{\ttfamily \#include $<$openssl/bio.\+h$>$}\newline
+{\ttfamily \#include $<$uv.\+h$>$}\newline
+Include dependency graph for addon.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{addon_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_native_string}{Native\+String}}
+\item 
+struct \mbox{\hyperlink{struct_group_data}{Group\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_send_callback_data}{Send\+Callback\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_ticket}{Ticket}}
+\item 
+struct \mbox{\hyperlink{struct_namespace}{Namespace$<$ is\+Server $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_hub}{u\+W\+S\+::\+Hub}} \mbox{\hyperlink{addon_8h_a507b0df9c5524da5208b80e7b25057ab}{hub}} (0, true)
+\item 
+void \mbox{\hyperlink{addon_8h_a37cd2a29c88db1763ce52b604f6b64ae}{register\+Check}} (Isolate $\ast$isolate)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a8ae68527205a6fc3154170fbf22c3829}{create\+Group}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_ab79b01cf20b869824a296a0e6c155317}{delete\+Group}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\Local$<$ External $>$ \mbox{\hyperlink{addon_8h_ad48db83da583cd37d8813b8ac3db04cc}{wrap\+Socket}} (\mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$ $\ast$web\+Socket, Isolate $\ast$isolate)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\\mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$ $\ast$ \mbox{\hyperlink{addon_8h_a58764da3f6e3f3c7ca22eac8288543d8}{unwrap\+Socket}} (Local$<$ External $>$ external)
+\item 
+Local$<$ Value $>$ \mbox{\hyperlink{addon_8h_a215ed26591cb6c350c9c76d6a3df8874}{wrap\+Message}} (const char $\ast$message, size\+\_\+t length, \mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{u\+W\+S\+::\+Op\+Code}} op\+Code, Isolate $\ast$isolate)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\Local$<$ Value $>$ \mbox{\hyperlink{addon_8h_ab01b49ec3bd0e84146d36c5e8ad676df}{get\+Data\+V8}} (\mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$ $\ast$web\+Socket, Isolate $\ast$isolate)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a2cf633790443e79db7bd9714b955c0e0}{get\+User\+Data}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a56373f783c994ac46493b73378381e66}{clear\+User\+Data}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a2340275cf8382df4b7c494c1a78f5ccb}{set\+User\+Data}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a062f2d1c51ffd0684aa332705d928c40}{get\+Address}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+uv\+\_\+handle\+\_\+t $\ast$ \mbox{\hyperlink{addon_8h_a98b4b9f67ea6be5552db7069feb4626c}{get\+Tcp\+Handle}} (void $\ast$handle\+Wrap)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a21515375e9ddd1bd9a4b256742e5bc1a}{send\+Callback}} (\mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$ $\ast$web\+Socket, void $\ast$data, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} cancelled, void $\ast$reserved)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_ad4f09777cea808648dcd309b06af2911}{send}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+void \mbox{\hyperlink{addon_8h_ac0b0144d245d04ea2b6c18d291cd2e48}{connect}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+void \mbox{\hyperlink{addon_8h_a19fab02bfef45a4928d1e6523236cc06}{upgrade}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+void \mbox{\hyperlink{addon_8h_aa42182f0af1612f8c3a00b26bb1cd92d}{transfer}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a4a3edcc04aa55c522759b4e96fe22254}{on\+Connection}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_aa775d1cf41c6f3862d23f4881dcbc534}{on\+Message}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_af3ff2c195c71ce0fdfb4ac2f818d1f5e}{on\+Ping}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_acfc8022ebc3cca976041cf390adfa60d}{on\+Pong}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a3ab5ac4286dac3abaf6af3a3e8a917f9}{on\+Disconnection}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+void \mbox{\hyperlink{addon_8h_a2a49ad35a41a2e091ce4a31775b82c3a}{on\+Error}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_ac04dd961a768150dadf9e67025a42cd9}{close\+Socket}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a3123e0d7a1760b75992e2acbb5bbc15f}{terminate\+Socket}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_abc85bc6d343b373c035cb850e15bb9f7}{close\+Group}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a8d3b80888d902a5f4838ad725bf4b695}{terminate\+Group}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a30eeb776f32d830f2d15529f5b8a648e}{broadcast}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a4ebb2988d63f5136d4233d04c25114eb}{prepare\+Message}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a232d554ca51056f5c84c94a4361197d0}{send\+Prepared}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+{\footnotesize template$<$bool is\+Server$>$ }\\void \mbox{\hyperlink{addon_8h_a8093d9efa472506e917428a582ee7aa9}{finalize\+Message}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+void \mbox{\hyperlink{addon_8h_a86072b546b8481bb9d97e7899dfd3187}{for\+Each}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+void \mbox{\hyperlink{addon_8h_a54c3353af2df0e755f716963ee03a2c2}{get\+Size}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+void \mbox{\hyperlink{addon_8h_a3891fe98ac8d4113d07e68a41a2fd7c4}{start\+Auto\+Ping}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+void \mbox{\hyperlink{addon_8h_ad9c84fd9e85472a8584d8fe95382e700}{set\+Noop}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\item 
+void \mbox{\hyperlink{addon_8h_a73fab7debef95d612673475c700a1855}{listen}} (const Function\+Callback\+Info$<$ Value $>$ \&args)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uv\+\_\+check\+\_\+t \mbox{\hyperlink{addon_8h_aad0729a41e64cb14292d991bbfccb57a}{check}}
+\item 
+Persistent$<$ Function $>$ \mbox{\hyperlink{addon_8h_a6326418fc09104ddfa0c325a612912a7}{noop}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{addon_8h_a30eeb776f32d830f2d15529f5b8a648e}\label{addon_8h_a30eeb776f32d830f2d15529f5b8a648e}} 
+\index{addon.h@{addon.h}!broadcast@{broadcast}}
+\index{broadcast@{broadcast}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{broadcast()}{broadcast()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void broadcast (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 370 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{addon_8h_a30eeb776f32d830f2d15529f5b8a648e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a56373f783c994ac46493b73378381e66}\label{addon_8h_a56373f783c994ac46493b73378381e66}} 
+\index{addon.h@{addon.h}!clearUserData@{clearUserData}}
+\index{clearUserData@{clearUserData}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{clearUserData()}{clearUserData()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void clear\+User\+Data (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 116 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{addon_8h_a56373f783c994ac46493b73378381e66_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_abc85bc6d343b373c035cb850e15bb9f7}\label{addon_8h_abc85bc6d343b373c035cb850e15bb9f7}} 
+\index{addon.h@{addon.h}!closeGroup@{closeGroup}}
+\index{closeGroup@{closeGroup}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{closeGroup()}{closeGroup()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void close\+Group (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 358 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{addon_8h_abc85bc6d343b373c035cb850e15bb9f7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_ac04dd961a768150dadf9e67025a42cd9}\label{addon_8h_ac04dd961a768150dadf9e67025a42cd9}} 
+\index{addon.h@{addon.h}!closeSocket@{closeSocket}}
+\index{closeSocket@{closeSocket}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{closeSocket()}{closeSocket()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void close\+Socket (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 347 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{addon_8h_ac04dd961a768150dadf9e67025a42cd9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_ac0b0144d245d04ea2b6c18d291cd2e48}\label{addon_8h_ac0b0144d245d04ea2b6c18d291cd2e48}} 
+\index{addon.h@{addon.h}!connect@{connect}}
+\index{connect@{connect}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void connect (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 189 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_ac0b0144d245d04ea2b6c18d291cd2e48_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{addon_8h_ac0b0144d245d04ea2b6c18d291cd2e48_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a8ae68527205a6fc3154170fbf22c3829}\label{addon_8h_a8ae68527205a6fc3154170fbf22c3829}} 
+\index{addon.h@{addon.h}!createGroup@{createGroup}}
+\index{createGroup@{createGroup}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{createGroup()}{createGroup()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void create\+Group (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 78 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{addon_8h_a8ae68527205a6fc3154170fbf22c3829_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_ab79b01cf20b869824a296a0e6c155317}\label{addon_8h_ab79b01cf20b869824a296a0e6c155317}} 
+\index{addon.h@{addon.h}!deleteGroup@{deleteGroup}}
+\index{deleteGroup@{deleteGroup}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{deleteGroup()}{deleteGroup()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void delete\+Group (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 85 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{addon_8h_ab79b01cf20b869824a296a0e6c155317_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a8093d9efa472506e917428a582ee7aa9}\label{addon_8h_a8093d9efa472506e917428a582ee7aa9}} 
+\index{addon.h@{addon.h}!finalizeMessage@{finalizeMessage}}
+\index{finalizeMessage@{finalizeMessage}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{finalizeMessage()}{finalizeMessage()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void finalize\+Message (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 391 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_a8093d9efa472506e917428a582ee7aa9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{addon_8h_a8093d9efa472506e917428a582ee7aa9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a86072b546b8481bb9d97e7899dfd3187}\label{addon_8h_a86072b546b8481bb9d97e7899dfd3187}} 
+\index{addon.h@{addon.h}!forEach@{forEach}}
+\index{forEach@{forEach}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{forEach()}{forEach()}}
+{\footnotesize\ttfamily void for\+Each (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 395 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_a86072b546b8481bb9d97e7899dfd3187_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{addon_8h_a86072b546b8481bb9d97e7899dfd3187_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a062f2d1c51ffd0684aa332705d928c40}\label{addon_8h_a062f2d1c51ffd0684aa332705d928c40}} 
+\index{addon.h@{addon.h}!getAddress@{getAddress}}
+\index{getAddress@{getAddress}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{getAddress()}{getAddress()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void get\+Address (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 133 of file addon.\+h.
+
+\mbox{\Hypertarget{addon_8h_ab01b49ec3bd0e84146d36c5e8ad676df}\label{addon_8h_ab01b49ec3bd0e84146d36c5e8ad676df}} 
+\index{addon.h@{addon.h}!getDataV8@{getDataV8}}
+\index{getDataV8@{getDataV8}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{getDataV8()}{getDataV8()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+Local$<$Value$>$ get\+Data\+V8 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$ $\ast$}]{web\+Socket,  }\item[{Isolate $\ast$}]{isolate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 106 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{addon_8h_ab01b49ec3bd0e84146d36c5e8ad676df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_ab01b49ec3bd0e84146d36c5e8ad676df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a54c3353af2df0e755f716963ee03a2c2}\label{addon_8h_a54c3353af2df0e755f716963ee03a2c2}} 
+\index{addon.h@{addon.h}!getSize@{getSize}}
+\index{getSize@{getSize}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily void get\+Size (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 407 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{addon_8h_a54c3353af2df0e755f716963ee03a2c2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{addon_8h_a54c3353af2df0e755f716963ee03a2c2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a98b4b9f67ea6be5552db7069feb4626c}\label{addon_8h_a98b4b9f67ea6be5552db7069feb4626c}} 
+\index{addon.h@{addon.h}!getTcpHandle@{getTcpHandle}}
+\index{getTcpHandle@{getTcpHandle}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{getTcpHandle()}{getTcpHandle()}}
+{\footnotesize\ttfamily uv\+\_\+handle\+\_\+t$\ast$ get\+Tcp\+Handle (\begin{DoxyParamCaption}\item[{void $\ast$}]{handle\+Wrap }\end{DoxyParamCaption})}
+
+
+
+Definition at line 143 of file addon.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{addon_8h_a98b4b9f67ea6be5552db7069feb4626c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a2cf633790443e79db7bd9714b955c0e0}\label{addon_8h_a2cf633790443e79db7bd9714b955c0e0}} 
+\index{addon.h@{addon.h}!getUserData@{getUserData}}
+\index{getUserData@{getUserData}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{getUserData()}{getUserData()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void get\+User\+Data (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 111 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_a2cf633790443e79db7bd9714b955c0e0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_a2cf633790443e79db7bd9714b955c0e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a507b0df9c5524da5208b80e7b25057ab}\label{addon_8h_a507b0df9c5524da5208b80e7b25057ab}} 
+\index{addon.h@{addon.h}!hub@{hub}}
+\index{hub@{hub}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{hub()}{hub()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structu_w_s_1_1_hub}{u\+W\+S\+::\+Hub}} hub (\begin{DoxyParamCaption}\item[{0}]{,  }\item[{true}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_a507b0df9c5524da5208b80e7b25057ab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a73fab7debef95d612673475c700a1855}\label{addon_8h_a73fab7debef95d612673475c700a1855}} 
+\index{addon.h@{addon.h}!listen@{listen}}
+\index{listen@{listen}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{listen()}{listen()}}
+{\footnotesize\ttfamily void listen (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 423 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{addon_8h_a73fab7debef95d612673475c700a1855_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{addon_8h_a73fab7debef95d612673475c700a1855_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a4a3edcc04aa55c522759b4e96fe22254}\label{addon_8h_a4a3edcc04aa55c522759b4e96fe22254}} 
+\index{addon.h@{addon.h}!onConnection@{onConnection}}
+\index{onConnection@{onConnection}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{onConnection()}{onConnection()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void on\+Connection (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 245 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{addon_8h_a4a3edcc04aa55c522759b4e96fe22254_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a3ab5ac4286dac3abaf6af3a3e8a917f9}\label{addon_8h_a3ab5ac4286dac3abaf6af3a3e8a917f9}} 
+\index{addon.h@{addon.h}!onDisconnection@{onDisconnection}}
+\index{onDisconnection@{onDisconnection}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{onDisconnection()}{onDisconnection()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void on\+Disconnection (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 309 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_a3ab5ac4286dac3abaf6af3a3e8a917f9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a2a49ad35a41a2e091ce4a31775b82c3a}\label{addon_8h_a2a49ad35a41a2e091ce4a31775b82c3a}} 
+\index{addon.h@{addon.h}!onError@{onError}}
+\index{onError@{onError}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{onError()}{onError()}}
+{\footnotesize\ttfamily void on\+Error (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 328 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{addon_8h_a2a49ad35a41a2e091ce4a31775b82c3a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{addon_8h_a2a49ad35a41a2e091ce4a31775b82c3a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_aa775d1cf41c6f3862d23f4881dcbc534}\label{addon_8h_aa775d1cf41c6f3862d23f4881dcbc534}} 
+\index{addon.h@{addon.h}!onMessage@{onMessage}}
+\index{onMessage@{onMessage}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{onMessage()}{onMessage()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void on\+Message (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 261 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_aa775d1cf41c6f3862d23f4881dcbc534_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_af3ff2c195c71ce0fdfb4ac2f818d1f5e}\label{addon_8h_af3ff2c195c71ce0fdfb4ac2f818d1f5e}} 
+\index{addon.h@{addon.h}!onPing@{onPing}}
+\index{onPing@{onPing}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{onPing()}{onPing()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void on\+Ping (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 277 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_af3ff2c195c71ce0fdfb4ac2f818d1f5e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_acfc8022ebc3cca976041cf390adfa60d}\label{addon_8h_acfc8022ebc3cca976041cf390adfa60d}} 
+\index{addon.h@{addon.h}!onPong@{onPong}}
+\index{onPong@{onPong}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{onPong()}{onPong()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void on\+Pong (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 293 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_acfc8022ebc3cca976041cf390adfa60d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a4ebb2988d63f5136d4233d04c25114eb}\label{addon_8h_a4ebb2988d63f5136d4233d04c25114eb}} 
+\index{addon.h@{addon.h}!prepareMessage@{prepareMessage}}
+\index{prepareMessage@{prepareMessage}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{prepareMessage()}{prepareMessage()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void prepare\+Message (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 378 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{addon_8h_a4ebb2988d63f5136d4233d04c25114eb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{addon_8h_a4ebb2988d63f5136d4233d04c25114eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a37cd2a29c88db1763ce52b604f6b64ae}\label{addon_8h_a37cd2a29c88db1763ce52b604f6b64ae}} 
+\index{addon.h@{addon.h}!registerCheck@{registerCheck}}
+\index{registerCheck@{registerCheck}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{registerCheck()}{registerCheck()}}
+{\footnotesize\ttfamily void register\+Check (\begin{DoxyParamCaption}\item[{Isolate $\ast$}]{isolate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{addon_8h_a37cd2a29c88db1763ce52b604f6b64ae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{addon_8h_a37cd2a29c88db1763ce52b604f6b64ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_ad4f09777cea808648dcd309b06af2911}\label{addon_8h_ad4f09777cea808648dcd309b06af2911}} 
+\index{addon.h@{addon.h}!send@{send}}
+\index{send@{send}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void send (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 170 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{addon_8h_ad4f09777cea808648dcd309b06af2911_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_ad4f09777cea808648dcd309b06af2911_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a21515375e9ddd1bd9a4b256742e5bc1a}\label{addon_8h_a21515375e9ddd1bd9a4b256742e5bc1a}} 
+\index{addon.h@{addon.h}!sendCallback@{sendCallback}}
+\index{sendCallback@{sendCallback}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{sendCallback()}{sendCallback()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void send\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$ $\ast$}]{web\+Socket,  }\item[{void $\ast$}]{data,  }\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}}}]{cancelled,  }\item[{void $\ast$}]{reserved }\end{DoxyParamCaption})}
+
+
+
+Definition at line 158 of file addon.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_a21515375e9ddd1bd9a4b256742e5bc1a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a232d554ca51056f5c84c94a4361197d0}\label{addon_8h_a232d554ca51056f5c84c94a4361197d0}} 
+\index{addon.h@{addon.h}!sendPrepared@{sendPrepared}}
+\index{sendPrepared@{sendPrepared}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{sendPrepared()}{sendPrepared()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void send\+Prepared (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 385 of file addon.\+h.
+
+\mbox{\Hypertarget{addon_8h_ad9c84fd9e85472a8584d8fe95382e700}\label{addon_8h_ad9c84fd9e85472a8584d8fe95382e700}} 
+\index{addon.h@{addon.h}!setNoop@{setNoop}}
+\index{setNoop@{setNoop}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{setNoop()}{setNoop()}}
+{\footnotesize\ttfamily void set\+Noop (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 419 of file addon.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{addon_8h_ad9c84fd9e85472a8584d8fe95382e700_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a2340275cf8382df4b7c494c1a78f5ccb}\label{addon_8h_a2340275cf8382df4b7c494c1a78f5ccb}} 
+\index{addon.h@{addon.h}!setUserData@{setUserData}}
+\index{setUserData@{setUserData}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{setUserData()}{setUserData()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void set\+User\+Data (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 123 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{addon_8h_a2340275cf8382df4b7c494c1a78f5ccb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_a2340275cf8382df4b7c494c1a78f5ccb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a3891fe98ac8d4113d07e68a41a2fd7c4}\label{addon_8h_a3891fe98ac8d4113d07e68a41a2fd7c4}} 
+\index{addon.h@{addon.h}!startAutoPing@{startAutoPing}}
+\index{startAutoPing@{startAutoPing}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{startAutoPing()}{startAutoPing()}}
+{\footnotesize\ttfamily void start\+Auto\+Ping (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 413 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{addon_8h_a3891fe98ac8d4113d07e68a41a2fd7c4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{addon_8h_a3891fe98ac8d4113d07e68a41a2fd7c4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a8d3b80888d902a5f4838ad725bf4b695}\label{addon_8h_a8d3b80888d902a5f4838ad725bf4b695}} 
+\index{addon.h@{addon.h}!terminateGroup@{terminateGroup}}
+\index{terminateGroup@{terminateGroup}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{terminateGroup()}{terminateGroup()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void terminate\+Group (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 365 of file addon.\+h.
+
+\mbox{\Hypertarget{addon_8h_a3123e0d7a1760b75992e2acbb5bbc15f}\label{addon_8h_a3123e0d7a1760b75992e2acbb5bbc15f}} 
+\index{addon.h@{addon.h}!terminateSocket@{terminateSocket}}
+\index{terminateSocket@{terminateSocket}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{terminateSocket()}{terminateSocket()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void terminate\+Socket (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 353 of file addon.\+h.
+
+\mbox{\Hypertarget{addon_8h_aa42182f0af1612f8c3a00b26bb1cd92d}\label{addon_8h_aa42182f0af1612f8c3a00b26bb1cd92d}} 
+\index{addon.h@{addon.h}!transfer@{transfer}}
+\index{transfer@{transfer}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{transfer()}{transfer()}}
+{\footnotesize\ttfamily void transfer (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 218 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{addon_8h_aa42182f0af1612f8c3a00b26bb1cd92d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{addon_8h_aa42182f0af1612f8c3a00b26bb1cd92d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a58764da3f6e3f3c7ca22eac8288543d8}\label{addon_8h_a58764da3f6e3f3c7ca22eac8288543d8}} 
+\index{addon.h@{addon.h}!unwrapSocket@{unwrapSocket}}
+\index{unwrapSocket@{unwrapSocket}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{unwrapSocket()}{unwrapSocket()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$is\+Server$>$$\ast$ unwrap\+Socket (\begin{DoxyParamCaption}\item[{Local$<$ External $>$}]{external }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 97 of file addon.\+h.
+
+\mbox{\Hypertarget{addon_8h_a19fab02bfef45a4928d1e6523236cc06}\label{addon_8h_a19fab02bfef45a4928d1e6523236cc06}} 
+\index{addon.h@{addon.h}!upgrade@{upgrade}}
+\index{upgrade@{upgrade}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{upgrade()}{upgrade()}}
+{\footnotesize\ttfamily void upgrade (\begin{DoxyParamCaption}\item[{const Function\+Callback\+Info$<$ Value $>$ \&}]{args }\end{DoxyParamCaption})}
+
+
+
+Definition at line 200 of file addon.\+h.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_a19fab02bfef45a4928d1e6523236cc06_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{addon_8h_a19fab02bfef45a4928d1e6523236cc06_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_a215ed26591cb6c350c9c76d6a3df8874}\label{addon_8h_a215ed26591cb6c350c9c76d6a3df8874}} 
+\index{addon.h@{addon.h}!wrapMessage@{wrapMessage}}
+\index{wrapMessage@{wrapMessage}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{wrapMessage()}{wrapMessage()}}
+{\footnotesize\ttfamily Local$<$Value$>$ wrap\+Message (\begin{DoxyParamCaption}\item[{const char $\ast$}]{message,  }\item[{size\+\_\+t}]{length,  }\item[{\mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{u\+W\+S\+::\+Op\+Code}}}]{op\+Code,  }\item[{Isolate $\ast$}]{isolate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 101 of file addon.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{addon_8h_a215ed26591cb6c350c9c76d6a3df8874_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{addon_8h_ad48db83da583cd37d8813b8ac3db04cc}\label{addon_8h_ad48db83da583cd37d8813b8ac3db04cc}} 
+\index{addon.h@{addon.h}!wrapSocket@{wrapSocket}}
+\index{wrapSocket@{wrapSocket}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{wrapSocket()}{wrapSocket()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+Local$<$External$>$ wrap\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_web_socket}{u\+W\+S\+::\+Web\+Socket}}$<$ is\+Server $>$ $\ast$}]{web\+Socket,  }\item[{Isolate $\ast$}]{isolate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 92 of file addon.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{addon_8h_ad48db83da583cd37d8813b8ac3db04cc_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{addon_8h_aad0729a41e64cb14292d991bbfccb57a}\label{addon_8h_aad0729a41e64cb14292d991bbfccb57a}} 
+\index{addon.h@{addon.h}!check@{check}}
+\index{check@{check}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{check}{check}}
+{\footnotesize\ttfamily uv\+\_\+check\+\_\+t check}
+
+
+
+Definition at line 12 of file addon.\+h.
+
+\mbox{\Hypertarget{addon_8h_a6326418fc09104ddfa0c325a612912a7}\label{addon_8h_a6326418fc09104ddfa0c325a612912a7}} 
+\index{addon.h@{addon.h}!noop@{noop}}
+\index{noop@{noop}!addon.h@{addon.h}}
+\doxysubsubsection{\texorpdfstring{noop}{noop}}
+{\footnotesize\ttfamily Persistent$<$Function$>$ noop}
+
+
+
+Definition at line 13 of file addon.\+h.
+

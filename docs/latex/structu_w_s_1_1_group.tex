@@ -1,0 +1,983 @@
+\hypertarget{structu_w_s_1_1_group}{}\doxysection{u\+WS\+::Group$<$ is\+Server $>$ Struct Template Reference}
+\label{structu_w_s_1_1_group}\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+
+
+{\ttfamily \#include $<$Group.\+h$>$}
+
+
+
+Inheritance diagram for u\+WS\+::Group$<$ is\+Server $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{structu_w_s_1_1_group__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for u\+WS\+::Group$<$ is\+Server $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_group__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a3be07500b72391623fba23d20c8aa5ce}{on\+Connection}} (std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, \mbox{\hyperlink{structu_w_s_1_1_http_request}{Http\+Request}})$>$ handler)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_af1f9fadfbab8b45affebd19935776956}{on\+Transfer}} (std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$)$>$ handler)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a8b60e4836e35162318b792577fdc9c7d}{on\+Message}} (std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, char $\ast$, size\+\_\+t, \mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}})$>$ handler)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_af6fc1d835096273b87d57f99896b17b2}{on\+Disconnection}} (std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} code, char $\ast$message, size\+\_\+t length)$>$ handler)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a5cf47343619b1b6f06665fe1e3345e0e}{on\+Ping}} (std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, char $\ast$, size\+\_\+t)$>$ handler)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a92ca1fa24e07ed67b922edcba8c9d125}{on\+Pong}} (std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, char $\ast$, size\+\_\+t)$>$ handler)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a660da695c67c60264c5c222f49a3884c}{on\+Error}} (std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_group_a769dd13448095ac42a252737599c704c}{error\+Type}})$>$ handler)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a04ac338c51a997cc850807044c2defab}{on\+Http\+Connection}} (std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$)$>$ handler)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a1ff984427167c8600551978b0d576967}{on\+Http\+Request}} (std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$, \mbox{\hyperlink{structu_w_s_1_1_http_request}{Http\+Request}}, char $\ast$data, size\+\_\+t length, size\+\_\+t remaining\+Bytes)$>$ handler)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_ad80ef6245d90918c64d61b97e5b7ee72}{on\+Http\+Data}} (std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$, char $\ast$data, size\+\_\+t length, size\+\_\+t remaining\+Bytes)$>$ handler)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a13e4b9febf33fefb72a2a79a2dd82535}{on\+Http\+Disconnection}} (std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$)$>$ handler)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_ad4a255fecf96ecb5b917c1bf1b185459}{on\+Cancelled\+Http\+Request}} (std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$)$>$ handler)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a3c9c9394126894e5bbe3e2ebff6fee72}{on\+Http\+Upgrade}} (std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$, \mbox{\hyperlink{structu_w_s_1_1_http_request}{Http\+Request}})$>$ handler)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a9cfa7523adc38b20020f2a04e909e3fc}{broadcast}} (const char $\ast$message, size\+\_\+t length, \mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}} op\+Code)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a6d2a20258ddf24c8dfee5e4bd9d8d9f1}{set\+User\+Data}} (void $\ast$\mbox{\hyperlink{structu_s_1_1_node_data_ae50717e7e80ec0a1ab5f76633d8f7206}{user}})
+\item 
+void $\ast$ \mbox{\hyperlink{structu_w_s_1_1_group_a107e3c05fbd4ca941bb8d46cddd3d0ae}{get\+User\+Data}} ()
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_ac407ed1e811640bf5e4c6afe21e6393b}{terminate}} ()
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a6a89a4f459f007ddf7f1653fa3ec621d}{close}} (\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} code=1000, char $\ast$message=nullptr, size\+\_\+t length=0)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a3621e3f62872bcc925622528dd261be3}{start\+Auto\+Ping}} (\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} interval\+Ms, std\+::string user\+Message=\char`\"{}\char`\"{})
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a9d2501ab35e2a7dd9dfa2e000fa4275d}{add\+Async}} ()
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_afc2f287e5a2129ce5fa456a1d35037ee}{listen}} (\mbox{\hyperlink{namespaceu_w_s_a95a937a744b932b85c5783aa5d8fa93b}{Listen\+Options}} listen\+Options)
+\item 
+{\footnotesize template$<$class F $>$ }\\void \mbox{\hyperlink{structu_w_s_1_1_group_a275f69774585def1dbff702b2974d21a}{for\+Each}} (const F \&\mbox{\hyperlink{build__log_8txt_a644a8e656cf4d496cc7d47a0154d6f4b}{cb}})
+\item 
+{\footnotesize template$<$class F $>$ }\\void \mbox{\hyperlink{structu_w_s_1_1_group_a7dac60bd7089a7ebaf131097c7bd8d7c}{for\+Each\+Http\+Socket}} (const F \&\mbox{\hyperlink{build__log_8txt_a644a8e656cf4d496cc7d47a0154d6f4b}{cb}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$ is\+Server $>$ $\ast$ \mbox{\hyperlink{structu_w_s_1_1_group_af62bcd74f6b06f989f9121c4ca55375c}{from}} (\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{structu_w_s_1_1_group_a769dd13448095ac42a252737599c704c}{error\+Type}} = typename std\+::conditional$<$ is\+Server, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}, void $\ast$ $>$\+::type
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a0514bb0ad4109cf3083e4a367a17dc70}{add\+Web\+Socket}} (\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$web\+Socket)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a32b010b119449200a83de144a7876bd0}{remove\+Web\+Socket}} (\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$web\+Socket)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a8be2b7124e204b7aab906f752314ed24}{add\+Http\+Socket}} (\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$http\+Socket)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_a2aaaf4a3d6de5c13f8536359a035b8f7}{remove\+Http\+Socket}} (\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$http\+Socket)
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_group_ae24681cc78d51959aa8cd3fa78c3d0db}{Group}} (\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_group_ae52736f5273cb5be178888f756077caa}{extension\+Options}}, unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_group_a5dcef3abf644403b9c1dc3a0453e2d83}{max\+Payload}}, \mbox{\hyperlink{structu_w_s_1_1_hub}{Hub}} $\ast$\mbox{\hyperlink{structu_w_s_1_1_group_af6aa8250105526d91faebaa0b0b5fdcf}{hub}}, \mbox{\hyperlink{structu_s_1_1_node_data}{u\+S\+::\+Node\+Data}} $\ast$node\+Data)
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_group_adfb0a9529a99460c943f88a7f67cfb3a}{stop\+Listening}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structu_w_s_1_1_group_ab0a1e6e8ef139d3d0fe8bad99596e843}{timer\+Callback}} (\mbox{\hyperlink{structu_s_1_1_timer}{u\+S\+::\+Timer}} $\ast$\mbox{\hyperlink{structu_w_s_1_1_group_a02e4045f9f9b19966c2de12e25657e3c}{timer}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, \mbox{\hyperlink{structu_w_s_1_1_http_request}{Http\+Request}})$>$ \mbox{\hyperlink{structu_w_s_1_1_group_af0698cea43e2764c291041765689c90a}{connection\+Handler}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$)$>$ \mbox{\hyperlink{structu_w_s_1_1_group_a1f107c5f5520f3a48c935ff3dc1b6b52}{transfer\+Handler}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, char $\ast$message, size\+\_\+t length, \mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}} op\+Code)$>$ \mbox{\hyperlink{structu_w_s_1_1_group_adf5c6a07e73f1d5777a0a4f1a539ec04}{message\+Handler}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} code, char $\ast$message, size\+\_\+t length)$>$ \mbox{\hyperlink{structu_w_s_1_1_group_ae3f6ed1781dbb11093095fa939d3055f}{disconnection\+Handler}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, char $\ast$, size\+\_\+t)$>$ \mbox{\hyperlink{structu_w_s_1_1_group_a2d6d5d0778bb23e495fa91c6e98b5a87}{ping\+Handler}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, char $\ast$, size\+\_\+t)$>$ \mbox{\hyperlink{structu_w_s_1_1_group_a5f782ed3edcd17723fd8a26e4b40abfd}{pong\+Handler}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$)$>$ \mbox{\hyperlink{structu_w_s_1_1_group_a697bf4ea6b46105c1e942d721b87e523}{http\+Connection\+Handler}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$, \mbox{\hyperlink{structu_w_s_1_1_http_request}{Http\+Request}}, char $\ast$, size\+\_\+t, size\+\_\+t)$>$ \mbox{\hyperlink{structu_w_s_1_1_group_acbaa06442c29bcd392ca748090d3eeba}{http\+Request\+Handler}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$, char $\ast$, size\+\_\+t, size\+\_\+t)$>$ \mbox{\hyperlink{structu_w_s_1_1_group_a4c3dc4b1a42a1304c2a85cea6545cc6c}{http\+Data\+Handler}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$)$>$ \mbox{\hyperlink{structu_w_s_1_1_group_ad89102f35b1381e9b098397d54d3c9d5}{http\+Cancelled\+Request\+Handler}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$)$>$ \mbox{\hyperlink{structu_w_s_1_1_group_ab942aaee00970bf2cd6b6ac4ec52622e}{http\+Disconnection\+Handler}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$, \mbox{\hyperlink{structu_w_s_1_1_http_request}{Http\+Request}})$>$ \mbox{\hyperlink{structu_w_s_1_1_group_a64f39a31e3cafa247cc34e42c2376e9d}{http\+Upgrade\+Handler}}
+\item 
+std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_group_a769dd13448095ac42a252737599c704c}{error\+Type}})$>$ \mbox{\hyperlink{structu_w_s_1_1_group_a4a639b72d351d68946652f6af1878135}{error\+Handler}}
+\item 
+unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_group_a5dcef3abf644403b9c1dc3a0453e2d83}{max\+Payload}}
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_hub}{Hub}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_group_af6aa8250105526d91faebaa0b0b5fdcf}{hub}}
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_group_ae52736f5273cb5be178888f756077caa}{extension\+Options}}
+\item 
+\mbox{\hyperlink{structu_s_1_1_timer}{u\+S\+::\+Timer}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_group_a02e4045f9f9b19966c2de12e25657e3c}{timer}} = nullptr
+\item 
+\mbox{\hyperlink{structu_s_1_1_timer}{u\+S\+::\+Timer}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_group_af236a10ea03ac9124ec735feebcf2788}{http\+Timer}} = nullptr
+\item 
+std\+::string \mbox{\hyperlink{structu_w_s_1_1_group_a853b9f3f8cecebb3c8b2b65ef68c290c}{user\+Ping\+Message}}
+\item 
+std\+::stack$<$ \mbox{\hyperlink{structu_s_1_1_poll}{u\+S\+::\+Poll}} $\ast$ $>$ \mbox{\hyperlink{structu_w_s_1_1_group_ae5bf705e280754df35ee84ce48a519e0}{iterators}}
+\item 
+void $\ast$ \mbox{\hyperlink{structu_w_s_1_1_group_af65a2e9b48ccaab0350a3b4deb428762}{user\+Data}} = nullptr
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$ \mbox{\hyperlink{structu_w_s_1_1_group_a206ce7abbc04b228eb51c2a63c54d21b}{web\+Socket\+Head}} = nullptr
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$ \mbox{\hyperlink{structu_w_s_1_1_group_a79744bc38eec51aa1860d59f2fd50db8}{http\+Socket\+Head}} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_group_af20bcb1dd4e741f2423d470bb4cd994d}{Hub}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_group_af442c64c44a1efcec5f214475ecf9b66}{Web\+Socket$<$ is\+Server $>$}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_group_a2b5e67441f8f1118b3cbf6ec686c4b44}{Http\+Socket$<$ false $>$}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_group_ab830db3189a4a8e913758f6e3e300aff}{Http\+Socket$<$ true $>$}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$bool is\+Server$>$\newline
+struct u\+W\+S\+::\+Group$<$ is\+Server $>$}
+
+
+
+Definition at line 19 of file Group.\+h.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a769dd13448095ac42a252737599c704c}\label{structu_w_s_1_1_group_a769dd13448095ac42a252737599c704c}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!errorType@{errorType}}
+\index{errorType@{errorType}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{errorType}{errorType}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+using \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::\mbox{\hyperlink{structu_w_s_1_1_group_a769dd13448095ac42a252737599c704c}{error\+Type}} =  typename std\+::conditional$<$is\+Server, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}, void $\ast$$>$\+::type\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 39 of file Group.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_group_ae24681cc78d51959aa8cd3fa78c3d0db}\label{structu_w_s_1_1_group_ae24681cc78d51959aa8cd3fa78c3d0db}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!Group@{Group}}
+\index{Group@{Group}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{Group()}{Group()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::\mbox{\hyperlink{structu_w_s_1_1_group}{Group}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{extension\+Options,  }\item[{unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{max\+Payload,  }\item[{\mbox{\hyperlink{structu_w_s_1_1_hub}{Hub}} $\ast$}]{hub,  }\item[{\mbox{\hyperlink{structu_s_1_1_node_data}{u\+S\+::\+Node\+Data}} $\ast$}]{node\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 121 of file Group.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a9d2501ab35e2a7dd9dfa2e000fa4275d}\label{structu_w_s_1_1_group_a9d2501ab35e2a7dd9dfa2e000fa4275d}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!addAsync@{addAsync}}
+\index{addAsync@{addAsync}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{addAsync()}{addAsync()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::add\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 92 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a8be2b7124e204b7aab906f752314ed24}\label{structu_w_s_1_1_group_a8be2b7124e204b7aab906f752314ed24}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!addHttpSocket@{addHttpSocket}}
+\index{addHttpSocket@{addHttpSocket}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{addHttpSocket()}{addHttpSocket()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::add\+Http\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$}]{http\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 44 of file Group.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a0514bb0ad4109cf3083e4a367a17dc70}\label{structu_w_s_1_1_group_a0514bb0ad4109cf3083e4a367a17dc70}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!addWebSocket@{addWebSocket}}
+\index{addWebSocket@{addWebSocket}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{addWebSocket()}{addWebSocket()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::add\+Web\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$}]{web\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 90 of file Group.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a9cfa7523adc38b20020f2a04e909e3fc}\label{structu_w_s_1_1_group_a9cfa7523adc38b20020f2a04e909e3fc}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!broadcast@{broadcast}}
+\index{broadcast@{broadcast}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{broadcast()}{broadcast()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::broadcast (\begin{DoxyParamCaption}\item[{const char $\ast$}]{message,  }\item[{size\+\_\+t}]{length,  }\item[{\mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}}}]{op\+Code }\end{DoxyParamCaption})}
+
+
+
+Definition at line 227 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_group_a9cfa7523adc38b20020f2a04e909e3fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a6a89a4f459f007ddf7f1653fa3ec621d}\label{structu_w_s_1_1_group_a6a89a4f459f007ddf7f1653fa3ec621d}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!close@{close}}
+\index{close@{close}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{code = {\ttfamily 1000},  }\item[{char $\ast$}]{message = {\ttfamily nullptr},  }\item[{size\+\_\+t}]{length = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 249 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{structu_w_s_1_1_group_a6a89a4f459f007ddf7f1653fa3ec621d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a275f69774585def1dbff702b2974d21a}\label{structu_w_s_1_1_group_a275f69774585def1dbff702b2974d21a}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!forEach@{forEach}}
+\index{forEach@{forEach}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{forEach()}{forEach()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+template$<$class F $>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::for\+Each (\begin{DoxyParamCaption}\item[{const F \&}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 105 of file Group.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_group_a275f69774585def1dbff702b2974d21a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a7dac60bd7089a7ebaf131097c7bd8d7c}\label{structu_w_s_1_1_group_a7dac60bd7089a7ebaf131097c7bd8d7c}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!forEachHttpSocket@{forEachHttpSocket}}
+\index{forEachHttpSocket@{forEachHttpSocket}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{forEachHttpSocket()}{forEachHttpSocket()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+template$<$class F $>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::for\+Each\+Http\+Socket (\begin{DoxyParamCaption}\item[{const F \&}]{cb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 122 of file Group.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_group_a7dac60bd7089a7ebaf131097c7bd8d7c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_af62bcd74f6b06f989f9121c4ca55375c}\label{structu_w_s_1_1_group_af62bcd74f6b06f989f9121c4ca55375c}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!from@{from}}
+\index{from@{from}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{from()}{from()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+static \mbox{\hyperlink{structu_w_s_1_1_group}{Group}}$<$is\+Server$>$$\ast$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::from (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Definition at line 137 of file Group.\+h.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_group_af62bcd74f6b06f989f9121c4ca55375c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a107e3c05fbd4ca941bb8d46cddd3d0ae}\label{structu_w_s_1_1_group_a107e3c05fbd4ca941bb8d46cddd3d0ae}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!getUserData@{getUserData}}
+\index{getUserData@{getUserData}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{getUserData()}{getUserData()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void $\ast$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::get\+User\+Data}
+
+
+
+Definition at line 12 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_group_a107e3c05fbd4ca941bb8d46cddd3d0ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_afc2f287e5a2129ce5fa456a1d35037ee}\label{structu_w_s_1_1_group_afc2f287e5a2129ce5fa456a1d35037ee}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!listen@{listen}}
+\index{listen@{listen}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{listen()}{listen()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::listen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceu_w_s_a95a937a744b932b85c5783aa5d8fa93b}{Listen\+Options}}}]{listen\+Options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 98 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_ad4a255fecf96ecb5b917c1bf1b185459}\label{structu_w_s_1_1_group_ad4a255fecf96ecb5b917c1bf1b185459}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!onCancelledHttpRequest@{onCancelledHttpRequest}}
+\index{onCancelledHttpRequest@{onCancelledHttpRequest}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onCancelledHttpRequest()}{onCancelledHttpRequest()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::on\+Cancelled\+Http\+Request (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$)$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 217 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_group_ad4a255fecf96ecb5b917c1bf1b185459_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a3be07500b72391623fba23d20c8aa5ce}\label{structu_w_s_1_1_group_a3be07500b72391623fba23d20c8aa5ce}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!onConnection@{onConnection}}
+\index{onConnection@{onConnection}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onConnection()}{onConnection()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::on\+Connection (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, \mbox{\hyperlink{structu_w_s_1_1_http_request}{Http\+Request}})$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 162 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{structu_w_s_1_1_group_a3be07500b72391623fba23d20c8aa5ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_af6fc1d835096273b87d57f99896b17b2}\label{structu_w_s_1_1_group_af6fc1d835096273b87d57f99896b17b2}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!onDisconnection@{onDisconnection}}
+\index{onDisconnection@{onDisconnection}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onDisconnection()}{onDisconnection()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::on\+Disconnection (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} code, char $\ast$message, size\+\_\+t length)$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 177 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_group_af6fc1d835096273b87d57f99896b17b2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a660da695c67c60264c5c222f49a3884c}\label{structu_w_s_1_1_group_a660da695c67c60264c5c222f49a3884c}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!onError@{onError}}
+\index{onError@{onError}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onError()}{onError()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::on\+Error (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_group_a769dd13448095ac42a252737599c704c}{error\+Type}})$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 192 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_group_a660da695c67c60264c5c222f49a3884c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a04ac338c51a997cc850807044c2defab}\label{structu_w_s_1_1_group_a04ac338c51a997cc850807044c2defab}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!onHttpConnection@{onHttpConnection}}
+\index{onHttpConnection@{onHttpConnection}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onHttpConnection()}{onHttpConnection()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::on\+Http\+Connection (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$)$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 197 of file Group.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_ad80ef6245d90918c64d61b97e5b7ee72}\label{structu_w_s_1_1_group_ad80ef6245d90918c64d61b97e5b7ee72}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!onHttpData@{onHttpData}}
+\index{onHttpData@{onHttpData}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onHttpData()}{onHttpData()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::on\+Http\+Data (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$, char $\ast$data, size\+\_\+t length, size\+\_\+t remaining\+Bytes)$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 207 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_group_ad80ef6245d90918c64d61b97e5b7ee72_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a13e4b9febf33fefb72a2a79a2dd82535}\label{structu_w_s_1_1_group_a13e4b9febf33fefb72a2a79a2dd82535}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!onHttpDisconnection@{onHttpDisconnection}}
+\index{onHttpDisconnection@{onHttpDisconnection}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onHttpDisconnection()}{onHttpDisconnection()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::on\+Http\+Disconnection (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$)$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 212 of file Group.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a1ff984427167c8600551978b0d576967}\label{structu_w_s_1_1_group_a1ff984427167c8600551978b0d576967}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!onHttpRequest@{onHttpRequest}}
+\index{onHttpRequest@{onHttpRequest}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onHttpRequest()}{onHttpRequest()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::on\+Http\+Request (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$, \mbox{\hyperlink{structu_w_s_1_1_http_request}{Http\+Request}}, char $\ast$data, size\+\_\+t length, size\+\_\+t remaining\+Bytes)$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 202 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_group_a1ff984427167c8600551978b0d576967_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a3c9c9394126894e5bbe3e2ebff6fee72}\label{structu_w_s_1_1_group_a3c9c9394126894e5bbe3e2ebff6fee72}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!onHttpUpgrade@{onHttpUpgrade}}
+\index{onHttpUpgrade@{onHttpUpgrade}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onHttpUpgrade()}{onHttpUpgrade()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::on\+Http\+Upgrade (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$, \mbox{\hyperlink{structu_w_s_1_1_http_request}{Http\+Request}})$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 222 of file Group.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a8b60e4836e35162318b792577fdc9c7d}\label{structu_w_s_1_1_group_a8b60e4836e35162318b792577fdc9c7d}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!onMessage@{onMessage}}
+\index{onMessage@{onMessage}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onMessage()}{onMessage()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::on\+Message (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, char $\ast$, size\+\_\+t, \mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}})$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 172 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{structu_w_s_1_1_group_a8b60e4836e35162318b792577fdc9c7d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a5cf47343619b1b6f06665fe1e3345e0e}\label{structu_w_s_1_1_group_a5cf47343619b1b6f06665fe1e3345e0e}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!onPing@{onPing}}
+\index{onPing@{onPing}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onPing()}{onPing()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::on\+Ping (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, char $\ast$, size\+\_\+t)$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 182 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{structu_w_s_1_1_group_a5cf47343619b1b6f06665fe1e3345e0e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a92ca1fa24e07ed67b922edcba8c9d125}\label{structu_w_s_1_1_group_a92ca1fa24e07ed67b922edcba8c9d125}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!onPong@{onPong}}
+\index{onPong@{onPong}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onPong()}{onPong()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::on\+Pong (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$, char $\ast$, size\+\_\+t)$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 187 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{structu_w_s_1_1_group_a92ca1fa24e07ed67b922edcba8c9d125_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_af1f9fadfbab8b45affebd19935776956}\label{structu_w_s_1_1_group_af1f9fadfbab8b45affebd19935776956}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!onTransfer@{onTransfer}}
+\index{onTransfer@{onTransfer}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{onTransfer()}{onTransfer()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::on\+Transfer (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$)$>$}]{handler }\end{DoxyParamCaption})}
+
+
+
+Definition at line 167 of file Group.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a2aaaf4a3d6de5c13f8536359a035b8f7}\label{structu_w_s_1_1_group_a2aaaf4a3d6de5c13f8536359a035b8f7}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!removeHttpSocket@{removeHttpSocket}}
+\index{removeHttpSocket@{removeHttpSocket}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{removeHttpSocket()}{removeHttpSocket()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::remove\+Http\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ is\+Server $>$ $\ast$}]{http\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 69 of file Group.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a32b010b119449200a83de144a7876bd0}\label{structu_w_s_1_1_group_a32b010b119449200a83de144a7876bd0}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!removeWebSocket@{removeWebSocket}}
+\index{removeWebSocket@{removeWebSocket}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{removeWebSocket()}{removeWebSocket()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::remove\+Web\+Socket (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$ $\ast$}]{web\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 102 of file Group.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a6d2a20258ddf24c8dfee5e4bd9d8d9f1}\label{structu_w_s_1_1_group_a6d2a20258ddf24c8dfee5e4bd9d8d9f1}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!setUserData@{setUserData}}
+\index{setUserData@{setUserData}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{setUserData()}{setUserData()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::set\+User\+Data (\begin{DoxyParamCaption}\item[{void $\ast$}]{user }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_group_a6d2a20258ddf24c8dfee5e4bd9d8d9f1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a3621e3f62872bcc925622528dd261be3}\label{structu_w_s_1_1_group_a3621e3f62872bcc925622528dd261be3}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!startAutoPing@{startAutoPing}}
+\index{startAutoPing@{startAutoPing}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{startAutoPing()}{startAutoPing()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::start\+Auto\+Ping (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}]{interval\+Ms,  }\item[{std\+::string}]{user\+Message = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file Group.\+cpp.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_group_a3621e3f62872bcc925622528dd261be3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structu_w_s_1_1_group_adfb0a9529a99460c943f88a7f67cfb3a}\label{structu_w_s_1_1_group_adfb0a9529a99460c943f88a7f67cfb3a}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!stopListening@{stopListening}}
+\index{stopListening@{stopListening}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{stopListening()}{stopListening()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::stop\+Listening\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 138 of file Group.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_ac407ed1e811640bf5e4c6afe21e6393b}\label{structu_w_s_1_1_group_ac407ed1e811640bf5e4c6afe21e6393b}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!terminate@{terminate}}
+\index{terminate@{terminate}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::terminate}
+
+
+
+Definition at line 241 of file Group.\+cpp.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_ab0a1e6e8ef139d3d0fe8bad99596e843}\label{structu_w_s_1_1_group_ab0a1e6e8ef139d3d0fe8bad99596e843}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!timerCallback@{timerCallback}}
+\index{timerCallback@{timerCallback}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{timerCallback()}{timerCallback()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::timer\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_timer}{u\+S\+::\+Timer}} $\ast$}]{timer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 17 of file Group.\+cpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_group_a2b5e67441f8f1118b3cbf6ec686c4b44}\label{structu_w_s_1_1_group_a2b5e67441f8f1118b3cbf6ec686c4b44}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!HttpSocket$<$ false $>$@{HttpSocket$<$ false $>$}}
+\index{HttpSocket$<$ false $>$@{HttpSocket$<$ false $>$}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{HttpSocket$<$ false $>$}{HttpSocket< false >}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+friend struct \mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ false $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 23 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_ab830db3189a4a8e913758f6e3e300aff}\label{structu_w_s_1_1_group_ab830db3189a4a8e913758f6e3e300aff}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!HttpSocket$<$ true $>$@{HttpSocket$<$ true $>$}}
+\index{HttpSocket$<$ true $>$@{HttpSocket$<$ true $>$}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{HttpSocket$<$ true $>$}{HttpSocket< true >}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+friend struct \mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$ true $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 24 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_af20bcb1dd4e741f2423d470bb4cd994d}\label{structu_w_s_1_1_group_af20bcb1dd4e741f2423d470bb4cd994d}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!Hub@{Hub}}
+\index{Hub@{Hub}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{Hub}{Hub}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+friend struct \mbox{\hyperlink{structu_w_s_1_1_hub}{Hub}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 21 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_af442c64c44a1efcec5f214475ecf9b66}\label{structu_w_s_1_1_group_af442c64c44a1efcec5f214475ecf9b66}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!WebSocket$<$ isServer $>$@{WebSocket$<$ isServer $>$}}
+\index{WebSocket$<$ isServer $>$@{WebSocket$<$ isServer $>$}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{WebSocket$<$ isServer $>$}{WebSocket< isServer >}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+friend struct \mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$ is\+Server $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 22 of file Group.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_group_af0698cea43e2764c291041765689c90a}\label{structu_w_s_1_1_group_af0698cea43e2764c291041765689c90a}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!connectionHandler@{connectionHandler}}
+\index{connectionHandler@{connectionHandler}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{connectionHandler}{connectionHandler}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::function$<$void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$is\+Server$>$ $\ast$, \mbox{\hyperlink{structu_w_s_1_1_http_request}{Http\+Request}})$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::connection\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_ae3f6ed1781dbb11093095fa939d3055f}\label{structu_w_s_1_1_group_ae3f6ed1781dbb11093095fa939d3055f}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!disconnectionHandler@{disconnectionHandler}}
+\index{disconnectionHandler@{disconnectionHandler}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{disconnectionHandler}{disconnectionHandler}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::function$<$void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$is\+Server$>$ $\ast$, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} code, char $\ast$message, size\+\_\+t length)$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::disconnection\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 29 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a4a639b72d351d68946652f6af1878135}\label{structu_w_s_1_1_group_a4a639b72d351d68946652f6af1878135}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!errorHandler@{errorHandler}}
+\index{errorHandler@{errorHandler}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{errorHandler}{errorHandler}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::function$<$void(\mbox{\hyperlink{structu_w_s_1_1_group_a769dd13448095ac42a252737599c704c}{error\+Type}})$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::error\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 40 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_ae52736f5273cb5be178888f756077caa}\label{structu_w_s_1_1_group_ae52736f5273cb5be178888f756077caa}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!extensionOptions@{extensionOptions}}
+\index{extensionOptions@{extensionOptions}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{extensionOptions}{extensionOptions}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::extension\+Options\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 44 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_ad89102f35b1381e9b098397d54d3c9d5}\label{structu_w_s_1_1_group_ad89102f35b1381e9b098397d54d3c9d5}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!httpCancelledRequestHandler@{httpCancelledRequestHandler}}
+\index{httpCancelledRequestHandler@{httpCancelledRequestHandler}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{httpCancelledRequestHandler}{httpCancelledRequestHandler}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::function$<$void(\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$)$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::http\+Cancelled\+Request\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 35 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a697bf4ea6b46105c1e942d721b87e523}\label{structu_w_s_1_1_group_a697bf4ea6b46105c1e942d721b87e523}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!httpConnectionHandler@{httpConnectionHandler}}
+\index{httpConnectionHandler@{httpConnectionHandler}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{httpConnectionHandler}{httpConnectionHandler}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::function$<$void(\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$is\+Server$>$ $\ast$)$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::http\+Connection\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 32 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a4c3dc4b1a42a1304c2a85cea6545cc6c}\label{structu_w_s_1_1_group_a4c3dc4b1a42a1304c2a85cea6545cc6c}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!httpDataHandler@{httpDataHandler}}
+\index{httpDataHandler@{httpDataHandler}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{httpDataHandler}{httpDataHandler}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::function$<$void(\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$, char $\ast$, size\+\_\+t, size\+\_\+t)$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::http\+Data\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 34 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_ab942aaee00970bf2cd6b6ac4ec52622e}\label{structu_w_s_1_1_group_ab942aaee00970bf2cd6b6ac4ec52622e}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!httpDisconnectionHandler@{httpDisconnectionHandler}}
+\index{httpDisconnectionHandler@{httpDisconnectionHandler}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{httpDisconnectionHandler}{httpDisconnectionHandler}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::function$<$void(\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$is\+Server$>$ $\ast$)$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::http\+Disconnection\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 36 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_acbaa06442c29bcd392ca748090d3eeba}\label{structu_w_s_1_1_group_acbaa06442c29bcd392ca748090d3eeba}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!httpRequestHandler@{httpRequestHandler}}
+\index{httpRequestHandler@{httpRequestHandler}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{httpRequestHandler}{httpRequestHandler}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::function$<$void(\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$, \mbox{\hyperlink{structu_w_s_1_1_http_request}{Http\+Request}}, char $\ast$, size\+\_\+t, size\+\_\+t)$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::http\+Request\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 33 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a79744bc38eec51aa1860d59f2fd50db8}\label{structu_w_s_1_1_group_a79744bc38eec51aa1860d59f2fd50db8}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!httpSocketHead@{httpSocketHead}}
+\index{httpSocketHead@{httpSocketHead}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{httpSocketHead}{httpSocketHead}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$is\+Server$>$$\ast$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::http\+Socket\+Head = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 54 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_af236a10ea03ac9124ec735feebcf2788}\label{structu_w_s_1_1_group_af236a10ea03ac9124ec735feebcf2788}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!httpTimer@{httpTimer}}
+\index{httpTimer@{httpTimer}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{httpTimer}{httpTimer}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_s_1_1_timer}{u\+S\+::\+Timer}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::http\+Timer = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 45 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a64f39a31e3cafa247cc34e42c2376e9d}\label{structu_w_s_1_1_group_a64f39a31e3cafa247cc34e42c2376e9d}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!httpUpgradeHandler@{httpUpgradeHandler}}
+\index{httpUpgradeHandler@{httpUpgradeHandler}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{httpUpgradeHandler}{httpUpgradeHandler}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::function$<$void(\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}}$<$is\+Server$>$ $\ast$, \mbox{\hyperlink{structu_w_s_1_1_http_request}{Http\+Request}})$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::http\+Upgrade\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 37 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_af6aa8250105526d91faebaa0b0b5fdcf}\label{structu_w_s_1_1_group_af6aa8250105526d91faebaa0b0b5fdcf}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!hub@{hub}}
+\index{hub@{hub}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{hub}{hub}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_hub}{Hub}}$\ast$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::hub\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 43 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_ae5bf705e280754df35ee84ce48a519e0}\label{structu_w_s_1_1_group_ae5bf705e280754df35ee84ce48a519e0}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!iterators@{iterators}}
+\index{iterators@{iterators}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{iterators}{iterators}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::stack$<$\mbox{\hyperlink{structu_s_1_1_poll}{u\+S\+::\+Poll}} $\ast$$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::iterators\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 47 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a5dcef3abf644403b9c1dc3a0453e2d83}\label{structu_w_s_1_1_group_a5dcef3abf644403b9c1dc3a0453e2d83}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!maxPayload@{maxPayload}}
+\index{maxPayload@{maxPayload}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{maxPayload}{maxPayload}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+unsigned \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::max\+Payload\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 42 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_adf5c6a07e73f1d5777a0a4f1a539ec04}\label{structu_w_s_1_1_group_adf5c6a07e73f1d5777a0a4f1a539ec04}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!messageHandler@{messageHandler}}
+\index{messageHandler@{messageHandler}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{messageHandler}{messageHandler}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::function$<$void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$is\+Server$>$ $\ast$, char $\ast$message, size\+\_\+t length, \mbox{\hyperlink{namespaceu_w_s_a1c20c70f571f0f71e00d1a10b9c52a1a}{Op\+Code}} op\+Code)$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::message\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 28 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a2d6d5d0778bb23e495fa91c6e98b5a87}\label{structu_w_s_1_1_group_a2d6d5d0778bb23e495fa91c6e98b5a87}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!pingHandler@{pingHandler}}
+\index{pingHandler@{pingHandler}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{pingHandler}{pingHandler}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::function$<$void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$is\+Server$>$ $\ast$, char $\ast$, size\+\_\+t)$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::ping\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 30 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a5f782ed3edcd17723fd8a26e4b40abfd}\label{structu_w_s_1_1_group_a5f782ed3edcd17723fd8a26e4b40abfd}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!pongHandler@{pongHandler}}
+\index{pongHandler@{pongHandler}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{pongHandler}{pongHandler}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::function$<$void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$is\+Server$>$ $\ast$, char $\ast$, size\+\_\+t)$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::pong\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 31 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a02e4045f9f9b19966c2de12e25657e3c}\label{structu_w_s_1_1_group_a02e4045f9f9b19966c2de12e25657e3c}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!timer@{timer}}
+\index{timer@{timer}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_s_1_1_timer}{u\+S\+::\+Timer}}$\ast$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::timer = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 45 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a1f107c5f5520f3a48c935ff3dc1b6b52}\label{structu_w_s_1_1_group_a1f107c5f5520f3a48c935ff3dc1b6b52}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!transferHandler@{transferHandler}}
+\index{transferHandler@{transferHandler}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{transferHandler}{transferHandler}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::function$<$void(\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$is\+Server$>$ $\ast$)$>$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::transfer\+Handler\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 27 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_af65a2e9b48ccaab0350a3b4deb428762}\label{structu_w_s_1_1_group_af65a2e9b48ccaab0350a3b4deb428762}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!userData@{userData}}
+\index{userData@{userData}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{userData}{userData}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void$\ast$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::user\+Data = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 50 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a853b9f3f8cecebb3c8b2b65ef68c290c}\label{structu_w_s_1_1_group_a853b9f3f8cecebb3c8b2b65ef68c290c}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!userPingMessage@{userPingMessage}}
+\index{userPingMessage@{userPingMessage}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{userPingMessage}{userPingMessage}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+std\+::string \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::user\+Ping\+Message\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 46 of file Group.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_group_a206ce7abbc04b228eb51c2a63c54d21b}\label{structu_w_s_1_1_group_a206ce7abbc04b228eb51c2a63c54d21b}} 
+\index{uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}!webSocketHead@{webSocketHead}}
+\index{webSocketHead@{webSocketHead}!uWS::Group$<$ isServer $>$@{uWS::Group$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{webSocketHead}{webSocketHead}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_web_socket}{Web\+Socket}}$<$is\+Server$>$$\ast$ \mbox{\hyperlink{structu_w_s_1_1_group}{u\+W\+S\+::\+Group}}$<$ is\+Server $>$\+::web\+Socket\+Head = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 53 of file Group.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_group_8h}{Group.\+h}}\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_group_8cpp}{Group.\+cpp}}\end{DoxyCompactItemize}

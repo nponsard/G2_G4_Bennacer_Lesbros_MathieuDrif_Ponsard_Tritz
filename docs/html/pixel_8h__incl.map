@@ -1,12 +1,12 @@
-<map id="src/minGL/tools/pixel.h" name="src/minGL/tools/pixel.h">
-<area shape="rect" id="node1" title=" " alt="" coords="99,5,269,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="32,80,91,107"/>
-<area shape="rect" id="node3" href="$rgbcolor_8h.html" title=" " alt="" coords="115,80,253,107"/>
-<area shape="rect" id="node8" href="$tools_8h.html" title=" " alt="" coords="287,80,353,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="5,155,91,181"/>
-<area shape="rect" id="node5" href="$_i_editable_8h.html" title=" " alt="" coords="115,155,253,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="99,304,179,331"/>
-<area shape="rect" id="node7" href="$_i_editable_8hxx.html" title=" " alt="" coords="131,229,237,256"/>
-<area shape="rect" id="node9" title=" " alt="" coords="277,155,363,181"/>
-<area shape="rect" id="node10" href="$graph_2pos_8h.html" title=" " alt="" coords="387,155,498,181"/>
+<map id="nosFichiers/src/minGL/tools/pixel.h" name="nosFichiers/src/minGL/tools/pixel.h">
+<area shape="rect" id="node1" title=" " alt="" coords="102,5,266,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="32,95,91,121"/>
+<area shape="rect" id="node3" href="$rgbcolor_8h.html" title=" " alt="" coords="115,95,253,121"/>
+<area shape="rect" id="node8" href="$tools_8h.html" title=" " alt="" coords="287,95,353,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,169,91,196"/>
+<area shape="rect" id="node5" href="$_i_editable_8h.html" title=" " alt="" coords="115,169,253,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="99,319,179,345"/>
+<area shape="rect" id="node7" href="$_i_editable_8hxx.html" title=" " alt="" coords="131,244,237,271"/>
+<area shape="rect" id="node9" title=" " alt="" coords="277,169,363,196"/>
+<area shape="rect" id="node10" href="$graph_2pos_8h.html" title=" " alt="" coords="387,169,498,196"/>
 </map>

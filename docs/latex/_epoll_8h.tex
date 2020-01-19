@@ -1,0 +1,63 @@
+\hypertarget{_epoll_8h}{}\doxysection{/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\+Epoll.h File Reference}
+\label{_epoll_8h}\index{/home/sautax/git/Battlegroud-\/BR-\/master/node\_modules/uws/src/Epoll.h@{/home/sautax/git/Battlegroud-\/BR-\/master/node\_modules/uws/src/Epoll.h}}
+{\ttfamily \#include $<$sys/epoll.\+h$>$}\newline
+{\ttfamily \#include $<$sys/eventfd.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+Include dependency graph for Epoll.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_epoll_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_timepoint}{u\+S\+::\+Timepoint}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_loop}{u\+S\+::\+Loop}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_timer}{u\+S\+::\+Timer}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_poll}{u\+S\+::\+Poll}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_async}{u\+S\+::\+Async}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceu_s}{uS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{_epoll_8h_af81628992ec6ef4954b291bf7278a383}{uv\+\_\+os\+\_\+sock\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::recursive\+\_\+mutex \mbox{\hyperlink{namespaceu_s_a0e2f093255be7d0fb9265d78f9425469}{u\+S\+::cb\+Mutex}}
+\item 
+void($\ast$ \mbox{\hyperlink{namespaceu_s_a524823c51ee3984de1322888bf328d20}{u\+S\+::callbacks}} \mbox{[}16\mbox{]})(Poll $\ast$, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}})
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{namespaceu_s_a8e5026bd7bd2abcea53707cc9ea29262}{u\+S\+::cb\+Head}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_epoll_8h_af81628992ec6ef4954b291bf7278a383}\label{_epoll_8h_af81628992ec6ef4954b291bf7278a383}} 
+\index{Epoll.h@{Epoll.h}!uv\_os\_sock\_t@{uv\_os\_sock\_t}}
+\index{uv\_os\_sock\_t@{uv\_os\_sock\_t}!Epoll.h@{Epoll.h}}
+\doxysubsubsection{\texorpdfstring{uv\_os\_sock\_t}{uv\_os\_sock\_t}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{_asio_8h_a083ed755f6023cb932aac26720c654d0}{uv\+\_\+os\+\_\+sock\+\_\+t}}}
+
+
+
+Definition at line 13 of file Epoll.\+h.
+

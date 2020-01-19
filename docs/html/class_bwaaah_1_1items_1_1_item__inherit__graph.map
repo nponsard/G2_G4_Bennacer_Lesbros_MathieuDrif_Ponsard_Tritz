@@ -1,0 +1,12 @@
+<map id="Bwaaah.items.Item" name="Bwaaah.items.Item">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,155,159"/>
+<area shape="rect" id="node2" href="$class_bwaaah_1_1items_1_1_coconut.html" title=" " alt="" coords="223,31,395,57"/>
+<area shape="rect" id="node3" href="$class_bwaaah_1_1items_1_1_consommable.html" title=" " alt="" coords="203,81,416,108"/>
+<area shape="rect" id="node7" href="$class_bwaaah_1_1items_1_1_tool.html" title=" " alt="" coords="237,132,382,159"/>
+<area shape="rect" id="node9" href="$class_bwaaah_1_1items_1_1_weapon.html" title=" " alt="" coords="224,183,395,209"/>
+<area shape="rect" id="node10" href="$class_bwaaah_1_1items_1_1_wood.html" title=" " alt="" coords="232,233,387,260"/>
+<area shape="rect" id="node4" href="$class_bwaaah_1_1items_1_1_apple.html" title=" " alt="" coords="502,5,658,32"/>
+<area shape="rect" id="node5" href="$class_bwaaah_1_1items_1_1_half_coconut.html" title=" " alt="" coords="481,56,679,83"/>
+<area shape="rect" id="node6" href="$class_bwaaah_1_1items_1_1_pompot.html" title=" " alt="" coords="495,107,665,133"/>
+<area shape="rect" id="node8" href="$class_bwaaah_1_1items_1_1_plasma_pickaxaxe.html" title=" " alt="" coords="464,157,696,184"/>
+</map>

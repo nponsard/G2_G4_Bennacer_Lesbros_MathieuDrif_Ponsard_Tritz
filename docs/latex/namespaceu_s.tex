@@ -1,0 +1,102 @@
+\hypertarget{namespaceu_s}{}\doxysection{uS Namespace Reference}
+\label{namespaceu_s}\index{uS@{uS}}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceu_s_1_1_t_l_s}{T\+LS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_async}{Async}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_context}{Context}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_init}{Init}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_listen_socket}{Listen\+Socket}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_loop}{Loop}}
+\item 
+class \mbox{\hyperlink{classu_s_1_1_node}{Node}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_node_data}{Node\+Data}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_poll}{Poll}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_socket}{Socket}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_timepoint}{Timepoint}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_timer}{Timer}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_transfer_data}{Transfer\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespaceu_s_a455d0ecbc13539539c75dde5474351e6}{Listen\+Options}} \+: int \{ \mbox{\hyperlink{namespaceu_s_a455d0ecbc13539539c75dde5474351e6abdd4706519abd6ee89686d98ca65c969}{R\+E\+U\+S\+E\+\_\+\+P\+O\+RT}} = 1, 
+\mbox{\hyperlink{namespaceu_s_a455d0ecbc13539539c75dde5474351e6a478152883850c68354a3cdba4e62906f}{O\+N\+L\+Y\+\_\+\+I\+P\+V4}} = 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::recursive\+\_\+mutex \mbox{\hyperlink{namespaceu_s_a0e2f093255be7d0fb9265d78f9425469}{cb\+Mutex}}
+\item 
+void($\ast$ \mbox{\hyperlink{namespaceu_s_a524823c51ee3984de1322888bf328d20}{callbacks}} \mbox{[}16\mbox{]})(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}})
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{namespaceu_s_a8e5026bd7bd2abcea53707cc9ea29262}{cb\+Head}}
+\item 
+struct \mbox{\hyperlink{structu_s_1_1_init}{u\+S\+::\+Init}} \mbox{\hyperlink{namespaceu_s_ade389a58e663ce348474224c1238430b}{init}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespaceu_s_a455d0ecbc13539539c75dde5474351e6}\label{namespaceu_s_a455d0ecbc13539539c75dde5474351e6}} 
+\index{uS@{uS}!ListenOptions@{ListenOptions}}
+\index{ListenOptions@{ListenOptions}!uS@{uS}}
+\doxysubsubsection{\texorpdfstring{ListenOptions}{ListenOptions}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespaceu_s_a455d0ecbc13539539c75dde5474351e6}{u\+S\+::\+Listen\+Options}} \+: \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REUSE\_PORT@{REUSE\_PORT}!uS@{uS}}\index{uS@{uS}!REUSE\_PORT@{REUSE\_PORT}}}\mbox{\Hypertarget{namespaceu_s_a455d0ecbc13539539c75dde5474351e6abdd4706519abd6ee89686d98ca65c969}\label{namespaceu_s_a455d0ecbc13539539c75dde5474351e6abdd4706519abd6ee89686d98ca65c969}} 
+R\+E\+U\+S\+E\+\_\+\+P\+O\+RT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONLY\_IPV4@{ONLY\_IPV4}!uS@{uS}}\index{uS@{uS}!ONLY\_IPV4@{ONLY\_IPV4}}}\mbox{\Hypertarget{namespaceu_s_a455d0ecbc13539539c75dde5474351e6a478152883850c68354a3cdba4e62906f}\label{namespaceu_s_a455d0ecbc13539539c75dde5474351e6a478152883850c68354a3cdba4e62906f}} 
+O\+N\+L\+Y\+\_\+\+I\+P\+V4&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 10 of file Node.\+h.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceu_s_a524823c51ee3984de1322888bf328d20}\label{namespaceu_s_a524823c51ee3984de1322888bf328d20}} 
+\index{uS@{uS}!callbacks@{callbacks}}
+\index{callbacks@{callbacks}!uS@{uS}}
+\doxysubsubsection{\texorpdfstring{callbacks}{callbacks}}
+{\footnotesize\ttfamily void($\ast$ u\+S\+::callbacks\mbox{[}16\mbox{]})(\mbox{\hyperlink{structu_s_1_1_poll}{Poll}} $\ast$, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}}, \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}})}
+
+\mbox{\Hypertarget{namespaceu_s_a8e5026bd7bd2abcea53707cc9ea29262}\label{namespaceu_s_a8e5026bd7bd2abcea53707cc9ea29262}} 
+\index{uS@{uS}!cbHead@{cbHead}}
+\index{cbHead@{cbHead}!uS@{uS}}
+\doxysubsubsection{\texorpdfstring{cbHead}{cbHead}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} u\+S\+::cb\+Head}
+
+\mbox{\Hypertarget{namespaceu_s_a0e2f093255be7d0fb9265d78f9425469}\label{namespaceu_s_a0e2f093255be7d0fb9265d78f9425469}} 
+\index{uS@{uS}!cbMutex@{cbMutex}}
+\index{cbMutex@{cbMutex}!uS@{uS}}
+\doxysubsubsection{\texorpdfstring{cbMutex}{cbMutex}}
+{\footnotesize\ttfamily std\+::recursive\+\_\+mutex u\+S\+::cb\+Mutex}
+
+\mbox{\Hypertarget{namespaceu_s_ade389a58e663ce348474224c1238430b}\label{namespaceu_s_ade389a58e663ce348474224c1238430b}} 
+\index{uS@{uS}!init@{init}}
+\index{init@{init}!uS@{uS}}
+\doxysubsubsection{\texorpdfstring{init}{init}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structu_s_1_1_init}{u\+S\+::\+Init}} u\+S\+::init}
+

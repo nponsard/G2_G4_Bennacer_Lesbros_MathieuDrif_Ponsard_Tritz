@@ -1,0 +1,9 @@
+<map id="uS::Socket::setNoDelay" name="uS::Socket::setNoDelay">
+<area shape="rect" id="node1" title=" " alt="" coords="660,31,833,57"/>
+<area shape="rect" id="node2" href="$structu_w_s_1_1_hub.html#a423b9cf066ba3a8becf1cc1ec2c34108" title=" " alt="" coords="465,31,612,57"/>
+<area shape="rect" id="node3" href="$addon_8h.html#a19fab02bfef45a4928d1e6523236cc06" title=" " alt="" coords="343,31,417,57"/>
+<area shape="rect" id="node4" href="$addon_8cpp.html#a91b20a76285854fb609ca61c93b6a652" title=" " alt="" coords="231,5,286,32"/>
+<area shape="rect" id="node5" href="$main_space_invaders_8h.html#a350e996a354865b6064bab50134646dc" title="Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets ..." alt="" coords="223,56,295,83"/>
+<area shape="rect" id="node6" href="$main_space_invaders_8h.html#a4fa2d58844efb7d9be2951633b85b060" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,56,175,83"/>
+<area shape="rect" id="node7" href="$projet_space_invaders_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,56,60,83"/>
+</map>

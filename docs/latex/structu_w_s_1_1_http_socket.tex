@@ -1,0 +1,233 @@
+\hypertarget{structu_w_s_1_1_http_socket}{}\doxysection{u\+WS\+::Http\+Socket$<$ is\+Server $>$ Struct Template Reference}
+\label{structu_w_s_1_1_http_socket}\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+
+
+{\ttfamily \#include $<$H\+T\+T\+P\+Socket.\+h$>$}
+
+
+
+Inheritance diagram for u\+WS\+::Http\+Socket$<$ is\+Server $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{structu_w_s_1_1_http_socket__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for u\+WS\+::Http\+Socket$<$ is\+Server $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structu_w_s_1_1_http_socket__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_http_socket_a18eca91d175822bc50cccaead349e8d1}{Http\+Socket}} (\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$\mbox{\hyperlink{structu_s_1_1_poll_a89b3505f44473b874dd43b484dfd648f}{socket}})
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_http_socket_a771c9e94fc3722a260fe74f880a1c7d5}{terminate}} ()
+\item 
+void \mbox{\hyperlink{structu_w_s_1_1_http_socket_ab907cb5900ccba171456a2c146d48129}{upgrade}} (const char $\ast$sec\+Key, const char $\ast$extensions, size\+\_\+t extensions\+Length, const char $\ast$subprotocol, size\+\_\+t subprotocol\+Length, \mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} $\ast$per\+Message\+Deflate)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_socket_aff14ec1a076ddd32a8eb37f4471db2d5}{http\+User}}
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_socket_ae9cc2d77c48468ea14609a071a86653d}{outstanding\+Responses\+Head}} = nullptr
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_socket_a5ac3a523c28016cbf31a3a2a56561a06}{outstanding\+Responses\+Tail}} = nullptr
+\item 
+\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}} $\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_socket_aa6aaabb48a64471b8fd1185a745e2dab}{pre\+Allocated\+Response}} = nullptr
+\item 
+std\+::string \mbox{\hyperlink{structu_w_s_1_1_http_socket_a8b9905f5b2333d2e73681fb996e1e36a}{http\+Buffer}}
+\item 
+size\+\_\+t \mbox{\hyperlink{structu_w_s_1_1_http_socket_a7743b5628fc48a5d795882d7a5fc9787}{content\+Length}} = 0
+\item 
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_w_s_1_1_http_socket_a9063050af3c964c0f7639a8e6408553c}{missed\+Deadline}} = false
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_http_socket_aa3516c90697652732deaa6ba9bfb375b}{u\+S\+::\+Socket}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_http_socket_af0957378717f7133c9f634370cca6294}{Http\+Response}}
+\item 
+struct \mbox{\hyperlink{structu_w_s_1_1_http_socket_af20bcb1dd4e741f2423d470bb4cd994d}{Hub}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$const bool is\+Server$>$\newline
+struct u\+W\+S\+::\+Http\+Socket$<$ is\+Server $>$}
+
+
+
+Definition at line 109 of file H\+T\+T\+P\+Socket.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_http_socket_a18eca91d175822bc50cccaead349e8d1}\label{structu_w_s_1_1_http_socket_a18eca91d175822bc50cccaead349e8d1}} 
+\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}!HttpSocket@{HttpSocket}}
+\index{HttpSocket@{HttpSocket}!uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{HttpSocket()}{HttpSocket()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_http_socket}{u\+W\+S\+::\+Http\+Socket}}$<$ is\+Server $>$\+::\mbox{\hyperlink{structu_w_s_1_1_http_socket}{Http\+Socket}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}} $\ast$}]{socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 119 of file H\+T\+T\+P\+Socket.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_http_socket_a771c9e94fc3722a260fe74f880a1c7d5}\label{structu_w_s_1_1_http_socket_a771c9e94fc3722a260fe74f880a1c7d5}} 
+\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}!terminate@{terminate}}
+\index{terminate@{terminate}!uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{terminate()}{terminate()}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_http_socket}{u\+W\+S\+::\+Http\+Socket}}$<$ is\+Server $>$\+::terminate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 121 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_socket_ab907cb5900ccba171456a2c146d48129}\label{structu_w_s_1_1_http_socket_ab907cb5900ccba171456a2c146d48129}} 
+\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}!upgrade@{upgrade}}
+\index{upgrade@{upgrade}!uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{upgrade()}{upgrade()}}
+{\footnotesize\ttfamily template$<$bool is\+Server$>$ \\
+void \mbox{\hyperlink{structu_w_s_1_1_http_socket}{u\+W\+S\+::\+Http\+Socket}}$<$ is\+Server $>$\+::upgrade (\begin{DoxyParamCaption}\item[{const char $\ast$}]{sec\+Key,  }\item[{const char $\ast$}]{extensions,  }\item[{size\+\_\+t}]{extensions\+Length,  }\item[{const char $\ast$}]{subprotocol,  }\item[{size\+\_\+t}]{subprotocol\+Length,  }\item[{\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} $\ast$}]{per\+Message\+Deflate }\end{DoxyParamCaption})}
+
+
+
+Definition at line 203 of file H\+T\+T\+P\+Socket.\+cpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_http_socket_af0957378717f7133c9f634370cca6294}\label{structu_w_s_1_1_http_socket_af0957378717f7133c9f634370cca6294}} 
+\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}!HttpResponse@{HttpResponse}}
+\index{HttpResponse@{HttpResponse}!uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{HttpResponse}{HttpResponse}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+friend struct \mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 131 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_socket_af20bcb1dd4e741f2423d470bb4cd994d}\label{structu_w_s_1_1_http_socket_af20bcb1dd4e741f2423d470bb4cd994d}} 
+\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}!Hub@{Hub}}
+\index{Hub@{Hub}!uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{Hub}{Hub}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+friend struct \mbox{\hyperlink{structu_w_s_1_1_hub}{Hub}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 132 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_socket_aa3516c90697652732deaa6ba9bfb375b}\label{structu_w_s_1_1_http_socket_aa3516c90697652732deaa6ba9bfb375b}} 
+\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}!uS::Socket@{uS::Socket}}
+\index{uS::Socket@{uS::Socket}!uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{uS::Socket}{uS::Socket}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+friend struct \mbox{\hyperlink{structu_s_1_1_socket}{u\+S\+::\+Socket}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 130 of file H\+T\+T\+P\+Socket.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structu_w_s_1_1_http_socket_a7743b5628fc48a5d795882d7a5fc9787}\label{structu_w_s_1_1_http_socket_a7743b5628fc48a5d795882d7a5fc9787}} 
+\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}!contentLength@{contentLength}}
+\index{contentLength@{contentLength}!uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{contentLength}{contentLength}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+size\+\_\+t \mbox{\hyperlink{structu_w_s_1_1_http_socket}{u\+W\+S\+::\+Http\+Socket}}$<$ is\+Server $>$\+::content\+Length = 0}
+
+
+
+Definition at line 116 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_socket_a8b9905f5b2333d2e73681fb996e1e36a}\label{structu_w_s_1_1_http_socket_a8b9905f5b2333d2e73681fb996e1e36a}} 
+\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}!httpBuffer@{httpBuffer}}
+\index{httpBuffer@{httpBuffer}!uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{httpBuffer}{httpBuffer}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+std\+::string \mbox{\hyperlink{structu_w_s_1_1_http_socket}{u\+W\+S\+::\+Http\+Socket}}$<$ is\+Server $>$\+::http\+Buffer}
+
+
+
+Definition at line 115 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_socket_aff14ec1a076ddd32a8eb37f4471db2d5}\label{structu_w_s_1_1_http_socket_aff14ec1a076ddd32a8eb37f4471db2d5}} 
+\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}!httpUser@{httpUser}}
+\index{httpUser@{httpUser}!uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{httpUser}{httpUser}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+void$\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_socket}{u\+W\+S\+::\+Http\+Socket}}$<$ is\+Server $>$\+::http\+User}
+
+
+
+Definition at line 110 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_socket_a9063050af3c964c0f7639a8e6408553c}\label{structu_w_s_1_1_http_socket_a9063050af3c964c0f7639a8e6408553c}} 
+\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}!missedDeadline@{missedDeadline}}
+\index{missedDeadline@{missedDeadline}!uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{missedDeadline}{missedDeadline}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+\mbox{\hyperlink{build__log_8txt_ad056990c0b52f00cbd5318fc28e256dc}{bool}} \mbox{\hyperlink{structu_w_s_1_1_http_socket}{u\+W\+S\+::\+Http\+Socket}}$<$ is\+Server $>$\+::missed\+Deadline = false}
+
+
+
+Definition at line 117 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_socket_ae9cc2d77c48468ea14609a071a86653d}\label{structu_w_s_1_1_http_socket_ae9cc2d77c48468ea14609a071a86653d}} 
+\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}!outstandingResponsesHead@{outstandingResponsesHead}}
+\index{outstandingResponsesHead@{outstandingResponsesHead}!uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{outstandingResponsesHead}{outstandingResponsesHead}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}}$\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_socket}{u\+W\+S\+::\+Http\+Socket}}$<$ is\+Server $>$\+::outstanding\+Responses\+Head = nullptr}
+
+
+
+Definition at line 111 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_socket_a5ac3a523c28016cbf31a3a2a56561a06}\label{structu_w_s_1_1_http_socket_a5ac3a523c28016cbf31a3a2a56561a06}} 
+\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}!outstandingResponsesTail@{outstandingResponsesTail}}
+\index{outstandingResponsesTail@{outstandingResponsesTail}!uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{outstandingResponsesTail}{outstandingResponsesTail}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}}$\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_socket}{u\+W\+S\+::\+Http\+Socket}}$<$ is\+Server $>$\+::outstanding\+Responses\+Tail = nullptr}
+
+
+
+Definition at line 112 of file H\+T\+T\+P\+Socket.\+h.
+
+\mbox{\Hypertarget{structu_w_s_1_1_http_socket_aa6aaabb48a64471b8fd1185a745e2dab}\label{structu_w_s_1_1_http_socket_aa6aaabb48a64471b8fd1185a745e2dab}} 
+\index{uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}!preAllocatedResponse@{preAllocatedResponse}}
+\index{preAllocatedResponse@{preAllocatedResponse}!uWS::HttpSocket$<$ isServer $>$@{uWS::HttpSocket$<$ isServer $>$}}
+\doxysubsubsection{\texorpdfstring{preAllocatedResponse}{preAllocatedResponse}}
+{\footnotesize\ttfamily template$<$const bool is\+Server$>$ \\
+\mbox{\hyperlink{structu_w_s_1_1_http_response}{Http\+Response}}$\ast$ \mbox{\hyperlink{structu_w_s_1_1_http_socket}{u\+W\+S\+::\+Http\+Socket}}$<$ is\+Server $>$\+::pre\+Allocated\+Response = nullptr}
+
+
+
+Definition at line 113 of file H\+T\+T\+P\+Socket.\+h.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_h_t_t_p_socket_8h}{H\+T\+T\+P\+Socket.\+h}}\item 
+/home/sautax/git/\+Battlegroud-\/\+B\+R-\/master/node\+\_\+modules/uws/src/\mbox{\hyperlink{_h_t_t_p_socket_8cpp}{H\+T\+T\+P\+Socket.\+cpp}}\end{DoxyCompactItemize}

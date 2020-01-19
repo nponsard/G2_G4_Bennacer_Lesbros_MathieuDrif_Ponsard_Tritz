@@ -1,0 +1,212 @@
+\hypertarget{class_bwaaah_1_1items_1_1_item}{}\doxysection{Bwaaah.\+items.\+Item Class Reference}
+\label{class_bwaaah_1_1items_1_1_item}\index{Bwaaah.items.Item@{Bwaaah.items.Item}}
+
+
+Inheritance diagram for Bwaaah.\+items.\+Item\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_bwaaah_1_1items_1_1_item__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a6f264ea7ab127a2e507e261440b34572}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a2b307fa715e117733bef5591e78109d9}{nom}}, \mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a43ac767efe67473938489cb3f3ad21a5}{quantity}}, texturedir, \mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a49ecb1e7c86bba6c5260468577e6c12a}{description}}=\char`\"{}\char`\"{})
+\item 
+def \mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a7dbe1d239635c653bce0ee7608ea4951}{render}} (self)
+\item 
+def \mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a58f38decfb79d659e64ba7d85e5ee99d}{use}} (self, user)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a075c58865c718377cca2e1c04d3afbdb}{nom}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_ad691da2ed29aa4ad1222b08ec682aa9a}{description}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a163e3b4d156e423e75c74078ef75bb56}{texture}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_aa0f88bfed4882a29e42ea754957f2e0b}{quantity}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a72538600a992718dbd8c918dba9e4e13}{textures}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a68e4bbaea3b65bdded81eed7b35b4dbd}{framequantity}}
+\item 
+\mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a564914d711f27f06498bf84d98e3fe15}{frame}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a2b307fa715e117733bef5591e78109d9}{nom}} = \char`\"{}\char`\"{}
+\item 
+string \mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a49ecb1e7c86bba6c5260468577e6c12a}{description}} = \char`\"{}\char`\"{}
+\item 
+\mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} \mbox{\hyperlink{class_bwaaah_1_1items_1_1_item_a43ac767efe67473938489cb3f3ad21a5}{quantity}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Classe Item permettant de base pour tout item de l'inventaire\end{DoxyVerb}
+ 
+
+Definition at line 11 of file items.\+py.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bwaaah_1_1items_1_1_item_a6f264ea7ab127a2e507e261440b34572}\label{class_bwaaah_1_1items_1_1_item_a6f264ea7ab127a2e507e261440b34572}} 
+\index{Bwaaah.items.Item@{Bwaaah.items.Item}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!Bwaaah.items.Item@{Bwaaah.items.Item}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def Bwaaah.\+items.\+Item.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{nom,  }\item[{}]{quantity,  }\item[{}]{texturedir,  }\item[{}]{description = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}crée un objet Item pour être utilisé dans l'inventaire,
+il est préférable d'utiliser un objet enfant du type adapté (ex: potion, arme)
+\end{DoxyVerb}
+ 
+
+Reimplemented in \mbox{\hyperlink{class_bwaaah_1_1items_1_1_tool_ad3932dd85a76c39e9d303cca9fdaeabf}{Bwaaah.\+items.\+Tool}}.
+
+
+
+Definition at line 20 of file items.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bwaaah_1_1items_1_1_item_a7dbe1d239635c653bce0ee7608ea4951}\label{class_bwaaah_1_1items_1_1_item_a7dbe1d239635c653bce0ee7608ea4951}} 
+\index{Bwaaah.items.Item@{Bwaaah.items.Item}!render@{render}}
+\index{render@{render}!Bwaaah.items.Item@{Bwaaah.items.Item}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily def Bwaaah.\+items.\+Item.\+render (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}retourne une surface avec l'item
+\end{DoxyVerb}
+ 
+
+Definition at line 38 of file items.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1items_1_1_item_a58f38decfb79d659e64ba7d85e5ee99d}\label{class_bwaaah_1_1items_1_1_item_a58f38decfb79d659e64ba7d85e5ee99d}} 
+\index{Bwaaah.items.Item@{Bwaaah.items.Item}!use@{use}}
+\index{use@{use}!Bwaaah.items.Item@{Bwaaah.items.Item}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily def Bwaaah.\+items.\+Item.\+use (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{user }\end{DoxyParamCaption})}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_bwaaah_1_1items_1_1_tool_acef1616c1057d751326e4d8ca2a13725}{Bwaaah.\+items.\+Tool}}, and \mbox{\hyperlink{class_bwaaah_1_1items_1_1_consommable_a9260f941a4c85fcd3ea65b395a6eb9d2}{Bwaaah.\+items.\+Consommable}}.
+
+
+
+Definition at line 46 of file items.\+py.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_bwaaah_1_1items_1_1_item_a49ecb1e7c86bba6c5260468577e6c12a}\label{class_bwaaah_1_1items_1_1_item_a49ecb1e7c86bba6c5260468577e6c12a}} 
+\index{Bwaaah.items.Item@{Bwaaah.items.Item}!description@{description}}
+\index{description@{description}!Bwaaah.items.Item@{Bwaaah.items.Item}}
+\doxysubsubsection{\texorpdfstring{description}{description}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string Bwaaah.\+items.\+Item.\+description = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 17 of file items.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1items_1_1_item_ad691da2ed29aa4ad1222b08ec682aa9a}\label{class_bwaaah_1_1items_1_1_item_ad691da2ed29aa4ad1222b08ec682aa9a}} 
+\index{Bwaaah.items.Item@{Bwaaah.items.Item}!description@{description}}
+\index{description@{description}!Bwaaah.items.Item@{Bwaaah.items.Item}}
+\doxysubsubsection{\texorpdfstring{description}{description}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bwaaah.\+items.\+Item.\+description}
+
+
+
+Definition at line 26 of file items.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1items_1_1_item_a564914d711f27f06498bf84d98e3fe15}\label{class_bwaaah_1_1items_1_1_item_a564914d711f27f06498bf84d98e3fe15}} 
+\index{Bwaaah.items.Item@{Bwaaah.items.Item}!frame@{frame}}
+\index{frame@{frame}!Bwaaah.items.Item@{Bwaaah.items.Item}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily Bwaaah.\+items.\+Item.\+frame}
+
+
+
+Definition at line 34 of file items.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1items_1_1_item_a68e4bbaea3b65bdded81eed7b35b4dbd}\label{class_bwaaah_1_1items_1_1_item_a68e4bbaea3b65bdded81eed7b35b4dbd}} 
+\index{Bwaaah.items.Item@{Bwaaah.items.Item}!framequantity@{framequantity}}
+\index{framequantity@{framequantity}!Bwaaah.items.Item@{Bwaaah.items.Item}}
+\doxysubsubsection{\texorpdfstring{framequantity}{framequantity}}
+{\footnotesize\ttfamily Bwaaah.\+items.\+Item.\+framequantity}
+
+
+
+Definition at line 31 of file items.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1items_1_1_item_a2b307fa715e117733bef5591e78109d9}\label{class_bwaaah_1_1items_1_1_item_a2b307fa715e117733bef5591e78109d9}} 
+\index{Bwaaah.items.Item@{Bwaaah.items.Item}!nom@{nom}}
+\index{nom@{nom}!Bwaaah.items.Item@{Bwaaah.items.Item}}
+\doxysubsubsection{\texorpdfstring{nom}{nom}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string Bwaaah.\+items.\+Item.\+nom = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 16 of file items.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1items_1_1_item_a075c58865c718377cca2e1c04d3afbdb}\label{class_bwaaah_1_1items_1_1_item_a075c58865c718377cca2e1c04d3afbdb}} 
+\index{Bwaaah.items.Item@{Bwaaah.items.Item}!nom@{nom}}
+\index{nom@{nom}!Bwaaah.items.Item@{Bwaaah.items.Item}}
+\doxysubsubsection{\texorpdfstring{nom}{nom}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bwaaah.\+items.\+Item.\+nom}
+
+
+
+Definition at line 25 of file items.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1items_1_1_item_a43ac767efe67473938489cb3f3ad21a5}\label{class_bwaaah_1_1items_1_1_item_a43ac767efe67473938489cb3f3ad21a5}} 
+\index{Bwaaah.items.Item@{Bwaaah.items.Item}!quantity@{quantity}}
+\index{quantity@{quantity}!Bwaaah.items.Item@{Bwaaah.items.Item}}
+\doxysubsubsection{\texorpdfstring{quantity}{quantity}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{build__log_8txt_a1f7865b67397a7a67a9a651ef20a290b}{int}} Bwaaah.\+items.\+Item.\+quantity = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 18 of file items.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1items_1_1_item_aa0f88bfed4882a29e42ea754957f2e0b}\label{class_bwaaah_1_1items_1_1_item_aa0f88bfed4882a29e42ea754957f2e0b}} 
+\index{Bwaaah.items.Item@{Bwaaah.items.Item}!quantity@{quantity}}
+\index{quantity@{quantity}!Bwaaah.items.Item@{Bwaaah.items.Item}}
+\doxysubsubsection{\texorpdfstring{quantity}{quantity}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bwaaah.\+items.\+Item.\+quantity}
+
+
+
+Definition at line 28 of file items.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1items_1_1_item_a163e3b4d156e423e75c74078ef75bb56}\label{class_bwaaah_1_1items_1_1_item_a163e3b4d156e423e75c74078ef75bb56}} 
+\index{Bwaaah.items.Item@{Bwaaah.items.Item}!texture@{texture}}
+\index{texture@{texture}!Bwaaah.items.Item@{Bwaaah.items.Item}}
+\doxysubsubsection{\texorpdfstring{texture}{texture}}
+{\footnotesize\ttfamily Bwaaah.\+items.\+Item.\+texture}
+
+
+
+Definition at line 27 of file items.\+py.
+
+\mbox{\Hypertarget{class_bwaaah_1_1items_1_1_item_a72538600a992718dbd8c918dba9e4e13}\label{class_bwaaah_1_1items_1_1_item_a72538600a992718dbd8c918dba9e4e13}} 
+\index{Bwaaah.items.Item@{Bwaaah.items.Item}!textures@{textures}}
+\index{textures@{textures}!Bwaaah.items.Item@{Bwaaah.items.Item}}
+\doxysubsubsection{\texorpdfstring{textures}{textures}}
+{\footnotesize\ttfamily Bwaaah.\+items.\+Item.\+textures}
+
+
+
+Definition at line 29 of file items.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sautax/git/\+Bwaaah/\mbox{\hyperlink{items_8py}{items.\+py}}\end{DoxyCompactItemize}

@@ -1,0 +1,14 @@
+<map id="uS::Socket::setPoll" name="uS::Socket::setPoll">
+<area shape="rect" id="node1" title=" " alt="" coords="841,107,983,133"/>
+<area shape="rect" id="node2" href="$structu_s_1_1_node_data.html#a50ff099d8c7568657a50a54f73876be2" title=" " alt="" coords="577,5,790,32"/>
+<area shape="rect" id="node4" href="$classu_s_1_1_node.html#a45614cbc70d9121b48738728f559cf4e" title=" " alt="" coords="614,56,753,83"/>
+<area shape="rect" id="node5" href="$structu_w_s_1_1_hub.html#a6f082fdce9ac8593c78c81ef5a9ac2b8" title=" " alt="" coords="573,107,793,133"/>
+<area shape="rect" id="node6" href="$structu_w_s_1_1_hub.html#a994681f1492339cb94f7ba9c69724821" title=" " alt="" coords="586,157,781,184"/>
+<area shape="rect" id="node7" href="$structu_w_s_1_1_hub.html#a423b9cf066ba3a8becf1cc1ec2c34108" title=" " alt="" coords="610,208,757,235"/>
+<area shape="rect" id="node3" href="$structu_s_1_1_node_data.html#a1b8f1e1522c3c32318bbd57addc4c4ea" title=" " alt="" coords="343,5,525,32"/>
+<area shape="rect" id="node8" href="$addon_8h.html#a19fab02bfef45a4928d1e6523236cc06" title=" " alt="" coords="397,208,471,235"/>
+<area shape="rect" id="node9" href="$addon_8cpp.html#a91b20a76285854fb609ca61c93b6a652" title=" " alt="" coords="231,183,286,209"/>
+<area shape="rect" id="node10" href="$main_space_invaders_8h.html#a350e996a354865b6064bab50134646dc" title="Updates the informations like the positions of the torpedoes, the lifes remaining if the player gets ..." alt="" coords="223,233,295,260"/>
+<area shape="rect" id="node11" href="$main_space_invaders_8h.html#a4fa2d58844efb7d9be2951633b85b060" title="The main function of the game, which use the others to display the screen, get inputs ...." alt="" coords="108,233,175,260"/>
+<area shape="rect" id="node12" href="$projet_space_invaders_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Initializes Glut and MinGl, creates a seed for randomness and launches the game." alt="" coords="5,233,60,260"/>
+</map>
