@@ -24,13 +24,8 @@ vector<pair<string, unsigned>> loadScores(const string &fileName)
 
     if (ifs.is_open())
     {
-        while (nb < 3)
+        while (nb < 3 && getline(ifs, line))
         {
-            getline(ifs, line);
-
-            if (ifs.eof())
-                break;
-
             istringstream istr;
             istr.str(line);
             istr >> name;
@@ -46,9 +41,8 @@ vector<pair<string, unsigned>> loadScores(const string &fileName)
                     c = toupper(c);
 
                 scores.push_back(make_pair(name, value));
+                ++nb;
             }
-
-            ++nb;
         }
     }
     scoreSort(scores);
