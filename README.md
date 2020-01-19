@@ -13,4 +13,4 @@
 - aplay on the machine ( for the sound, optionnal )
 
 ## how to compile 
-Run `compile.sh` script or open the `project.pro` in the `src` folder with QT creator
+open the `project.pro` with QT creator
