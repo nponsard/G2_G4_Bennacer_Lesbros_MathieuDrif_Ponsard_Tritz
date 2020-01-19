@@ -63,7 +63,7 @@ void displaySpace(minGL &window, const spaceInvaders &SI)
     display(window, SI.invadersTorpedoPos, SI.invadersTorpedo.entityFig);
     if (!(SI.bonusInvaderPos == pos(0, 0)))
         window << SI.bonusInvader.entityFig + SI.bonusInvaderPos;
-    display(window, SI.UpgradePos, SI.upgradeTypes);
+    display(window, SI.UpgradePos, SI.upgrades.entityFigs);
 
     window << SI.player.entityFig + SI.playerPos;
 }
