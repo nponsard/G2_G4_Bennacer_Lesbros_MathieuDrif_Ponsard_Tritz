@@ -84,14 +84,13 @@ void mainSI(minGL &window)
         if (SIBase.bestScores.size() < 3)
         {
             string name(ReadName(window, frameDuration));
-            insertScore(SIBase.bestScores, name, SIBase.score);
+            insertScore(SIBase.bestScores, name, SIBase.score, false);
             saveScores(SIBase.bestScores, "scores.yaml");
         }
         else if (SIBase.bestScores[SIBase.bestScores.size() - 1].second < SIBase.score)
         {
             string name(ReadName(window, frameDuration));
-            insertScore(SIBase.bestScores, name, SIBase.score);
-            SIBase.bestScores.pop_back();
+            insertScore(SIBase.bestScores, name, SIBase.score, true);
             saveScores(SIBase.bestScores, "scores.yaml");
         }
     }

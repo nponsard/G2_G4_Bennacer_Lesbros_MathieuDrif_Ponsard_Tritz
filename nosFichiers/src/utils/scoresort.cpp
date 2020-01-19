@@ -38,17 +38,19 @@ void scoreSort(vector<pair<string, unsigned>> &scores)
  * \param scores : vector containing pairs of name - score, in which the new score will be added
  * \param nom : the name corresponding to the score which will be added
  * \param score : the score which will be added to the vector
+ * \param popBack : if true, removes the last elements after insertion
  */
 
-void insertScore(vector<pair<string, unsigned>> & scores, const string &nom, const unsigned & score)
+void insertScore(vector<pair<string, unsigned>> & scores, const string &nom, const unsigned & score, const bool & popBack)
 {
-    unsigned i(0);
-    while(i < scores.size() && scores[i].second > score)
-        ++i;
-
     scores.resize(scores.size() + 1);
-    for(unsigned j(scores.size()); j-- > i + 1; )
-        scores[j] = scores[j - 1];
+
+    unsigned i(scores.size() - 1);
+    for( ; i > 0 && scores[i - 1].second < score; --i)
+        scores[i] = scores[i - 1];
 
     scores[i] = make_pair(nom, score);
+
+    if(popBack)
+        scores.pop_back();
 }
