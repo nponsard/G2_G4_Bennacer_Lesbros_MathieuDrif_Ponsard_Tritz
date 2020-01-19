@@ -44,9 +44,7 @@ struct spaceInvaders
     entity invadersTorpedo;
     entity bonusInvader;
 
-    entity lifeUpgrade;
-    entity shootSpeedUpgrade;
-    entity scoreUpgrade;
+    BonusEntity upgrades;
 
     pos playerPos;
     pos bonusInvaderPos;
@@ -55,7 +53,6 @@ struct spaceInvaders
     std::vector<pos> invadersTorpedoPos;
 
     std::vector<std::pair<pos, short>> UpgradePos;
-    std::vector<figure> upgradeTypes;
 };
 
 void initSpaceInvadersFigs(spaceInvaders &SI);
