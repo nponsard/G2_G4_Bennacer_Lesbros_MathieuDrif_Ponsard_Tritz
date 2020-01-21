@@ -1,5 +1,5 @@
 #!/bin/bash
 
 while [ 1 ];
-	do aplay -q '../nosFichiers/ressources/theme.wav'
+	do aplay -q '../G2_G4_Bennacer_Lesbros_MathieuDrif_Ponsard_Tritz/nosFichiers/ressources/theme.wav'
 done
