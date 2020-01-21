@@ -7,7 +7,7 @@
 
 void startMusic()
 {
-    system("bash ../nosFichiers/ressources/audioSpaceInvaders.bash &");
+    system("bash ../G2_G4_Bennacer_Lesbros_MathieuDrif_Ponsard_Tritz/nosFichiers/ressources/audioSpaceInvaders.bash &");
 }
 
 ///
@@ -16,7 +16,6 @@ void startMusic()
 
 void killMusic()
 {
-    system("pkill -f 'bash ../nosFichiers/ressources/audioSpaceInvaders.bash'");
-    system("pkill -f 'aplay -q ../nosFichiers/ressources/theme.wav'");
+    system("pkill -f 'bash ../G2_G4_Bennacer_Lesbros_MathieuDrif_Ponsard_Tritz/nosFichiers/ressources/audioSpaceInvaders.bash'");
+    system("pkill -f 'aplay -q ../G2_G4_Bennacer_Lesbros_MathieuDrif_Ponsard_Tritz/nosFichiers/ressources/theme.wav'");
 }
-

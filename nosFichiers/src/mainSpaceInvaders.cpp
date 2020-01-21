@@ -75,7 +75,7 @@ void mainSI(minGL &window)
             if (diff < frameDuration)
                 this_thread::sleep_for(frameDuration - diff);
         }
-        system("aplay -q '../nosFichiers/ressources/gameOver.wav' &");
+        system("aplay -q '../G2_G4_Bennacer_Lesbros_MathieuDrif_Ponsard_Tritz/nosFichiers/ressources/gameOver.wav' &");
 
         SI = SIBase;
         SI.score = 0;
@@ -138,7 +138,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                                 SI.UpgradePos.push_back(upgrade);
                             }
                             SI.invadersPos.erase(itInvadersPos);
-                            system("aplay -q '../nosFichiers/ressources/invadersDeath.wav' &");
+                            system("aplay -q '../G2_G4_Bennacer_Lesbros_MathieuDrif_Ponsard_Tritz/nosFichiers/ressources/invadersDeath.wav' &");
                             SI.score += SI.scoreStep;
                             SI.scoreStep += 20;
 
@@ -148,7 +148,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                         else
                         {
                             --itInvadersPos->second;
-                            system("aplay -q '../nosFichiers/ressources/invadersHit.wav' &");
+                            system("aplay -q '../G2_G4_Bennacer_Lesbros_MathieuDrif_Ponsard_Tritz/nosFichiers/ressources/invadersHit.wav' &");
                         }
                     }
                 }
@@ -166,7 +166,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                             upgrade.second = rand() % SI.upgrades.entityFigs.size();
                             SI.UpgradePos.push_back(upgrade);
                             SI.playerTorpedoPos.erase(it);
-                            system("aplay -q '../nosFichiers/ressources/bonusInvaderDeath.wav' &");
+                            system("aplay -q '../G2_G4_Bennacer_Lesbros_MathieuDrif_Ponsard_Tritz/nosFichiers/ressources/bonusInvaderDeath.wav' &");
                             SI.bonusInvaderPos = pos(0, 0);
                             SI.LastBonusInvader = chrono::steady_clock::now();
                             SI.score += SI.scoreStepBonusInvaders;
@@ -216,7 +216,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
                     if (--SI.lives == 0)
                         iLoose = true;
                     else
-                        system("aplay -q '../nosFichiers/ressources/loseLife.wav' &");
+                        system("aplay -q '../G2_G4_Bennacer_Lesbros_MathieuDrif_Ponsard_Tritz/nosFichiers/ressources/loseLife.wav' &");
                 }
             }
             else //collision avec le mur
@@ -238,7 +238,7 @@ void process(spaceInvaders &SI, const unsigned &height, const unsigned &width, b
         {
             if (itupgrade->first.getOrd() > 1)
             {
-                itupgrade->first = pos(itupgrade->first.getAbs(), itupgrade->first.getOrd() - 1);                                                                               //déplacement
+                itupgrade->first = pos(itupgrade->first.getAbs(), itupgrade->first.getOrd() - 1);                                                                         //déplacement
                 collision = collisions(itupgrade->first, SI.playerPos, SI.upgrades.entityHeight, SI.player.entityHeight, SI.upgrades.entityWidth, SI.player.entityWidth); //collision avec le joueur, on utilise lifeUpgrade pour la collision de base
                 if (collision)
                 {
