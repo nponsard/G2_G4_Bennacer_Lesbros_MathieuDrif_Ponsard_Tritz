@@ -102,7 +102,7 @@ void mainSI(minGL &window)
 ///     and make one of them choosen randomly shoot.
 /// \param SI : struct containing all the useful variables to be used and updated
 /// \param height : window's height
-/// \param width : windSI.invadersPos.size()ow's width
+/// \param width : window's width
 /// \param iLoose : boolean which become true if the player lose its last life by being hit by an ennemy torpedo
 /// \param iWin : boolean which become true if there is no invader remaining in the wave
 ///
